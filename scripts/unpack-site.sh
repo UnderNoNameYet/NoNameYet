@@ -16,18 +16,12 @@ python3 scripts/decode-bundle.py \
   public-overrides/site.part-*
 tar -xzf overrides.tar.gz -C public
 
-python3 scripts/decode-bundle.py \
-  --output immersive-overrides.tar.gz \
-  --sha 56b86baf24e3e0531c257fa3f65fba32bd6eeea8944687836a3688ad6d399b4f \
-  immersive-overrides/site.part-*
-tar -xzf immersive-overrides.tar.gz -C public
-
 cp site-config.js public/site-config.js
 test -f public/index.html
-test -f public/immersive.css
-test -f public/experience.js
 test -f public/app.html
 test -f public/download.html
 test -f public/tutorial.html
+test -f public/privacy.html
+test -f public/terms.html
 echo "1ab779e9af850e2ecbc43d2944a0aba38fd3fc73a459c2c8f73cc10331bd0fe0  public/app.html" | sha256sum --check --strict
-printf 'SettleSift immersive site unpacked into public/\n'
+printf 'SettleSift stable site unpacked into public/\n'
