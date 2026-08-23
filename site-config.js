@@ -2,6 +2,6 @@
 window.SETTLESIFT_CONFIG = {
   contactEmail: "",
   paymentUrl: "",
-  siteUrl: "",
+  siteUrl: "https://undernonameyet.github.io/NoNameYet/",
   pilotPrice: 1499
 };
