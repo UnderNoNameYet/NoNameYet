@@ -68,7 +68,7 @@ GitHub Pages deploys from `main` with `.github/workflows/pages.yml`.
 
 1. The workflow rebuilds the tested base bundle from `deploy/site.part-*`.
 2. The deterministic product overlay in `public-overrides/site.part-*` restores the full marketing, tutorial, legal, and discovery site.
-3. The checksum-verified immersive layer in `immersive-overrides/site.b64` applies the WebGL homepage.
+3. The checksum-verified immersive layer in `immersive-overrides/site.part-*` applies the WebGL homepage.
 4. Root `site-config.js` is copied into the public artifact.
 5. The workflow verifies the standalone app checksum before publishing.
 
