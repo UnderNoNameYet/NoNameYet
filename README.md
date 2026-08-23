@@ -4,24 +4,42 @@
 
 SettleSift matches order, settlement, fee, and return/RTO CSV exports, then surfaces the small set of transactions that need investigation.
 
-## Launch candidate
+## Public product
 
-This repository contains the tested static product and its promotional website:
+- **Website:** https://undernonameyet.github.io/NoNameYet/
+- **Open the complete app:** https://undernonameyet.github.io/NoNameYet/app.html
+- **Download guide:** https://undernonameyet.github.io/NoNameYet/download.html
+- **Full tutorial:** https://undernonameyet.github.io/NoNameYet/tutorial.html
 
-- Free browser-based self-audit
-- Exception queue and order-level evidence
-- Channel-specific fee and settlement rules
-- Data-quality gate
-- Recovery report and CSV exports
-- Leakage estimator, pricing, privacy, and pilot-request funnel
-- GitHub Pages deployment workflow
+The application is free for the current build. The online and downloaded versions contain the same features. The downloadable file is a self-contained HTML application named `SettleSift-offline.html`; it works in a modern browser without an installer, account, API key, or financial-file upload.
+
+Verified application:
+
+- Size: `84,108` bytes
+- SHA-256: `1ab779e9af850e2ecbc43d2944a0aba38fd3fc73a459c2c8f73cc10331bd0fe0`
+
+## Product capabilities
+
+- CSV import, column mapping, and data-quality gate
+- Marketplace-specific audit and fee rules
+- Order ledger and prioritized exception queue
+- Settlement equations and money-flow explanations
+- Exception resolution with reviewer notes
+- Evidence CSV, recovery report, and portable project export
+- Local IndexedDB storage with localStorage fallback
+- Built-in demo for learning without private data
+- Responsive web and offline interfaces
+
+## Website experience
+
+The public site includes a conversion-focused hero, animated product tour, complete feature guide, five-step workflow, exposure estimator, privacy architecture, pricing scope, FAQ, dedicated download page, and illustrated end-to-end tutorial. Motion respects `prefers-reduced-motion`.
 
 ## Commercial wedge
 
-- Free local self-audit
-- ₹1,499 founder-assisted pilot for one closed statement period, one primary channel, and up to 5,000 order rows
+- Free complete self-audit
+- Proposed ₹1,499 founder-assisted audit for one closed period, one primary channel, and up to 5,000 order rows
 
-Payment is intentionally inactive until a public business contact, hosted payment page, operator identity, tax treatment, and refund terms are approved.
+Payment remains intentionally inactive until compatibility, operator identity, secure transfer, tax treatment, refund terms, and the user-approved payment flow are ready. SettleSift does not promise recovery.
 
 ## Go-to-market material
 
@@ -31,20 +49,25 @@ Payment is intentionally inactive until a public business contact, hosted paymen
 - [Public launch checklist](PUBLIC-LAUNCH-CHECKLIST.md)
 - [Lead tracker](LEAD-TRACKER.csv)
 
-## Deploy
+## Deployment
 
-1. In repository **Settings → Pages**, select **GitHub Actions** as the source.
-2. Add only approved, non-secret values to `site-config.js`.
-3. Push to `main`; the included workflow publishes the static site.
+GitHub Pages deploys from `main` with `.github/workflows/pages.yml`.
 
-The workflow rebuilds the tested site and copies the root configuration into the public artifact. Never put credentials or payment secrets in `site-config.js`.
+1. The workflow rebuilds the tested base bundle from `deploy/site.part-*`.
+2. The deterministic overlay bundle in `public-overrides/site.part-*` replaces the marketing, tutorial, legal, and discovery pages.
+3. Root `site-config.js` is copied into the public artifact.
+4. The workflow verifies the standalone app checksum before publishing.
+
+Never place credentials or payment secrets in `site-config.js`.
 
 ## Validation completed
 
-- Marketing desktop and mobile overflow checks passed
-- Pilot-request and calculator flows passed
+- Website interactions, download, calculator, and audit-request fallback passed
+- Desktop and mobile overflow checks passed on every public page
+- Offline download verified at 84,108 bytes
 - Full controlled application fixture passed
 - Browser console errors: 0
+- Page errors: 0
 - Failed requests: 0
 
 Potential recovery is an investigation estimate, not an accounting conclusion or guarantee.
