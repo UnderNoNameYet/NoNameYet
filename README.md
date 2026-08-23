@@ -6,7 +6,7 @@ SettleSift matches order, settlement, fee, and return/RTO CSV exports, then surf
 
 ## Launch candidate
 
-This branch contains the tested static product and its promotional website:
+This repository contains the tested static product and its promotional website:
 
 - Free browser-based self-audit
 - Exception queue and order-level evidence
@@ -21,13 +21,25 @@ This branch contains the tested static product and its promotional website:
 - Free local self-audit
 - ₹1,499 founder-assisted pilot for one closed statement period, one primary channel, and up to 5,000 order rows
 
-Payment is intentionally not active until a public business contact, hosted payment page, operator identity, tax treatment, and refund terms are approved.
+Payment is intentionally inactive until a public business contact, hosted payment page, operator identity, tax treatment, and refund terms are approved.
+
+## Go-to-market material
+
+- [Ten-day acquisition plan](GO-TO-MARKET.md)
+- [Seller and partner outreach copy](OUTREACH-COPY.md)
+- [Real-data validation playbook](VALIDATION-PLAYBOOK.md)
+- [Public launch checklist](PUBLIC-LAUNCH-CHECKLIST.md)
+- [Lead tracker](LEAD-TRACKER.csv)
 
 ## Deploy
 
-After this branch is merged, select **GitHub Actions** as the Pages source in repository settings. The workflow rebuilds the tested static site from the deployment bundle and publishes it.
+1. In repository **Settings → Pages**, select **GitHub Actions** as the source.
+2. Add only approved, non-secret values to `site-config.js`.
+3. Push to `main`; the included workflow publishes the static site.
 
-## Validation
+The workflow rebuilds the tested site and copies the root configuration into the public artifact. Never put credentials or payment secrets in `site-config.js`.
+
+## Validation completed
 
 - Marketing desktop and mobile overflow checks passed
 - Pilot-request and calculator flows passed
