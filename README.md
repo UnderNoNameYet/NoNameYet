@@ -30,9 +30,22 @@ Verified application:
 - Built-in demo for learning without private data
 - Responsive web and offline interfaces
 
-## Website experience
+## Immersive website experience
 
-The public site includes a conversion-focused hero, animated product tour, complete feature guide, five-step workflow, exposure estimator, privacy architecture, pricing scope, FAQ, dedicated download page, and illustrated end-to-end tutorial. Motion respects `prefers-reduced-motion`.
+The homepage is an original, real-time generative WebGL experience rather than a pre-rendered template or heavy third-party embed. Scroll directs a five-act financial-data narrative from source exports to evidence. Pointer movement changes the 3D camera, anomalous settlement nodes surface in red, and an optional sound control synthesizes ambient audio only after a visitor clicks it.
+
+The experience also includes:
+
+- Cinematic loader with a failure-safe timeout
+- Custom WebGL ray-marched settlement core and orbiting data paths
+- Scroll-directed story chapters and scene progress
+- Pointer parallax, magnetic actions, 3D interface tilt, and kinetic typography
+- Interactive unexplained-value signal model
+- Product UI reveal, capability system, and privacy architecture
+- Responsive mobile composition and navigation
+- Static visual fallback when WebGL is unavailable
+- Complete `prefers-reduced-motion` alternative
+- No external runtime library, model host, video CDN, or tracking SDK
 
 ## Commercial wedge
 
@@ -54,18 +67,22 @@ Payment remains intentionally inactive until compatibility, operator identity, s
 GitHub Pages deploys from `main` with `.github/workflows/pages.yml`.
 
 1. The workflow rebuilds the tested base bundle from `deploy/site.part-*`.
-2. The deterministic overlay bundle in `public-overrides/site.part-*` replaces the marketing, tutorial, legal, and discovery pages.
-3. Root `site-config.js` is copied into the public artifact.
-4. The workflow verifies the standalone app checksum before publishing.
+2. The deterministic product overlay in `public-overrides/site.part-*` restores the full marketing, tutorial, legal, and discovery site.
+3. The checksum-verified immersive layer in `immersive-overrides/site.part-*` applies the WebGL homepage.
+4. Root `site-config.js` is copied into the public artifact.
+5. The workflow verifies the standalone app checksum before publishing.
 
 Never place credentials or payment secrets in `site-config.js`.
 
 ## Validation completed
 
-- Website interactions, download, calculator, and audit-request fallback passed
+- WebGL initialized and animated frames were visually distinct
+- Five scroll chapters rendered correctly on desktop and mobile
+- Pointer, mobile navigation, tilt, reveal, calculator, and download interactions passed
+- Reduced-motion and no-WebGL fallbacks are present
 - Desktop and mobile overflow checks passed on every public page
-- Offline download verified at 84,108 bytes
-- Full controlled application fixture passed
+- Complete audit-app regression passed
+- Offline application checksum and size verified
 - Browser console errors: 0
 - Page errors: 0
 - Failed requests: 0
