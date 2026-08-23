@@ -24,26 +24,32 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Rebuild stable static site
+      - name: Rebuild verified product site
         run: |
           set -euo pipefail
           rm -rf public
           mkdir -p public
 
-          printf 'Decoding verified base site...\n'
           python3 scripts/decode-bundle.py \
             --output site.tar.gz \
             --sha c3fcfe72df6f6449a2d7d706bb24c6bbcc3c7009fcc4101e4100c3bcd07d8bfa \
             deploy/site.part-*
           tar -xzf site.tar.gz -C public
 
-          printf 'Decoding verified product site...\n'
           python3 scripts/decode-bundle.py \
             --output overrides.tar.gz \
             --sha d82cc19114dbe8a776290dc27488e46e080a24df2d3df1acd15eb3d839ec7572 \
             --repair-one-missing-in-first \
             public-overrides/site.part-*
           tar -xzf overrides.tar.gz -C public
+
+          printf 'Installing tested professional homepage...\n'
+          python3 scripts/decode-bundle.py \
+            --output homepage-v3.html.gz \
+            --sha 6173422ea287e8c8daf99037c17b9a1a7cf1869fa83f80fe0edc66f867a86155 \
+            homepage-v3/site.part-*
+          gzip -dc homepage-v3.html.gz > public/index.html
+          echo "a8da784b8f73fc7e6d7522212f1e4753ddfc88c3bd93f1a3ef3e1b9fb684c076  public/index.html" | sha256sum --check --strict
 
           cp site-config.js public/site-config.js
           test -f public/index.html

@@ -7,11 +7,11 @@ SettleSift matches order, settlement, fee, and return/RTO CSV exports, then surf
 ## Public product
 
 - **Website:** https://undernonameyet.github.io/NoNameYet/
-- **Open the complete app:** https://undernonameyet.github.io/NoNameYet/app.html
+- **Complete app:** https://undernonameyet.github.io/NoNameYet/app.html
 - **Download guide:** https://undernonameyet.github.io/NoNameYet/download.html
-- **Full tutorial:** https://undernonameyet.github.io/NoNameYet/tutorial.html
+- **Tutorial:** https://undernonameyet.github.io/NoNameYet/tutorial.html
 
-The application is free for the current build. The online and downloaded versions contain the same features. The downloadable file is a self-contained HTML application named `SettleSift-offline.html`; it works in a modern browser without an installer, account, API key, or financial-file upload.
+The current application is free. The online and downloaded builds contain the same functionality. The downloadable version is a self-contained HTML application that works in a modern browser without an installer, account, API key, or financial-file upload.
 
 Verified application:
 
@@ -20,37 +20,36 @@ Verified application:
 
 ## Product capabilities
 
-- CSV import, column mapping, and data-quality gate
+- CSV import, column mapping, and data-quality checks
 - Marketplace-specific audit and fee rules
 - Order ledger and prioritized exception queue
 - Settlement equations and money-flow explanations
 - Exception resolution with reviewer notes
 - Evidence CSV, recovery report, and portable project export
 - Local IndexedDB storage with localStorage fallback
-- Built-in demo for learning without private data
-- Responsive web and offline interfaces
+- Built-in demo and responsive offline interface
 
-## Immersive website experience
+## Professional product-led website
 
-The homepage is an original, real-time generative WebGL experience rather than a pre-rendered template or heavy third-party embed. Scroll directs a five-act financial-data narrative from source exports to evidence. Pointer movement changes the 3D camera, anomalous settlement nodes surface in red, and an optional sound control synthesizes ambient audio only after a visitor clicks it.
+The homepage uses one coherent financial-product design system instead of a generic 3D or cyberpunk treatment.
 
-The experience also includes:
+- Warm ivory, deep ink, restrained emerald, and discrepancy coral
+- Animated reconciliation map tied directly to orders, fees, returns, and payouts
+- Explainable settlement card with expected, received, and unexplained values
+- Scroll-directed journey from source export to bank settlement
+- Detailed product control-room preview
+- Equation, priority, portability, and local-first privacy stories
+- Interactive exposure model with explicit non-guarantee language
+- Responsive mobile navigation and layout
+- Complete `prefers-reduced-motion` behavior
+- No third-party runtime, tracking SDK, external font request, or video CDN
 
-- Cinematic loader with a failure-safe timeout
-- Custom WebGL ray-marched settlement core and orbiting data paths
-- Scroll-directed story chapters and scene progress
-- Pointer parallax, magnetic actions, 3D interface tilt, and kinetic typography
-- Interactive unexplained-value signal model
-- Product UI reveal, capability system, and privacy architecture
-- Responsive mobile composition and navigation
-- Static visual fallback when WebGL is unavailable
-- Complete `prefers-reduced-motion` alternative
-- No external runtime library, model host, video CDN, or tracking SDK
+The page is delivered as one tested, self-contained HTML document. Its compressed source and final output are checksum-verified during every Pages deployment.
 
 ## Commercial wedge
 
-- Free complete self-audit
-- Proposed ₹1,499 founder-assisted audit for one closed period, one primary channel, and up to 5,000 order rows
+- Complete self-audit: free
+- Proposed founder-assisted audit: ₹1,499 for one closed period, one primary channel, and up to 5,000 order rows
 
 Payment remains intentionally inactive until compatibility, operator identity, secure transfer, tax treatment, refund terms, and the user-approved payment flow are ready. SettleSift does not promise recovery.
 
@@ -66,23 +65,21 @@ Payment remains intentionally inactive until compatibility, operator identity, s
 
 GitHub Pages deploys from `main` with `.github/workflows/pages.yml`.
 
-1. The workflow rebuilds the tested base bundle from `deploy/site.part-*`.
-2. The deterministic product overlay in `public-overrides/site.part-*` restores the full marketing, tutorial, legal, and discovery site.
-3. The checksum-verified immersive layer in `immersive-overrides/site.part-*` applies the WebGL homepage.
-4. Root `site-config.js` is copied into the public artifact.
-5. The workflow verifies the standalone app checksum before publishing.
+1. The workflow reconstructs and verifies the tested base application bundle.
+2. It reconstructs and verifies the complete product-site overlay.
+3. It installs the checksum-pinned professional homepage from `homepage-v3/site.part-*`.
+4. It validates the final homepage and standalone app hashes before upload.
+5. GitHub Pages publishes the complete static artifact.
 
 Never place credentials or payment secrets in `site-config.js`.
 
-## Validation completed
+## Homepage validation
 
-- WebGL initialized and animated frames were visually distinct
-- Five scroll chapters rendered correctly on desktop and mobile
-- Pointer, mobile navigation, tilt, reveal, calculator, and download interactions passed
-- Reduced-motion and no-WebGL fallbacks are present
-- Desktop and mobile overflow checks passed on every public page
-- Complete audit-app regression passed
-- Offline application checksum and size verified
+- Desktop viewport: `1440 / 1440`, with no horizontal overflow
+- Mobile viewport: `390 / 390`, with no horizontal overflow
+- Animated reconciliation map produced distinct frames
+- Product tabs, mobile navigation, and exposure model passed
+- Reduced-motion mode passed
 - Browser console errors: 0
 - Page errors: 0
 - Failed requests: 0
