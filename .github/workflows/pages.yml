@@ -29,18 +29,25 @@ jobs:
           mkdir -p public
 
           printf 'Decoding base site bundle...\n'
-          cat deploy/site.part-* | base64 --decode --ignore-garbage > site.tar.gz
-          echo "c3fcfe72df6f6449a2d7d706bb24c6bbcc3c7009fcc4101e4100c3bcd07d8bfa  site.tar.gz" | sha256sum --check --strict
+          python3 scripts/decode-bundle.py \
+            --output site.tar.gz \
+            --sha c3fcfe72df6f6449a2d7d706bb24c6bbcc3c7009fcc4101e4100c3bcd07d8bfa \
+            deploy/site.part-*
           tar -xzf site.tar.gz -C public
 
           printf 'Decoding product overlay...\n'
-          cat public-overrides/site.part-* | base64 --decode --ignore-garbage > overrides.tar.gz
-          echo "d82cc19114dbe8a776290dc27488e46e080a24df2d3df1acd15eb3d839ec7572  overrides.tar.gz" | sha256sum --check --strict
+          python3 scripts/decode-bundle.py \
+            --output overrides.tar.gz \
+            --sha d82cc19114dbe8a776290dc27488e46e080a24df2d3df1acd15eb3d839ec7572 \
+            --repair-one-missing-in-first \
+            public-overrides/site.part-*
           tar -xzf overrides.tar.gz -C public
 
           printf 'Decoding immersive overlay...\n'
-          cat immersive-overrides/site.part-* | base64 --decode --ignore-garbage > immersive-overrides.tar.gz
-          echo "56b86baf24e3e0531c257fa3f65fba32bd6eeea8944687836a3688ad6d399b4f  immersive-overrides.tar.gz" | sha256sum --check --strict
+          python3 scripts/decode-bundle.py \
+            --output immersive-overrides.tar.gz \
+            --sha 56b86baf24e3e0531c257fa3f65fba32bd6eeea8944687836a3688ad6d399b4f \
+            immersive-overrides/site.part-*
           tar -xzf immersive-overrides.tar.gz -C public
 
           cp site-config.js public/site-config.js
