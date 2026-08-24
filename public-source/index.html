@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#102a27">
+  <meta name="description" content="Build a reason-specific, print-ready chargeback evidence packet in your browser.">
+  <title>RebuttalKit — Chargeback evidence packet builder</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="RebuttalKit home"><span class="brand-mark">RK</span><span>RebuttalKit</span></a>
+    <nav aria-label="Primary navigation">
+      <a href="#workflow">How it works</a>
+      <a href="#privacy">Privacy</a>
+      <a class="button small" href="#builder">Open builder</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Free private beta · payment disabled</p>
+        <h1>Turn scattered proof into a response a bank can scan.</h1>
+        <p class="hero-lede">A local-first workspace for freelancers, digital sellers, studios, coaches, and small merchants handling an occasional Stripe or Shopify Payments dispute.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#builder">Build an evidence packet</a>
+          <button class="button ghost" id="heroDemo" type="button">Preview the demo</button>
+        </div>
+        <ul class="trust-list" aria-label="Product benefits">
+          <li><span>✓</span>No account</li>
+          <li><span>✓</span>Files stay on-device</li>
+          <li><span>✓</span>Print to PDF</li>
+        </ul>
+      </div>
+      <div class="hero-visual" aria-label="Example packet readiness">
+        <div class="sample-window">
+          <div class="window-bar"><span></span><span></span><span></span><b>RK-1042</b></div>
+          <div class="sample-topline"><span class="pill orange">Service not received</span><span>Stripe · $480</span></div>
+          <div class="sample-score"><strong>94</strong><span>packet readiness</span></div>
+          <div class="sample-grid">
+            <div><small>Critical proof</small><b>4 / 4</b></div>
+            <div><small>Timeline events</small><b>4</b></div>
+            <div><small>Days left</small><b>6</b></div>
+          </div>
+          <div class="sample-line full"></div><div class="sample-line"></div><div class="sample-line short"></div>
+          <div class="sample-ready"><span>✓</span><div><b>Response packet ready</b><small>Facts, evidence index, and final checks</small></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="proof-strip" aria-label="Product boundaries">
+      <div><strong>7</strong><span>dispute categories</span></div>
+      <div><strong>4</strong><span>sale types</span></div>
+      <div><strong>0</strong><span>server uploads</span></div>
+      <p>Built to organize evidence—not invent it or predict an issuer decision.</p>
+    </section>
+
+    <section class="workflow section" id="workflow">
+      <div class="section-heading">
+        <p class="eyebrow">A bank-readable workflow</p>
+        <h2>Less arguing. More chronology and proof.</h2>
+        <p>RebuttalKit turns the evidence you already have into a compact packet with a clear line from transaction to fulfillment.</p>
+      </div>
+      <div class="workflow-grid">
+        <article><span class="step-number">01</span><div class="icon-box">⌁</div><h3>Match the reason</h3><p>Start with the processor reason, sale type, deadline, and transaction facts. The checklist changes with the case.</p></article>
+        <article><span class="step-number">02</span><div class="icon-box">≡</div><h3>Build the record</h3><p>Mark proof as have, missing, or not applicable. Add factual notes and a dated chronology without emotional filler.</p></article>
+        <article><span class="step-number">03</span><div class="icon-box">↗</div><h3>Export the packet</h3><p>Generate a response, evidence index, and final checks, then print to PDF or export a portable case backup.</p></article>
+      </div>
+    </section>
+
+    <section class="builder-section section" id="builder">
+      <div class="builder-heading">
+        <div><p class="eyebrow">Working product</p><h2>Build your response packet</h2></div>
+        <p class="local-badge"><span></span>Stored locally in this browser</p>
+      </div>
+
+      <div class="app-shell">
+        <aside class="app-sidebar">
+          <div class="score-card">
+            <div class="score-ring" id="scoreRing"><strong id="scoreValue">0</strong><span>/100</span></div>
+            <div><b>Packet readiness</b><small id="scoreMessage">Add case details to begin.</small></div>
+          </div>
+          <ol class="step-nav">
+            <li><button class="step-link active" data-step-target="1" type="button"><span>1</span><div><b>Case</b><small>Reason and transaction</small></div></button></li>
+            <li><button class="step-link" data-step-target="2" type="button"><span>2</span><div><b>Evidence</b><small>Proof checklist</small></div></button></li>
+            <li><button class="step-link" data-step-target="3" type="button"><span>3</span><div><b>Timeline</b><small>What happened when</small></div></button></li>
+            <li><button class="step-link" data-step-target="4" type="button"><span>4</span><div><b>Response</b><small>Packet and export</small></div></button></li>
+          </ol>
+          <div class="sidebar-note"><b>Important</b><p>Readiness measures organization, not the probability of winning. Check every item against your live processor portal.</p></div>
+        </aside>
+
+        <div class="app-main">
+          <div class="app-toolbar">
+            <div><span class="case-label">CURRENT CASE</span><b id="caseToolbarName">Untitled dispute</b></div>
+            <div class="toolbar-actions">
+              <button class="text-button" id="loadDemo" type="button">Load demo</button>
+              <button class="text-button" id="exportCase" type="button">Export JSON</button>
+              <label class="text-button file-label">Import JSON<input type="file" id="importCase" accept="application/json"></label>
+              <button class="text-button danger" id="resetCase" type="button">Reset</button>
+            </div>
+          </div>
+
+          <section class="app-step active" data-step="1">
+            <div class="step-head"><div><p>STEP 1 OF 4</p><h3>Define the case</h3></div><span class="deadline-chip" id="deadlineChip">No deadline set</span></div>
+            <p class="step-intro">Use the exact wording from the dispute notice. Required fields are marked with an asterisk.</p>
+            <form id="caseForm" class="form-grid" autocomplete="off">
+              <label>Processor *<select id="processor" required><option>Stripe</option><option>Shopify Payments</option><option>Other</option></select></label>
+              <label>Dispute reason *<select id="reason" required><option value="not_received">Product or service not received</option><option value="duplicate">Duplicate charge</option><option value="fraud">Fraudulent / cardholder does not recognize</option><option value="credit">Credit not processed</option><option value="recurring">Canceled recurring transaction</option><option value="not_as_described">Product unacceptable / not as described</option><option value="general">General</option></select></label>
+              <label>Sale type *<select id="saleType" required><option value="service">Service</option><option value="digital">Digital product</option><option value="physical">Physical product</option><option value="subscription">Subscription</option></select></label>
+              <label>Response deadline *<input id="deadline" type="date" required></label>
+              <label>Case / dispute ID *<input id="caseId" placeholder="e.g. dp_123 or portal ID" required></label>
+              <label>Amount *<div class="money-field"><select id="currency" aria-label="Currency"><option>USD</option><option>GBP</option><option>EUR</option><option>INR</option><option>CAD</option><option>AUD</option></select><input id="amount" type="number" min="0" step="0.01" placeholder="480.00" required></div></label>
+              <label>Merchant / business *<input id="merchant" placeholder="Your trading name" required></label>
+              <label>Customer name<input id="customer" placeholder="Use the name in your records"></label>
+              <label>Transaction date *<input id="transactionDate" type="date" required></label>
+              <label>Transaction or order ID<input id="transactionId" placeholder="Invoice, order, or charge ID"></label>
+              <label class="span-2">What was sold? *<textarea id="description" rows="3" placeholder="Describe the product or service factually." required></textarea></label>
+              <label class="span-2">Processor reason text / notes<textarea id="reasonText" rows="3" placeholder="Paste the reason wording or important portal constraints."></textarea></label>
+            </form>
+            <div class="step-footer"><span>Saved automatically on this device.</span><button class="button primary next-step" data-next="2" type="button">Continue to evidence</button></div>
+          </section>
+
+          <section class="app-step" data-step="2">
+            <div class="step-head"><div><p>STEP 2 OF 4</p><h3>Assemble the evidence</h3></div><span class="pill" id="evidenceCount">0 items ready</span></div>
+            <div class="reason-callout"><b id="reasonTitle">Product or service not received</b><p id="reasonHint">Prove what was promised, when it was delivered, and what the customer did after delivery.</p></div>
+            <div class="evidence-legend"><span><i class="critical-dot"></i>Critical</span><span><i class="strong-dot"></i>Strong</span><span><i class="support-dot"></i>Supporting</span></div>
+            <div id="evidenceList" class="evidence-list"></div>
+            <div class="step-footer"><button class="button ghost prev-step" data-prev="1" type="button">Back</button><button class="button primary next-step" data-next="3" type="button">Continue to timeline</button></div>
+          </section>
+
+          <section class="app-step" data-step="3">
+            <div class="step-head"><div><p>STEP 3 OF 4</p><h3>Build the chronology</h3></div><span class="pill" id="timelineCount">0 events</span></div>
+            <p class="step-intro">Use dates from your records. A short, consistent chronology is easier to scan than a long narrative.</p>
+            <form id="timelineForm" class="timeline-form">
+              <label>Date *<input id="eventDate" type="date" required></label>
+              <label>Event *<input id="eventTitle" placeholder="Service delivered" required></label>
+              <label class="grow">Factual detail<input id="eventDetail" placeholder="What record supports this event?"></label>
+              <button class="button dark" type="submit">Add event</button>
+            </form>
+            <div id="timelineList" class="timeline-list empty-state"><p>No events yet. Add the transaction, fulfillment, customer contact, and dispute dates.</p></div>
+            <div class="step-footer"><button class="button ghost prev-step" data-prev="2" type="button">Back</button><button class="button primary next-step" data-next="4" type="button">Generate response</button></div>
+          </section>
+
+          <section class="app-step" data-step="4">
+            <div class="step-head"><div><p>STEP 4 OF 4</p><h3>Review the packet</h3></div><button class="button dark" id="regenerate" type="button">Regenerate</button></div>
+            <div class="readiness-banner" id="readinessBanner"><div><span id="bannerScore">0</span><small>readiness</small></div><p id="bannerText">Complete the case details and critical evidence before exporting.</p></div>
+            <div class="output-grid">
+              <article class="output-card response-card"><div class="output-head"><div><span>01</span><h4>Response draft</h4></div><div><button id="copyResponse" type="button">Copy</button><button id="downloadResponse" type="button">.txt</button></div></div><pre id="responseDraft">Your factual response will appear here.</pre></article>
+              <article class="output-card"><div class="output-head"><div><span>02</span><h4>Evidence index</h4></div></div><ol id="evidenceIndex" class="output-list"><li>Add evidence in step 2.</li></ol></article>
+              <article class="output-card"><div class="output-head"><div><span>03</span><h4>Final checks</h4></div></div><ul id="finalChecks" class="check-list"></ul></article>
+            </div>
+            <div class="export-bar"><div><b>Ready to make a packet?</b><span>Use your browser print dialog and select “Save as PDF.”</span></div><button class="button primary" id="printPacket" type="button">Print packet / PDF</button></div>
+            <div class="step-footer"><button class="button ghost prev-step" data-prev="3" type="button">Back to timeline</button><span>Issuer decisions are outside RebuttalKit’s control.</span></div>
+          </section>
+        </div>
+      </div>
+    </section>
+
+    <section class="privacy section" id="privacy">
+      <div><p class="eyebrow">Local-first by design</p><h2>Your dispute files are not our business.</h2><p>RebuttalKit runs in your browser. It does not require an account, API key, processor login, or server upload. Export a JSON backup before clearing browser storage.</p></div>
+      <div class="privacy-grid"><article><span>01</span><h3>On-device workspace</h3><p>Case details, notes, and evidence status are stored locally in this browser.</p></article><article><span>02</span><h3>Factual guardrails</h3><p>The response generator uses only entered records and labels missing proof instead of inventing it.</p></article><article><span>03</span><h3>Clear boundary</h3><p>This is an organization tool, not legal advice or a prediction of a bank’s decision.</p></article></div>
+    </section>
+  </main>
+
+  <footer><div class="brand"><span class="brand-mark">RK</span><span>RebuttalKit</span></div><p>Chargeback evidence organization for small merchants.</p><p>Free beta · Payment inactive · No outcome guarantee</p></footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="app.js"></script>
+</body>
+</html>
