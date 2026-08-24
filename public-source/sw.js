@@ -1,4 +1,4 @@
-const CACHE = 'rebuttalkit-v5';
+const CACHE = 'rebuttalkit-v6';
 const CORE = [
   './',
   './index.html',
@@ -15,7 +15,7 @@ const CORE = [
   './sample-packet.html',
   './privacy.html',
   './terms.html',
-  './release-v5.txt'
+  './release-v6.txt'
 ];
 
 self.addEventListener('install', event => {
