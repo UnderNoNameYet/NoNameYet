@@ -3,87 +3,124 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="theme-color" content="#f2efe7">
-  <meta name="description" content="RebuttalKit turns chargeback records into a clear chain of proof and one reviewable response packet.">
-  <title>RebuttalKit — Build a clear chain of proof</title>
+  <meta name="theme-color" content="#eee9dc">
+  <meta name="description" content="RebuttalKit turns scattered chargeback records into one clear, reason-aware response packet.">
+  <title>RebuttalKit — The dispute arrives in pieces</title>
   <link rel="canonical" href="https://undernonameyet.github.io/NoNameYet/">
   <link rel="icon" href="icon.svg">
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="stylesheet" href="site.css">
 </head>
-<body class="v5-home">
-  <header class="nav">
-    <a class="brand" href="#top" aria-label="RebuttalKit home"><span class="brand-symbol"><i></i><i></i><i></i></span><b>RebuttalKit</b></a>
-    <nav aria-label="Main navigation"><a href="#workflow">Workflow</a><a href="#workspace">Workspace</a><a href="#privacy">Privacy</a><a href="sample-packet.html">Sample packet</a></nav>
-    <a class="nav-cta" href="app.html">Open workspace <span>↗</span></a>
+<body>
+  <div class="scroll-meter" aria-hidden="true"><i id="scrollMeter"></i></div>
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="RebuttalKit home"><span class="brand-mark"><i></i><b>R</b><i></i></span><strong>RebuttalKit</strong></a>
+    <p class="top-status"><span></span> PRIVATE CASE-BUILDING SOFTWARE</p>
+    <nav><a href="#reason">Reason logic</a><a href="#method">Method</a><a href="#output">Output</a></nav>
+    <a class="top-action" href="app.html">Open workspace <span>↗</span></a>
   </header>
 
   <main id="top">
     <section class="hero">
-      <div class="hero-grid">
-        <div class="hero-copy">
-          <p class="eyebrow"><span>●</span> Private case-building workspace</p>
-          <h1>Build a clear<br><em>chain of proof.</em></h1>
-          <p class="lead">Turn contracts, delivery records, messages, and dates into one response packet—with every claim tied to evidence.</p>
-          <div class="hero-actions"><a class="primary" href="app.html">Start a case <span>↗</span></a><a class="text-link" href="sample-packet.html">See the finished packet <span>↓</span></a></div>
+      <div class="hero-header">
+        <div class="hero-title">
+          <p class="micro">CHARGEBACK RECORD / RECONSTRUCTION</p>
+          <h1>The dispute arrives<br><em>in pieces.</em></h1>
         </div>
-        <aside class="hero-aside">
-          <p>Designed for</p>
-          <ul><li>Independent studios</li><li>Freelancers &amp; agencies</li><li>Digital sellers</li><li>Small service businesses</li></ul>
-          <div class="local-note"><span class="pulse"></span><div><b>Local by default</b><small>No account. No case-data server.</small></div></div>
-        </aside>
-      </div>
-
-      <div class="case-trace" aria-label="Interactive fictional case chronology">
-        <div class="trace-header"><div><span>FICTIONAL CASE</span><b>RK–1042 / SERVICE NOT RECEIVED</b></div><div class="trace-score"><span>PACKET READINESS</span><b id="traceScore">82%</b></div></div>
-        <div class="trace-stage">
-          <svg class="trace-line" viewBox="0 0 1200 210" preserveAspectRatio="none" aria-hidden="true">
-            <path class="trace-base" d="M35,147 C170,147 195,64 330,64 S500,145 625,145 S780,58 905,58 S1040,133 1165,133"/>
-            <path class="trace-progress" id="traceProgress" d="M35,147 C170,147 195,64 330,64 S500,145 625,145 S780,58 905,58 S1040,133 1165,133"/>
-          </svg>
-          <button class="event event-a complete" data-event="scope" type="button"><span>01</span><i></i><div><small>31 JUL</small><b>Scope accepted</b><em>Proposal / p.1</em></div></button>
-          <button class="event event-b complete" data-event="payment" type="button"><span>02</span><i></i><div><small>01 AUG</small><b>Invoice paid</b><em>Transaction / p.2</em></div></button>
-          <button class="event event-c active" data-event="delivery" type="button"><span>03</span><i></i><div><small>07 AUG</small><b>Workshop delivered</b><em>Attendance / p.4</em></div></button>
-          <button class="event event-d" data-event="brief" type="button"><span>04</span><i></i><div><small>09 AUG</small><b>Brief delivered</b><em>Delivery log / p.5</em></div></button>
+        <div class="hero-note">
+          <span>01 / FIRST PRINCIPLE</span>
+          <p>Do not start with the argument. Establish what happened, when it happened, and which record proves it.</p>
+          <a href="#caseLab">Work the fictional case <b>↓</b></a>
         </div>
-        <div class="trace-detail" id="traceDetail"><span class="detail-index">EVIDENCE 03</span><p><b>Workshop delivered.</b> Calendar confirmation and attendance record connect the accepted scope to dated fulfillment.</p><button id="markReady" type="button">Mark record verified</button></div>
       </div>
-    </section>
 
-    <section class="signal-strip" aria-label="Product principles"><span>Reason-aware</span><i></i><span>Chronology first</span><i></i><span>Files stay local</span><i></i><span>One exportable packet</span></section>
-
-    <section class="workflow" id="workflow">
-      <div class="section-intro"><p class="section-kicker">THE METHOD</p><h2>Less argument.<br>More record.</h2><p>A strong response is not a wall of text. It is a short sequence of facts, each supported by a record the reviewer can find quickly.</p></div>
-      <div class="workflow-steps">
-        <article data-step="01"><div class="step-top"><span>01</span><b>Establish the case</b></div><p>Copy the processor reason, deadline, amount, and identifiers exactly as shown.</p><div class="mini-field"><small>DISPUTE REASON</small><strong>Service not received</strong></div></article>
-        <article data-step="02"><div class="step-top"><span>02</span><b>Find the right proof</b></div><p>The checklist changes by dispute reason and by what you sold.</p><div class="proof-list"><span class="yes">Transaction record</span><span class="yes">Accepted scope</span><span class="review">Customer activity</span></div></article>
-        <article data-step="03"><div class="step-top"><span>03</span><b>Resolve the dates</b></div><p>Build the chronology before writing. Gaps and contradictions become visible here.</p><div class="mini-dates"><span>31 JUL</span><span>01 AUG</span><span>07 AUG</span><span>09 AUG</span></div></article>
-        <article data-step="04"><div class="step-top"><span>04</span><b>Assemble the packet</b></div><p>Response, evidence index, and final checks all use the same verified record.</p><div class="packet-mini"><b>RK–1042</b><span>6 records indexed</span><i></i></div></article>
-      </div>
-    </section>
-
-    <section class="workspace" id="workspace">
-      <div class="workspace-copy"><p class="section-kicker">THE WORKSPACE</p><h2>Built for the hour<br>you do not want to waste.</h2><p>A calm, focused interface for a stressful task. No chat thread. No setup maze. No processor credentials.</p><ul><li><span>⌘</span>Fictional demo in one click</li><li><span>↥</span>Portable JSON backup</li><li><span>↗</span>Print-ready packet</li></ul></div>
-      <div class="app-frame">
-        <div class="app-top"><b><span></span> RK–1042</b><small>Saved on this device</small><button type="button">Print packet</button></div>
-        <div class="app-body">
-          <aside><span>CASE</span><span class="selected">EVIDENCE</span><span>TIMELINE</span><span>PACKET</span><i></i><small>82<br><em>READINESS</em></small></aside>
-          <section><header><div><small>02 / EVIDENCE</small><h3>Build the record.</h3></div><b>7 of 8 ready</b></header><div class="app-row done"><i></i><div><b>Transaction record</b><small>Invoice INV–2087</small></div><span>HAVE</span></div><div class="app-row done"><i></i><div><b>Service scope</b><small>Accepted proposal</small></div><span>HAVE</span></div><div class="app-row current"><i></i><div><b>Fulfillment record</b><small>Workshop attendance + delivery</small></div><span>REVIEW</span></div><div class="app-row"><i></i><div><b>Customer activity</b><small>Message after delivery</small></div><span>MISSING</span></div></section>
+      <div class="case-lab" id="caseLab">
+        <div class="lab-bar"><div><span>FICTIONAL CASE</span><b>RK–1042</b></div><div><span>REASON</span><b>SERVICE NOT RECEIVED</b></div><div><span>DEADLINE</span><b>6 DAYS</b></div><p id="labState">5 RECORDS / UNSEQUENCED</p></div>
+        <div class="assembly-stage" id="assemblyStage">
+          <svg class="assembly-line" viewBox="0 0 1200 160" preserveAspectRatio="none" aria-hidden="true"><path d="M35 105 H1165"/><circle cx="35" cy="105" r="5"/><circle cx="318" cy="105" r="5"/><circle cx="600" cy="105" r="5"/><circle cx="882" cy="105" r="5"/><circle cx="1165" cy="105" r="5"/></svg>
+          <article class="evidence evidence-notice" data-record="Notice"><header><span>PROCESSOR NOTICE</span><b>01</b></header><small>REASON</small><h3>Service not received</h3><footer><span>30 AUG</span><b>DEADLINE</b></footer></article>
+          <article class="evidence evidence-scope" data-record="Scope"><header><span>ACCEPTED SCOPE</span><b>02</b></header><small>PROPOSAL / V3</small><p>Strategy workshop<br>+ written brief</p><footer><span>31 JUL</span><b>SIGNED</b></footer></article>
+          <article class="evidence evidence-payment" data-record="Payment"><header><span>TRANSACTION</span><b>03</b></header><small>INVOICE INV–2087</small><h3>$480.00</h3><footer><span>01 AUG</span><b>PAID</b></footer></article>
+          <article class="evidence evidence-delivery" data-record="Delivery"><header><span>FULFILLMENT</span><b>04</b></header><small>WORKSHOP LOG</small><p>Attendance confirmed<br>58 minutes</p><footer><span>07 AUG</span><b>DELIVERED</b></footer></article>
+          <article class="evidence evidence-message" data-record="Message"><header><span>CUSTOMER MESSAGE</span><b>05</b></header><blockquote>“Got it — I’ll review the brief this afternoon.”</blockquote><footer><span>09 AUG</span><b>ACKNOWLEDGED</b></footer></article>
+          <div class="assembly-caption"><span>SCATTERED INPUTS</span><p id="assemblyCaption">Five records. Three locations. No visible sequence.</p></div>
+          <button class="assemble-control" id="assembleControl" type="button"><i></i><span>ASSEMBLE THE RECORD</span><kbd>CLICK</kbd></button>
         </div>
       </div>
     </section>
 
-    <section class="packet" id="sample">
-      <div class="packet-preview"><div class="packet-page page-back"></div><div class="packet-page page-mid"></div><article class="packet-page page-front"><header><span>REBUTTALKIT / RK–1042</span><b>94 / 100</b></header><h3>Chargeback response</h3><small>POSITION</small><p>The merchant records show that the purchased service was fulfilled as agreed.</p><small>CHRONOLOGY</small><ol><li><b>31 Jul</b> Scope accepted</li><li><b>07 Aug</b> Workshop delivered</li><li><b>09 Aug</b> Written brief delivered</li></ol><footer>6 EVIDENCE RECORDS INDEXED</footer></article></div>
-      <div class="packet-copy"><p class="section-kicker">SEE THE OUTPUT FIRST</p><h2>Know what your time produces.</h2><p>Inspect a complete fictional packet before entering a customer name or transaction detail.</p><a class="primary dark" href="sample-packet.html">Open the sample packet <span>↗</span></a><p class="disclaimer">Readiness measures organization, not the probability of winning.</p></div>
+    <section class="statement">
+      <p class="micro">WHAT THE PRODUCT CHANGES</p>
+      <h2>Not more text.<br><span>Better sequence.</span></h2>
+      <div class="statement-aside"><b>Every factual sentence</b><i></i><b>maps to a dated record</b><i></i><b>inside one evidence index.</b></div>
     </section>
 
-    <section class="privacy" id="privacy"><div><p class="section-kicker">PRIVACY MODEL</p><h2>Your case stays<br>your case.</h2></div><div class="privacy-grid"><article><span>01</span><b>No account</b><p>Open the workspace and begin. No profile or onboarding funnel.</p></article><article><span>02</span><b>No case server</b><p>Form values and evidence notes remain in local browser storage.</p></article><article><span>03</span><b>No processor access</b><p>You verify requirements and submit through the live portal yourself.</p></article></div></section>
+    <section class="reason-lab" id="reason">
+      <header><div><p class="micro">REASON-AWARE LOGIC</p><h2>The allegation changes.<br>So should the proof.</h2></div><p>A generic document dump asks the reviewer to find the story. RebuttalKit changes the checklist around the processor’s reason and the type of sale.</p></header>
+      <div class="reason-switch" role="tablist" aria-label="Choose a fictional dispute reason">
+        <button class="active" data-reason="notReceived" type="button"><span>01</span>Not received</button>
+        <button data-reason="notDescribed" type="button"><span>02</span>Not as described</button>
+        <button data-reason="duplicate" type="button"><span>03</span>Duplicate charge</button>
+        <button data-reason="cancelled" type="button"><span>04</span>Cancelled recurring</button>
+      </div>
+      <div class="reason-console">
+        <div class="console-title"><span>ACTIVE RECORD MAP</span><b id="reasonTitle">SERVICE NOT RECEIVED</b><p id="reasonCount">8 REQUIRED SIGNALS</p></div>
+        <div class="proof-orbit" id="proofOrbit">
+          <svg viewBox="0 0 900 420" preserveAspectRatio="none" aria-hidden="true"><path d="M450 210 C350 210 300 70 145 70 M450 210 C340 210 300 350 145 350 M450 210 C560 210 600 70 755 70 M450 210 C560 210 600 350 755 350"/><circle cx="450" cy="210" r="64"/></svg>
+          <div class="reason-core"><small>ALLEGATION</small><b id="reasonCore">NOT<br>RECEIVED</b></div>
+          <article class="proof-node node-a"><span>CRITICAL</span><b id="proofA">Accepted scope</b><small id="proofAMeta">What was promised</small></article>
+          <article class="proof-node node-b"><span>CRITICAL</span><b id="proofB">Delivery record</b><small id="proofBMeta">When it was fulfilled</small></article>
+          <article class="proof-node node-c"><span>STRONG</span><b id="proofC">Customer activity</b><small id="proofCMeta">What happened after</small></article>
+          <article class="proof-node node-d"><span>SUPPORTING</span><b id="proofD">Transaction details</b><small id="proofDMeta">Amount and identifier</small></article>
+        </div>
+        <footer><span>THE CHECKLIST RECONFIGURES INSTANTLY</span><span>NO GENERIC EVIDENCE DUMP</span></footer>
+      </div>
+    </section>
 
-    <section class="final"><p>FREE PRIVATE BETA · PAYMENT DISABLED</p><h2>Give the reviewer<br>a record they can follow.</h2><a class="primary light" href="app.html">Open the workspace <span>↗</span></a></section>
+    <section class="method" id="method">
+      <div class="method-copy"><p class="micro">THE WORK / 04 PASSES</p><h2>A stressful task,<br>given a calm order.</h2><p>Scroll through the same fictional case. The visual on the right changes as the record becomes ready to review.</p></div>
+      <div class="method-grid">
+        <div class="method-steps">
+          <article class="active" data-stage="establish"><span>01</span><div><h3>Establish</h3><p>Copy the reason, amount, transaction, and deadline exactly.</p></div><b>CASE</b></article>
+          <article data-stage="substantiate"><span>02</span><div><h3>Substantiate</h3><p>Keep only records that answer this allegation.</p></div><b>EVIDENCE</b></article>
+          <article data-stage="sequence"><span>03</span><div><h3>Sequence</h3><p>Resolve the chronology before writing the response.</p></div><b>TIMELINE</b></article>
+          <article data-stage="assemble"><span>04</span><div><h3>Assemble</h3><p>Generate the narrative, index, and final checks from one record.</p></div><b>PACKET</b></article>
+        </div>
+        <div class="method-visual" id="methodVisual" data-stage="establish">
+          <div class="visual-bar"><span>RK–1042</span><b id="visualLabel">CASE ESTABLISHED</b><i>LOCAL</i></div>
+          <div class="visual-canvas">
+            <div class="case-fields"><span>PROCESSOR<b>Stripe</b></span><span>AMOUNT<b>$480.00</b></span><span>REASON<b>Service not received</b></span><span>DEADLINE<b>30 Aug 2026</b></span></div>
+            <div class="evidence-stack"><i></i><i></i><i></i><i></i><p>4 RECORDS</p></div>
+            <div class="time-spine"><span>31 JUL</span><span>01 AUG</span><span>07 AUG</span><span>09 AUG</span></div>
+            <div class="packet-sheet"><small>RESPONSE PACKET</small><b>RK–1042</b><p>Position<br>Chronology<br>Evidence index</p></div>
+          </div>
+          <div class="visual-foot"><span id="visualHint">Exact portal wording recorded</span><b id="visualScore">24%</b></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="output" id="output">
+      <div class="output-type"><p class="micro">THE OUTPUT / NOT A PROMISE</p><h2>One file.<br>Six indexed records.<br><em>Zero invented facts.</em></h2><p>Readiness describes how completely the case is organized—not whether the issuer will decide in your favor.</p><a href="sample-packet.html">Open the fictional packet <span>↗</span></a></div>
+      <div class="packet-stack" aria-label="Fictional response packet preview">
+        <div class="sheet sheet-three"></div><div class="sheet sheet-two"></div>
+        <article class="sheet sheet-one"><header><span>REBUTTALKIT / CASE RK–1042</span><b>94 / 100</b></header><p class="sheet-kicker">CHARGEBACK RESPONSE</p><h3>Service not received</h3><div class="sheet-rule"></div><small>POSITION</small><p>The merchant records show the fixed-scope service was delivered according to the accepted proposal.</p><small>CHRONOLOGY</small><ol><li><b>31 JUL</b><span>Scope accepted</span></li><li><b>07 AUG</b><span>Workshop delivered</span></li><li><b>09 AUG</b><span>Brief acknowledged</span></li></ol><footer>6 EVIDENCE RECORDS / USER VERIFIED</footer></article>
+      </div>
+    </section>
+
+    <section class="boundaries">
+      <p class="micro">THE PRODUCT BOUNDARY</p>
+      <div class="boundary-line"><span>YOUR RECORDS</span><i></i><span>LOCAL RULE ENGINE</span><i></i><span>YOUR PDF / TXT / JSON</span></div>
+      <div class="boundary-grid"><article><span>01</span><h3>No case upload</h3><p>Case details and notes remain in the browser unless you export them.</p></article><article><span>02</span><h3>No processor login</h3><p>You retain access and submit through the current processor portal.</p></article><article><span>03</span><h3>No outcome theatre</h3><p>No invented win rates, outcome predictions, or automatic legal claims.</p></article></div>
+    </section>
+
+    <section class="closing">
+      <div class="closing-index"><span>RK</span><i></i><b>READY WHEN THE RECORD IS</b></div>
+      <h2>Make the case<br><em>easy to follow.</em></h2>
+      <div><p>Free private beta.<br>Payment remains disabled.</p><a href="app.html">Open RebuttalKit <span>↗</span></a></div>
+    </section>
   </main>
 
-  <footer class="footer"><a class="brand" href="#top"><span class="brand-symbol"><i></i><i></i><i></i></span><b>RebuttalKit</b></a><div><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="sample-packet.html">Sample</a></div><p>Independent evidence-organization tool<br>No legal advice · No outcome guarantee</p></footer>
+  <footer><a class="brand" href="#top"><span class="brand-mark"><i></i><b>R</b><i></i></span><strong>RebuttalKit</strong></a><p>Evidence organization for independent operators.</p><div><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="sample-packet.html">Sample</a></div><small>No legal advice · No outcome guarantee</small></footer>
   <script src="site.js"></script>
 </body>
 </html>
