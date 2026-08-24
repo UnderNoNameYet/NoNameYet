@@ -1,120 +1,172 @@
-# SettleSift go-to-market plan
+# RebuttalKit: first-$100 launch plan
 
-## What we are selling first
+## Goal
 
-Do not lead with “reconciliation software.” Lead with an urgent, measurable outcome:
+Validate willingness to pay within the first 10 days after publication without ads, paid data, or a premature payment integration.
 
-> Find marketplace orders that may not have been paid correctly before the claim window closes.
+**Target:** two founder-reviewed packets at $59 each = **$118 gross**.
 
-The first paid product is a reviewed audit, not an unproven subscription.
+This is a target, not a revenue guarantee.
 
-| Step | Offer | Price | Purpose |
-| --- | --- | ---: | --- |
-| 1 | Local self-audit | Free | Demonstrate value without requiring trust, an account, or API credentials |
-| 2 | File-compatibility check | Free | Confirm that the seller's reports can be mapped before payment |
-| 3 | Founder-assisted closed-period audit | ₹1,499 | Mapping assistance, rules review, and an evidence pack |
-| 4 | Monthly close service | Not launched | Consider only after at least five paid audits show recurring demand |
+## Positioning
 
-The founding pilot covers one closed statement period, one primary marketplace, and up to 5,000 order rows. It does not include recovery representation or a guarantee that money will be found.
+**Turn scattered proof into a response a bank can scan.**
+
+RebuttalKit is for small merchants with an active dispute and evidence spread across invoices, contracts, messages, delivery records, and policy pages. It is not for high-volume merchants already using enterprise chargeback automation.
 
 ## Ideal first customer
 
-Prioritize sellers who:
+- Freelancer, agency, coach, studio, digital seller, or small ecommerce merchant
+- An active Stripe or Shopify Payments dispute
+- Roughly $150–$2,000 at stake
+- Deadline within 3–14 days
+- Has real supporting records but is unsure how to organize them
+- Willing to use a secure file-transfer method
 
-- Process roughly 200–5,000 marketplace orders per month.
-- Sell through Amazon, Flipkart, Meesho, or a comparable marketplace.
-- Can export order, settlement, and return/RTO reports.
-- Personally review payouts or pay an accountant to do it manually.
-- Recently noticed a missing settlement, unexpected fee, delayed payout, or RTO loss.
-- Can make a ₹1,499 decision without a procurement process.
+Do not target people asking to invent evidence, impersonate a customer, conceal facts, or guarantee a win.
 
-Deprioritize sellers with fewer than 50 monthly orders, enterprise teams requiring integrations and compliance reviews, and anyone without access to the underlying exports.
+## Free product
 
-## Ten-day launch sprint
+The public beta is a complete local-first self-service builder:
 
-### Day 1 — Make the site reachable
+- Reason-specific evidence checklist
+- Timeline builder
+- Factual response draft
+- Evidence index and final checks
+- Print-to-PDF packet
+- JSON and text export
+- Demo case
+- No account, upload, or payment
 
-- Enable GitHub Pages using GitHub Actions.
-- Add an approved public business email and final site URL.
-- Keep payment disabled until operator, invoice, tax, and refund details are approved.
-- Test the public site on desktop and mobile.
+## Proposed paid offer — only after approval
 
-### Day 2 — Validate report compatibility
+### $59 founder-reviewed packet
 
-- Recruit three sellers willing to share anonymized report structures.
-- Map one primary marketplace export completely.
-- Record mapping time, unsupported columns, and ambiguous fee names.
-- Do not retain seller files longer than agreed.
+Customer provides:
 
-### Day 3 — Produce proof-oriented content
+1. RebuttalKit JSON export
+2. Existing supporting files
+3. Processor deadline and portal constraints
 
-Publish three useful pieces:
+Customer receives:
 
-1. Flipkart settlement mismatch checklist.
-2. Delivered order but payment not received: investigation steps.
-3. Marketplace RTO deduction audit template.
+- One clarity and organization pass
+- Evidence order and filename suggestions
+- Factual consistency check against supplied records
+- One revised response draft
+- One round of corrections
 
-Each piece should link to the free local self-audit, not directly to payment.
+Explicitly excluded:
 
-### Days 4–7 — Targeted conversations
+- Legal advice
+- Fabricated or altered evidence
+- Logging into customer accounts
+- Submitting the dispute
+- Outcome guarantees
+- Endless revisions
 
-Daily targets:
+## Required operations before accepting money
 
-- 20 highly relevant seller messages.
-- 5 accountant or bookkeeper partnership messages.
-- 2 helpful replies in communities where the problem is already being discussed.
-- 1 follow-up to every qualified person who replied 48 hours earlier.
+- Public business name
+- Public business email
+- Secure upload method with controlled access
+- Payment link
+- Plain-language refund terms
+- Country, tax, and invoice details
+- File-retention and deletion period
+- Published turnaround commitment
+- Capacity limit
 
-Do not scrape and blast generic lists. Every message must reference a visible settlement, fee, payout, or RTO concern.
+Do not expose a personal email address or accept sensitive documents through public forms or direct messages.
 
-### Days 5–9 — Deliver pilots quickly
+## 10-day validation sprint
 
-- Check compatibility before accepting payment.
-- Aim to return the reviewed evidence pack within one business day after receiving clean exports.
-- Ask the customer to classify every high-severity finding as valid, invalid, or unclear.
-- Request permission separately before using any anonymized result as a case study.
+### Day 1 — approve the product
 
-### Day 10 — Decide using evidence
+- Test the public demo on desktop and mobile.
+- Have the review group complete one fictional case.
+- Record confusion, missing evidence types, and trust objections.
+- Decide whether the paid review offer is approved.
 
-Review:
+### Day 2 — install trust infrastructure
 
-- Targeted contacts sent.
-- Positive replies.
-- Compatible datasets.
-- Free audits completed.
-- Paid pilots.
-- Valid findings and false positives.
-- Time required per audit.
-- Referrals or repeat-period requests.
+- Set the public business identity and email.
+- Configure secure uploads and deletion rules.
+- Add payment/refund details only after approval.
+- Publish a short privacy and service-scope statement.
 
-Continue only if the workflow finds valid issues with tolerable false positives and at least some customers value the reviewed output enough to pay.
+### Day 3 — create proof assets
 
-## Sprint targets, not promises
+- Record a 45–60 second demo: blank case → evidence checklist → timeline → packet.
+- Create three screenshots: checklist, response, print packet.
+- Prepare one fictional before/after example with no customer data.
 
-| Metric | Minimum useful signal | Stretch target |
-| --- | ---: | ---: |
-| Personalized seller contacts | 100 | 160 |
-| Accountant/consultant contacts | 20 | 40 |
-| Qualified replies | 10 | 20 |
-| Compatible datasets | 3 | 8 |
-| Paid pilots | 2 | 6 |
-| Gross pilot revenue | ₹2,998 | ₹8,994 |
+### Days 4–7 — intent-led outreach
 
-Six paid pilots approximately test the original US$100 gross-revenue goal. These numbers are hypotheses, not a forecast.
+Spend time only where active disputes already appear:
 
-## Acquisition loop
+- Reply helpfully to recent Stripe, Shopify, freelancer, ecommerce, and small-business posts where promotion is allowed.
+- Contact small agencies, coaches, and digital sellers in the operator's existing network.
+- Ask accountants, virtual assistants, and ecommerce consultants for one relevant introduction.
+- Offer a free compatibility check first; share the paid review only when the case fits.
 
-1. A platform-specific checklist or conversation identifies the pain.
-2. The free audit demonstrates a concrete exception.
-3. The compatibility check removes purchase risk.
-4. The assisted audit produces reviewed evidence.
-5. A verified case study improves the next platform-specific page.
-6. Accountants and consultants refer similar sellers.
+Daily target:
 
-## Non-negotiables
+- 15 carefully selected, personalized conversations
+- 3 compatibility checks
+- 1 scheduled review opportunity
 
-- Never claim guaranteed recovery.
-- Never ask for card credentials in chat, email, or the static website.
-- Never accept payment before confirming report compatibility.
-- Never publish seller data or case details without separate consent.
-- Stop promoting a rule or preset when its high-severity false-positive rate exceeds 10%.
+No mass scraping, spam, fake testimonials, or unapproved claims.
+
+### Days 8–9 — close and deliver
+
+- Confirm scope, deadline, and secure transfer before payment.
+- Cap the founder offer to a small number of cases.
+- Deliver within the published turnaround.
+- Ask for permission to collect an anonymized process testimonial, never the dispute outcome unless the customer volunteers it.
+
+### Day 10 — decide
+
+Track:
+
+- Relevant conversations
+- Demo opens
+- Compatibility checks
+- Qualified cases
+- Paid reviews
+- Gross revenue
+- Delivery time
+- Refunds
+- Top objections
+
+Decision rule:
+
+- **2+ sales:** keep the $59 offer and improve onboarding.
+- **Qualified interest but no sales:** change packaging/trust before building more features.
+- **No qualified interest:** stop; do not add billing or spend another build week.
+
+## Outreach templates
+
+### Public reply
+
+> That deadline is stressful. The strongest response is usually a short chronology plus evidence matched to the dispute reason—not a long emotional explanation. I built a free browser tool that keeps the case local and produces a checklist, timeline, response draft, and print-ready evidence index. If useful, I can share it. Verify every item against your processor portal before submitting.
+
+### Warm message
+
+> I built RebuttalKit for small operators handling an occasional Stripe or Shopify dispute. It organizes existing proof into a reason-specific checklist, timeline, response, and printable packet; files stay in the browser. I am looking for a few active cases to test whether the workflow is clear. I cannot submit disputes or promise outcomes. Want the free beta link?
+
+### Compatibility check
+
+> Before discussing a paid review, please send only the processor, dispute reason, deadline, business/sale type, approximate amount, and which evidence categories you already have. Do not send card data, passwords, or customer files through this channel.
+
+## Proof standard
+
+Make only claims demonstrated by the product:
+
+- Local-first browser storage
+- Reason-specific evidence guidance
+- Structured timeline and response
+- Print-ready packet
+- No outcome prediction
+
+Never advertise a win rate without verified, representative data.
