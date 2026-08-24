@@ -27,24 +27,32 @@ jobs:
           set -euo pipefail
           rm -rf public
           mkdir -p public
-          cp public-source/index.html public/index.html
-          cp public-source/styles.css public/styles.css
-          cp public-source/app.js public/app.js
-          touch public/.nojekyll
+          cp -R public-source/. public/
 
       - name: Validate product
         shell: bash
         run: |
           test -s public/index.html
           test -s public/styles.css
+          test -s public/growth.css
           test -s public/app.js
+          test -s public/growth.js
+          test -s public/manifest.webmanifest
+          test -s public/sw.js
+          test -s public/sample-packet.html
+          test -s public/privacy.html
+          test -s public/terms.html
           grep -q 'RebuttalKit' public/index.html
           grep -q 'Turn scattered proof into a response a bank can scan' public/index.html
           node --check public/app.js
+          node --check public/growth.js
+          node --check public/sw.js
+          python3 -m json.tool public/manifest.webmanifest >/dev/null
           if grep -REn '(sk_live_|pk_live_|AKIA[0-9A-Z]{16}|BEGIN (RSA |OPENSSH )?PRIVATE KEY)' public; then
             echo 'Possible production secret found in deployable source' >&2
             exit 1
           fi
+          touch public/.nojekyll
 
       - name: Configure Pages
         uses: actions/configure-pages@v5
