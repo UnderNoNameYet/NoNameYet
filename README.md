@@ -1,53 +1,44 @@
 # RebuttalKit
 
-**Turn scattered proof into a response a bank can scan.**
+**Dispute evidence, assembled.**
 
-RebuttalKit is a local-first chargeback evidence packet builder for freelancers, agencies, studios, coaches, digital sellers, and small merchants handling occasional disputes.
+RebuttalKit is a local-first chargeback evidence workspace for freelancers, agencies, studios, coaches, digital sellers, and small merchants handling occasional disputes.
 
-**Live beta:** https://undernonameyet.github.io/NoNameYet/
+- Product website: https://undernonameyet.github.io/NoNameYet/
+- Application: https://undernonameyet.github.io/NoNameYet/app.html
+- Fictional output: https://undernonameyet.github.io/NoNameYet/sample-packet.html
 
-## Why it exists
+## Product structure
 
-Small merchants often have the right records spread across invoices, contracts, delivery logs, files, and messages—but no fast way to organize them around the processor's dispute reason. RebuttalKit turns those records into a reason-specific checklist, dated chronology, factual response, evidence index, final checks, and print-ready packet.
+The marketing website and working application are intentionally separate.
 
-The product does not submit disputes, access processor accounts, fabricate evidence, provide legal advice, or predict an issuer outcome.
+### Website
 
-## Product status
+The homepage explains the product through a modern product narrative, interactive workflow preview, real interface visualization, local-first architecture map, and complete fictional output. It contains no fake logos, customers, testimonials, usage counts, or win-rate claims.
 
-- Complete installable web beta
-- Payment intentionally disabled
-- No account or case-data server
-- Local browser persistence
-- Offline interface after the first successful visit
-- Direct, reviewable static source under `public-source/`
-- GitHub Pages deployment with syntax and secret-pattern checks
+### Application
 
-## Main workflow
+The application is a dedicated productivity workspace with four focused stages:
 
-1. Record the processor reason, deadline, amount, transaction, and sale type.
-2. Follow a reason- and sale-specific evidence checklist.
-3. Mark each record `Have`, `Missing`, or `N/A` and add a factual reference note.
-4. Build a dated chronology.
-5. Generate a response draft, evidence index, and final checks.
-6. Print to PDF, export text, or export/import a portable JSON case.
+1. Case — exact processor reason, deadline, transaction, and sale facts
+2. Evidence — reason- and sale-specific proof checklist
+3. Timeline — dated chronology
+4. Packet — response draft, evidence index, final checks, and export
 
-## Coverage
+The workspace supports Stripe, Shopify Payments, and other processors; seven dispute categories; four sale types; local persistence; print-to-PDF; text and JSON export; and fictional demo data.
 
-**Processors:** Stripe, Shopify Payments, and Other.
+## Visual system
 
-**Reasons:** not received, duplicate, cardholder does not recognize, credit not processed, canceled recurring, not as described, and general.
+- Marketing: near-black canvas, cool blue/cyan signal color, large editorial typography, product-led interface storytelling
+- Application: light neutral productivity canvas, compact navigation, high-contrast forms, cobalt progress states
+- Supporting pages: the same neutral/cobalt system with long-form reading layouts
+- No external font, image, analytics, or UI dependency
 
-**Sale types:** service, digital product, physical product, and subscription.
+## Privacy and boundaries
 
-## Conversion and trust surfaces
+Case form values stay in local browser storage. RebuttalKit has no account system, processor integration, case-data backend, analytics tracker, or active payment flow. GitHub Pages still serves the static assets and may process ordinary web request information.
 
-- Immediate evidence-list preview before case entry
-- Complete fictional sample packet
-- Explicit local-data explanation and beta terms
-- Installable PWA and offline cache
-- Narrow educational pages for high-intent searches
-- Proposed one-time founder review shown as unavailable until approval
-- No fake testimonial, win rate, countdown, or outcome claim
+RebuttalKit does not submit disputes, provide legal advice, fabricate evidence, predict outcomes, or claim processor affiliation.
 
 ## Run locally
 
@@ -56,9 +47,9 @@ bash scripts/build-site.sh
 python3 -m http.server 4173 --directory public
 ```
 
-Open `http://127.0.0.1:4173`.
+Open `/` for the product website and `/app.html` for the workspace.
 
-Run dependency-free validation with:
+Validate the complete build with:
 
 ```bash
 node test.mjs
@@ -66,18 +57,14 @@ node test.mjs
 
 ## Repository layout
 
-- `public-source/` — direct product and public guidance source
-- `scripts/build-site.sh` — reproducible static build
-- `.github/workflows/pages.yml` — validated Pages deployment
-- `test.mjs` — source, syntax, content, and secret-pattern checks
-- `GO-TO-MARKET.md` — first-$100 validation plan
+- `public-source/index.html`, `site.css`, `site.js` — product website
+- `public-source/app.html`, `app-v2.css`, `app.js`, `app-shell.js` — working application
+- `public-source/guide-v2.css` — supporting-page visual system
+- `public-source/sw.js`, `manifest.webmanifest` — installable offline shell
+- `scripts/build-site.sh` — deterministic static build
+- `test.mjs` — structure, syntax, link, manifest, payment, and credential checks
+- `.github/workflows/pages.yml` — GitHub Pages deployment
 
-## Privacy and limitations
+## Commercial status
 
-Case fields and evidence notes are kept in local browser storage. The application has no case-data backend and no analytics tracker. GitHub Pages still delivers the static files and may process standard web request information under GitHub's own practices.
-
-Use a trusted device. Export a backup before clearing site data. Check the live processor portal for the current deadline, reason, accepted evidence, formats, and size limits.
-
-## Monetization hypothesis
-
-The self-service beta remains free. If the product and operations are approved, the proposed first paid offer is a **one-time $59 founder-reviewed packet**, not a subscription. Two sales would equal $118 gross. That is a validation target, not a revenue or dispute-outcome guarantee.
+The complete self-service beta is free. Payment remains intentionally disabled. A possible future one-time $59 founder review is a hypothesis that still requires approved business identity, secure document intake, payment and refund operations, and real-user validation. Revenue and dispute outcomes are not guaranteed.
