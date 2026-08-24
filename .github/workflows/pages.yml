@@ -21,24 +21,17 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Build direct static site
-        run: bash scripts/build-site.sh
+      - name: Validate and build v5
+        run: node test.mjs
 
-      - name: Validate deployment artifact
+      - name: Verify release marker
         shell: bash
         run: |
           set -euo pipefail
-          node --check public/site.js
-          node --check public/app.js
-          node --check public/app-shell.js
-          node --check public/sw.js
-          python3 -m json.tool public/manifest.webmanifest >/dev/null
-          test -f public/premium.css
+          grep -q 'chain of proof' public/index.html
+          grep -q 'RebuttalKit Chain of Proof v5' public/release-v5.txt
           test -f public/app.html
-          grep -q 'Build the record' public/index.html
-          grep -q 'premium.css' public/index.html
-          grep -q 'premium.css' public/app.html
-          ! grep -RIE 'sk_live_|pk_live_|checkout\.stripe\.com|buy\.stripe\.com' public
+          test -f public/premium.css
 
       - name: Configure Pages
         uses: actions/configure-pages@v5

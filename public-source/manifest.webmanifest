@@ -1,13 +1,13 @@
 {
   "name": "RebuttalKit — Chargeback evidence workspace",
   "short_name": "RebuttalKit",
-  "description": "Build a reason-aware chargeback evidence packet locally in your browser.",
+  "description": "Build a clear, reason-aware chargeback evidence packet locally in your browser.",
   "id": "./app.html",
   "start_url": "./app.html",
   "scope": "./",
   "display": "standalone",
-  "background_color": "#f4f5f8",
-  "theme_color": "#171b25",
+  "background_color": "#f2efe7",
+  "theme_color": "#171816",
   "icons": [
     { "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
   ],
