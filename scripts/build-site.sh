@@ -24,6 +24,6 @@ for name in ['sample-packet.html','privacy.html','terms.html','stripe-service-no
         text = text.replace('</head>','<link rel="stylesheet" href="premium.css"></head>')
     path.write_text(text, encoding='utf-8')
 PY
-printf 'RebuttalKit Chain of Proof v5\n' > "$ROOT/public/release-v5.txt"
+printf 'RebuttalKit Evidence Room v6\n' > "$ROOT/public/release-v6.txt"
 touch "$ROOT/public/.nojekyll"
-printf 'Built RebuttalKit v5 in %s/public\n' "$ROOT"
+printf 'Built RebuttalKit homepage v6 in %s/public\n' "$ROOT"

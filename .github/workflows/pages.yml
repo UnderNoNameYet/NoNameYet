@@ -21,15 +21,15 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Validate and build v5
+      - name: Validate and build v6
         run: node test.mjs
 
-      - name: Verify release marker
+      - name: Verify homepage release
         shell: bash
         run: |
           set -euo pipefail
-          grep -q 'chain of proof' public/index.html
-          grep -q 'RebuttalKit Chain of Proof v5' public/release-v5.txt
+          grep -q 'The dispute arrives' public/index.html
+          grep -q 'RebuttalKit Evidence Room v6' public/release-v6.txt
           test -f public/app.html
           test -f public/premium.css
 
