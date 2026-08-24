@@ -1,11 +1,18 @@
 {
-  "name": "RebuttalKit — Chargeback Evidence Builder",
+  "name": "RebuttalKit — Chargeback evidence workspace",
   "short_name": "RebuttalKit",
-  "description": "Build a reason-specific chargeback response packet locally in your browser.",
-  "start_url": "./",
+  "description": "Build a reason-aware chargeback evidence packet locally in your browser.",
+  "id": "./app.html",
+  "start_url": "./app.html",
   "scope": "./",
   "display": "standalone",
-  "background_color": "#f5f0e6",
-  "theme_color": "#102a27",
-  "icons": [{ "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }]
+  "background_color": "#f4f5f8",
+  "theme_color": "#171b25",
+  "icons": [
+    { "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ],
+  "shortcuts": [
+    { "name": "Open workspace", "short_name": "Workspace", "url": "./app.html" },
+    { "name": "Load fictional demo", "short_name": "Demo", "url": "./app.html?demo=1" }
+  ]
 }
