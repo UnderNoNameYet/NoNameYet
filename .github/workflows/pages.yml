@@ -12,7 +12,7 @@ permissions:
 
 concurrency:
   group: pages
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   build:
@@ -22,12 +22,23 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Build direct static site
-        shell: bash
         run: bash scripts/build-site.sh
 
-      - name: Validate product
+      - name: Validate deployment artifact
         shell: bash
-        run: node test.mjs
+        run: |
+          set -euo pipefail
+          node --check public/site.js
+          node --check public/app.js
+          node --check public/app-shell.js
+          node --check public/sw.js
+          python3 -m json.tool public/manifest.webmanifest >/dev/null
+          test -f public/premium.css
+          test -f public/app.html
+          grep -q 'Build the record' public/index.html
+          grep -q 'premium.css' public/index.html
+          grep -q 'premium.css' public/app.html
+          ! grep -RIE 'sk_live_|pk_live_|checkout\.stripe\.com|buy\.stripe\.com' public
 
       - name: Configure Pages
         uses: actions/configure-pages@v5
