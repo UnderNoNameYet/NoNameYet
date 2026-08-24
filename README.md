@@ -1,87 +1,108 @@
-# SettleSift
+# RebuttalKit
 
-**Local-first marketplace settlement reconciliation for smaller ecommerce sellers.**
+**Turn scattered proof into a response a bank can scan.**
 
-SettleSift matches order, settlement, fee, and return/RTO CSV exports, then surfaces the small set of transactions that need investigation.
+RebuttalKit is a local-first chargeback evidence packet builder for freelancers, solo operators, digital sellers, coaches, studios, and small merchants handling occasional disputes.
 
-## Public product
+It turns case details, supporting evidence, and a dated timeline into a structured response draft, evidence index, final checks, and a print-ready packet. It does not submit disputes, fabricate evidence, give legal advice, or guarantee an outcome.
 
-- **Website:** https://undernonameyet.github.io/NoNameYet/
-- **Complete app:** https://undernonameyet.github.io/NoNameYet/app.html
-- **Download guide:** https://undernonameyet.github.io/NoNameYet/download.html
-- **Tutorial:** https://undernonameyet.github.io/NoNameYet/tutorial.html
+## Why this product
 
-The current application is free. The online and downloaded builds contain the same functionality. The downloadable version is a self-contained HTML application that works in a modern browser without an installer, account, API key, or financial-file upload.
+Chargebacks have an explicit dollar value and a deadline. Small merchants often have the right facts spread across email, invoices, contracts, delivery records, and messages—but no fast way to organize them into a response an issuer can scan. RebuttalKit addresses that narrow, urgent job without requiring account access or a recurring subscription.
 
-Verified application:
+## Product status
 
-- Size: `84,108` bytes
-- SHA-256: `1ab779e9af850e2ecbc43d2944a0aba38fd3fc73a459c2c8f73cc10331bd0fe0`
+- Complete static beta
+- Payment intentionally disabled
+- Runs entirely in the browser
+- No account required
+- No server upload
+- Works offline after the first load
+- Ready for group review at the GitHub Pages URL
 
-## Product capabilities
+## Included workflow
 
-- CSV import, column mapping, and data-quality checks
-- Marketplace-specific audit and fee rules
-- Order ledger and prioritized exception queue
-- Settlement equations and money-flow explanations
-- Exception resolution with reviewer notes
-- Evidence CSV, recovery report, and portable project export
-- Local IndexedDB storage with localStorage fallback
-- Built-in demo and responsive offline interface
+1. Enter the case, processor, dispute reason, sale type, amount, and deadline.
+2. Follow a reason-specific evidence checklist with critical, strong, and supporting items.
+3. Build a chronological timeline.
+4. Generate a factual response from only the records entered.
+5. Review the evidence index and final checks.
+6. Print the packet to PDF, copy/export the response, or export the case as JSON.
 
-## Professional product-led website
+## Coverage
 
-The homepage uses one coherent financial-product design system instead of a generic 3D or cyberpunk treatment.
+**Processors**
+- Stripe
+- Shopify Payments
+- Other
 
-- Warm ivory, deep ink, restrained emerald, and discrepancy coral
-- Animated reconciliation map tied directly to orders, fees, returns, and payouts
-- Explainable settlement card with expected, received, and unexplained values
-- Scroll-directed journey from source export to bank settlement
-- Detailed product control-room preview
-- Equation, priority, portability, and local-first privacy stories
-- Interactive exposure model with explicit non-guarantee language
-- Responsive mobile navigation and layout
-- Complete `prefers-reduced-motion` behavior
-- No third-party runtime, tracking SDK, external font request, or video CDN
+**Dispute categories**
+- Product or service not received
+- Duplicate charge
+- Fraudulent / cardholder does not recognize
+- Credit not processed
+- Canceled recurring transaction
+- Product unacceptable / not as described
+- General
 
-The page is delivered as one tested, self-contained HTML document. Its compressed source and final output are checksum-verified during every Pages deployment.
+**Sale types**
+- Service
+- Digital product
+- Physical product
+- Subscription
 
-## Commercial wedge
+## Privacy and safety
 
-- Complete self-audit: free
-- Proposed founder-assisted audit: ₹1,499 for one closed period, one primary channel, and up to 5,000 order rows
+- Case data is stored locally with IndexedDB and a limited localStorage fallback.
+- Attachments remain on the device and are embedded only in locally generated print output.
+- Attachments are limited to about 1.5 MB each and 6 MB total.
+- User-entered content is escaped before rendering.
+- The app clearly distinguishes packet readiness from the probability of winning a dispute.
+- No payment code, API keys, analytics, or production credentials are included.
 
-Payment remains intentionally inactive until compatibility, operator identity, secure transfer, tax treatment, refund terms, and the user-approved payment flow are ready. SettleSift does not promise recovery.
+Use a trusted device. Export a JSON backup before clearing browser data. Do not add evidence you cannot substantiate.
 
-## Go-to-market material
+## Run locally
 
-- [Ten-day acquisition plan](GO-TO-MARKET.md)
-- [Seller and partner outreach copy](OUTREACH-COPY.md)
-- [Real-data validation playbook](VALIDATION-PLAYBOOK.md)
-- [Public launch checklist](PUBLIC-LAUNCH-CHECKLIST.md)
-- [Lead tracker](LEAD-TRACKER.csv)
+```bash
+./scripts/unpack-rebuttalkit.sh
+python3 -m http.server 4173 --directory public
+```
 
-## Deployment
+Then open `http://127.0.0.1:4173`.
 
-GitHub Pages deploys from `main` with `.github/workflows/pages.yml`.
+## Reproducible build
 
-1. The workflow reconstructs and verifies the tested base application bundle.
-2. It reconstructs and verifies the complete product-site overlay.
-3. It installs the checksum-pinned professional homepage from `homepage-v3/site.part-*`.
-4. It validates the final homepage and standalone app hashes before upload.
-5. GitHub Pages publishes the complete static artifact.
+The deployable static site is stored as split Base64 text files under `product/`. The unpack script:
 
-Never place credentials or payment secrets in `site-config.js`.
+1. Concatenates `product/site.part-*`.
+2. Decodes the archive.
+3. Verifies SHA-256 `8fa22131eb70cb2ce3ffca58096e1e369635afbcbf898044e060d6a9273fd131`.
+4. Extracts the site into `public/`.
 
-## Homepage validation
+GitHub Actions performs the same verification before deploying to Pages.
 
-- Desktop viewport: `1440 / 1440`, with no horizontal overflow
-- Mobile viewport: `390 / 390`, with no horizontal overflow
-- Animated reconciliation map produced distinct frames
-- Product tabs, mobile navigation, and exposure model passed
-- Reduced-motion mode passed
-- Browser console errors: 0
-- Page errors: 0
-- Failed requests: 0
+Run the dependency-free integrity smoke test with:
 
-Potential recovery is an investigation estimate, not an accounting conclusion or guarantee.
+```bash
+node test.mjs
+```
+
+## Validation already completed
+
+- Automated browser flow passed without console or page errors.
+- Desktop horizontal overflow: `0`.
+- Mobile horizontal overflow: `0`.
+- Demo case readiness score: `94`.
+- Reason-specific checklist switching passed.
+- JSON export, response generation, print packet, and local persistence paths were exercised.
+
+## Monetization hypothesis
+
+The beta stays free while the product is reviewed. If approved, the first paid offer is a **$59 founder-reviewed packet**: the customer uses RebuttalKit, sends the export and supporting files through an approved secure channel, and receives one factual organization/clarity pass. Two sales equal $118 gross.
+
+That service must not launch until a public business identity, business email, secure upload method, payment link, refund terms, turnaround commitment, retention policy, and invoice/tax details are in place. See [GO-TO-MARKET.md](GO-TO-MARKET.md).
+
+## Important limitations
+
+RebuttalKit is an organizational tool, not legal advice. Processor and card-network rules change. The merchant is responsible for checking the live dispute portal, deadline, accepted formats, evidence limits, and applicable rules before submission. Issuers and networks decide outcomes.
