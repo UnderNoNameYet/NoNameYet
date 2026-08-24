@@ -23,28 +23,11 @@ jobs:
 
       - name: Build direct static site
         shell: bash
-        run: |
-          set -euo pipefail
-          rm -rf public
-          mkdir -p public
-          cp public-source/index.html public/index.html
-          cp public-source/styles.css public/styles.css
-          cp public-source/app.js public/app.js
-          touch public/.nojekyll
+        run: bash scripts/build-site.sh
 
       - name: Validate product
         shell: bash
-        run: |
-          test -s public/index.html
-          test -s public/styles.css
-          test -s public/app.js
-          grep -q 'RebuttalKit' public/index.html
-          grep -q 'Turn scattered proof into a response a bank can scan' public/index.html
-          node --check public/app.js
-          if grep -REn '(sk_live_|pk_live_|AKIA[0-9A-Z]{16}|BEGIN (RSA |OPENSSH )?PRIVATE KEY)' public; then
-            echo 'Possible production secret found in deployable source' >&2
-            exit 1
-          fi
+        run: node test.mjs
 
       - name: Configure Pages
         uses: actions/configure-pages@v5

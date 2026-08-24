@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://undernonameyet.github.io/NoNameYet/sitemap.xml
