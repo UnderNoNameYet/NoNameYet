@@ -1,6 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="RebuttalKit icon">
-  <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#8794ff"/><stop offset="1" stop-color="#62d6ff"/></linearGradient></defs>
-  <rect width="512" height="512" rx="112" fill="#11151d"/>
-  <path d="M146 126h128c68 0 108 35 108 92 0 39-21 68-58 82l67 86h-78l-56-75h-42v75h-69V126zm69 58v71h54c29 0 44-12 44-36 0-23-15-35-44-35h-54z" fill="url(#g)"/>
-  <circle cx="375" cy="138" r="20" fill="#f5f7fb"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="RebuttalKit"><rect width="512" height="512" rx="112" fill="#1d1d1f"/><path d="M143 122h133c68 0 109 36 109 94 0 40-22 70-59 84l69 90h-80l-58-78h-43v78h-71V122zm71 60v73h56c30 0 45-12 45-37 0-24-15-36-45-36h-56z" fill="#fff"/></svg>
