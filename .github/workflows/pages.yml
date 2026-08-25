@@ -3,6 +3,7 @@ name: Deploy RebuttalKit to GitHub Pages
 on:
   push:
     branches: [main]
+  pull_request:
   workflow_dispatch:
 
 permissions:
@@ -11,7 +12,7 @@ permissions:
   id-token: write
 
 concurrency:
-  group: pages
+  group: pages-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
@@ -20,28 +21,28 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-
-      - name: Validate and build v6
+      - name: Validate and build v7
         run: node test.mjs
-
-      - name: Verify homepage release
+      - name: Verify complete website release
         shell: bash
         run: |
           set -euo pipefail
           grep -q 'The dispute arrives' public/index.html
-          grep -q 'RebuttalKit Evidence Room v6' public/release-v6.txt
+          grep -q 'A calmer way' public/about.html
+          grep -q 'Six deliberate passes' public/tutorial.html
+          grep -q 'RebuttalKit Product Website v7' public/release-v7.txt
+          test -f public/download.html
           test -f public/app.html
-          test -f public/premium.css
-
       - name: Configure Pages
+        if: github.event_name != 'pull_request'
         uses: actions/configure-pages@v5
-
       - name: Upload Pages artifact
+        if: github.event_name != 'pull_request'
         uses: actions/upload-pages-artifact@v3
         with:
           path: public
-
   deploy:
+    if: github.event_name != 'pull_request'
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}

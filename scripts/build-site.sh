@@ -13,17 +13,18 @@ text = app.read_text(encoding='utf-8')
 if 'href="premium.css"' not in text:
     text = text.replace('</head>', '<link rel="stylesheet" href="premium.css"></head>')
 app.write_text(text, encoding='utf-8')
-for name in ['sample-packet.html','privacy.html','terms.html','stripe-service-not-received.html','freelancer-chargeback-response.html','shopify-chargeback-evidence.html']:
+legacy = ['sample-packet.html','privacy.html','terms.html','stripe-service-not-received.html','freelancer-chargeback-response.html','shopify-chargeback-evidence.html']
+for name in legacy:
     path = root / name
     if not path.exists():
         continue
     text = path.read_text(encoding='utf-8').replace('index.html?demo=1#builder','app.html?demo=1').replace('index.html#builder','app.html')
-    if 'href="guide-v2.css"' not in text:
-        text = text.replace('</head>','<link rel="stylesheet" href="guide-v2.css"></head>')
-    if 'href="premium.css"' not in text:
-        text = text.replace('</head>','<link rel="stylesheet" href="premium.css"></head>')
+    for stylesheet in ['guide-v2.css','premium.css','pages.css']:
+        marker = f'href="{stylesheet}"'
+        if marker not in text:
+            text = text.replace('</head>', f'<link rel="stylesheet" href="{stylesheet}"></head>')
     path.write_text(text, encoding='utf-8')
 PY
-printf 'RebuttalKit Evidence Room v6\n' > "$ROOT/public/release-v6.txt"
+printf 'RebuttalKit Product Website v7\n' > "$ROOT/public/release-v7.txt"
 touch "$ROOT/public/.nojekyll"
-printf 'Built RebuttalKit homepage v6 in %s/public\n' "$ROOT"
+printf 'Built RebuttalKit product website v7 in %s/public\n' "$ROOT"
