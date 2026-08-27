@@ -1,172 +1,148 @@
 # RebuttalKit: first-$100 launch plan
 
-## Goal
+## Objective
 
-Validate willingness to pay within the first 10 days after publication without ads, paid data, or a premature payment integration.
+Earn the first $100 within ten days of the commercial launch by selling **two founder packet reviews at $69 each**.
 
-**Target:** two founder-reviewed packets at $59 each = **$118 gross**.
+- Revenue target: 2 × $69 = **$138 gross**
+- Primary conversion: accepted compatibility check → paid review
+- Secondary conversion: relevant conversation → compatibility check
+- Constraint: no ads, scraping, spam, fake proof, or outcome claims
 
-This is a target, not a revenue guarantee.
+This is an operating target, not a revenue guarantee.
 
-## Positioning
+## Why this offer
 
-**Turn scattered proof into a response a bank can scan.**
+The software already solves the repeatable work: case capture, reason-aware evidence selection, chronology, response drafting, indexing, and export. The paid service is limited to judgment-heavy work that a stressed occasional merchant may still value: clarity, sequence, contradictions, and missing links.
 
-RebuttalKit is for small merchants with an active dispute and evidence spread across invoices, contracts, messages, delivery records, and policy pages. It is not for high-volume merchants already using enterprise chargeback automation.
+The offer avoids a weak subscription pitch. It is one accepted case, one price, and one defined review.
 
 ## Ideal first customer
 
-- Freelancer, agency, coach, studio, digital seller, or small ecommerce merchant
-- An active Stripe or Shopify Payments dispute
-- Roughly $150–$2,000 at stake
-- Deadline within 3–14 days
-- Has real supporting records but is unsure how to organize them
-- Willing to use a secure file-transfer method
+- Freelancer, small agency, coach, studio, digital seller, or small merchant
+- Active Stripe or Shopify Payments dispute
+- Approximately $150–$2,500 at stake
+- Evidence deadline 3–14 days away
+- Real supporting records already exist
+- Case is difficult because records span tools or dates
+- Wants organization and clarity, not representation
 
-Do not target people asking to invent evidence, impersonate a customer, conceal facts, or guarantee a win.
+Disqualify expired deadlines, requests for legal advice, requests to invent or hide evidence, demands for account access, and anyone seeking a guaranteed result.
 
-## Free product
+## Offer
 
-The public beta is a complete local-first self-service builder:
+### Free workspace
 
-- Reason-specific evidence checklist
+- Runs in the browser
+- No account or case upload
+- Reason-aware checklist
 - Timeline builder
 - Factual response draft
 - Evidence index and final checks
-- Print-to-PDF packet
-- JSON and text export
-- Demo case
-- No account, upload, or payment
+- PDF, TXT, and JSON export
 
-## Proposed paid offer — only after approval
+### $69 founder packet review
 
-### $59 founder-reviewed packet
+After compatibility acceptance and payment:
 
-Customer provides:
+- one chronology and consistency pass;
+- one evidence sequence and filename plan;
+- one revised factual response;
+- one exception list;
+- one correction round;
+- delivery within the confirmed service window after complete files arrive.
 
-1. RebuttalKit JSON export
-2. Existing supporting files
-3. Processor deadline and portal constraints
+The operator does not submit the dispute, access processor accounts, provide legal advice, alter evidence, or promise an outcome.
 
-Customer receives:
+## Channel priority
 
-- One clarity and organization pass
-- Evidence order and filename suggestions
-- Factual consistency check against supplied records
-- One revised response draft
-- One round of corrections
+### 1. Warm operators and referral partners
 
-Explicitly excluded:
+Ask people who already know freelancers, agencies, coaches, creators, or Shopify merchants: bookkeepers, virtual assistants, payment consultants, web agencies, and small-business communities.
 
-- Legal advice
-- Fabricated or altered evidence
-- Logging into customer accounts
-- Submitting the dispute
-- Outcome guarantees
-- Endless revisions
+The request is for one relevant introduction—not a mailing list.
 
-## Required operations before accepting money
+### 2. Intent-led public conversations
 
-- Public business name
-- Public business email
-- Secure upload method with controlled access
-- Payment link
-- Plain-language refund terms
-- Country, tax, and invoice details
-- File-retention and deletion period
-- Published turnaround commitment
-- Capacity limit
+Monitor current Shopify Community and other merchant-support threads for active evidence questions. Give a complete useful answer first. Mention RebuttalKit only when the rules permit it and the link genuinely helps.
 
-Do not expose a personal email address or accept sensitive documents through public forms or direct messages.
+### 3. Reddit as research and selective support
 
-## 10-day validation sprint
+Major Stripe, Shopify, and freelance communities generally restrict self-promotion. Do not post ads or unsolicited links. Use public posts to learn the language of the problem. If a current poster explicitly asks for a tool and the community rules allow it, provide a transparent disclosure and a useful answer before any link.
 
-### Day 1 — approve the product
+### 4. Search pages
 
-- Test the public demo on desktop and mobile.
-- Have the review group complete one fictional case.
-- Record confusion, missing evidence types, and trust objections.
-- Decide whether the paid review offer is approved.
+Keep the existing reason-specific pages accurate. Search traffic is a compounding channel, not the primary ten-day plan.
 
-### Day 2 — install trust infrastructure
+## Ten-day sprint
 
-- Set the public business identity and email.
-- Configure secure uploads and deletion rules.
-- Add payment/refund details only after approval.
-- Publish a short privacy and service-scope statement.
+### Day 0 — commercial gate
 
-### Day 3 — create proof assets
+- Publish operator identity, country, and support address.
+- Configure a hosted $69 checkout.
+- Confirm invoice/tax handling.
+- Confirm secure handoff and seven-day deletion procedure.
+- Run a complete fictional order through intake, payment, delivery, correction, and deletion.
 
-- Record a 45–60 second demo: blank case → evidence checklist → timeline → packet.
-- Create three screenshots: checklist, response, print packet.
-- Prepare one fictional before/after example with no customer data.
+### Day 1 — proof
 
-### Days 4–7 — intent-led outreach
+- Record a 45–60 second demo using only fictional data.
+- Capture the checklist, timeline, and packet screens.
+- Publish one fictional before/after response example.
+- Ask three trusted operators to complete the compatibility form.
 
-Spend time only where active disputes already appear:
-
-- Reply helpfully to recent Stripe, Shopify, freelancer, ecommerce, and small-business posts where promotion is allowed.
-- Contact small agencies, coaches, and digital sellers in the operator's existing network.
-- Ask accountants, virtual assistants, and ecommerce consultants for one relevant introduction.
-- Offer a free compatibility check first; share the paid review only when the case fits.
+### Days 2–4 — conversations
 
 Daily target:
 
-- 15 carefully selected, personalized conversations
-- 3 compatibility checks
-- 1 scheduled review opportunity
+- 10 manually selected relevant conversations;
+- 3 warm referral requests;
+- 3 compatibility checks;
+- response to every qualified request within 12 hours.
 
-No mass scraping, spam, fake testimonials, or unapproved claims.
+Do not count impressions or generic likes as progress.
 
-### Days 8–9 — close and deliver
+### Days 5–7 — close and deliver
 
-- Confirm scope, deadline, and secure transfer before payment.
-- Cap the founder offer to a small number of cases.
-- Deliver within the published turnaround.
-- Ask for permission to collect an anonymized process testimonial, never the dispute outcome unless the customer volunteers it.
+- Confirm fit and scope in writing.
+- Send the hosted checkout only after acceptance.
+- Confirm the secure link, complete-file timestamp, and deadline.
+- Deliver the review within the agreed window.
+- Request process feedback separately from outcome feedback.
 
-### Day 10 — decide
+### Days 8–9 — objection repair
 
-Track:
+Group objections into: trust, privacy, price, relevance, turnaround, or unclear value. Fix the dominant objection in copy or operations. Do not add unrelated product features.
 
-- Relevant conversations
-- Demo opens
-- Compatibility checks
-- Qualified cases
-- Paid reviews
-- Gross revenue
-- Delivery time
-- Refunds
-- Top objections
+### Day 10 — decision
 
-Decision rule:
+Continue if either condition is true:
 
-- **2+ sales:** keep the $59 offer and improve onboarding.
-- **Qualified interest but no sales:** change packaging/trust before building more features.
-- **No qualified interest:** stop; do not add billing or spend another build week.
+- two or more customers paid; or
+- at least five qualified prospects requested a review and a specific removable blocker explains non-purchase.
 
-## Outreach templates
+Repackage if qualified interest exists but trust or scope blocks payment. Stop this offer if 50 well-selected conversations produce no qualified compatibility checks.
 
-### Public reply
+## Dashboard
 
-> That deadline is stressful. The strongest response is usually a short chronology plus evidence matched to the dispute reason—not a long emotional explanation. I built a free browser tool that keeps the case local and produces a checklist, timeline, response draft, and print-ready evidence index. If useful, I can share it. Verify every item against your processor portal before submitting.
+Track daily:
 
-### Warm message
+- manually qualified conversations;
+- helpful replies sent;
+- referral requests;
+- compatibility requests;
+- accepted cases;
+- payment links sent;
+- paid reviews;
+- gross revenue;
+- delivery minutes;
+- corrections;
+- refunds;
+- deletion confirmations;
+- dominant objection.
 
-> I built RebuttalKit for small operators handling an occasional Stripe or Shopify dispute. It organizes existing proof into a reason-specific checklist, timeline, response, and printable packet; files stay in the browser. I am looking for a few active cases to test whether the workflow is clear. I cannot submit disputes or promise outcomes. Want the free beta link?
+## Claim standard
 
-### Compatibility check
+Allowed claims must be demonstrable: local browser storage, reason-aware guidance, structured chronology, packet export, flat review price, and the published service scope.
 
-> Before discussing a paid review, please send only the processor, dispute reason, deadline, business/sale type, approximate amount, and which evidence categories you already have. Do not send card data, passwords, or customer files through this channel.
-
-## Proof standard
-
-Make only claims demonstrated by the product:
-
-- Local-first browser storage
-- Reason-specific evidence guidance
-- Structured timeline and response
-- Print-ready packet
-- No outcome prediction
-
-Never advertise a win rate without verified, representative data.
+Never claim a win rate, recovery amount, processor endorsement, legal expertise, customer count, or guaranteed turnaround that has not been verified.

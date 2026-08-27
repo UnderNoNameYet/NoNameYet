@@ -1,11 +1,11 @@
 (() => {
   const topNav = document.querySelector('.topbar nav');
-  [['How it works','tutorial.html'],['Download','download.html']].forEach(([label,href]) => {
+  [['How it works','tutorial.html'],['Founder review','premium.html']].forEach(([label,href]) => {
     if (!topNav || topNav.querySelector(`[href="${href}"]`)) return;
     const link = document.createElement('a'); link.href = href; link.textContent = label; topNav.append(link);
   });
   const footerLinks = document.querySelector('body > footer > div');
-  [['About','about.html'],['Tutorial','tutorial.html'],['Premium','premium.html'],['Support','support.html'],['Download','download.html']].forEach(([label,href]) => {
+  [['About','about.html'],['Tutorial','tutorial.html'],['Founder review','premium.html'],['Support','support.html'],['Download','download.html']].forEach(([label,href]) => {
     if (!footerLinks || footerLinks.querySelector(`[href="${href}"]`)) return;
     const link = document.createElement('a'); link.href = href; link.textContent = label; footerLinks.append(link);
   });
@@ -13,7 +13,8 @@
   const extraStyle = document.createElement('style');
   extraStyle.textContent = '.site-more-links{flex-wrap:wrap;justify-content:center}.topbar nav{flex-wrap:wrap;justify-content:center}@media(max-width:720px){.site-more-links{justify-content:flex-start}}';
   document.head.append(extraStyle);
-
+  const closingNote = document.querySelector('.closing > div:last-child > p');
+  if (closingNote) closingNote.innerHTML = 'Free local workspace.<br>Optional $69 founder review.';
   const stage = document.querySelector('#assemblyStage');
   const control = document.querySelector('#assembleControl');
   const caption = document.querySelector('#assemblyCaption');
@@ -27,7 +28,6 @@
     captionLabel.textContent = assembled ? 'SEQUENCED RECORD' : 'SCATTERED INPUTS';
     labState.textContent = assembled ? '5 RECORDS / SEQUENCED' : '5 RECORDS / UNSEQUENCED';
   });
-
   const reasons = {
     notReceived:{title:'SERVICE NOT RECEIVED',core:'NOT<br>RECEIVED',count:'8 REQUIRED SIGNALS',items:[['Accepted scope','What was promised'],['Delivery record','When it was fulfilled'],['Customer activity','What happened after'],['Transaction details','Amount and identifier']]},
     notDescribed:{title:'NOT AS DESCRIBED',core:'NOT AS<br>DESCRIBED',count:'8 REQUIRED SIGNALS',items:[['Original description','What the customer saw'],['Delivered item','What was actually supplied'],['Quality evidence','Condition and specification'],['Resolution attempt','How concerns were handled']]},
@@ -41,7 +41,6 @@
     ids.forEach((pair,index)=>{document.querySelector(pair[0]).textContent=data.items[index][0];document.querySelector(pair[1]).textContent=data.items[index][1];});
     document.querySelector('#proofOrbit').animate([{opacity:.45,transform:'scale(.985)'},{opacity:1,transform:'scale(1)'}],{duration:360,easing:'ease-out'});
   }));
-
   const visual=document.querySelector('#methodVisual');
   const stageCopy={establish:['CASE ESTABLISHED','Exact portal wording recorded','24%'],substantiate:['EVIDENCE VERIFIED','Reason-specific records selected','58%'],sequence:['CHRONOLOGY RESOLVED','Four dated events connected','82%'],assemble:['PACKET READY','Response and evidence index generated','94%']};
   const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(!entry.isIntersecting)return;document.querySelectorAll('.method-steps article').forEach(item=>item.classList.remove('active'));entry.target.classList.add('active');const key=entry.target.dataset.stage;const [label,hint,score]=stageCopy[key];visual.dataset.stage=key;document.querySelector('#visualLabel').textContent=label;document.querySelector('#visualHint').textContent=hint;document.querySelector('#visualScore').textContent=score;}),{rootMargin:'-35% 0px -45% 0px',threshold:0});

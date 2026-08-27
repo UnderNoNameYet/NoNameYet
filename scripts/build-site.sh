@@ -13,7 +13,7 @@ text = app.read_text(encoding='utf-8')
 if 'href="premium.css"' not in text:
     text = text.replace('</head>', '<link rel="stylesheet" href="premium.css"></head>')
 app.write_text(text, encoding='utf-8')
-legacy = ['sample-packet.html','privacy.html','terms.html','stripe-service-not-received.html','freelancer-chargeback-response.html','shopify-chargeback-evidence.html']
+legacy = ['sample-packet.html','stripe-service-not-received.html','freelancer-chargeback-response.html','shopify-chargeback-evidence.html']
 for name in legacy:
     path = root / name
     if not path.exists():
@@ -25,6 +25,6 @@ for name in legacy:
             text = text.replace('</head>', f'<link rel="stylesheet" href="{stylesheet}"></head>')
     path.write_text(text, encoding='utf-8')
 PY
-printf 'RebuttalKit Product Website v7\n' > "$ROOT/public/release-v7.txt"
+printf 'RebuttalKit Revenue Release v8\n' > "$ROOT/public/release-v8.txt"
 touch "$ROOT/public/.nojekyll"
-printf 'Built RebuttalKit product website v7 in %s/public\n' "$ROOT"
+printf 'Built RebuttalKit revenue release v8 in %s/public\n' "$ROOT"

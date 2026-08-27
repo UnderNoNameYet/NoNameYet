@@ -1,61 +1,84 @@
-# Public launch checklist
+# RebuttalKit public launch checklist
 
-## Repository and deployment
+## Repository and release
 
-- [x] Product and marketing site merged to `main`.
-- [x] GitHub Pages workflow added.
-- [x] Desktop and mobile browser checks passed.
-- [x] No personal contact address, active payment credential, or private key published.
-- [ ] In **Settings → Pages**, select **GitHub Actions** as the deployment source.
-- [ ] Confirm the Pages workflow succeeds.
-- [ ] Open the public URL on desktop and mobile.
-- [ ] Test the free audit, calculator, privacy page, terms page, and pilot request.
-
-GitHub's standard workflow token cannot enable Pages on a new repository by itself. An administrator must enable GitHub Actions as the Pages source once.
+- [x] Working local-first product exists.
+- [x] Founder-review funnel is implemented on `launch/revenue-v8`.
+- [x] Desktop visual QA passed at 1440 px.
+- [x] Mobile visual QA passed at 390 px.
+- [x] No horizontal overflow, missing resources, or JavaScript exceptions in the reviewed page.
+- [x] Pull-request build checks pass.
+- [x] No payment secrets, credentials, or customer files are committed.
+- [ ] Public configuration is approved.
+- [ ] Revenue release is merged to `main`.
+- [ ] GitHub Pages deployment succeeds.
+- [ ] Public homepage, app, review, privacy, and terms pages are verified on desktop and mobile.
 
 ## Public configuration
 
-Edit the root `site-config.js` file before promotion:
+Edit `public-source/site-config.js` with public, non-secret values only:
 
 ```js
-window.SETTLESIFT_CONFIG = {
+window.REBUTTALKIT_CONFIG = {
+  businessName: "Approved public operator name",
   contactEmail: "approved-public-address@example.com",
-  paymentUrl: "",
-  siteUrl: "https://approved-public-url.example",
-  pilotPrice: 1499
+  paymentUrl: "https://hosted-checkout.example/...",
+  siteUrl: "https://undernonameyet.github.io/NoNameYet/",
+  servicePriceUsd: 69,
+  turnaroundHours: 48,
+  weeklyCapacity: 3
 };
 ```
 
-The deployment workflow copies this root configuration over the bundled default. This means contact and site details can be changed without rebuilding the product bundle.
+Never commit API keys, webhook secrets, bank details, passwords, card data, or private customer information.
 
-Leave `paymentUrl` blank until all of the following are approved:
+## Commercial gate
 
-- [ ] Hosted payment provider and payment-page URL.
-- [ ] Operator or business identity displayed to the buyer.
-- [ ] Support route.
-- [ ] Invoice and tax treatment.
-- [ ] Refund/cancellation policy.
-- [ ] Secure file-transfer procedure.
+All boxes must be complete before the payment URL is enabled:
 
-Never put payment secrets, private API keys, bank credentials, or card details in `site-config.js`.
+- [ ] Public operator or business identity.
+- [ ] Country/region for tax and invoice treatment.
+- [ ] Public support/review inbox.
+- [ ] Hosted $69 USD checkout page.
+- [ ] Checkout description matches one review and one correction round.
+- [ ] Refund terms are visible before payment.
+- [ ] Customer-controlled secure handoff tested.
+- [ ] Seven-day working-copy deletion procedure tested.
+- [ ] Capacity of three cases per week is realistic.
+- [ ] Forty-eight-hour delivery window is realistic.
+- [ ] One fictional end-to-end order has been completed.
 
-## Commercial readiness
+## Funnel test
 
-- [ ] Three anonymized seller datasets reviewed.
-- [ ] One marketplace report preset verified end to end.
-- [ ] High-severity precision at or above 90%.
-- [ ] At least one valid previously missed issue confirmed.
-- [ ] Delivery time measured and acceptable at ₹1,499.
-- [ ] Retention/deletion process communicated to each pilot customer.
+- [ ] Compatibility form blocks missing required fields.
+- [ ] Past or dangerously close deadlines are flagged.
+- [ ] Form says nothing is sent automatically.
+- [ ] Request contains no customer name, transaction ID, files, credentials, or private messages.
+- [ ] Public email opens with the correct request.
+- [ ] Payment link appears only through the accepted-customer route.
+- [ ] Checkout total and currency are correct.
+- [ ] Receipt/invoice is delivered.
+- [ ] Refund can be issued without delay.
 
-## Promotion readiness
+## Launch assets
 
-- [ ] One platform-specific checklist published.
-- [ ] Seller and accountant prospect lists contain only relevant, manually qualified contacts.
-- [ ] Outreach copy is personalized and avoids guaranteed-recovery claims.
-- [ ] A process exists for recording valid, invalid, already-known, and unclear findings.
-- [ ] Case-study permission is requested separately from service delivery.
+- [ ] 45–60 second fictional-data demo.
+- [ ] Three screenshots: evidence checklist, timeline, packet.
+- [ ] One fictional before/after response example.
+- [ ] One helpful public checklist with no sales pitch.
+- [ ] Ten warm introduction requests prepared.
+- [ ] Current community rules checked before every public post.
 
-## Launch decision
+## Daily operating check
 
-Do not scale paid promotion yet. First prove that targeted outreach can generate compatible datasets and that the audit finds defensible issues. If ten compatible audits produce no valid previously missed issue, stop and reconsider the product rather than increasing traffic.
+- [ ] New requests answered within 12 hours.
+- [ ] Accepted cases recorded by anonymous review ID.
+- [ ] Deadline and complete-file timestamp confirmed.
+- [ ] Delivery time recorded.
+- [ ] Correction round recorded.
+- [ ] Working-copy deletion confirmed.
+- [ ] Objections and refunds logged.
+
+## Stop conditions
+
+Pause checkout immediately if secure handoff fails, capacity is exceeded, a delivery promise is at risk, private data is exposed, or the operator cannot state the service boundary clearly.

@@ -1,87 +1,59 @@
-# SettleSift validation playbook
+# RebuttalKit validation playbook
 
-## Purpose
+## Question
 
-Determine whether SettleSift finds previously missed, defensible settlement exceptions faster than a seller's current process. The objective is not to maximize the displayed recovery number.
+Will an operator with an active, evidence-backed Stripe or Shopify dispute pay $69 for a defined clarity and organization review after using a free local-first workspace?
 
-## Minimum validation set
+The test is willingness to pay and delivery usefulness. A bank outcome is not a product-quality metric because RebuttalKit does not control it.
 
-Before scaling promotion, complete:
+## First-ten-customer protocol
 
-- At least three anonymized seller datasets.
-- At least one fully mapped marketplace report preset.
-- At least 30 manually reviewed high-severity findings across the datasets, when available.
-- At least one valid issue the seller had not already recorded.
+1. Record only non-sensitive metadata during compatibility screening.
+2. Reject cases outside scope before payment.
+3. Confirm deadline, review boundary, turnaround, secure handoff, refund rule, and deletion date in writing.
+4. Start the delivery clock only when complete files arrive.
+5. Review chronology, evidence mapping, unsupported statements, naming, and readability.
+6. Deliver the case map, revised response, evidence sequence, and exception list.
+7. Complete one factual correction round.
+8. Delete working copies within seven days and send confirmation.
+9. Ask separately for process feedback.
 
-## Audit protocol
-
-1. Agree on the marketplace, closed period, row limit, retention period, and secure transfer method.
-2. Request column headers or a blank sample before transaction data whenever possible.
-3. Record the mapping and rules used for the audit.
-4. Run the data-quality gate before interpreting exceptions.
-5. Review each high-severity finding against the source reports.
-6. Ask the seller or accountant to classify each finding:
-   - Valid
-   - Invalid / false positive
-   - Already known
-   - Unclear / needs marketplace evidence
-7. Record investigation time and the final disposition.
-8. Delete or return source files according to the agreed retention period.
-
-## Required metrics
+## Metrics
 
 | Metric | Definition | Initial threshold |
 | --- | --- | ---: |
-| Compatibility rate | Compatible datasets ÷ datasets assessed | Track, no target yet |
-| Time to first result | File receipt to first useful exception | Under 15 minutes for a known preset |
-| Mapping time | Time to configure an unfamiliar export | Under 30 minutes for pilot work |
-| High-severity precision | Valid findings ÷ reviewed high-severity findings | At least 90% |
-| Previously missed issue rate | Datasets with at least one valid unknown issue | At least 1 of the first 3 |
-| Reviewed-audit time | Operator time per paid pilot | Under 90 minutes |
-| Paid conversion | Paid compatible pilots ÷ compatible prospects offered the pilot | Track after 10 offers |
+| Conversation relevance | qualified conversations ÷ conversations started | 50% or higher |
+| Fit-check conversion | compatibility requests ÷ qualified conversations | 20% or higher |
+| Acceptance rate | accepted cases ÷ compatibility requests | Track; quality matters more than volume |
+| Paid conversion | paid cases ÷ accepted cases sent checkout | 30% or higher after 10 offers |
+| First response time | request received to first human reply | under 12 hours |
+| Delivery time | complete files to first delivery | under the promised window |
+| Operator time | active work per completed review | under 90 minutes initially |
+| Correction rate | deliveries requiring factual correction | track and reduce |
+| Refund rate | refunded reviews ÷ paid reviews | below 10% |
+| Deletion compliance | deletion confirmations ÷ completed reviews | 100% |
 
-Do not count “potential recovery” as validated revenue until the underlying issue is confirmed and the marketplace accepts or resolves it.
+## Quality review
 
-## Finding review record
+A completed review must answer yes to all:
 
-For every reviewed exception, capture:
+- Does every factual statement map to a supplied record?
+- Are dates internally consistent?
+- Is the response focused on the processor reason?
+- Are unsupported claims removed or visibly flagged?
+- Is the evidence order easy to scan?
+- Are filenames concise and unique?
+- Are missing records and open questions explicit?
+- Does the delivery repeat the no-legal-advice and no-outcome-guarantee boundary?
 
-- Anonymous audit ID
-- Marketplace
-- Statement period
-- Exception type
-- Severity
-- Displayed amount
-- Seller classification
-- Evidence used
-- Final action
-- Time to verify
-- Notes for rule improvement
+## Continue
 
-## Continue criteria
+Continue the offer when at least two customers pay, the average review stays below 90 minutes, deletion compliance is 100%, and buyers describe the organization pass as useful independent of outcome.
 
-Continue investing when all are true:
+## Repackage
 
-- A common report format can be mapped reliably.
-- High-severity precision remains at or above 90%.
-- At least one seller confirms a previously missed valid issue.
-- At least two customers pay for the reviewed workflow or request another period.
-- Delivery time leaves a credible margin at the pilot price.
+Change trust, scope, turnaround, or price when qualified prospects request checks but accepted cases do not buy. Do not add unrelated automation until the objection data identifies a product gap.
 
-## Pause or pivot criteria
+## Stop
 
-Pause promotion when any are true:
-
-- Ten compatible real audits produce no valid previously missed issue.
-- High-severity precision remains below 90% after rule corrections.
-- Common exports routinely require more than 30 minutes of manual mapping.
-- The reviewed audit requires more than 90 minutes at ₹1,499 with no evidence customers will pay more.
-- Sellers consistently value bookkeeping cleanup but not exception evidence; in that case, reposition toward accountants rather than sellers.
-
-## Privacy and evidence rules
-
-- Do not request credentials or direct marketplace login access.
-- Prefer anonymized headers and samples during compatibility checks.
-- Use an agreed secure transfer method for actual exports.
-- Do not place seller files in GitHub, public cloud links, analytics, or support chat.
-- Obtain separate permission before publishing any case study, even when anonymized.
+Pause or stop if 50 well-selected conversations produce no qualified checks, ten accepted cases produce no sales, the review routinely exceeds two hours, secure handling cannot be maintained, or buyers mainly request legal representation and outcome guarantees.
