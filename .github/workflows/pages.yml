@@ -1,37 +1,34 @@
-name: Deploy RebuttalKit to GitHub Pages
-
+name: Deploy RebuttalKit revenue release
 on:
   push:
     branches: [main]
   pull_request:
   workflow_dispatch:
-
 permissions:
   contents: read
   pages: write
   id-token: write
-
 concurrency:
   group: pages-${{ github.ref }}
   cancel-in-progress: true
-
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Validate and build v7
+      - name: Validate and build v8
         run: node test.mjs
-      - name: Verify complete website release
+      - name: Verify revenue release
         shell: bash
         run: |
           set -euo pipefail
           grep -q 'The dispute arrives' public/index.html
-          grep -q 'A calmer way' public/about.html
-          grep -q 'Six deliberate passes' public/tutorial.html
-          grep -q 'RebuttalKit Product Website v7' public/release-v7.txt
-          test -f public/download.html
+          grep -q 'A second set of eyes' public/premium.html
+          grep -q 'RebuttalKit Revenue Release v8' public/release-v8.txt
+          test -f public/founder-review.css
+          test -f public/founder-review.js
+          test -f public/site-config.js
           test -f public/app.html
       - name: Configure Pages
         if: github.event_name != 'pull_request'
