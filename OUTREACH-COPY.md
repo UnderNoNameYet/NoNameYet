@@ -1,62 +1,61 @@
-# SettleSift outreach copy
+# RebuttalKit outreach copy
 
-Use these as starting points. Personalize every message around a real payout, fee, settlement, or RTO concern. Do not send them as a generic bulk campaign.
+Personalize every message around a real, current problem. Do not send these as a bulk campaign. Do not include a product link where community rules prohibit promotion.
 
-## Seller message
+## Helpful public reply — no pitch
 
-Hi — I saw your note about **[specific payout/settlement issue]**. I built a browser-based audit that matches order, settlement, fee, and return exports and flags only the rows that do not tie out.
+That deadline is stressful. A useful first pass is to separate the response into four things: the exact dispute reason, a short dated chronology, only the records that answer that reason, and an evidence index that points each factual sentence to a record. Check the current processor portal before submitting because file and evidence rules can change.
 
-It runs locally, so the CSV files stay on your device. If you want, try the free audit first. If the report format is unusual, I can check compatibility before you pay for anything.
+If you want, I can share a free browser worksheet that organizes this locally. It does not submit the case or promise an outcome.
 
-No recovery guarantee — the goal is to produce a clearer list of orders worth investigating.
+## Warm message
 
-## Seller follow-up after 48 hours
+Hi — I built RebuttalKit for freelancers and small operators handling an occasional Stripe or Shopify dispute. It turns existing records into a reason-aware checklist, timeline, factual response, and printable evidence index. Case details stay in the browser.
 
-Quick follow-up on the **[specific issue]**. If you do not want to run the full audit, you can send only the column headers or a blank sample export first. I can tell you whether the format is compatible without receiving transaction data.
+I am opening a few $69 founder packet reviews for active cases with evidence deadlines 3–14 days away. The fit check is free and uses only non-sensitive case metadata. No processor login, legal advice, or outcome promise.
 
-## Compatibility-confirmed offer
+Do you know one operator who is currently dealing with this problem?
 
-Your report structure is compatible. The ₹1,499 founding pilot covers one closed statement period, one primary channel, and up to 5,000 order rows.
+## Partner message
 
-It includes mapping help, a review of the audit rules, and an evidence CSV for the exceptions. It does not include filing claims or guarantee a recovery.
+Hi — I am testing a narrow referral offer for the occasional chargeback cases your clients may ask about. RebuttalKit is a free local-first evidence workspace, with an optional $69 clarity and organization review after a case-fit check.
 
-If that scope works, I will send the approved hosted payment page and the secure file-transfer instructions.
+It is not a recovery agency: no account access, submission, percentage fee, legal advice, or outcome guarantee. I am looking for one relevant introduction and candid feedback on whether the boundary is clear.
 
-## Accountant or bookkeeper partnership message
+## Compatibility accepted
 
-Hi — I am testing SettleSift, a local-first tool for marketplace settlement audits. It turns order, settlement, fee, and return exports into an exception list and evidence pack.
+Your compatibility request fits the founder review scope. Before payment, please confirm:
 
-I am looking for accountants or bookkeepers who already reconcile Amazon, Flipkart, Meesho, or similar seller reports. I can run one anonymized compatibility review at no charge. If it saves review time, we can discuss a simple referral or delivery partnership.
+- the exact processor deadline;
+- one active dispute only;
+- you own or are authorized to use the records;
+- the agreed customer-controlled secure link;
+- the review window begins only after complete files arrive;
+- the service covers organization and clarity, not legal advice or submission;
+- working copies are deleted within seven days after delivery or final correction.
 
-The tool does not promise recovery and does not require marketplace API credentials.
+The one-time price is $69 USD. If those terms work, I will send the hosted checkout link. Do not send credentials or card data.
 
-## Community post
+## Compatibility declined
 
-### A practical checklist for a marketplace payout gap
+I cannot accept this case responsibly because **[specific reason]**. Please do not pay or send files. The free workspace may still help organize your records, but verify the current processor instructions and consider qualified professional advice if the stakes or legal questions are significant.
 
-Before assuming the marketplace owes money, check:
+## One follow-up
 
-1. Whether the order was actually eligible for settlement.
-2. Whether the payout sits under a different settlement or batch reference.
-3. Refund, cancellation, RTO, and reverse-logistics adjustments.
-4. Commission, shipping, payment/COD, and promotional fees.
-5. The platform's expected settlement window.
-6. Duplicate or unknown order references in the exports.
+Quick follow-up on the compatibility check. If the case is still open, the only details needed at this stage are the processor, dispute reason, approximate amount range, evidence deadline, sale type, and evidence categories already available. Do not send customer documents or identifiers yet.
 
-I made a free browser-based audit to automate that first pass. It works locally and does not ask for API credentials. Treat the output as an investigation list, not an accounting conclusion.
+If the deadline is under three days away, I may not be able to accept the review safely.
 
-## Five qualification questions
+## Delivery note
 
-1. Which marketplace and statement period are involved?
-2. Approximately how many order rows are in the period?
-3. Do you have order, settlement, and return/RTO exports?
-4. What first made you suspect a mismatch?
-5. Is there a claim deadline or amount that makes the review urgent?
+Your founder review is ready. The delivery contains the case map, evidence order, revised factual response, and exception list described in the acceptance email.
 
-## Disqualification response
+Please verify every fact and compare the packet with the live processor requirements before submitting. Reply with factual corrections during the included correction round. This review does not predict or control the issuer’s decision.
 
-This format is not compatible enough for me to accept payment responsibly. I can document the missing fields and reassess if the marketplace provides a more detailed export. I do not want to charge you for an audit that cannot produce defensible results.
+## Deletion confirmation
 
-## Case-study permission request
+The agreed working copies for review **[review ID]** were deleted on **[date/time/time zone]**. RebuttalKit does not retain a case-data account or backup. Keep your own originals and final packet securely.
 
-The audit found **[brief verified outcome]**. May I use an anonymized version of the workflow and result as a case study? I will not name you, publish files, or disclose identifying order data. This permission is optional and separate from the paid work.
+## Testimonial request
+
+Would you be comfortable sharing one sentence about the organization process—not whether the dispute was won? Permission is optional. I will not identify you, publish files, or disclose case details without separate written approval.
