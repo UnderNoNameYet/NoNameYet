@@ -2,32 +2,32 @@
 
 ## Objective
 
-Earn the first $100 within ten days of the commercial launch by selling **two founder packet reviews at $69 each**.
+Earn the first $100 within ten days of opening commercial applications by selling **two founder packet reviews at $69 each**.
 
 - Revenue target: 2 × $69 = **$138 gross**
 - Primary conversion: accepted compatibility check → paid review
-- Secondary conversion: relevant conversation → compatibility check
+- Secondary conversion: qualified conversation → compatibility check
 - Constraint: no ads, scraping, spam, fake proof, or outcome claims
 
 This is an operating target, not a revenue guarantee.
 
-## Why this offer
+## Market reality and wedge
 
-The software already solves the repeatable work: case capture, reason-aware evidence selection, chronology, response drafting, indexing, and export. The paid service is limited to judgment-heavy work that a stressed occasional merchant may still value: clarity, sequence, contradictions, and missing links.
+Stripe and Shopify already automate many disputes, and generic AI can rewrite a response cheaply. RebuttalKit should not compete as a generic chargeback writer.
 
-The offer avoids a weak subscription pitch. It is one accepted case, one price, and one defined review.
+The wedge is a high-value service dispute where delivery proof spans contracts, meetings, approvals, messages, invoices, and shared files that the payment platform cannot fully interpret. The free product organizes those records locally; the $69 review adds human chronology, consistency, and evidence-order judgment.
 
 ## Ideal first customer
 
-- Freelancer, small agency, coach, studio, digital seller, or small merchant
-- Active Stripe or Shopify Payments dispute
-- Approximately $150–$2,500 at stake
+- Freelancer, agency, consultant, coach, implementation specialist, or software studio
+- Active manual, ineligible, or unusually complex service dispute
+- Approximately $750–$5,000 at stake
 - Evidence deadline 3–14 days away
 - Real supporting records already exist
-- Case is difficult because records span tools or dates
-- Wants organization and clarity, not representation
+- Evidence is distributed across multiple tools or dates
+- Wants an independent clarity check, not representation
 
-Disqualify expired deadlines, requests for legal advice, requests to invent or hide evidence, demands for account access, and anyone seeking a guaranteed result.
+Disqualify cases already covered completely by platform automation, straightforward shipping-only cases, expired or under-three-day deadlines, requests for legal advice, requests to invent or hide evidence, demands for account access, and anyone seeking a guaranteed result.
 
 ## Offer
 
@@ -56,23 +56,21 @@ The operator does not submit the dispute, access processor accounts, provide leg
 
 ## Channel priority
 
-### 1. Warm operators and referral partners
+### 1. Referral partners with service-business clients
 
-Ask people who already know freelancers, agencies, coaches, creators, or Shopify merchants: bookkeepers, virtual assistants, payment consultants, web agencies, and small-business communities.
+Ask bookkeepers, accountants, fractional finance leaders, virtual operations specialists, web agencies, and payment consultants for one relevant introduction—not a mailing list.
 
-The request is for one relevant introduction—not a mailing list.
+### 2. Manually qualified operator conversations
 
-### 2. Intent-led public conversations
+Look for a current, high-value service dispute with a real deadline and cross-tool evidence. Give a useful evidence-organization suggestion before mentioning the product.
 
-Monitor current Shopify Community and other merchant-support threads for active evidence questions. Give a complete useful answer first. Mention RebuttalKit only when the rules permit it and the link genuinely helps.
+### 3. Public communities
 
-### 3. Reddit as research and selective support
-
-Major Stripe, Shopify, and freelance communities generally restrict self-promotion. Do not post ads or unsolicited links. Use public posts to learn the language of the problem. If a current poster explicitly asks for a tool and the community rules allow it, provide a transparent disclosure and a useful answer before any link.
+Follow community rules. Do not post generic promotions or unsolicited links. Mention RebuttalKit only when someone explicitly asks for a tool or when the link directly answers the question, with clear disclosure.
 
 ### 4. Search pages
 
-Keep the existing reason-specific pages accurate. Search traffic is a compounding channel, not the primary ten-day plan.
+Keep reason-specific pages accurate. Search is a compounding channel, not the primary ten-day acquisition plan.
 
 ## Ten-day sprint
 
@@ -80,69 +78,65 @@ Keep the existing reason-specific pages accurate. Search traffic is a compoundin
 
 - Publish operator identity, country, and support address.
 - Configure a hosted $69 checkout.
-- Confirm invoice/tax handling.
+- Confirm invoice and tax handling.
 - Confirm secure handoff and seven-day deletion procedure.
 - Run a complete fictional order through intake, payment, delivery, correction, and deletion.
 
 ### Day 1 — proof
 
-- Record a 45–60 second demo using only fictional data.
-- Capture the checklist, timeline, and packet screens.
-- Publish one fictional before/after response example.
-- Ask three trusted operators to complete the compatibility form.
+- Record the 45–60 second fictional demo.
+- Capture the workspace, evidence map, and fictional review screens.
+- Ask three trusted service-business operators to complete the compatibility form.
 
 ### Days 2–4 — conversations
 
 Daily target:
 
-- 10 manually selected relevant conversations;
+- 10 manually selected, relevant conversations;
 - 3 warm referral requests;
-- 3 compatibility checks;
+- 2 qualified compatibility checks;
 - response to every qualified request within 12 hours.
 
-Do not count impressions or generic likes as progress.
+Do not count impressions, generic traffic, or compliments as progress.
 
 ### Days 5–7 — close and deliver
 
 - Confirm fit and scope in writing.
-- Send the hosted checkout only after acceptance.
-- Confirm the secure link, complete-file timestamp, and deadline.
-- Deliver the review within the agreed window.
-- Request process feedback separately from outcome feedback.
+- Send hosted checkout only after acceptance.
+- Confirm secure link, complete-files timestamp, delivery deadline, and deletion date.
+- Deliver within the agreed window using `FOUNDER-REVIEW-TEMPLATE.md`.
+- Request feedback about organization—not the issuer outcome.
 
 ### Days 8–9 — objection repair
 
-Group objections into: trust, privacy, price, relevance, turnaround, or unclear value. Fix the dominant objection in copy or operations. Do not add unrelated product features.
+Group objections into trust, privacy, price, relevance, turnaround, or unclear value. Fix the dominant objection. Do not add unrelated features.
 
 ### Day 10 — decision
 
-Continue if either condition is true:
+Continue if:
 
 - two or more customers paid; or
-- at least five qualified prospects requested a review and a specific removable blocker explains non-purchase.
+- at least five qualified prospects requested a review and one removable blocker explains non-purchase.
 
-Repackage if qualified interest exists but trust or scope blocks payment. Stop this offer if 50 well-selected conversations produce no qualified compatibility checks.
+Repackage if qualified interest exists but trust or scope blocks payment. Stop the offer if 50 manually qualified conversations produce no compatibility checks.
 
 ## Dashboard
 
 Track daily:
 
 - manually qualified conversations;
-- helpful replies sent;
+- helpful replies;
 - referral requests;
 - compatibility requests;
-- accepted cases;
+- accepted and declined cases;
 - payment links sent;
-- paid reviews;
-- gross revenue;
-- delivery minutes;
-- corrections;
-- refunds;
-- deletion confirmations;
+- paid reviews and gross revenue;
+- delivery minutes and corrections;
+- refunds and deletion confirmations;
 - dominant objection.
 
 ## Claim standard
 
-Allowed claims must be demonstrable: local browser storage, reason-aware guidance, structured chronology, packet export, flat review price, and the published service scope.
+Allowed claims must be demonstrable: local browser storage, reason-aware guidance, structured chronology, packet export, the fictional review example, flat review price, and published scope.
 
 Never claim a win rate, recovery amount, processor endorsement, legal expertise, customer count, or guaranteed turnaround that has not been verified.
