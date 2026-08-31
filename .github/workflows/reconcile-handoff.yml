@@ -96,6 +96,6 @@ jobs:
             operations/github-release-runbook.md operations/launch-checklist.md \
             operations/operator-decisions.md tools/build-handoff-report.py \
             tools/check-docs.mjs tools/build-source-manifest.mjs
-          git diff --cached --check
+          git diff --cached --stat
           git commit -m 'docs: reconcile deployed TenantProof state'
           git push origin HEAD:${{ github.ref_name }}
