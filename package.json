@@ -1,6 +1,6 @@
 {
   "name": "tenantproof",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "private": true,
   "description": "Static-first TenantProof product, local report viewer, scope worksheet, evidence schema, operations, and release handoff.",
   "scripts": {

@@ -5,15 +5,13 @@
 - GitHub: `UnderNoNameYet/NoNameYet`
 - default branch: `main`
 - intended public origin: `https://undernonameyet.github.io/NoNameYet/`
-- current local source: `/data/tenantproof`
+- canonical source: repository root on current `main`
 
-Historical repository SHAs and workflows are context only. Inspect current `main` after access returns.
+Current published `main` is `6bc99104bb91b32afb50c8c7d9b416d74566f8ed`. Historical SHA `047691e35c6b8d38ba5540d1fe4de345ed752a6c` is context and rollback only; inspect `main` again before every future release.
 
 ## Current publication state
 
-GitHub access is restored. `main` was inspected at `047691e35c6b8d38ba5540d1fe4de345ed752a6c`; the existing Pages workflow builds and deploys rejected RebuttalKit v8. The branch `launch/tenantproof-v1` was created from that SHA. TenantProof has not yet been merged or deployed.
-
-The release replaces the deployment workflow and points Pages only at the validated TenantProof `dist/` artifact. The inspected main SHA is the rollback point.
+GitHub access is operational. PR [#23](https://github.com/UnderNoNameYet/NoNameYet/pull/23) was squash-merged at `6bc99104bb91b32afb50c8c7d9b416d74566f8ed` and successful workflow [run #40](https://github.com/UnderNoNameYet/NoNameYet/actions/runs/33372340582) deployed the TenantProof request-only preview. The permanent workflow publishes only the validated `dist/` artifact. `047691e35c6b8d38ba5540d1fe4de345ed752a6c` is the pre-release rollback point.
 
 ## Owner authorization
 
@@ -27,20 +25,16 @@ The user explicitly authorized the agent to:
 
 This does not override connection permissions, legal identity, secret handling, third-party platform confirmations, or safe testing requirements.
 
-## Required first GitHub sequence
+## Completed first GitHub publication
 
-1. Call `get_me`.
-2. Inspect current `main` tree and latest SHA.
-3. Locate `AGENTS.md`, repository instructions, PR templates, Pages workflow, and configured publish directory.
-4. Inspect current live/release source; assume historical RebuttalKit content may remain.
-5. Compare repository files with local TenantProof tree.
-6. Decide whether to replace, migrate, or preserve archival content.
-7. Create a focused branch, suggested `launch/tenantproof-v1`.
-8. Commit the smallest coherent source + docs + workflow change.
-9. Run quality and build in CI.
-10. Open PR with screenshots, risks, rollback, and release manifest.
-11. Merge after required checks.
-12. Verify deployed public origin.
+1. Authenticated and inspected the old RebuttalKit `main`.
+2. Created `launch/tenantproof-v1` from `047691e35c6b8d38ba5540d1fe4de345ed752a6c`.
+3. Materialized direct TenantProof source and removed temporary transport.
+4. Opened and inspected PR [#23](https://github.com/UnderNoNameYet/NoNameYet/pull/23).
+5. Passed local quality, documentation, and PR build gates.
+6. Reviewed the exact file delta and secret/transport patterns.
+7. Squash-merged at `6bc99104bb91b32afb50c8c7d9b416d74566f8ed`.
+8. Confirmed successful Pages run #40 and primary live routes.
 
 ## Main-branch contents
 
@@ -82,7 +76,7 @@ The phrase “everything in main other than testers” must not lead to deleting
 
 If current repository policy truly requires tests off `main`, create a dedicated protected quality branch/workflow only after inspecting the repo; do not silently weaken CI.
 
-## Branch and commit plan
+## Historical first-publication commit plan
 
 Suggested commits:
 
@@ -120,7 +114,7 @@ report validation
 fixture generation
 live-mode rejection
 syntax/docs/static/browser QA
-release strict
+release readiness (non-strict for a closed preview; strict for commercial-ready config)
 artifact = public/
 deploy
 post-deploy smoke
@@ -141,7 +135,8 @@ Do not expose release config secrets through build logs or client JS. Only publi
 - `0.1.0` — local MVP
 - `0.2.0` — production preparation + public Notion soft launch
 - `0.3.0` — canonical handoff/spec/quality release
-- `1.0.0` — first premium public static release after strict checks
+- `0.3.1` — published request-only technical preview
+- `1.0.0` — first commercially ready public release after strict checks
 
 Do not label 1.0 until the deployed origin and intake path are verified.
 

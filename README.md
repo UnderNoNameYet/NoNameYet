@@ -12,11 +12,11 @@ It sells an agreed authorization matrix, executed before/after evidence, remedia
 |---|---|
 | Product specification | complete |
 | Local static MVP | complete |
-| Production preparation | complete locally |
+| Production preparation | complete for the closed technical preview |
 | Browser/responsive/privacy QA | passing; rerun after every change |
 | Public qualification form | live through Notion; non-sensitive only |
 | Public launch/sample pages | live through Notion |
-| Premium GitHub Pages deployment | release branch prepared; pending PR, CI, merge, and live verification |
+| GitHub Pages request-only preview | live from `6bc99104bb91` after PR [#23](https://github.com/UnderNoNameYet/NoNameYet/pull/23) and successful deployment |
 | Payments | closed |
 | Customers/revenue/testimonials | none |
 
@@ -83,7 +83,7 @@ Source tests and quality tooling belong in version control for professional deli
 ## Run locally
 
 ```bash
-cd /data/tenantproof
+cd /path/to/NoNameYet
 npm run serve
 ```
 
@@ -136,7 +136,6 @@ A public premium release additionally requires `npm run release:strict` with:
 
 ## Current blockers
 
-- TenantProof release branch remains unmerged and unverified on GitHub Pages
 - usable public form URL must be inserted into static release config
 - legal contracting identity, jurisdiction, and owned business contact are required before taking payment
 - static privacy/terms remain pre-launch

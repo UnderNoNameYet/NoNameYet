@@ -1,22 +1,34 @@
 {
-  "snapshotAt": "2026-08-31T11:53:35+05:30",
+  "snapshotAt": "2026-08-31T14:25:08+05:30",
   "product": "TenantProof",
   "corePromise": "Prove that Customer A cannot read or modify Customer B's data.",
-  "stage": "request-only soft launch and premium static release preparation",
-  "sourcePath": "/data/tenantproof",
+  "stage": "GitHub Pages request-only technical preview live; commercial intake and payment closed",
+  "sourcePath": "repository root on current main",
   "repository": {
     "owner": "UnderNoNameYet",
     "name": "NoNameYet",
     "defaultBranch": "main",
     "publicOriginCandidate": "https://undernonameyet.github.io/NoNameYet/",
-    "access": "connected_and_inspected",
-    "tenantProofDeployed": false,
+    "access": "connected_published_and_verified",
+    "tenantProofDeployed": true,
     "authenticatedUser": "MYIndieDEV",
-    "inspectedMainSha": "047691e35c6b8d38ba5540d1fe4de345ed752a6c",
-    "releaseBranch": "launch/tenantproof-v1",
-    "existingProduct": "RebuttalKit v8 (rejected and frozen)",
+    "inspectedMainSha": "6bc99104bb91b32afb50c8c7d9b416d74566f8ed",
+    "releaseBranch": "launch/tenantproof-v1 (merged)",
+    "existingProduct": "TenantProof v0.3.1 request-only technical preview",
     "pagesWorkflow": ".github/workflows/pages.yml",
-    "releaseTransport": "temporary verified bootstrap; final main is direct source"
+    "releaseTransport": "direct source on main; temporary materializer and staging references removed",
+    "preReleaseRollbackSha": "047691e35c6b8d38ba5540d1fe4de345ed752a6c",
+    "pullRequestNumber": 23,
+    "pullRequestUrl": "https://github.com/UnderNoNameYet/NoNameYet/pull/23",
+    "mergeSha": "6bc99104bb91b32afb50c8c7d9b416d74566f8ed",
+    "mergedAt": "2026-08-31T08:19:02Z",
+    "workflowRunNumber": 40,
+    "workflowRunUrl": "https://github.com/UnderNoNameYet/NoNameYet/actions/runs/33372340582",
+    "workflowConclusion": "success",
+    "deployedAt": "2026-08-31T08:19:39Z",
+    "deployedUrl": "https://undernonameyet.github.io/NoNameYet/",
+    "liveVerifiedAt": "2026-08-31T08:51:01Z",
+    "liveVerification": "primary HTML routes and fictional report JSON fetched successfully; exact artifact passed local Chromium QA"
   },
   "packages": [
     {
@@ -68,7 +80,7 @@
   },
   "quality": {
     "latestKnownResult": "pass",
-    "latestRunAt": "2026-08-31T06:38:43.588Z",
+    "latestRunAt": "2026-08-31T08:54:18.497Z",
     "qualityGateSteps": 31,
     "documentationChecks": 136,
     "handoffPdfPages": 11,
@@ -92,8 +104,12 @@
     "browserPersistenceCalls": 0,
     "postRequests": 0,
     "demoRunnerLocked": true,
-    "mustRerunAfterChanges": true,
-    "sourceManifestFiles": 99
+    "mustRerunAfterChanges": false,
+    "sourceManifestFiles": 99,
+    "githubPullRequestBuild": "success",
+    "githubMainBuildAndDeploy": "success",
+    "liveStaticRouteFetch": "pass",
+    "sourceManifestBytes": 3583781
   },
   "softLaunch": {
     "publicQualificationForm": true,
@@ -101,7 +117,8 @@
     "publicNotionLaunchPage": true,
     "publicFictionalSampleReport": true,
     "formSmokeTest": "passed_and_test_row_deleted",
-    "searchIndexing": true
+    "searchIndexing": true,
+    "githubPagesRequestOnlyPreview": true
   },
   "commercialTruth": {
     "customers": 0,
@@ -112,22 +129,22 @@
     "targetIsGuarantee": false
   },
   "blockers": [
-    "TenantProof release branch is not yet merged or deployed",
-    "usable HTTPS intake URL inserted into static release config",
-    "verified legal contracting identity and jurisdiction before payment",
+    "owned HTTPS intake and deletion route inserted into commercial release config",
+    "verified legal contracting identity and jurisdiction before customer intake or payment",
     "owned business contact before commercial launch",
     "static privacy and terms updated from pre-launch state",
+    "approved evidence retention value and delivery capacity",
     "security contact before security.txt",
-    "payment processor before accepting money"
+    "payment processor, tax, and refund configuration before accepting money",
+    "authenticated approved acquisition channel before individualized outreach"
   ],
   "nextActions": [
-    "push the GitHub-ready TenantProof source, documentation, operations, and asset transport",
-    "open and inspect the release pull request",
-    "verify CI and the exact public-only artifact",
-    "merge the preview release and verify GitHub Pages",
-    "integrate an owned HTTPS intake route and operator facts before opening commercial intake",
-    "run the ten-prospect paid-pilot experiment",
-    "deliver one safely authorized pilot if won"
+    "keep the deployed static preview local-only for intake and closed for payment",
+    "configure verified operator identity, jurisdiction, owned business contact, retention, and delivery capacity",
+    "add the owned HTTPS intake and deletion route and pass the strict release gate before accepting customers",
+    "connect an authenticated approved business channel",
+    "run the ten-prospect paid-pilot experiment with individualized messages",
+    "deliver one safely authorized staging-first pilot if won"
   ],
   "frozenProducts": [
     "RebuttalKit",
@@ -135,5 +152,6 @@
     "App Store screenshot service",
     "ClearCal proposal",
     "Relay migration"
-  ]
+  ],
+  "localReleaseMirror": "/data/tenantproof-final"
 }

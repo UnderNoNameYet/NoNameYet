@@ -56,7 +56,7 @@ const grouped = files.reduce((result, file) => {
 const manifest = {
   generatedAt: new Date().toISOString(),
   product: 'TenantProof',
-  version: '0.3.0',
+  version: '0.3.1',
   sourceOfTruth: 'AGENTS.md and handoff/README.md',
   deployRoot: 'public/',
   files: files.length,

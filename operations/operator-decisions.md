@@ -1,8 +1,8 @@
-# TenantProof operator decisions required before public launch
+# TenantProof operator decisions required before commercial intake
 
 Everything below is a factual account, legal, or identity decision that cannot be invented by product design.
 
-## Required for request-only launch
+## Required before customer intake opens
 
 1. **Public operator display name**  
    Recommended product display: `TenantProof`. Confirm whether a legal personal or company name must also appear.
@@ -36,9 +36,9 @@ Everything below is a factual account, legal, or identity decision that cannot b
 10. **Final legal review**  
     Review operator identity, privacy, retention, liability, tax, cancellation, refund, and statutory-right language.
 
-## Repository blocker
+## Repository status
 
-The GitHub connection can list tools but cannot authenticate repository operations because administrator reapproval is required. Until reapproved, no branch, commit, pull request, merge, or deployment can occur.
+The request-only GitHub Pages preview is live from `6bc99104bb91b32afb50c8c7d9b416d74566f8ed` after PR #23 and successful deployment run #40. Repository access is no longer a blocker. Commercial intake, payment, and real testing remain blocked by the factual decisions above.
 
 ## Recommended launch mode
 

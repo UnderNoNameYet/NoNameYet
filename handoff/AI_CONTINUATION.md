@@ -6,11 +6,11 @@ Use this when handing TenantProof to another advanced model or developer.
 
 > You are continuing TenantProof, a productized Supabase/PostgreSQL tenant-isolation verification and repair service. Do not invent a new product. Read `AGENTS.md` and every file linked from `handoff/README.md` before editing. The core promise is: “Prove that Customer A cannot read or modify Customer B’s data.” The product sells executed authorization evidence, remediation, and regression protection—not an automated badge or security guarantee.
 >
-> Current state: local premium static MVP and production-preparation package pass QA; a public Notion qualification form, private intake pipeline, public launch page, and fictional sample report exist; GitHub deployment is blocked by connection-level administrator reapproval; payment is closed; there are no customers, revenue, testimonials, or real findings. Preserve those truths.
+> Current state: the premium request-only preview is live at `https://undernonameyet.github.io/NoNameYet/` from main SHA `6bc99104bb91b32afb50c8c7d9b416d74566f8ed` after PR #23 and successful Pages run #40; the local quality package passed; a public Notion qualification form, private pipeline, launch page, and fictional sample report exist; payment and static commercial intake are closed; there are no customers, revenue, testimonials, or real findings. Preserve those truths.
 >
 > First, inspect `handoff/CURRENT_STATE.json`, run `npm run quality`, and reconcile any drift. If GitHub is available, inspect current `main`, repository instructions, Pages workflow, and PR template before writing. Commit product source, specs, operations, handoff, media, and quality tooling. Publish only `public/`. The user authorized autonomous merging after checks, but do not bypass account permissions, fabricate legal/account facts, expose private email, or test any real target without written authorization.
 >
-> Next objective: deploy the premium static site with the real HTTPS intake link and honest operator/privacy configuration, verify it live, then run no more than ten highly matched acquisition attempts through an authenticated approved account. Prefer one paid pilot to vanity traffic. Stop/revise if ten contacts produce no serious conversation. Never use bulk spam, fake proof, blind discounts, or unsupported claims.
+> Next objective: configure a real operator identity, jurisdiction, owned business contact, HTTPS intake/deletion route, retention, delivery capacity, and launch-state legal copy; then run no more than ten highly matched acquisition attempts through an authenticated approved business account. Prefer one paid pilot to vanity traffic. Stop/revise if ten contacts produce no serious conversation. Never use bulk spam, fake proof, blind discounts, or unsupported claims.
 
 ## Mandatory first actions
 
@@ -34,7 +34,7 @@ Use this when handing TenantProof to another advanced model or developer.
 - real testing: written authorization required
 - raw evidence recommendation: 14 days
 - customers/revenue/testimonials: none
-- GitHub premium deployment: not completed at handoff snapshot
+- GitHub request-only preview: deployed from `6bc99104bb91b32afb50c8c7d9b416d74566f8ed` through PR #23 and successful Pages run #40
 - private Outlook email: never expose/use for cold outreach without explicit specific approval
 
 ## Decision authority

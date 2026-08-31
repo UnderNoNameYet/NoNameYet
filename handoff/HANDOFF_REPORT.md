@@ -1,15 +1,15 @@
 # TenantProof handoff report
 
-**Snapshot:** 2026-08-30  
-**Product stage:** request-only soft launch; premium static deployment blocked by GitHub administrator reapproval  
+**Snapshot:** 2026-08-31  
+**Product stage:** GitHub Pages request-only technical preview live; static customer intake and payments closed  
 **Commercial stage:** validated paid demand, no customer or revenue yet  
-**Next model objective:** preserve product quality, complete repository publication, then run a ten-buyer paid-pilot experiment
+**Next model objective:** configure verified operator/commercial facts, then run a ten-buyer paid-pilot experiment through an authenticated channel
 
 ## Executive summary
 
 TenantProof is a productized service for founders launching multi-tenant SaaS applications on Supabase/PostgreSQL. It executes a buyer-approved authorization matrix and produces redacted before/after evidence. The winning wedge is not “we enabled RLS”; it is “we proved the tenant and role boundaries that matter to your application.”
 
-The product exists as a polished local static website, interactive fictional report viewer, local scope worksheet, versioned report schema, demo-only runner, production hardening, operational templates, and a public Notion qualification path. The premium GitHub Pages release has not been pushed because the GitHub connection requires administrator reapproval.
+The product now exists on GitHub Pages as a polished request-only technical preview, interactive fictional report viewer, local scope worksheet, versioned report schema, demo-only runner, production hardening, operational templates, and a public Notion qualification path. PR [#23](https://github.com/UnderNoNameYet/NoNameYet/pull/23) was squash-merged at `6bc99104bb91b32afb50c8c7d9b416d74566f8ed`, and deployment [run #40](https://github.com/UnderNoNameYet/NoNameYet/actions/runs/33372340582) succeeded.
 
 ## Why this product was selected
 
@@ -134,26 +134,21 @@ Payment stays closed until a real legal contracting party, jurisdiction, owned b
 
 ## Current blockers
 
-1. GitHub MCP operations require administrator reapproval.
-2. Current repository `main` must be freshly inspected; historical SHAs are not authority.
-3. Owned business email and final legal operator identity are not configured.
-4. Premium site config remains in `preview` state.
-5. Static privacy/terms still contain pre-launch language.
-6. No `.well-known/security.txt` until an owned security contact exists.
-7. No payment processor is connected.
+1. Owned business contact, legal contracting identity, and jurisdiction are not configured.
+2. The static site has no owned HTTPS intake/deletion route and remains in `preview`.
+3. Static privacy/terms still contain pre-launch language.
+4. No `.well-known/security.txt` until an owned security contact exists.
+5. No processor, tax/refund position, or confirmed delivery capacity exists.
+6. No authenticated approved acquisition channel is connected for individualized outreach.
 
 ## Immediate continuation plan
 
-1. Finish and validate this handoff package.
-2. Reconnect GitHub and call `get_me`.
-3. Inspect current `main`, workflow, source directory, and PR template.
-4. Reconcile the local release with repository reality; do not blind-overwrite.
-5. Commit product source, `AGENTS.md`, `handoff/`, operations, and build tooling.
-6. Ensure production deployment publishes only `public/`; test sources and generated logs stay out of the web artifact.
-7. Run full quality gate and inspect screenshots/video.
-8. Merge after checks; user explicitly authorized autonomous merging.
-9. Verify live routes, CSP, intake CTA, sample report, print, and mobile behavior.
-10. Run the ten-prospect experiment through an authenticated approved account; do not use the private Outlook address for cold outreach.
+1. Treat current `main` and `handoff/CURRENT_STATE.json` as the canonical source.
+2. Keep static intake local-only and payment closed; do not invent launch facts.
+3. Configure verified operator identity, jurisdiction, owned business contact, retention, and delivery capacity.
+4. Add the owned HTTPS intake/deletion route, update legal copy, and pass the strict release gate before accepting customers.
+5. Use an authenticated approved business channel for no more than ten highly matched buyer contacts.
+6. Prefer one safely authorized paid pilot, then record objections, fulfillment time, margin, and outcome without publishing customer evidence.
 
 ## Mindset to preserve
 

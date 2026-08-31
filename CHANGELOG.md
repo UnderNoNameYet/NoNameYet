@@ -1,6 +1,23 @@
 # Changelog
 
-All notable product changes are recorded here. The project has not reached a public premium 1.0 release.
+All notable product changes are recorded here. The project has not reached a commercially ready 1.0 release.
+
+## [0.3.1] — 2026-08-31 — request-only GitHub Pages preview
+
+### Published
+
+- squash-merged PR [#23](https://github.com/UnderNoNameYet/NoNameYet/pull/23) to `main` at `6bc99104bb91b32afb50c8c7d9b416d74566f8ed`
+- replaced rejected RebuttalKit with direct, browsable TenantProof source
+- deployed the 22-file public-only artifact through successful workflow [run #40](https://github.com/UnderNoNameYet/NoNameYet/actions/runs/33372340582)
+- verified the home, report, methodology, request, privacy, terms, 404, and fictional report-data routes at `https://undernonameyet.github.io/NoNameYet/`
+
+### Quality and safety
+
+- fixed the CI preview-state assertions to match generated JSON syntax
+- preserved `state: preview` and `paymentMode: closed`
+- kept Northstar CRM explicitly fictional and customer intake local-only on the static site
+- reviewed the exact 198-file PR delta; the final diff contains no source-transfer workflow, staging reference, signed URL, private email, or credential-shaped secret
+- retained `047691e35c6b8d38ba5540d1fe4de345ed752a6c` as the pre-release rollback reference
 
 ## [0.3.0] — 2026-08-30 — canonical handoff release
 

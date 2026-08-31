@@ -34,19 +34,20 @@
 - [x] Demo runner locked against live targets
 - [ ] Configure production site JSON
 - [ ] Run strict release check
-- [ ] GitHub connection administrator reapproval
-- [ ] Inspect current `main` and pull-request template
-- [ ] Create a new release branch from current `main`
-- [ ] Push files and open a draft pull request
-- [ ] Review CI and rendered preview
-- [ ] Obtain separate deployment approval
-- [ ] Merge only after approval
+- [x] GitHub connection restored and authenticated
+- [x] Inspect current `main` and pull-request template
+- [x] Create a release branch from inspected `main`
+- [x] Push direct source and open pull request #23
+- [x] Review exact diff and successful PR CI
+- [x] Apply standing deployment authorization after checks
+- [x] Squash-merge and verify successful Pages deployment
+- [x] Fetch every primary live route and fictional report data
 
 ## D. Marketing readiness
 
 - [ ] Public operator identity matches profiles used for outreach
-- [ ] No fabricated client, case study, result, certification, or testimonial
-- [ ] Sample report remains labeled fictional
+- [x] No fabricated client, case study, result, certification, or testimonial
+- [x] Sample report remains labeled fictional
 - [ ] Ten named prospects meet the target profile
 - [ ] Every message references a current, explicit buyer trigger
 - [ ] Outreach channel and account approved by the user
@@ -56,6 +57,6 @@
 
 ## E. Launch decision
 
-The site may publish in **request-only mode** before payment is open, but only when operator identity, privacy contact, intake handling, written authorization, and delivery capacity are ready.
+The closed technical preview is live and does not accept or transmit static-site requests. Commercial intake may open only after operator identity, privacy contact, intake handling, written authorization, and delivery capacity are ready.
 
-Payment may open only after the buyer and scope are qualified. Public deployment, payment activation, and outbound marketing are separate approval gates.
+Payment may open only after the buyer and scope are qualified. Technical publication, commercial intake, payment activation, and outbound marketing remain separate gates.

@@ -1,45 +1,72 @@
 # GitHub publication record
 
-## Observed repository state
+## Current status
 
 - Repository: `UnderNoNameYet/NoNameYet`
 - Authenticated GitHub user: `MYIndieDEV`
-- Inspected at: 2026-08-31
 - Default branch: `main`
-- Inspected main SHA: `047691e35c6b8d38ba5540d1fe4de345ed752a6c`
-- Release branch: `launch/tenantproof-v1`
-- Existing deployed product: RebuttalKit v8, rejected and frozen
-- Existing workflow: `.github/workflows/pages.yml`
-- Existing source layout: `public-source/` plus generated `public/`
+- Public origin: `https://undernonameyet.github.io/NoNameYet/`
+- Pull request: [#23](https://github.com/UnderNoNameYet/NoNameYet/pull/23)
+- Squash merge SHA: `6bc99104bb91b32afb50c8c7d9b416d74566f8ed`
+- Merged at: `2026-08-31T08:19:02Z`
+- Pages workflow: `.github/workflows/pages.yml`
+- Deployment run: [#40](https://github.com/UnderNoNameYet/NoNameYet/actions/runs/33372340582) — success
+- Deployment completed at: `2026-08-31T08:19:39Z`
+- Live verification recorded at: `2026-08-31T08:51:01Z`
+- Pre-release rollback SHA: `047691e35c6b8d38ba5540d1fe4de345ed752a6c`
 
-## Release intent
+Current `main` is direct TenantProof v0.3.x source. The public product is a request-only technical preview. Static intake is local-only, payment is closed, and Northstar CRM remains explicitly fictional.
 
-Replace the active Pages artifact with the approved TenantProof request-only preview. Keep payment closed, preserve fictional-demo labeling, and publish only the generated `dist/` contents. Source, operations, quality tooling, and handoff documents stay on `main` but never enter the public artifact.
+## Publication outcome
 
-## Final repository layout
+PR #23 replaced the rejected RebuttalKit release and removed its generated-source trees. Current `main` contains the product source, schema, tools, operations, handoff documents, selected media, quality source, PR template, and one permanent Pages workflow.
 
-The release materializes the complete source directly on `main`: public site, schema, tools, operations, handoff documents, selected screenshots, walkthrough video, styled PDF, and machine-readable manifests. Historical RebuttalKit source and bundle directories are removed in the materialization commit. Tests remain versioned for reproducibility but never enter the Pages artifact.
+The temporary source materializer, staging reference, diagnostic file, signed download URL, and legacy directories are absent from the final tree and final PR delta. No transfer token or attachment URL was retained in the release.
 
-Only `dist/`, built exclusively from `public/`, is uploaded to GitHub Pages. No credentials, customer data, real findings, private contact information, environment secrets, build logs, or payment configuration are committed.
+## Review evidence
 
-## Authorization
+- PR build completed successfully before merge.
+- Mergeability was `clean`.
+- Final delta: 198 files — 97 added, 3 modified, 97 removed, and 1 renamed.
+- All 87 non-removed text patches (499,201 added-line bytes) passed targeted checks for AWS signatures, GitHub/OpenAI/Notion token forms, private keys, authorization headers, the private Outlook domain, staging identifiers, materializer names, and signed-source hosts.
+- GitHub Advanced Security secret scanning was unavailable for this repository; the exact-diff scan and the repository's credential/private-email quality gate were used instead.
+- Local release evidence remained 31/31 quality steps and 136 documentation checks before publication.
 
-The owner provided standing authorization to create the branch, open the pull request, merge after required checks, and deploy the closed preview. No additional routine approval is required. This does not authorize opening payment, inventing operator facts, or collecting sensitive data.
+## CI and deployment boundary
 
-## CI and deployment
+The permanent workflow:
 
-The replacement workflow:
-
-1. checks out the complete TenantProof source;
+1. checks out direct TenantProof source;
 2. regenerates public brand assets;
 3. hardens HTML and builds preview configuration;
-4. validates the report contract and demo fixture;
+4. validates the report contract and fictional fixture;
 5. rejects live matrix execution;
 6. checks JavaScript syntax and documentation integrity;
-7. builds a public-only `dist/` artifact;
-8. confirms preview state and closed payment;
-9. deploys only `dist/` on `main`.
+7. builds `dist/` exclusively from `public/`;
+8. confirms preview state, closed payment, and exactly 22 public files;
+9. uploads and deploys only `dist/` after a push to `main`.
+
+Source, operations, tests, handoff documents, media, and build logs are never part of the Pages artifact.
+
+## Live verification
+
+The successful post-merge workflow is tied to `6bc99104bb91b32afb50c8c7d9b416d74566f8ed`. Public fetches confirmed TenantProof content on:
+
+- `/`
+- `/report.html`
+- `/methodology.html`
+- `/request.html`
+- `/privacy.html`
+- `/terms.html`
+- `/404.html`
+- `/assets/sample-report.json`
+
+The sample data exposed schema `1.0`, report `TP-DEMO-0830`, project `Northstar CRM`, and the label `Fictional demonstration only`. No RebuttalKit release marker appeared. A remote interactive browser could not resolve the GitHub Pages hostname from the sandbox; the exact deployed source had already passed local Chromium responsive, interaction, console, persistence, request, and external-runtime QA.
+
+## Commercial boundary
+
+This publication does not open customer work or payment. Before commercial intake or invoicing, require verified operator identity and jurisdiction, an owned business contact and HTTPS intake/deletion route, launch-state legal copy, retention approval, delivery capacity, processor/tax/refund configuration, and written authorization for every target.
 
 ## Rollback
 
-If Pages verification fails, revert the release pull request or redeploy `047691e35c6b8d38ba5540d1fe4de345ed752a6c`. Verify routes, CSP, assets, request state, and fictional labels after rollback.
+For a critical routing, CSP, privacy, truth, or deployment defect, revert `6bc99104bb91b32afb50c8c7d9b416d74566f8ed` or restore `047691e35c6b8d38ba5540d1fe4de345ed752a6c`, then re-run Pages and verify routes, assets, configuration, and fictional labels. Do not open payment or real testing during rollback.
