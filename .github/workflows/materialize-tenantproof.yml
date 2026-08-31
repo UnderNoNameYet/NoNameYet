@@ -30,15 +30,16 @@ jobs:
           SOURCE_SHA256: 1e238a2909e5d433c2c41057906da0edf6aefd602bd2b5ae7aafde713a3b3264
         shell: bash
         run: |
-          set -euo pipefail
+          set -o pipefail
           archive="$RUNNER_TEMP/tenantproof-source-staging.pdf"
-          ARCHIVE="$archive" python3 - <<'PYDOWNLOAD'
+          ARCHIVE="$archive" python3 - <<'PYDOWNLOAD' 2>&1 | tee "$RUNNER_TEMP/materialize.log"
           import base64
           import hashlib
           import json
           import os
           import time
           from pathlib import Path
+          from urllib.error import HTTPError
           from urllib.parse import urlparse
           from urllib.request import Request, urlopen
 
@@ -57,7 +58,7 @@ jobs:
                   data=json.dumps(payload).encode(),
                   headers={
                       "content-type": "application/json",
-                      "user-agent": "TenantProof source materializer/1.0",
+                      "user-agent": "TenantProof source materializer/1.1",
                   },
                   method="POST",
               )
@@ -84,18 +85,26 @@ jobs:
               },
           )
           for base in bases:
-              for payload in payloads:
-                  try:
-                      candidate = post_json(base, "loadCachedPageChunk", payload)
-                      if candidate.get("recordMap", {}).get("block"):
-                          chunk, api_base = candidate, base
-                          break
-                  except Exception as error:
-                      errors.append(f"{base}: {type(error).__name__}")
+              for endpoint in ("loadPageChunk", "loadCachedPageChunk"):
+                  for payload in payloads:
+                      try:
+                          candidate = post_json(base, endpoint, payload)
+                          blocks = candidate.get("recordMap", {}).get("block")
+                          if blocks:
+                              chunk, api_base = candidate, base
+                              print(f"Resolved public page through {base}/{endpoint}")
+                              break
+                          errors.append(f"{base}/{endpoint}: empty record map")
+                      except HTTPError as error:
+                          errors.append(f"{base}/{endpoint}: HTTP {error.code}")
+                      except Exception as error:
+                          errors.append(f"{base}/{endpoint}: {type(error).__name__}")
+                  if chunk:
+                      break
               if chunk:
                   break
           if not chunk or not api_base:
-              raise SystemExit("public source page could not be resolved: " + ", ".join(errors))
+              raise SystemExit("public source page could not be resolved: " + "; ".join(errors))
 
           source = None
           block_id = None
@@ -111,23 +120,28 @@ jobs:
                   block_id = value.get("id")
                   break
           if not source or not block_id:
-              raise SystemExit("verified source attachment was not found")
+              raise SystemExit("verified source attachment was not found in the public record map")
 
-          signed = post_json(
-              api_base,
-              "getSignedFileUrls",
-              {
-                  "urls": [
-                      {
-                          "permissionRecord": {"table": "block", "id": block_id},
-                          "url": source,
-                      }
-                  ]
-              },
-          )
-          signed_url = (signed.get("signedUrls") or [None])[0]
+          parsed_source = urlparse(source)
+          if parsed_source.scheme == "https":
+              signed_url = source
+          else:
+              signed = post_json(
+                  api_base,
+                  "getSignedFileUrls",
+                  {
+                      "urls": [
+                          {
+                              "permissionRecord": {"table": "block", "id": block_id},
+                              "url": source,
+                          }
+                      ]
+                  },
+              )
+              signed_url = (signed.get("signedUrls") or [None])[0]
           if not isinstance(signed_url, str):
               raise SystemExit("Notion did not issue a source download URL")
+
           parsed = urlparse(signed_url)
           allowed_host = (
               parsed.hostname == "file.notion.so"
@@ -139,7 +153,7 @@ jobs:
 
           for attempt in range(3):
               try:
-                  request = Request(signed_url, headers={"user-agent": "TenantProof source materializer/1.0"})
+                  request = Request(signed_url, headers={"user-agent": "TenantProof source materializer/1.1"})
                   with urlopen(request, timeout=90) as response:
                       archive.write_bytes(response.read())
                   break
@@ -153,6 +167,11 @@ jobs:
               raise SystemExit(f"source SHA-256 mismatch: {actual_sha}")
           print(f"Verified source container: {actual_sha}")
           PYDOWNLOAD
+          status=${PIPESTATUS[0]}
+          if [ "$status" -ne 0 ]; then
+            exit "$status"
+          fi
+          set -euo pipefail
 
           find . -mindepth 1 -maxdepth 1 ! -name .git -exec rm -rf {} +
 
@@ -181,6 +200,23 @@ jobs:
           test ! -e immersive-overrides
           test ! -e public-overrides
           test ! -e .github/workflows/materialize-tenantproof.yml
+
+      - name: Commit sanitized diagnostic
+        if: failure()
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p release
+          if [ -s "$RUNNER_TEMP/materialize.log" ]; then
+            cp "$RUNNER_TEMP/materialize.log" release/materialize-error.txt
+          else
+            printf '%s\n' 'Materialization failed without a captured resolver diagnostic.' > release/materialize-error.txt
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add release/materialize-error.txt
+          git commit -m "chore: record source materialization diagnostic" || exit 0
+          git push origin HEAD:launch/tenantproof-v1
 
       - name: Commit direct TenantProof source
         shell: bash
