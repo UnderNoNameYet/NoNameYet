@@ -43,7 +43,14 @@ jobs:
           from urllib.parse import urlparse
           from urllib.request import Request, urlopen
 
-          page_id = base64.b64decode(os.environ["PAGE_ID_B64"]).decode().strip()
+          compact_page_id = base64.b64decode(os.environ["PAGE_ID_B64"]).decode().strip().replace("-", "")
+          if len(compact_page_id) != 32:
+              raise SystemExit("staged page ID is invalid")
+          uuid_page_id = (
+              compact_page_id[:8] + "-" + compact_page_id[8:12] + "-" +
+              compact_page_id[12:16] + "-" + compact_page_id[16:20] + "-" +
+              compact_page_id[20:]
+          )
           expected_name = os.environ["SOURCE_FILENAME"]
           expected_sha = os.environ["SOURCE_SHA256"]
           archive = Path(os.environ["ARCHIVE"])
@@ -57,8 +64,9 @@ jobs:
                   f"{base}/{endpoint}",
                   data=json.dumps(payload).encode(),
                   headers={
+                      "accept": "application/json",
                       "content-type": "application/json",
-                      "user-agent": "TenantProof source materializer/1.1",
+                      "user-agent": "TenantProof source materializer/1.2",
                   },
                   method="POST",
               )
@@ -68,22 +76,24 @@ jobs:
           chunk = None
           api_base = None
           errors = []
-          payloads = (
-              {
-                  "pageId": page_id,
-                  "limit": 100,
-                  "chunkNumber": 0,
-                  "cursor": {"stack": []},
-                  "verticalColumns": False,
-              },
-              {
-                  "page": {"id": page_id},
-                  "limit": 100,
-                  "chunkNumber": 0,
-                  "cursor": {"stack": []},
-                  "verticalColumns": False,
-              },
-          )
+          payloads = []
+          for page_id in (uuid_page_id, compact_page_id):
+              payloads.extend((
+                  {
+                      "pageId": page_id,
+                      "limit": 100,
+                      "chunkNumber": 0,
+                      "cursor": {"stack": []},
+                      "verticalColumns": False,
+                  },
+                  {
+                      "page": {"id": page_id},
+                      "limit": 100,
+                      "chunkNumber": 0,
+                      "cursor": {"stack": []},
+                      "verticalColumns": False,
+                  },
+              ))
           for base in bases:
               for endpoint in ("loadPageChunk", "loadCachedPageChunk"):
                   for payload in payloads:
@@ -153,7 +163,7 @@ jobs:
 
           for attempt in range(3):
               try:
-                  request = Request(signed_url, headers={"user-agent": "TenantProof source materializer/1.1"})
+                  request = Request(signed_url, headers={"user-agent": "TenantProof source materializer/1.2"})
                   with urlopen(request, timeout=90) as response:
                       archive.write_bytes(response.read())
                   break
