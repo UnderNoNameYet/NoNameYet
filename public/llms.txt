@@ -1,0 +1,24 @@
+# TenantProof
+
+TenantProof is a productized, authorized tenant-boundary verification and remediation service for Supabase applications.
+
+## Core claim
+TenantProof tests whether one synthetic customer identity can read or modify another synthetic customer's in-scope data. It produces an executed matrix, redacted evidence, and—when purchased—reviewable policy patches and regression checks.
+
+## Important limitations
+- It is not a general penetration test.
+- It is not a compliance certification.
+- A passing check applies only to its documented environment, identity, code state, and time.
+- Untested and out-of-scope paths are not treated as safe.
+- Written authorization is mandatory before testing.
+- The website never requests credentials or production records.
+
+## Public pages
+- / — Product overview and pricing
+- /report.html — Fictional interactive report
+- /methodology.html — Scope, authorization, and evidence handling
+- /request.html — Local-only scope worksheet
+- /privacy.html — Current data-handling notice
+- /terms.html — Current service limitations
+
+All named sample projects, findings, and remediation outcomes are fictional product demonstrations.

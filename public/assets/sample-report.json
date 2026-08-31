@@ -1,0 +1,338 @@
+{
+  "schemaVersion": "1.0",
+  "reportId": "TP-DEMO-0830",
+  "project": {
+    "name": "Northstar CRM",
+    "environment": "Fictional staging demo",
+    "client": "Fictional demonstration only"
+  },
+  "scope": {
+    "generatedAt": "2026-08-30T06:30:00.000Z",
+    "tables": 8,
+    "roles": 3,
+    "functions": 2,
+    "storageBuckets": 1
+  },
+  "checks": [
+    {
+      "id": "TP-001",
+      "actor": "member",
+      "area": "Table",
+      "resource": "customer_notes",
+      "operation": "read",
+      "expectation": "A member cannot read another tenant’s customer notes.",
+      "before": {
+        "status": "fail",
+        "observed": "The authorized test identity received four rows owned by the comparison tenant.",
+        "evidence": "HTTP 200 · 4 foreign rows · identifiers redacted",
+        "remediation": "Replace the broad authenticated-role policy with a membership-bound tenant predicate."
+      },
+      "after": {
+        "status": "pass",
+        "observed": "The same test identity received zero rows from the comparison tenant.",
+        "evidence": "HTTP 200 · 0 foreign rows · own-tenant rows unchanged",
+        "remediation": "Patched policy retained as a versioned database migration."
+      }
+    },
+    {
+      "id": "TP-002",
+      "actor": "member",
+      "area": "Table",
+      "resource": "customer_notes",
+      "operation": "update",
+      "expectation": "A member cannot move a note into another tenant.",
+      "before": {
+        "status": "fail",
+        "observed": "An owned row accepted a tenant reassignment during the authorized check.",
+        "evidence": "Update accepted · target tenant changed · values redacted",
+        "remediation": "Add a WITH CHECK condition that validates the row’s proposed tenant membership."
+      },
+      "after": {
+        "status": "pass",
+        "observed": "The reassignment was rejected while ordinary same-tenant edits continued to work.",
+        "evidence": "Cross-tenant update rejected · control update accepted",
+        "remediation": "Regression coverage now tests both existing-row and proposed-row conditions."
+      }
+    },
+    {
+      "id": "TP-003",
+      "actor": "manager",
+      "area": "Table",
+      "resource": "accounts",
+      "operation": "read",
+      "expectation": "A manager sees accounts belonging only to their organization.",
+      "before": {
+        "status": "pass",
+        "observed": "Only the manager’s organization was returned.",
+        "evidence": "1 own row · 0 foreign rows",
+        "remediation": "No change required."
+      },
+      "after": {
+        "status": "pass",
+        "observed": "Isolation remained intact after policy changes elsewhere.",
+        "evidence": "1 own row · 0 foreign rows",
+        "remediation": "Control check retained in the suite."
+      }
+    },
+    {
+      "id": "TP-004",
+      "actor": "member",
+      "area": "Table",
+      "resource": "projects",
+      "operation": "insert",
+      "expectation": "A member cannot create a project for another tenant.",
+      "before": {
+        "status": "pass",
+        "observed": "The comparison-tenant insert was rejected.",
+        "evidence": "Insert denied · no row created",
+        "remediation": "No change required."
+      },
+      "after": {
+        "status": "pass",
+        "observed": "The comparison-tenant insert remained blocked.",
+        "evidence": "Insert denied · own-tenant control accepted",
+        "remediation": "Control check retained in the suite."
+      }
+    },
+    {
+      "id": "TP-005",
+      "actor": "member",
+      "area": "Table",
+      "resource": "projects",
+      "operation": "delete",
+      "expectation": "A member cannot delete a project owned by another tenant.",
+      "before": {
+        "status": "pass",
+        "observed": "The foreign project was unchanged after the delete request.",
+        "evidence": "0 foreign rows deleted",
+        "remediation": "No change required."
+      },
+      "after": {
+        "status": "pass",
+        "observed": "The foreign project remained protected.",
+        "evidence": "0 foreign rows deleted",
+        "remediation": "Control check retained in the suite."
+      }
+    },
+    {
+      "id": "TP-006",
+      "actor": "coach",
+      "area": "Table",
+      "resource": "client_sessions",
+      "operation": "read",
+      "expectation": "A coach cannot read sessions for an unassigned client.",
+      "before": {
+        "status": "fail",
+        "observed": "The coach could read sessions for all clients in the same tenant.",
+        "evidence": "3 unassigned sessions returned · content redacted",
+        "remediation": "Require an active coach-client assignment in addition to tenant membership."
+      },
+      "after": {
+        "status": "pass",
+        "observed": "Only sessions for assigned clients were returned.",
+        "evidence": "2 assigned rows · 0 unassigned rows",
+        "remediation": "Assignment-bound predicate added and tested."
+      }
+    },
+    {
+      "id": "TP-007",
+      "actor": "manager",
+      "area": "Function",
+      "resource": "archive_project",
+      "operation": "invoke",
+      "expectation": "A manager cannot archive another tenant’s project through an RPC.",
+      "before": {
+        "status": "fail",
+        "observed": "The function accepted a project identifier from the comparison tenant.",
+        "evidence": "Function completed · foreign row changed · identifiers redacted",
+        "remediation": "Enforce tenant membership inside the function and use the caller identity."
+      },
+      "after": {
+        "status": "pass",
+        "observed": "The comparison-tenant invocation was rejected before mutation.",
+        "evidence": "Function denied · foreign row unchanged",
+        "remediation": "Function guard and negative regression test added."
+      }
+    },
+    {
+      "id": "TP-008",
+      "actor": "member",
+      "area": "Function",
+      "resource": "team_metrics",
+      "operation": "invoke",
+      "expectation": "A member receives metrics for their own tenant only.",
+      "before": {
+        "status": "pass",
+        "observed": "The result contained only own-tenant aggregates.",
+        "evidence": "Aggregate tenant matches caller membership",
+        "remediation": "No change required."
+      },
+      "after": {
+        "status": "pass",
+        "observed": "The function remained tenant-scoped.",
+        "evidence": "Aggregate tenant matches caller membership",
+        "remediation": "Control check retained in the suite."
+      }
+    },
+    {
+      "id": "TP-009",
+      "actor": "member",
+      "area": "Storage",
+      "resource": "customer-files",
+      "operation": "read",
+      "expectation": "A member cannot download a file owned by another tenant.",
+      "before": {
+        "status": "pass",
+        "observed": "The foreign object was not returned.",
+        "evidence": "Object request denied · filename redacted",
+        "remediation": "No change required."
+      },
+      "after": {
+        "status": "pass",
+        "observed": "The foreign object remained inaccessible.",
+        "evidence": "Object request denied",
+        "remediation": "Control check retained in the suite."
+      }
+    },
+    {
+      "id": "TP-010",
+      "actor": "member",
+      "area": "Storage",
+      "resource": "customer-files",
+      "operation": "upload",
+      "expectation": "A member cannot upload into another tenant’s folder.",
+      "before": {
+        "status": "pass",
+        "observed": "The foreign-path upload was rejected.",
+        "evidence": "Upload denied · no object created",
+        "remediation": "No change required."
+      },
+      "after": {
+        "status": "pass",
+        "observed": "The foreign-path upload remained blocked.",
+        "evidence": "Upload denied · own-path control accepted",
+        "remediation": "Control check retained in the suite."
+      }
+    },
+    {
+      "id": "TP-011",
+      "actor": "anonymous",
+      "area": "Table",
+      "resource": "profiles",
+      "operation": "read",
+      "expectation": "An anonymous visitor sees only explicitly public profile fields.",
+      "before": {
+        "status": "pass",
+        "observed": "Only the approved public projection was available.",
+        "evidence": "Public fields returned · private fields absent",
+        "remediation": "No change required."
+      },
+      "after": {
+        "status": "pass",
+        "observed": "The public projection remained restricted.",
+        "evidence": "Public fields returned · private fields absent",
+        "remediation": "Control check retained in the suite."
+      }
+    },
+    {
+      "id": "TP-012",
+      "actor": "anonymous",
+      "area": "Table",
+      "resource": "billing_records",
+      "operation": "read",
+      "expectation": "An anonymous visitor cannot read billing records.",
+      "before": {
+        "status": "pass",
+        "observed": "No billing rows were returned.",
+        "evidence": "0 rows returned",
+        "remediation": "No change required."
+      },
+      "after": {
+        "status": "pass",
+        "observed": "Billing records remained unavailable.",
+        "evidence": "0 rows returned",
+        "remediation": "Control check retained in the suite."
+      }
+    },
+    {
+      "id": "TP-013",
+      "actor": "member",
+      "area": "Table",
+      "resource": "invitations",
+      "operation": "insert",
+      "expectation": "A standard member cannot create organization invitations.",
+      "before": {
+        "status": "pass",
+        "observed": "The invitation insert was rejected for the standard member.",
+        "evidence": "Insert denied · 0 rows created",
+        "remediation": "No change required."
+      },
+      "after": {
+        "status": "pass",
+        "observed": "The invitation insert remained restricted.",
+        "evidence": "Insert denied · manager control accepted",
+        "remediation": "Control check retained in the suite."
+      }
+    },
+    {
+      "id": "TP-014",
+      "actor": "manager",
+      "area": "Table",
+      "resource": "memberships",
+      "operation": "update",
+      "expectation": "A manager cannot promote a member to a platform administrator.",
+      "before": {
+        "status": "pass",
+        "observed": "The platform-role change was rejected.",
+        "evidence": "Update denied · role unchanged",
+        "remediation": "No change required."
+      },
+      "after": {
+        "status": "pass",
+        "observed": "The platform-role change remained blocked.",
+        "evidence": "Update denied · role unchanged",
+        "remediation": "Control check retained in the suite."
+      }
+    },
+    {
+      "id": "TP-015",
+      "actor": "member",
+      "area": "Auth flow",
+      "resource": "organization_switch",
+      "operation": "switch",
+      "expectation": "Changing the active organization requires current membership.",
+      "before": {
+        "status": "pass",
+        "observed": "The session rejected an organization without membership.",
+        "evidence": "Switch denied · active organization unchanged",
+        "remediation": "No change required."
+      },
+      "after": {
+        "status": "pass",
+        "observed": "The invalid organization switch remained blocked.",
+        "evidence": "Switch denied · active organization unchanged",
+        "remediation": "Control check retained in the suite."
+      }
+    },
+    {
+      "id": "TP-016",
+      "actor": "platform_admin",
+      "area": "Server path",
+      "resource": "support_console",
+      "operation": "impersonate",
+      "expectation": "Support impersonation is logged and restricted to approved operators.",
+      "before": {
+        "status": "untested",
+        "observed": "The support console was excluded from the fictional demonstration environment.",
+        "evidence": "No test executed",
+        "remediation": "Include the server-side support path in a separately authorized review."
+      },
+      "after": {
+        "status": "out_of_scope",
+        "observed": "The support console remained outside the agreed demonstration scope.",
+        "evidence": "Not represented as passed",
+        "remediation": "Track as explicit residual scope rather than inferring safety."
+      }
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+# TenantProof launch checklist
+
+## A. Operator and legal identity
+
+- [ ] Operator legal name or registered entity approved
+- [ ] Public trading/display name approved
+- [ ] Jurisdiction and business address requirements reviewed
+- [ ] Owned business email configured; do not use the known personal Outlook address for cold outreach
+- [ ] Privacy contact and deletion route configured
+- [ ] Terms reviewed for governing law, liability, taxes, and statutory rights
+- [ ] Evidence retention period approved
+
+## B. Customer workflow
+
+- [ ] HTTPS intake provider selected and owned by operator
+- [ ] Public intake contains no file upload or credential field
+- [ ] Statement of work reviewed
+- [ ] Written authorization template reviewed
+- [ ] Secure temporary-access exchange selected
+- [ ] Invoice processor configured with multi-factor authentication
+- [ ] Refund workflow reflected in customer agreement
+- [ ] Capacity to deliver one pilot confirmed
+
+## C. Product release
+
+- [x] Responsive product site
+- [x] Interactive fictional report
+- [x] Local report import
+- [x] Local scope worksheet
+- [x] CSP-compatible external scripts and styles
+- [x] Social-preview image and app icons
+- [x] Sitemap, robots, manifest, 404 page, and portable security headers
+- [x] Functional and responsive QA
+- [x] Demo runner locked against live targets
+- [ ] Configure production site JSON
+- [ ] Run strict release check
+- [ ] GitHub connection administrator reapproval
+- [ ] Inspect current `main` and pull-request template
+- [ ] Create a new release branch from current `main`
+- [ ] Push files and open a draft pull request
+- [ ] Review CI and rendered preview
+- [ ] Obtain separate deployment approval
+- [ ] Merge only after approval
+
+## D. Marketing readiness
+
+- [ ] Public operator identity matches profiles used for outreach
+- [ ] No fabricated client, case study, result, certification, or testimonial
+- [ ] Sample report remains labeled fictional
+- [ ] Ten named prospects meet the target profile
+- [ ] Every message references a current, explicit buyer trigger
+- [ ] Outreach channel and account approved by the user
+- [ ] Suppression list and response log ready
+- [ ] No bulk scraping or spam automation
+- [ ] Stop rule: no serious conversation after ten well-matched contacts means reassess the offer
+
+## E. Launch decision
+
+The site may publish in **request-only mode** before payment is open, but only when operator identity, privacy contact, intake handling, written authorization, and delivery capacity are ready.
+
+Payment may open only after the buyer and scope are qualified. Public deployment, payment activation, and outbound marketing are separate approval gates.
