@@ -6,23 +6,19 @@ Public candidate: `https://undernonameyet.github.io/NoNameYet/`
 
 ## Current state
 
-GitHub access was restored on 2026-08-31. The authenticated user is `MYIndieDEV`. Current `main` was inspected at `047691e35c6b8d38ba5540d1fe4de345ed752a6c`; it deploys rejected RebuttalKit v8 from a generated `public/` directory. The focused branch `launch/tenantproof-v1` was created from that exact SHA. TenantProof is not yet merged or deployed.
+GitHub access is operational. PR [#23](https://github.com/UnderNoNameYet/NoNameYet/pull/23) replaced RebuttalKit, was squash-merged to `main` at `6bc99104bb91b32afb50c8c7d9b416d74566f8ed`, and deployed successfully through [workflow run #40](https://github.com/UnderNoNameYet/NoNameYet/actions/runs/33372340582). The request-only preview is live at `https://undernonameyet.github.io/NoNameYet/`. `047691e35c6b8d38ba5540d1fe4de345ed752a6c` is retained only as the pre-release rollback point.
 
-## Required order after reapproval
+## Completed first-publication sequence
 
-1. Load the authenticated GitHub user.
-2. Inspect the current `main` branch root and latest commit.
-3. Search for `pull_request_template.md` and `.github/PULL_REQUEST_TEMPLATE/`.
-4. Inspect the existing Pages workflow and build layout.
-5. Confirm whether the live source is `public-source`, `docs`, or another directory.
-6. Use `launch/tenantproof-v1`, created from the inspected current `main`.
-7. Push the minimum coherent file set in one or more reviewable commits.
-8. Open a pull request structured from the repository template.
-9. Run and inspect all checks.
-10. Inspect the rendered preview and compare its release marker.
-11. Scan the exact diff for secrets.
-12. Apply the owner's standing authorization: merge after required checks and diff inspection without asking for another routine approval.
-13. Verify the deployed origin and roll back on a critical defect.
+1. Authenticated as `MYIndieDEV` and inspected the prior `main`.
+2. Created `launch/tenantproof-v1` from `047691e35c6b8d38ba5540d1fe4de345ed752a6c`.
+3. Materialized direct source without retaining a signed URL or staging token.
+4. Removed temporary transport and legacy RebuttalKit trees before review.
+5. Opened PR [#23](https://github.com/UnderNoNameYet/NoNameYet/pull/23) with risk, truth, artifact, and rollback notes.
+6. Inspected all 198 changed files and scanned exact added text for secret/transport patterns.
+7. Fixed the preview-config CI assertion and obtained a successful PR build.
+8. Squash-merged under the owner's standing authorization.
+9. Confirmed successful Pages [run #40](https://github.com/UnderNoNameYet/NoNameYet/actions/runs/33372340582) and fetched every primary public route.
 
 ## Pull-request intent
 

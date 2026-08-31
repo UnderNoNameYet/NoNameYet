@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-31T06:39:10.566Z",
+  "generatedAt": "2026-08-31T09:07:47.796Z",
   "product": "TenantProof",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "sourceOfTruth": "AGENTS.md and handoff/README.md",
   "deployRoot": "public/",
   "files": 99,
-  "bytes": 3534764,
+  "bytes": 3583781,
   "byRole": {
     "repository-root": 11,
     "repository-workflow": 2,
@@ -33,8 +33,8 @@
     {
       "path": ".github/workflows/pages.yml",
       "role": "repository-workflow",
-      "bytes": 2152,
-      "sha256": "3712604fe9802066b09f289e07e3ab93982de6580cd9dc6d9628d730209c77ca"
+      "bytes": 2156,
+      "sha256": "a32551395745cbf0d01b0fc658af43793df1591e35fdbb0ee2455cac45544e73"
     },
     {
       "path": ".gitignore",
@@ -45,8 +45,8 @@
     {
       "path": "AGENTS.md",
       "role": "repository-root",
-      "bytes": 10366,
-      "sha256": "8c2a99fad452c0861a4ba7b65f526093fe42ba328c78a82c04aea42602ee8bb1"
+      "bytes": 10725,
+      "sha256": "4a8b5f50f72e41cd5b58db3362ff55065fc70dc9d78671da075ece3b16414a1f"
     },
     {
       "path": "ARCHITECTURE.md",
@@ -57,8 +57,8 @@
     {
       "path": "CHANGELOG.md",
       "role": "repository-root",
-      "bytes": 1848,
-      "sha256": "aec067c056b4fd383bae3fc0cbfbb6543d32eb2a0e182df5f03c2f1cc49308a5"
+      "bytes": 2949,
+      "sha256": "d66006973062e4613d72b678fea47f084df4b90b4b43aa5797091b24f61a6e9d"
     },
     {
       "path": "CONTRIBUTING.md",
@@ -70,7 +70,7 @@
       "path": "README.md",
       "role": "repository-root",
       "bytes": 6940,
-      "sha256": "5fbd7368e9769387f003e239c006e7bb21cac051a072b92800317bc145cbbda5"
+      "sha256": "63749e211ea4070e0005372733d16c820b6398dab5395739a227e26ea13fe3e1"
     },
     {
       "path": "ROADMAP.md",
@@ -105,8 +105,8 @@
     {
       "path": "handoff/AI_CONTINUATION.md",
       "role": "handoff-source",
-      "bytes": 4815,
-      "sha256": "9da1b3f19ef5fcd6168e6feef15d1cd0ab581660719079a061373c4d6ea89aaa"
+      "bytes": 5029,
+      "sha256": "2a36d85f044114a06655caeb8fee752ab497c1771524ef22dc3477217b5e498f"
     },
     {
       "path": "handoff/ASSET_MANIFEST.md",
@@ -123,14 +123,14 @@
     {
       "path": "handoff/CURRENT_STATE.json",
       "role": "handoff-source",
-      "bytes": 4323,
-      "sha256": "7e0aa0da64d83599b8325f34b122ad223ab54ff6be5a99831694f7908dd6ee81"
+      "bytes": 5600,
+      "sha256": "d6e9812dfacaccdd39db9ac9a378c3d6d31116e69bdb43c210d909a200773275"
     },
     {
       "path": "handoff/DECISION_LOG.md",
       "role": "handoff-source",
-      "bytes": 5601,
-      "sha256": "3e4ade2703d77923cf47cc49f1731af81b7917abf98925ab69c834878341dcd5"
+      "bytes": 6614,
+      "sha256": "20b0a36d42dec687501776d740ec0ef502dd37e4f2ed21c241e39a929506c940"
     },
     {
       "path": "handoff/FEATURE_AND_FUNCTION_INVENTORY.md",
@@ -141,8 +141,8 @@
     {
       "path": "handoff/GITHUB_PUBLICATION.md",
       "role": "handoff-source",
-      "bytes": 2411,
-      "sha256": "3e75e79b01ffd94d837849c062f1c178958a733d74af2d36fa107613ce3cdb91"
+      "bytes": 4193,
+      "sha256": "64a8696ae7dbe7693f60ce0c05024cf877775d2573c397fe85efb4d6d5d7ef22"
     },
     {
       "path": "handoff/GTM_AND_VALIDATION.md",
@@ -153,14 +153,14 @@
     {
       "path": "handoff/HANDOFF_REPORT.md",
       "role": "handoff-source",
-      "bytes": 8714,
-      "sha256": "ae206d702393d9878fecaf6b0732fe778e9626d52e1c27a09b927b4c6ce12fc6"
+      "bytes": 8770,
+      "sha256": "343045dddb76cbabe552e1945f46d638d27537aec59b02f9cc0a6c372ad5319b"
     },
     {
       "path": "handoff/HANDOFF_REPORT.pdf",
       "role": "handoff-source",
-      "bytes": 630164,
-      "sha256": "e6c27f5f28f1495c0a0619af25d8e7f8763726e46efbc7f5ee08558e2a2cf586"
+      "bytes": 672702,
+      "sha256": "1c3dee265cf2341e6238b9c30bce89a1d4ef4afe08ebd2005f8abea990dd3038"
     },
     {
       "path": "handoff/OPERATIONS_AND_INTAKE.md",
@@ -201,8 +201,8 @@
     {
       "path": "handoff/RELEASE_AND_REPOSITORY.md",
       "role": "handoff-source",
-      "bytes": 5204,
-      "sha256": "5d1486a9f5a2080f81f450e86d6dba1ea05484377eb4eb17806ad555e7af0e53"
+      "bytes": 5356,
+      "sha256": "c62501c753c8bfbc325b4a3691c122a20e5347341cbb8a0246d158ffe5ca7426"
     },
     {
       "path": "handoff/REPORT_ENGINE_SPEC.md",
@@ -333,8 +333,8 @@
     {
       "path": "operations/github-release-runbook.md",
       "role": "operations-private-template",
-      "bytes": 2578,
-      "sha256": "4efa544537576a9076d3c2e53434ef292a32aae38ab83940b5e074e300994c85"
+      "bytes": 2656,
+      "sha256": "1b610ff5c3d01e4eaafe4c62acdb7e43a8ab39851bc8c0f7032c5ae666d626c8"
     },
     {
       "path": "operations/intake-architecture.md",
@@ -345,8 +345,8 @@
     {
       "path": "operations/launch-checklist.md",
       "role": "operations-private-template",
-      "bytes": 2665,
-      "sha256": "e3508b9273aadfe0d9ac57703839f26e0e3d045e88b8116cde71be5dd3bc6887"
+      "bytes": 2845,
+      "sha256": "7695299e12992a587ee71ef8a32444411385c529f409bbcf0b5a5df82a75db3f"
     },
     {
       "path": "operations/marketing-experiment.md",
@@ -357,8 +357,8 @@
     {
       "path": "operations/operator-decisions.md",
       "role": "operations-private-template",
-      "bytes": 2444,
-      "sha256": "b4c3c9c68ed9f64a9d017be3de7c1d190b93725cbac7c56b093cbd283460177e"
+      "bytes": 2516,
+      "sha256": "183941cccb2223659596a7e42dbbe4b59fbd7bea982f68474f3241b917cbacb0"
     },
     {
       "path": "operations/payment-refund-workflow.md",
@@ -376,7 +376,7 @@
       "path": "package.json",
       "role": "repository-root",
       "bytes": 1212,
-      "sha256": "221a416de9dbc4bcbe3630aac24c6c68aa0a77b1a43fbe12cbe0806d3ddc7b4b"
+      "sha256": "f35c0a5f5f524c8d8dfee7f110e34b919301b542a07807332e50b858bf400513"
     },
     {
       "path": "public/.nojekyll",
@@ -519,8 +519,8 @@
     {
       "path": "tools/build-handoff-report.py",
       "role": "build-quality-tooling",
-      "bytes": 14056,
-      "sha256": "494a8761042f7aea7cd464cf2541effd34887fc5146c3c0181d89eadfc6ddde4"
+      "bytes": 14029,
+      "sha256": "33bc3ce2f5122e52986ca6891933351dd46ceefbe5e12e785e8663a515ba25fd"
     },
     {
       "path": "tools/build-release.mjs",
@@ -538,7 +538,7 @@
       "path": "tools/build-source-manifest.mjs",
       "role": "build-quality-tooling",
       "bytes": 2595,
-      "sha256": "cbd7a42ab043718a542ccb9c610802379f8b4396021a55d16a95690a9f2c80a3"
+      "sha256": "63832283996632c42bd3cb8c4c810c3bd3b57a5e04debfe0e5d482845e9818c2"
     },
     {
       "path": "tools/capture-previews.mjs",
@@ -549,8 +549,8 @@
     {
       "path": "tools/check-docs.mjs",
       "role": "build-quality-tooling",
-      "bytes": 6859,
-      "sha256": "0d2308174bbd18c5c0b22945984034174d9bc8b8d5893fda7ce8a9a5d8a817aa"
+      "bytes": 7077,
+      "sha256": "02bece671b562f5d35175a472e939c26285a833cc16ebb90f9ee0ca200929443"
     },
     {
       "path": "tools/demo-adapter.mjs",

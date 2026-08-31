@@ -69,16 +69,22 @@ add(agents.includes('publish **only** `public/`'), 'AGENTS defines deploy bounda
 
 const current = JSON.parse(fs.readFileSync(path.join(root, 'handoff/CURRENT_STATE.json'), 'utf8'));
 add(current.product === 'TenantProof', 'Current state identifies TenantProof');
-add(current.repository?.tenantProofDeployed === false, 'Current state does not falsely claim premium deployment');
+add(
+  current.repository?.tenantProofDeployed === true
+    && /^[a-f0-9]{40}$/.test(current.repository?.mergeSha || '')
+    && current.repository?.workflowConclusion === 'success'
+    && current.repository?.deployedUrl === 'https://undernonameyet.github.io/NoNameYet/',
+  'Current state records verified GitHub Pages deployment'
+);
 add(current.commercialTruth?.customers === 0 && current.commercialTruth?.revenueUsd === 0, 'Current state preserves commercial truth');
 add(current.safety?.writtenAuthorizationRequired === true, 'Current state requires authorization');
 
 const sourceManifest = JSON.parse(fs.readFileSync(path.join(root, 'handoff/SOURCE_MANIFEST.json'), 'utf8'));
-add(sourceManifest.product === 'TenantProof' && sourceManifest.version === '0.3.0', 'Source manifest identifies handoff release');
+add(sourceManifest.product === 'TenantProof' && sourceManifest.version === '0.3.1', 'Source manifest identifies handoff release');
 add(sourceManifest.deployRoot === 'public/' && sourceManifest.files >= 60, 'Source manifest covers repository and public-only deploy root');
 
 const packageJson = JSON.parse(fs.readFileSync(path.join(root, 'package.json'), 'utf8'));
-add(packageJson.version === '0.3.0', 'Package version matches handoff release');
+add(packageJson.version === '0.3.1', 'Package version matches handoff release');
 add(Boolean(packageJson.scripts?.quality), 'Package exposes quality command');
 add(Boolean(packageJson.scripts?.['docs:check']), 'Package exposes documentation check');
 add(Boolean(packageJson.scripts?.['release:bundle']), 'Package exposes public-only release builder');

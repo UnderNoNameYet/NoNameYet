@@ -127,3 +127,13 @@ Append new decisions; do not silently rewrite prior rationale. Dates use Asia/Ca
 **Decision:** root `AGENTS.md` plus `handoff/` becomes the durable source for any future AI or developer.
 
 **Why:** avoid quality loss from chat truncation, undocumented intent, or implementation-only handoff.
+
+## 2026-08-31 — Publish the closed GitHub Pages preview
+
+**Decision:** squash-merge PR [#23](https://github.com/UnderNoNameYet/NoNameYet/pull/23) and publish TenantProof from direct source while preserving `state: preview`, local-only static intake, and `paymentMode: closed`.
+
+**Why:** the exact 198-file delta was inspected, the PR build passed, the public-only artifact boundary was enforced, the source-transfer workflow was removed, and live public routes showed the intended TenantProof and fictional Northstar CRM content.
+
+**Evidence:** merge `6bc99104bb91b32afb50c8c7d9b416d74566f8ed`; deployment [run #40](https://github.com/UnderNoNameYet/NoNameYet/actions/runs/33372340582) succeeded; pre-release rollback `047691e35c6b8d38ba5540d1fe4de345ed752a6c` remains documented.
+
+**Constraint:** technical publication is not commercial readiness. Operator identity, jurisdiction, owned contact/intake, legal copy, retention, delivery capacity, processor, and written customer authorization remain mandatory.

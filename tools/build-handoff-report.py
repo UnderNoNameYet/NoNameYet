@@ -249,9 +249,9 @@ story.extend([
     Paragraph("Product strategy, page specifications, UX system, technical architecture, safety boundaries, commercial model, roadmap, release state, and AI continuation protocol.", styles["TPSubtitle"]),
 ])
 status_data = [
-    [Paragraph("SNAPSHOT", styles["TPSmall"]), Paragraph("2026-08-30", styles["TPBody"])],
-    [Paragraph("STAGE", styles["TPSmall"]), Paragraph("Request-only soft launch; premium static deployment pending GitHub administrator reapproval", styles["TPBody"])],
-    [Paragraph("QUALITY", styles["TPSmall"]), Paragraph("Full source, browser, privacy, documentation, media, and release quality gates passed", styles["TPBody"])],
+    [Paragraph("SNAPSHOT", styles["TPSmall"]), Paragraph("2026-08-31", styles["TPBody"])],
+    [Paragraph("STAGE", styles["TPSmall"]), Paragraph("GitHub Pages request-only preview live; commercial intake and payment closed", styles["TPBody"])],
+    [Paragraph("QUALITY", styles["TPSmall"]), Paragraph("31/31 local gates passed; PR build and main deployment workflow succeeded", styles["TPBody"])],
     [Paragraph("COMMERCIAL", styles["TPSmall"]), Paragraph("$349 verification / $649 verification + repair; payments closed; no customers or revenue yet", styles["TPBody"])],
 ]
 status = Table(status_data, colWidths=[32 * mm, 137 * mm], hAlign="LEFT")

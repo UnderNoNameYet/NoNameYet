@@ -43,14 +43,14 @@ Use `handoff/README.md` as the complete index.
 - Production-preparation assets and runbooks: complete.
 - Public Notion qualification form: live and smoke-tested with synthetic data.
 - Public Notion launch page and fictional sample report: live.
-- Premium GitHub Pages build: ready locally, not yet deployed.
-- GitHub access: restored and authenticated as `MYIndieDEV`.
-- Inspected `main`: `047691e35c6b8d38ba5540d1fe4de345ed752a6c`; existing RebuttalKit v8 remains live.
-- Release branch: `launch/tenantproof-v1`, created from the inspected `main`.
+- GitHub Pages request-only preview: live at `https://undernonameyet.github.io/NoNameYet/`.
+- GitHub release: PR [#23](https://github.com/UnderNoNameYet/NoNameYet/pull/23) was squash-merged to `main` at `6bc99104bb91b32afb50c8c7d9b416d74566f8ed`.
+- Deployment: workflow [run #40](https://github.com/UnderNoNameYet/NoNameYet/actions/runs/33372340582) completed successfully and published only the generated public artifact.
+- Legacy RebuttalKit trees and the temporary source materializer are absent from current `main`; rollback SHA is `047691e35c6b8d38ba5540d1fe4de345ed752a6c`.
 - Payment: closed.
 - Customer work, testimonials, revenue, and real findings: none; never imply otherwise.
 
-The latest machine source is `/data/tenantproof`. Historical paths for RebuttalKit, Stay5, screenshot concepts, or ClearCal may not exist and are not active products.
+The canonical machine source is the current repository root on `main`; `/data/tenantproof-final` is only the release-session mirror. Historical paths for RebuttalKit, Stay5, screenshot concepts, or ClearCal may not exist and are not active products.
 
 ## Offer and pricing
 
