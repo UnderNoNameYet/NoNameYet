@@ -1,0 +1,10 @@
+{
+  "state": "ready",
+  "publicOrigin": "https://undernonameyet.github.io/NoNameYet/",
+  "contactUrl": "REPLACE_WITH_OWNED_HTTPS_INTAKE_URL",
+  "operatorDisplayName": "REPLACE_WITH_APPROVED_PUBLIC_OPERATOR_NAME",
+  "contactEmail": "REPLACE_WITH_OWNED_BUSINESS_EMAIL",
+  "paymentMode": "closed",
+  "paymentUrl": "",
+  "evidenceRetentionDays": 14
+}

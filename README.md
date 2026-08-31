@@ -1,92 +1,151 @@
-# RebuttalKit
+# TenantProof
 
-**Dispute evidence, assembled.**
+TenantProof is a productized Supabase/PostgreSQL tenant-isolation verification and repair service.
 
-RebuttalKit is a local-first chargeback evidence workspace for independent service businesses handling occasional disputes. The strongest use case is a high-value service dispute where delivery proof is spread across contracts, calls, approvals, messages, shared files, and invoices.
+> Prove that Customer A cannot read or modify Customer B’s data.
 
-- Product website: https://undernonameyet.github.io/NoNameYet/
-- Application: https://undernonameyet.github.io/NoNameYet/app.html
-- Fictional workspace packet: https://undernonameyet.github.io/NoNameYet/sample-packet.html
-- Fictional founder-review example: https://undernonameyet.github.io/NoNameYet/review-sample.html
-- Founder review: https://undernonameyet.github.io/NoNameYet/premium.html
+It sells an agreed authorization matrix, executed before/after evidence, remediation, and regression protection—not a generic scanner badge or a guarantee that an application has no vulnerabilities.
 
-## Product
+## Current status
 
-The free application guides a merchant through four deliberate stages:
+| Area | State |
+|---|---|
+| Product specification | complete |
+| Local static MVP | complete |
+| Production preparation | complete locally |
+| Browser/responsive/privacy QA | passing; rerun after every change |
+| Public qualification form | live through Notion; non-sensitive only |
+| Public launch/sample pages | live through Notion |
+| Premium GitHub Pages deployment | release branch prepared; pending PR, CI, merge, and live verification |
+| Payments | closed |
+| Customers/revenue/testimonials | none |
 
-1. **Case** — copy the exact processor reason, deadline, transaction, and sale facts.
-2. **Evidence** — work through a reason- and sale-specific proof checklist.
-3. **Timeline** — connect factual events to dated records.
-4. **Packet** — generate a response draft, evidence index, final checks, and exports.
+## Start here
 
-Case data stays in local browser storage. There is no RebuttalKit account, processor connection, case-data backend, analytics tracker, or automatic submission.
+Any AI agent or developer must read:
 
-## When to use platform automation first
+1. [`AGENTS.md`](AGENTS.md)
+2. [`handoff/README.md`](handoff/README.md)
+3. [`handoff/HANDOFF_REPORT.md`](handoff/HANDOFF_REPORT.md)
+4. [`handoff/CURRENT_STATE.json`](handoff/CURRENT_STATE.json)
 
-Stripe Smart Disputes and Shopify Payments automation can be the best option when a case is eligible and the platform already has all relevant evidence. RebuttalKit does not pretend to replace those systems.
+The handoff package documents every page, section, function, UX rule, safety boundary, commercial decision, rejected idea, roadmap, release procedure, and continuation protocol. Self-contained product previews are in `handoff/assets/`; the downloadable handoff archive also includes full-resolution screenshots, a 20-second walkthrough, and a styled PDF.
 
-The free workspace and optional review are designed for:
+## Offer
 
-- manual or ineligible disputes;
-- high-value service delivery that is difficult to represent with platform data alone;
-- records distributed across several tools;
-- an independent chronology and consistency check before the customer decides what to submit.
+### Boundary Verification — $349
 
-## Founder packet review
+Up to 12 named tables, three roles, agreed read/write matrix, redacted report, remediation guidance, and one retest.
 
-The optional **$69 one-time review** is for one accepted, active service dispute, normally with **$750–$5,000 at stake** and a verified deadline at least three days away.
+### Verification + Repair — $649
 
-The review includes:
+Up to 25 named tables, three roles, selected functions, one storage bucket, SQL/RLS migrations, reviewable pull request, regression checks, and one retest.
 
-- chronology and factual-consistency pass;
-- evidence order and filename plan;
-- one revised factual response;
-- visible gaps and questions to resolve;
-- one correction round.
+Larger, production-only, regulated, or more sensitive work receives a manual quote.
 
-It excludes legal advice, processor representation, account access, invented evidence, submission, and outcome guarantees. Payment is requested only after a non-sensitive compatibility check is accepted.
+## Included product surface
 
-Two reviews produce **$138 gross**, which is the first-10-day target—not a promise.
+- premium responsive marketing site
+- interactive fictional before/after report
+- local-only JSON report import and print view
+- three-step local scope worksheet
+- methodology and authorization page
+- privacy, terms, and branded 404
+- report schema 1.0 and validator
+- demo-only matrix runner locked against real targets
+- external preview/ready configuration
+- CSP-compatible HTML and portable security headers
+- sitemap, manifest, social image, and application icons
+- authorization, SOW, evidence, delivery, payment, intake, launch, and marketing runbooks
+- deterministic browser/static/documentation/release quality gates
+- public-only deployment artifact builder
+- complete handoff package with screenshots/video
 
-## Commercial safety gate
+## Repository map
 
-`public-source/site-config.js` intentionally keeps the public business identity, country, review inbox, and payment URL blank, with `applicationsOpen: false`, until the operator approves them. In the closed state, the browser can prepare a local compatibility request but cannot expose application email or checkout.
+```text
+.
+├── AGENTS.md                  canonical continuation instructions
+├── agent.md                   lowercase compatibility entry point
+├── public/                    only deployable web artifact
+├── schema/                    report contract
+├── tools/                     build, validation, capture, and release tooling
+├── operations/                real engagement templates and runbooks
+├── handoff/                   full product/UX/technical/commercial context
+├── config/                    preview and ignored release configuration
+├── build/                     generated local outputs; not tracked/deployed
+├── dist/                      generated public-only artifact; not tracked
+└── qa.mjs                     finite Chromium/static QA source
+```
 
-Never commit API keys, payment secrets, bank details, credentials, or customer files. A hosted checkout URL is public configuration, not a credential.
+Source tests and quality tooling belong in version control for professional delivery, but the deployed artifact contains only `public/`. Test logs, screenshots outside selected handoff media, and generated reports stay out of deployment.
 
 ## Run locally
 
 ```bash
-bash scripts/build-site.sh
-python3 -m http.server 4173 --directory public
+cd /data/tenantproof
+npm run serve
 ```
 
-Open `/` for the product website, `/app.html` for the workspace, `/review-sample.html` for the fictional review, and `/premium.html` for the review offer.
+Open `http://127.0.0.1:4173/`.
 
-Validate the release:
+## Commands
 
 ```bash
-node test.mjs
+npm run assets              # generate icons/social image
+npm run harden              # normalize CSP/canonical/social metadata
+npm run config:preview      # generate preview browser config
+npm run validate:report     # validate fictional public report
+npm run demo:report         # generate fictional demo report
+npm run walkthrough         # create 20-second handoff video
+npm run handoff:assets      # copy/hash selected media
+npm run handoff:report      # build styled PDF handoff report
+npm run handoff:manifest    # hash and classify repository source
+npm run docs:check          # validate handoff files and links
+npm test                    # finite browser/static QA
+npm run release:check       # report launch blockers
+npm run release:strict      # fail while any launch blocker remains
+npm run release:bundle      # create dist/ from public/ only
+npm run quality             # full non-strict quality gate
 ```
 
-## Repository map
+## Deliberate restrictions
 
-- `public-source/index.html`, `site.css`, `site.js` — product website
-- `public-source/app.html`, `app-v2.css`, `app.js`, `app-shell.js` — working application
-- `public-source/premium.html`, `founder-review.css`, `founder-review.js` — paid-review funnel
-- `public-source/review-sample.html`, `review-sample.css` — fictional before/after proof
-- `public-source/privacy.html`, `terms.html`, `service-legal.*` — product and service boundaries
-- `public-source/site-config.js` — non-secret public commercial settings
-- `MARKET-POSITIONING.md` — target segment and competitive wedge
-- `GO-TO-MARKET.md` — ten-day acquisition plan
-- `OUTREACH-COPY.md` — permission-aware conversation templates
-- `FOUNDER-REVIEW-TEMPLATE.md` — controlled fulfillment structure
-- `LAUNCH-DEMO-STORYBOARD.md` — fictional 60-second launch demo
-- `OPERATIONS-RUNBOOK.md` — intake, delivery, deletion, and refund process
-- `VALIDATION-PLAYBOOK.md` — evidence-based continue or stop rules
-- `LEAD-TRACKER.csv` — manually qualified signal tracker
-- `.github/workflows/pages.yml` — deterministic GitHub Pages deployment
+- no arbitrary public target scanner
+- no real-environment adapter in the public repository
+- no credential, database dump, customer record, or private repository upload
+- no imported-report storage or upload
+- no browser persistence
+- no analytics, trackers, remote fonts, or third-party runtime scripts
+- no unrestricted checkout
+- no real testing without verified written authorization
+- no fabricated customer, revenue, testimonial, finding, approval, or scarcity
+- all Northstar CRM evidence is explicitly fictional
 
-## Boundaries
+## Quality and release
 
-RebuttalKit organizes records. It does not provide legal advice, fabricate evidence, predict outcomes, claim affiliation with Stripe, Shopify, PayPal, or any card network, or control a bank or issuer decision.
+`npm run quality` validates source syntax, brand assets, HTML hardening, preview configuration, report schema, demo generation, live-mode rejection, browser behavior, public-only artifact isolation, handoff media, documentation integrity, release readiness, and credential/private-email scanning.
+
+A public premium release additionally requires `npm run release:strict` with:
+
+- ready HTTPS configuration and intake URL
+- verified public operator/contact facts
+- launch-state privacy/terms
+- evidence-retention value
+- fresh GitHub repository verification
+
+## Current blockers
+
+- TenantProof release branch remains unmerged and unverified on GitHub Pages
+- usable public form URL must be inserted into static release config
+- legal contracting identity, jurisdiction, and owned business contact are required before taking payment
+- static privacy/terms remain pre-launch
+- security contact is required before publishing `security.txt`
+- payment processor is not activated
+
+The user authorized autonomous product decisions, branches, merging, and deployment after checks. That authority does not allow bypassing platform permissions, inventing legal/account facts, or weakening authorization and privacy controls.
+
+## Commercial validation rule
+
+After premium deployment, contact no more than ten highly matched current buyers through authenticated approved channels. Prefer one paid pilot to vanity traffic. If ten contacts produce no serious conversation, revise the offer/channel/proof before adding product surface area.
+

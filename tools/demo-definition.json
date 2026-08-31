@@ -1,0 +1,35 @@
+{
+  "schemaVersion": "1.0",
+  "project": {
+    "name": "Boundary Lab",
+    "environment": "Local fictional fixture",
+    "client": "Fictional demonstration only"
+  },
+  "scope": { "tables": 2, "roles": 2, "functions": 1, "storageBuckets": 0 },
+  "scenarios": [
+    {
+      "id": "TP-LAB-001",
+      "actor": "member",
+      "area": "Table",
+      "resource": "documents",
+      "operation": "read",
+      "expectation": "A member cannot read another tenant’s documents."
+    },
+    {
+      "id": "TP-LAB-002",
+      "actor": "member",
+      "area": "Table",
+      "resource": "documents",
+      "operation": "update",
+      "expectation": "A member cannot reassign a document to another tenant."
+    },
+    {
+      "id": "TP-LAB-003",
+      "actor": "manager",
+      "area": "Function",
+      "resource": "archive_document",
+      "operation": "invoke",
+      "expectation": "A manager cannot archive another tenant’s document."
+    }
+  ]
+}

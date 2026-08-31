@@ -1,0 +1,139 @@
+{
+  "snapshotAt": "2026-08-31T11:53:35+05:30",
+  "product": "TenantProof",
+  "corePromise": "Prove that Customer A cannot read or modify Customer B's data.",
+  "stage": "request-only soft launch and premium static release preparation",
+  "sourcePath": "/data/tenantproof",
+  "repository": {
+    "owner": "UnderNoNameYet",
+    "name": "NoNameYet",
+    "defaultBranch": "main",
+    "publicOriginCandidate": "https://undernonameyet.github.io/NoNameYet/",
+    "access": "connected_and_inspected",
+    "tenantProofDeployed": false,
+    "authenticatedUser": "MYIndieDEV",
+    "inspectedMainSha": "047691e35c6b8d38ba5540d1fe4de345ed752a6c",
+    "releaseBranch": "launch/tenantproof-v1",
+    "existingProduct": "RebuttalKit v8 (rejected and frozen)",
+    "pagesWorkflow": ".github/workflows/pages.yml",
+    "releaseTransport": "temporary verified bootstrap; final main is direct source"
+  },
+  "packages": [
+    {
+      "name": "Boundary Verification",
+      "priceUsd": 349,
+      "tableLimit": 12,
+      "roleLimit": 3,
+      "retestIncluded": true
+    },
+    {
+      "name": "Verification + Repair",
+      "priceUsd": 649,
+      "tableLimit": 25,
+      "roleLimit": 3,
+      "functionScope": "selected",
+      "storageBucketLimit": 1,
+      "retestIncluded": true
+    }
+  ],
+  "payment": {
+    "mode": "closed",
+    "recommendedInitialProcessor": "operator-owned Stripe invoice or source-platform escrow after qualification",
+    "activated": false
+  },
+  "safety": {
+    "writtenAuthorizationRequired": true,
+    "defaultEnvironment": "staging_or_dedicated_test_project",
+    "defaultData": "synthetic",
+    "publicCredentialCollection": false,
+    "rawEvidenceRetentionRecommendationDays": 14,
+    "arbitraryPublicScanning": false
+  },
+  "implementation": {
+    "publicPages": [
+      "index.html",
+      "report.html",
+      "methodology.html",
+      "request.html",
+      "privacy.html",
+      "terms.html",
+      "404.html"
+    ],
+    "reportSchema": "1.0",
+    "sampleReportId": "TP-DEMO-0830",
+    "sampleProject": "Northstar CRM",
+    "sampleFictional": true,
+    "publicRuntimeDependencies": 0,
+    "siteConfigState": "preview"
+  },
+  "quality": {
+    "latestKnownResult": "pass",
+    "latestRunAt": "2026-08-31T06:38:43.588Z",
+    "qualityGateSteps": 31,
+    "documentationChecks": 136,
+    "handoffPdfPages": 11,
+    "walkthroughDurationSeconds": 20,
+    "requiredFiles": 22,
+    "htmlPages": 7,
+    "sampleChecks": 16,
+    "before": {
+      "pass": 11,
+      "fail": 4,
+      "unresolved": 1
+    },
+    "after": {
+      "pass": 15,
+      "fail": 0,
+      "unresolved": 1
+    },
+    "consoleErrors": 0,
+    "externalRuntimeRequests": 0,
+    "mobileOverflowPages": 0,
+    "browserPersistenceCalls": 0,
+    "postRequests": 0,
+    "demoRunnerLocked": true,
+    "mustRerunAfterChanges": true,
+    "sourceManifestFiles": 99
+  },
+  "softLaunch": {
+    "publicQualificationForm": true,
+    "privateIntakePipeline": true,
+    "publicNotionLaunchPage": true,
+    "publicFictionalSampleReport": true,
+    "formSmokeTest": "passed_and_test_row_deleted",
+    "searchIndexing": true
+  },
+  "commercialTruth": {
+    "customers": 0,
+    "revenueUsd": 0,
+    "testimonials": 0,
+    "realFindingsPublished": 0,
+    "tenDayRevenueTargetUsd": 100,
+    "targetIsGuarantee": false
+  },
+  "blockers": [
+    "TenantProof release branch is not yet merged or deployed",
+    "usable HTTPS intake URL inserted into static release config",
+    "verified legal contracting identity and jurisdiction before payment",
+    "owned business contact before commercial launch",
+    "static privacy and terms updated from pre-launch state",
+    "security contact before security.txt",
+    "payment processor before accepting money"
+  ],
+  "nextActions": [
+    "push the GitHub-ready TenantProof source, documentation, operations, and asset transport",
+    "open and inspect the release pull request",
+    "verify CI and the exact public-only artifact",
+    "merge the preview release and verify GitHub Pages",
+    "integrate an owned HTTPS intake route and operator facts before opening commercial intake",
+    "run the ten-prospect paid-pilot experiment",
+    "deliver one safely authorized pilot if won"
+  ],
+  "frozenProducts": [
+    "RebuttalKit",
+    "Stay5",
+    "App Store screenshot service",
+    "ClearCal proposal",
+    "Relay migration"
+  ]
+}

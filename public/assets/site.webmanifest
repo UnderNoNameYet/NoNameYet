@@ -1,0 +1,14 @@
+{
+  "name": "TenantProof",
+  "short_name": "TenantProof",
+  "description": "Executed tenant-boundary evidence for Supabase SaaS.",
+  "start_url": "../index.html",
+  "scope": "../",
+  "display": "standalone",
+  "background_color": "#f5f2e9",
+  "theme_color": "#0c1815",
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}

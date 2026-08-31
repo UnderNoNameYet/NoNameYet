@@ -1,5 +1,10 @@
-public/
-site.tar.gz
+node_modules/
+build/
+dist/
 *.zip
-*.log
+.env
+.env.*
+config/site.release.json
+release/github-verification.json
 .DS_Store
+*.log

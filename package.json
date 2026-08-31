@@ -1,0 +1,27 @@
+{
+  "name": "tenantproof",
+  "version": "0.3.0",
+  "private": true,
+  "description": "Static-first TenantProof product, local report viewer, scope worksheet, evidence schema, operations, and release handoff.",
+  "scripts": {
+    "serve": "python3 -m http.server 4173 --directory public",
+    "assets": "python3 tools/generate-brand-assets.py",
+    "harden": "node tools/harden-html.mjs",
+    "config:preview": "node tools/build-site-config.mjs",
+    "validate:report": "node tools/validate-report.mjs public/assets/sample-report.json",
+    "demo:report": "node tools/run-matrix.mjs --mode=demo --out=build/demo-generated-report.json",
+    "release:check": "node tools/release-check.mjs",
+    "release:strict": "node tools/release-check.mjs --strict",
+    "release:bundle": "node tools/build-release.mjs",
+    "walkthrough": "node tools/record-walkthrough.mjs",
+    "handoff:assets": "node tools/sync-handoff-assets.mjs",
+    "handoff:report": "python3 tools/build-handoff-report.py",
+    "handoff:manifest": "node tools/build-source-manifest.mjs",
+    "docs:check": "node tools/check-docs.mjs",
+    "test": "node qa.mjs",
+    "quality": "node tools/quality-gate.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

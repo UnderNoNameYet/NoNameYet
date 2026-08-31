@@ -1,0 +1,67 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://tenantproof.invalid/schema/report-1.0.json",
+  "title": "TenantProof redacted report",
+  "type": "object",
+  "required": ["schemaVersion", "reportId", "project", "scope", "checks"],
+  "additionalProperties": false,
+  "properties": {
+    "schemaVersion": { "const": "1.0" },
+    "reportId": { "type": "string", "minLength": 3, "maxLength": 80 },
+    "project": {
+      "type": "object",
+      "required": ["name", "environment", "client"],
+      "additionalProperties": false,
+      "properties": {
+        "name": { "type": "string", "minLength": 1, "maxLength": 120 },
+        "environment": { "type": "string", "minLength": 1, "maxLength": 120 },
+        "client": { "type": "string", "minLength": 1, "maxLength": 160 }
+      }
+    },
+    "scope": {
+      "type": "object",
+      "required": ["generatedAt", "tables", "roles", "functions", "storageBuckets"],
+      "additionalProperties": false,
+      "properties": {
+        "generatedAt": { "type": "string", "format": "date-time" },
+        "tables": { "type": "integer", "minimum": 0 },
+        "roles": { "type": "integer", "minimum": 0 },
+        "functions": { "type": "integer", "minimum": 0 },
+        "storageBuckets": { "type": "integer", "minimum": 0 }
+      }
+    },
+    "checks": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/check" }
+    }
+  },
+  "$defs": {
+    "state": {
+      "type": "object",
+      "required": ["status", "observed", "evidence", "remediation"],
+      "additionalProperties": false,
+      "properties": {
+        "status": { "enum": ["pass", "fail", "untested", "out_of_scope"] },
+        "observed": { "type": "string", "minLength": 1, "maxLength": 1200 },
+        "evidence": { "type": "string", "minLength": 1, "maxLength": 1200 },
+        "remediation": { "type": "string", "maxLength": 1200 }
+      }
+    },
+    "check": {
+      "type": "object",
+      "required": ["id", "actor", "area", "resource", "operation", "expectation", "before", "after"],
+      "additionalProperties": false,
+      "properties": {
+        "id": { "type": "string", "pattern": "^TP-[A-Z0-9-]+$", "maxLength": 40 },
+        "actor": { "type": "string", "minLength": 1, "maxLength": 80 },
+        "area": { "type": "string", "minLength": 1, "maxLength": 80 },
+        "resource": { "type": "string", "minLength": 1, "maxLength": 160 },
+        "operation": { "type": "string", "minLength": 1, "maxLength": 80 },
+        "expectation": { "type": "string", "minLength": 1, "maxLength": 500 },
+        "before": { "$ref": "#/$defs/state" },
+        "after": { "$ref": "#/$defs/state" }
+      }
+    }
+  }
+}
