@@ -52,8 +52,8 @@ jobs:
           npm run release:bundle
           npm run docs:check
           npm run release:check
-          grep -q 'state: "preview"' public/assets/site-config.js
-          grep -q 'paymentMode: "closed"' public/assets/site-config.js
+          grep -q '"state": "preview"' public/assets/site-config.js
+          grep -q '"paymentMode": "closed"' public/assets/site-config.js
           test "$(find dist -type f | wc -l)" -eq 22
 
       - name: Configure Pages
