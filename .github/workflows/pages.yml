@@ -1,43 +1,71 @@
-name: Deploy RebuttalKit revenue release
+name: Validate and deploy TenantProof preview
+
 on:
   push:
     branches: [main]
   pull_request:
   workflow_dispatch:
+
 permissions:
   contents: read
   pages: write
   id-token: write
+
 concurrency:
-  group: pages-${{ github.ref }}
+  group: tenantproof-pages-${{ github.ref }}
   cancel-in-progress: true
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Validate and build v8
-        run: node test.mjs
-      - name: Verify revenue release
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install deterministic image dependency
+        run: python -m pip install --disable-pip-version-check pillow==10.4.0
+
+      - name: Build and validate request-only preview
         shell: bash
         run: |
           set -euo pipefail
-          grep -q 'The dispute arrives' public/index.html
-          grep -q 'A second set of eyes' public/premium.html
-          grep -q 'RebuttalKit Revenue Release v8' public/release-v8.txt
-          test -f public/founder-review.css
-          test -f public/founder-review.js
-          test -f public/site-config.js
-          test -f public/app.html
+          npm run assets
+          npm run harden
+          npm run config:preview
+          npm run validate:report
+          npm run demo:report
+          if node tools/run-matrix.mjs --mode=live --out=build/forbidden-live.json; then
+            echo 'Live matrix execution unexpectedly succeeded' >&2
+            exit 1
+          fi
+          for file in public/assets/*.js qa.mjs tools/*.mjs; do node --check "$file"; done
+          npm run release:bundle
+          npm run docs:check
+          npm run release:check
+          grep -q 'state: "preview"' public/assets/site-config.js
+          grep -q 'paymentMode: "closed"' public/assets/site-config.js
+          test "$(find dist -type f | wc -l)" -eq 22
+
       - name: Configure Pages
         if: github.event_name != 'pull_request'
         uses: actions/configure-pages@v5
-      - name: Upload Pages artifact
+
+      - name: Upload public-only artifact
         if: github.event_name != 'pull_request'
         uses: actions/upload-pages-artifact@v3
         with:
-          path: public
+          path: dist
+
   deploy:
     if: github.event_name != 'pull_request'
     environment:
