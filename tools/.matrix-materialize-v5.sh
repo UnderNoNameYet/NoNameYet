@@ -37,11 +37,7 @@ if source.count(old) != 1:
 path.write_text(source.replace(old, '**Snapshot:** 2026-09-01', 1), encoding='utf-8')
 PY
 
-tar -cf /tmp/tenantproof-matrix-transport.tar \
-  .github/workflows/materialize-sample-matrix-v5.yml \
-  tools/.matrix-chunk-* \
-  tools/.matrix-postprocess.py \
-  tools/.matrix-materialize-v5.sh
+cp .github/workflows/materialize-sample-matrix-v5.yml /tmp/materialize-sample-matrix-v5.yml
 rm .github/workflows/materialize-sample-matrix-v5.yml
 rm tools/.matrix-chunk-* tools/apply-sample-matrix.py tools/.matrix-postprocess.py tools/.matrix-materialize-v5.sh
 rm -f MATERIALIZER_ERROR.txt
@@ -150,11 +146,14 @@ test ! -e tools/.matrix-materialize-v5.sh
 test ! -e MATERIALIZER_ERROR.txt
 git diff --check -- . ':(exclude)handoff/HANDOFF_REPORT.pdf'
 
-tar -xf /tmp/tenantproof-matrix-transport.tar
+mkdir -p .github/workflows
+cp /tmp/materialize-sample-matrix-v5.yml .github/workflows/materialize-sample-matrix-v5.yml
 test -f .github/workflows/materialize-sample-matrix-v5.yml
-test -f tools/.matrix-materialize-v5.sh
-test -f tools/.matrix-postprocess.py
-test "$(find tools -maxdepth 1 -name '.matrix-chunk-*' | wc -l)" -eq 12
+test ! -e tools/.matrix-materialize-v5.sh
+test ! -e tools/.matrix-postprocess.py
+test -z "$(find tools -maxdepth 1 -name '.matrix-chunk-*' -print -quit)"
+git checkout "$BASE_HEAD" -- .github/workflows/pages.yml
+git diff --quiet -- .github/workflows/pages.yml
 git diff --check -- . ':(exclude)handoff/HANDOFF_REPORT.pdf'
 
 rm -rf node_modules
