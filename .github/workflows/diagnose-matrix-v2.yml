@@ -1,0 +1,60 @@
+name: Diagnose corrected TenantProof matrix patch
+
+on:
+  push:
+    branches:
+      - feature/tenant-boundary-matrix-20260901
+
+permissions:
+  contents: write
+
+jobs:
+  diagnose:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout feature branch
+        uses: actions/checkout@v4
+        with:
+          ref: feature/tenant-boundary-matrix-20260901
+          fetch-depth: 0
+
+      - name: Persist checksum and exact patch result
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          from pathlib import Path
+          import base64
+          import gzip
+          import hashlib
+          import subprocess
+          import traceback
+
+          log = []
+          try:
+              compact = ''.join([
+                  Path('tools/.sample-matrix-payload-0').read_text(encoding='utf-8'),
+                  Path('tools/.sample-matrix-payload-1').read_text(encoding='utf-8'),
+              ])
+              log.append(f'payload_chars={len(compact)}')
+              decoded = gzip.decompress(base64.b64decode(compact, validate=True))
+              digest = hashlib.sha256(decoded).hexdigest()
+              log.append(f'patch_bytes={len(decoded)}')
+              log.append(f'patch_sha256={digest}')
+              target = Path('tools/apply-sample-matrix.py')
+              target.write_bytes(decoded)
+              result = subprocess.run(['python', str(target)], text=True, capture_output=True)
+              log.append(f'patch_exit={result.returncode}')
+              log.append('patch_stdout:\n' + result.stdout)
+              log.append('patch_stderr:\n' + result.stderr)
+          except Exception:
+              log.append('exception:\n' + traceback.format_exc())
+          Path('MATERIALIZER_ERROR.txt').write_text('\n'.join(log) + '\n', encoding='utf-8')
+          PY
+          rm -f tools/apply-sample-matrix.py
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add MATERIALIZER_ERROR.txt
+          git commit -m 'chore: record corrected matrix patch diagnostic'
+          git push origin HEAD:feature/tenant-boundary-matrix-20260901
