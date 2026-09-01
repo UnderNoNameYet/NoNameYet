@@ -1,0 +1,204 @@
+materializer_exit=1
+--- last log bytes ---
+tools/apply-sample-matrix.py: OK
+tools/.matrix-postprocess.py: OK
+Applied TenantProof sample-matrix release changes
+Applied DELETE controls, CTA hierarchy, and complete capture set
+{
+  "files": [
+    "tenantproof-hero-desktop.png",
+    "tenantproof-report-desktop.png",
+    "tenantproof-matrix-desktop.png",
+    "tenantproof-request-mobile.png",
+    "tenantproof-mobile.png"
+  ]
+}
+{'matrixCapture': '1440×4458', 'homeMobileCapture': '390×11559'}
+{
+  "copied": 9,
+  "target": "/home/runner/work/NoNameYet/NoNameYet/handoff/assets"
+}
+
+> tenantproof@0.3.1 handoff:report
+> python3 tools/build-handoff-report.py
+
+{'output': '/home/runner/work/NoNameYet/NoNameYet/handoff/HANDOFF_REPORT.pdf', 'bytes': 1182222}
+
+> tenantproof@0.3.1 handoff:manifest
+> node tools/build-source-manifest.mjs
+
+{
+  "output": "/home/runner/work/NoNameYet/NoNameYet/handoff/SOURCE_MANIFEST.json",
+  "files": 102,
+  "bytes": 4710480,
+  "byRole": {
+    "repository-root": 11,
+    "repository-workflow": 2,
+    "release-configuration": 2,
+    "handoff-source": 22,
+    "handoff-media": 14,
+    "operations-private-template": 10,
+    "deployable-public": 24,
+    "report-contract": 1,
+    "build-quality-tooling": 16
+  }
+}
+
+> tenantproof@0.3.1 quality
+> node tools/quality-gate.mjs
+
+[pass] generate brand assets
+[pass] harden HTML
+[pass] build preview config
+[pass] validate public sample report
+[pass] generate fictional demo report
+[pass] reject live matrix mode
+[pass] syntax public/assets/report.js
+[pass] syntax public/assets/site-config.js
+[pass] syntax public/assets/site.js
+[pass] syntax qa.mjs
+[pass] syntax tools/build-release.mjs
+[pass] syntax tools/build-site-config.mjs
+[pass] syntax tools/build-source-manifest.mjs
+[pass] syntax tools/capture-previews.mjs
+[pass] syntax tools/check-docs.mjs
+[pass] syntax tools/demo-adapter.mjs
+[pass] syntax tools/harden-html.mjs
+[pass] syntax tools/quality-gate.mjs
+[pass] syntax tools/record-walkthrough.mjs
+[pass] syntax tools/release-check.mjs
+[pass] syntax tools/run-matrix.mjs
+[pass] syntax tools/sync-handoff-assets.mjs
+[pass] syntax tools/validate-report.mjs
+[pass] browser and static QA
+[pass] build public-only artifact
+[pass] sync handoff media
+[pass] build handoff PDF
+[pass] build source manifest
+[pass] documentation integrity
+[pass] release-readiness analysis
+[pass] credential and private-email scan
+{
+  "ok": true,
+  "steps": 31,
+  "failed": []
+}
+
+> tenantproof@0.3.1 handoff:report
+> python3 tools/build-handoff-report.py
+
+{'output': '/home/runner/work/NoNameYet/NoNameYet/handoff/HANDOFF_REPORT.pdf', 'bytes': 1183127}
+
+> tenantproof@0.3.1 handoff:manifest
+> node tools/build-source-manifest.mjs
+
+{
+  "output": "/home/runner/work/NoNameYet/NoNameYet/handoff/SOURCE_MANIFEST.json",
+  "files": 102,
+  "bytes": 4712015,
+  "byRole": {
+    "repository-root": 11,
+    "repository-workflow": 2,
+    "release-configuration": 2,
+    "handoff-source": 22,
+    "handoff-media": 14,
+    "operations-private-template": 10,
+    "deployable-public": 24,
+    "report-contract": 1,
+    "build-quality-tooling": 16
+  }
+}
+
+> tenantproof@0.3.1 docs:check
+> node tools/check-docs.mjs
+
+{
+  "generatedAt": "2026-09-01T12:34:26.800Z",
+  "checkedFiles": 42,
+  "markdownFiles": 39,
+  "checks": 137,
+  "warnings": [],
+  "failures": [],
+  "ok": true
+}
+
+> tenantproof@0.3.1 release:bundle
+> node tools/build-release.mjs
+
+{
+  "output": "/home/runner/work/NoNameYet/NoNameYet/dist",
+  "files": 24,
+  "bytes": 208168,
+  "forbidden": 0
+}
+
+> tenantproof@0.3.1 release:check
+> node tools/release-check.mjs
+
+{
+  "generatedAt": "2026-09-01T12:34:27.129Z",
+  "ready": false,
+  "releaseMode": "request-only candidate",
+  "passed": [
+    "Required release files exist",
+    "HTML is CSP-compatible",
+    "Sitemap matches public origin"
+  ],
+  "warnings": [
+    "Payment remains closed; acceptable only for request-only launch",
+    "security.txt awaits an owned security contact"
+  ],
+  "blockers": [
+    "Site configuration is still preview",
+    "Owned HTTPS intake URL is not configured",
+    "Public operator display name is not configured",
+    "Public business contact email is not configured",
+    "Evidence retention period is not configured",
+    "Public privacy/terms still contain pre-launch placeholders",
+    "Fresh GitHub repository verification record is not present in this checkout"
+  ]
+}
+M  .github/workflows/pages.yml
+M  CHANGELOG.md
+M  README.md
+M  handoff/ASSET_MANIFEST.md
+M  handoff/CURRENT_STATE.json
+M  handoff/DECISION_LOG.md
+M  handoff/FEATURE_AND_FUNCTION_INVENTORY.md
+M  handoff/HANDOFF_REPORT.md
+M  handoff/HANDOFF_REPORT.pdf
+M  handoff/PAGE_AND_SECTION_SPECS.md
+M  handoff/PRODUCT_SPEC.md
+M  handoff/QUALITY_GATES.md
+M  handoff/ROADMAP_V1_V2_V3.md
+M  handoff/SOURCE_MANIFEST.json
+M  handoff/assets/01-home-desktop.png
+M  handoff/assets/02-report-desktop.png
+M  handoff/assets/03-request-mobile.png
+M  handoff/assets/04-home-mobile-full.png
+M  handoff/assets/05-social-preview.png
+A  handoff/assets/08-sample-matrix-desktop.png
+M  handoff/assets/SHA256SUMS
+M  operations/launch-checklist.md
+A  public/assets/sample-boundary-matrix.csv
+M  public/assets/tenantproof-og.png
+M  public/index.html
+M  public/llms.txt
+M  public/methodology.html
+A  public/sample-matrix.html
+M  public/sitemap.xml
+M  qa.mjs
+M  tools/build-handoff-report.py
+M  tools/capture-previews.mjs
+M  tools/check-docs.mjs
+M  tools/harden-html.mjs
+M  tools/release-check.mjs
+M  tools/sync-handoff-assets.mjs
+[feature/tenant-boundary-matrix-20260901 7557a03] feat: add free tenant-boundary matrix
+ 36 files changed, 462 insertions(+), 222 deletions(-)
+ create mode 100644 handoff/assets/08-sample-matrix-desktop.png
+ create mode 100644 public/assets/sample-boundary-matrix.csv
+ create mode 100644 public/sample-matrix.html
+To https://github.com/UnderNoNameYet/NoNameYet
+ ! [remote rejected] HEAD -> feature/tenant-boundary-matrix-20260901 (refusing to allow a GitHub App to create or update workflow `.github/workflows/pages.yml` without `workflows` permission)
+error: failed to push some refs to 'https://github.com/UnderNoNameYet/NoNameYet'
