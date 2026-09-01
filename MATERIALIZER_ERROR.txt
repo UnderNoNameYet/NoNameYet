@@ -1,0 +1,11 @@
+workflow_bytes=19840
+payload_open_markers=2
+payload_chars=13608
+exception:
+Traceback (most recent call last):
+  File "<stdin>", line 17, in <module>
+  File "/usr/lib/python3.12/gzip.py", line 632, in decompress
+    decompressed = do.decompress(data[fp.tell():])
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+zlib.error: Error -3 while decompressing data: invalid bit length repeat
+
