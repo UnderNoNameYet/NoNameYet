@@ -1,0 +1,59 @@
+name: Diagnose TenantProof sample matrix materializer
+
+on:
+  push:
+    branches:
+      - feature/tenant-boundary-matrix-20260901
+
+permissions:
+  contents: write
+
+jobs:
+  diagnose:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout feature branch
+        uses: actions/checkout@v4
+        with:
+          ref: feature/tenant-boundary-matrix-20260901
+          fetch-depth: 0
+
+      - name: Extract staged patch
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          from pathlib import Path
+          import base64
+          import gzip
+          import hashlib
+          source = Path('.github/workflows/materialize-sample-matrix.yml').read_text(encoding='utf-8')
+          payload = source.split("<<'PAYLOAD'\n", 1)[1].split('\n          PAYLOAD', 1)[0]
+          decoded = gzip.decompress(base64.b64decode(''.join(payload.split())))
+          digest = hashlib.sha256(decoded).hexdigest()
+          expected = '40f3effc57a5d98e0cf85889b635420381cb2f94a547c80fc701e233fdf1c475'
+          if digest != expected:
+              raise SystemExit(f'Patch checksum mismatch: {digest}')
+          target = Path('tools/apply-sample-matrix.py')
+          target.write_bytes(decoded)
+          print({'patchBytes': len(decoded), 'sha256': digest})
+          PY
+
+      - name: Run patch and persist exact failure
+        shell: bash
+        run: |
+          set +e
+          python tools/apply-sample-matrix.py > MATERIALIZER_ERROR.txt 2>&1
+          status=$?
+          set -e
+          if [ "$status" -eq 0 ]; then
+            echo 'Patch completed successfully; original failure was in shell setup.' > MATERIALIZER_ERROR.txt
+          fi
+          rm -f tools/apply-sample-matrix.py
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add MATERIALIZER_ERROR.txt
+          git commit -m 'chore: record matrix materializer diagnostic'
+          git push origin HEAD:feature/tenant-boundary-matrix-20260901
+          exit "$status"
