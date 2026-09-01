@@ -1,0 +1,97 @@
+finalizer_exit=1
+--- last log bytes ---
+
+> tenantproof@0.3.2 handoff:report
+> python3 tools/build-handoff-report.py
+
+{'output': '/home/runner/work/NoNameYet/NoNameYet/handoff/HANDOFF_REPORT.pdf', 'bytes': 1183508}
+
+> tenantproof@0.3.2 handoff:manifest
+> node tools/build-source-manifest.mjs
+
+{
+  "output": "/home/runner/work/NoNameYet/NoNameYet/handoff/SOURCE_MANIFEST.json",
+  "files": 102,
+  "bytes": 4712828,
+  "byRole": {
+    "repository-root": 11,
+    "repository-workflow": 2,
+    "release-configuration": 2,
+    "handoff-source": 22,
+    "handoff-media": 14,
+    "operations-private-template": 10,
+    "deployable-public": 24,
+    "report-contract": 1,
+    "build-quality-tooling": 16
+  }
+}
+
+> tenantproof@0.3.2 quality
+> node tools/quality-gate.mjs
+
+[pass] generate brand assets
+[pass] harden HTML
+[pass] build preview config
+[pass] validate public sample report
+[pass] generate fictional demo report
+[pass] reject live matrix mode
+[pass] syntax public/assets/report.js
+[pass] syntax public/assets/site-config.js
+[pass] syntax public/assets/site.js
+[pass] syntax qa.mjs
+[pass] syntax tools/build-release.mjs
+[pass] syntax tools/build-site-config.mjs
+[pass] syntax tools/build-source-manifest.mjs
+[pass] syntax tools/capture-previews.mjs
+[pass] syntax tools/check-docs.mjs
+[pass] syntax tools/demo-adapter.mjs
+[pass] syntax tools/harden-html.mjs
+[pass] syntax tools/quality-gate.mjs
+[pass] syntax tools/record-walkthrough.mjs
+[pass] syntax tools/release-check.mjs
+[pass] syntax tools/run-matrix.mjs
+[pass] syntax tools/sync-handoff-assets.mjs
+[pass] syntax tools/validate-report.mjs
+[pass] browser and static QA
+[pass] build public-only artifact
+
+[sync handoff media] failed
+file:///home/runner/work/NoNameYet/NoNameYet/tools/sync-handoff-assets.mjs:23
+  if (!fs.existsSync(from)) throw new Error(`Missing handoff asset source: ${source}`);
+                                  ^
+
+Error: Missing handoff asset source: build/tenantproof-hero-desktop.png
+    at file:///home/runner/work/NoNameYet/NoNameYet/tools/sync-handoff-assets.mjs:23:35
+    at ModuleJob.run (node:internal/modules/esm/module_job:325:25)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:606:24)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:117:5)
+
+Node.js v20.20.2
+
+[pass] build handoff PDF
+[pass] build source manifest
+
+[documentation integrity] failed
+{
+  "generatedAt": "2026-09-01T12:50:46.345Z",
+  "checkedFiles": 42,
+  "markdownFiles": 39,
+  "checks": 137,
+  "warnings": [],
+  "failures": [
+    "Source manifest identifies handoff release",
+    "Package version matches handoff release"
+  ],
+  "ok": false
+}
+
+[pass] release-readiness analysis
+[pass] credential and private-email scan
+{
+  "ok": false,
+  "steps": 31,
+  "failed": [
+    "sync handoff media",
+    "documentation integrity"
+  ]
+}
