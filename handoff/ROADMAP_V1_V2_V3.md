@@ -26,6 +26,7 @@ Roadmap items are ordered by evidence and risk, not excitement. Dates are intent
 - release-readiness checker
 - public Notion qualification form and private pipeline
 - public launch hub and fictional report
+- free fictional tenant-boundary matrix and downloadable CSV
 - repository handoff/agent specification
 
 ### V1.2 premium public release — next
@@ -57,7 +58,6 @@ Blockers first:
 
 - public static link to hosted qualification form
 - downloadable fictional report PDF
-- sample matrix CSV
 - deployment smoke-test script
 - signed checksum manifest for handoff
 - print polish across Chromium/Safari

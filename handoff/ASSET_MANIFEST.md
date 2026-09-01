@@ -18,7 +18,8 @@ All media in this handoff is product/demo material. No customer evidence, creden
 | `build/tenantproof-desktop.png` | 1440×7695 | full homepage visual QA |
 | `build/tenantproof-hero-desktop.png` | 1440×1050 | first-viewport/product preview |
 | `build/tenantproof-report-desktop.png` | 1440×1050 | report interface preview |
-| `build/tenantproof-mobile.png` | 390×11086 | full mobile homepage QA |
+| `build/tenantproof-matrix-desktop.png` | 1440×4458 | free boundary-matrix preview |
+| `build/tenantproof-mobile.png` | 390×11559 | full mobile homepage QA |
 | `build/tenantproof-request-mobile.png` | 390×2629 | mobile scope flow preview |
 
 Selected versions are copied to `handoff/assets/` with stable names so another operator can inspect the intended state without regenerating first.
@@ -34,6 +35,7 @@ handoff/assets/
 ├── 05-social-preview.png
 ├── 06-icon-192.png
 ├── 07-icon-512.png
+├── 08-sample-matrix-desktop.png
 ├── walkthrough.webm
 └── SHA256SUMS
 
@@ -59,6 +61,7 @@ The exact scripts must start and stop finite local servers; never leave a backgr
 - no clipping/overflow
 - hero communicates buyer/problem/artifact/CTA
 - report statuses and selection are legible
+- sample matrix fits desktop/mobile and the download action is clear
 - fictional label visible
 - mobile pricing and form controls are readable
 - focus/hover/selected states make sense

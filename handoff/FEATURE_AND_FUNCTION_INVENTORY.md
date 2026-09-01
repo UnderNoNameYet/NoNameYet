@@ -11,6 +11,7 @@ Status legend: **implemented**, **prepared**, **blocked**, **evidence-gated**, *
 | Full report viewer | implemented | `public/report.html` | Local JSON import and print |
 | Methodology/authorization | implemented | `public/methodology.html` | Scope, evidence, stop rules |
 | Local scope worksheet | implemented | `public/request.html`, `assets/site.js` | Three steps, no submission |
+| Free boundary matrix | implemented | `public/sample-matrix.html`, `public/assets/sample-boundary-matrix.csv` | Fictional paired controls; static local download |
 | Privacy page | implemented/pre-launch | `public/privacy.html` | Must be updated before premium launch |
 | Terms page | implemented/pre-launch | `public/terms.html` | Must be updated before taking payment |
 | Branded 404 | implemented | `public/404.html` | Recovery links |

@@ -13,6 +13,7 @@ const copies = [
   ['public/assets/tenantproof-og.png', '05-social-preview.png'],
   ['public/assets/icon-192.png', '06-icon-192.png'],
   ['public/assets/icon-512.png', '07-icon-512.png'],
+  ['build/tenantproof-matrix-desktop.png', '08-sample-matrix-desktop.png'],
   ['build/walkthrough.webm', 'walkthrough.webm']
 ];
 

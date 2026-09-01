@@ -19,7 +19,7 @@ const required = [
   'handoff/assets/01-home-desktop.png', 'handoff/assets/02-report-desktop.png',
   'handoff/assets/03-request-mobile.png', 'handoff/assets/04-home-mobile-full.png',
   'handoff/assets/05-social-preview.png', 'handoff/assets/06-icon-192.png',
-  'handoff/assets/07-icon-512.png', 'handoff/assets/walkthrough.webm',
+  'handoff/assets/07-icon-512.png', 'handoff/assets/08-sample-matrix-desktop.png', 'handoff/assets/walkthrough.webm',
   'handoff/assets/SHA256SUMS', 'handoff/HANDOFF_REPORT.pdf', 'handoff/SOURCE_MANIFEST.json'
 ];
 const failures = [];

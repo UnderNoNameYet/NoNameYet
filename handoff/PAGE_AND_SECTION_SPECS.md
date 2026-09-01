@@ -250,6 +250,38 @@ Recover an invalid route without creating anxiety.
 
 **Contains:** clear not-found message, home CTA, report CTA, same header/footer, no search field or telemetry.
 
+## `sample-matrix.html` — free boundary-planning artifact
+
+### Page job
+
+Help a Supabase SaaS team define a falsifiable tenant/role authorization matrix before requesting access or paying for a review.
+
+### Sections
+
+1. Hero: free local CSV download and method link.
+2. Fictional starter matrix with paired allowed and denied controls.
+3. Operation-specific guidance for SELECT, INSERT, UPDATE, DELETE, RPC, and storage paths.
+4. Reproducibility fields and evidence requirements.
+5. Pass/fail/untested/out-of-scope vocabulary.
+6. Authorization, staging, synthetic-data, and stop-condition reminder.
+7. CTA to the local scope worksheet.
+
+### Privacy contract
+
+- static page and CSV only
+- no upload, form submission, execution, browser storage, or external runtime request
+- no credentials, private repository data, production records, or real findings
+- all example rows explicitly fictional and unexecuted
+
+### Acceptance criteria
+
+- downloadable CSV resolves from the public artifact
+- one H1, one main landmark, canonical/social metadata, and restrictive CSP
+- table remains usable inside an announced keyboard-focusable scroll region
+- no status is represented as executed evidence
+- mobile page has no horizontal document overflow
+- CTA prepares a non-sensitive brief rather than opening checkout
+
 ## Production support files
 
 ### `robots.txt`
@@ -285,10 +317,6 @@ Only after a real customer approves exact content and audience in writing. Inclu
 ### `/faq.html`
 
 Add only from repeated buyer questions, not imagined objections. Likely subjects: access requirements, staging, timing, report use, retest, production-only scopes.
-
-### `/sample-matrix.html`
-
-Potential free planning artifact showing how to define actors/resources/operations without running a scan. Build only if it improves qualified conversion.
 
 ### Customer delivery portal
 

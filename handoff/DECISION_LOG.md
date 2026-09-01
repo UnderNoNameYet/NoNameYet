@@ -137,3 +137,11 @@ Append new decisions; do not silently rewrite prior rationale. Dates use Asia/Ca
 **Evidence:** merge `6bc99104bb91b32afb50c8c7d9b416d74566f8ed`; deployment [run #40](https://github.com/UnderNoNameYet/NoNameYet/actions/runs/33372340582) succeeded; pre-release rollback `047691e35c6b8d38ba5540d1fe4de345ed752a6c` remains documented.
 
 **Constraint:** technical publication is not commercial readiness. Operator identity, jurisdiction, owned contact/intake, legal copy, retention, delivery capacity, processor, and written customer authorization remain mandatory.
+
+## 2026-09-01 — Publish a free boundary-matrix acquisition asset
+
+**Decision:** add a static fictional matrix page and downloadable CSV before expanding the product or adding a scanner.
+
+**Why:** current paid requests repeatedly ask for explicit tenant/role authorization validation. A matrix lets buyers experience the core method, improves scope quality, and creates an educational inbound artifact without credentials, tracking, uploads, or unsupported security claims.
+
+**Constraint:** the template is unexecuted planning material, not evidence, certification, or a public testing tool.

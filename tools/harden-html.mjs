@@ -21,6 +21,11 @@ const pages = {
     description: 'TenantProof methodology, authorization requirements, scope boundaries, evidence handling, and remediation workflow.',
     imageAlt: 'TenantProof authorization verification methodology'
   },
+  'sample-matrix.html': {
+    title: 'Supabase tenant-boundary matrix template — TenantProof',
+    description: 'Download a free fictional CSV template for mapping Supabase tenant, role, resource, operation, and expected authorization outcomes.',
+    imageAlt: 'TenantProof tenant-boundary matrix template'
+  },
   'request.html': {
     title: 'Scope a review — TenantProof',
     description: 'Create a private TenantProof scope brief without submitting credentials or customer data.',

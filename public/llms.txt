@@ -17,6 +17,7 @@ TenantProof tests whether one synthetic customer identity can read or modify ano
 - / — Product overview and pricing
 - /report.html — Fictional interactive report
 - /methodology.html — Scope, authorization, and evidence handling
+- /sample-matrix.html — Fictional tenant-boundary matrix and local CSV download
 - /request.html — Local-only scope worksheet
 - /privacy.html — Current data-handling notice
 - /terms.html — Current service limitations

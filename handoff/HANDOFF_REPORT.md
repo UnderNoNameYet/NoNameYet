@@ -1,6 +1,6 @@
 # TenantProof handoff report
 
-**Snapshot:** 2026-08-31  
+**Snapshot:** 2026-09-01
 **Product stage:** GitHub Pages request-only technical preview live; static customer intake and payments closed  
 **Commercial stage:** validated paid demand, no customer or revenue yet  
 **Next model objective:** configure verified operator/commercial facts, then run a ten-buyer paid-pilot experiment through an authenticated channel
@@ -42,6 +42,7 @@ It then records the observed result, evidence, remediation, and retest status. T
 - `index.html` — category framing, problem, evidence preview, method, pricing, boundaries, CTA
 - `report.html` — interactive sample/local report viewer
 - `methodology.html` — authorization and evidence method
+- `sample-matrix.html` — free fictional paired-control matrix and local CSV download
 - `request.html` — three-step local scope brief builder
 - `privacy.html` — current pre-release privacy notice
 - `terms.html` — current pre-release terms and limitations
@@ -68,7 +69,7 @@ It then records the observed result, evidence, remediation, and retest status. T
 - restrictive meta CSP on all HTML pages
 - portable `_headers`
 - canonical, Open Graph, and Twitter metadata
-- sitemap, robots, manifest, `.nojekyll`, `llms.txt`
+- sitemap, robots, manifest, `.nojekyll`, `llms.txt`, and a free sample-matrix route
 - 192/512 icons and 1200×630 social preview
 - external runtime configuration
 - release-readiness checker
@@ -86,9 +87,9 @@ It then records the observed result, evidence, remediation, and retest status. T
 
 Last completed browser QA:
 
-- 22 required public files
-- 7 HTML pages loaded
-- 7 CSP-compatible pages
+- 24 required public files
+- 8 HTML pages loaded
+- 8 CSP-compatible pages
 - 16 sample checks
 - before: 11 pass, 4 fail, 1 unresolved
 - after: 15 pass, 0 fail, 1 unresolved

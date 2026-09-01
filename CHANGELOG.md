@@ -2,6 +2,19 @@
 
 All notable product changes are recorded here. The project has not reached a commercially ready 1.0 release.
 
+## [Unreleased] — free tenant-boundary matrix
+
+### Added
+
+- public `sample-matrix.html` planning page with paired positive/negative controls
+- downloadable fictional `sample-boundary-matrix.csv` template
+- sitemap, machine-readable page index, QA, release checks, documentation, and handoff coverage for the new artifact
+
+### Safety
+
+- the matrix is static, fictional, unexecuted, and local-download only
+- no target input, credential collection, browser storage, tracking, or external runtime request was added
+
 ## [0.3.1] — 2026-08-31 — request-only GitHub Pages preview
 
 ### Published

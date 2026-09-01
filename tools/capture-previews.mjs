@@ -30,14 +30,18 @@ try {
   await page.goto(`${base}/report.html`, { waitUntil: 'networkidle' });
   await page.waitForFunction(() => document.querySelector('[data-metric="total"]')?.textContent === '16');
   await page.screenshot({ path: path.join(out, 'tenantproof-report-desktop.png') });
+  await page.goto(`${base}/sample-matrix.html`, { waitUntil: 'networkidle' });
+  await page.screenshot({ path: path.join(out, 'tenantproof-matrix-desktop.png'), fullPage: true });
   await desktop.close();
 
   const mobile = await browser.newContext({ viewport: { width: 390, height: 844 }, deviceScaleFactor: 1 });
   const mobilePage = await mobile.newPage();
   await mobilePage.goto(`${base}/request.html?package=repair`, { waitUntil: 'networkidle' });
   await mobilePage.screenshot({ path: path.join(out, 'tenantproof-request-mobile.png'), fullPage: true });
+  await mobilePage.goto(`${base}/index.html`, { waitUntil: 'networkidle' });
+  await mobilePage.screenshot({ path: path.join(out, 'tenantproof-mobile.png'), fullPage: true });
   await mobile.close();
-  console.log(JSON.stringify({ files: ['tenantproof-hero-desktop.png', 'tenantproof-report-desktop.png', 'tenantproof-request-mobile.png'] }, null, 2));
+  console.log(JSON.stringify({ files: ['tenantproof-hero-desktop.png', 'tenantproof-report-desktop.png', 'tenantproof-matrix-desktop.png', 'tenantproof-request-mobile.png', 'tenantproof-mobile.png'] }, null, 2));
 } finally {
   if (browser) await browser.close();
   server.kill('SIGTERM');

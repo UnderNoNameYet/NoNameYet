@@ -1,5 +1,5 @@
 {
-  "snapshotAt": "2026-08-31T14:25:08+05:30",
+  "snapshotAt": "2026-09-01T16:00:45+05:30",
   "product": "TenantProof",
   "corePromise": "Prove that Customer A cannot read or modify Customer B's data.",
   "stage": "GitHub Pages request-only technical preview live; commercial intake and payment closed",
@@ -66,6 +66,7 @@
       "index.html",
       "report.html",
       "methodology.html",
+      "sample-matrix.html",
       "request.html",
       "privacy.html",
       "terms.html",
@@ -76,17 +77,24 @@
     "sampleProject": "Northstar CRM",
     "sampleFictional": true,
     "publicRuntimeDependencies": 0,
-    "siteConfigState": "preview"
+    "siteConfigState": "preview",
+    "publicSampleMatrix": {
+      "route": "sample-matrix.html",
+      "download": "assets/sample-boundary-matrix.csv",
+      "fictional": true,
+      "executesTests": false,
+      "collectsData": false
+    }
   },
   "quality": {
     "latestKnownResult": "pass",
-    "latestRunAt": "2026-08-31T08:54:18.497Z",
+    "latestRunAt": "2026-09-01T12:40:05.264Z",
     "qualityGateSteps": 31,
-    "documentationChecks": 136,
+    "documentationChecks": 137,
     "handoffPdfPages": 11,
     "walkthroughDurationSeconds": 20,
-    "requiredFiles": 22,
-    "htmlPages": 7,
+    "requiredFiles": 24,
+    "htmlPages": 8,
     "sampleChecks": 16,
     "before": {
       "pass": 11,
@@ -105,11 +113,11 @@
     "postRequests": 0,
     "demoRunnerLocked": true,
     "mustRerunAfterChanges": false,
-    "sourceManifestFiles": 99,
+    "sourceManifestFiles": 102,
     "githubPullRequestBuild": "success",
     "githubMainBuildAndDeploy": "success",
     "liveStaticRouteFetch": "pass",
-    "sourceManifestBytes": 3583781
+    "sourceManifestBytes": 4712015
   },
   "softLaunch": {
     "publicQualificationForm": true,
@@ -118,7 +126,8 @@
     "publicFictionalSampleReport": true,
     "formSmokeTest": "passed_and_test_row_deleted",
     "searchIndexing": true,
-    "githubPagesRequestOnlyPreview": true
+    "githubPagesRequestOnlyPreview": true,
+    "publicSampleBoundaryMatrix": true
   },
   "commercialTruth": {
     "customers": 0,
@@ -131,7 +140,7 @@
   "blockers": [
     "owned HTTPS intake and deletion route inserted into commercial release config",
     "verified legal contracting identity and jurisdiction before customer intake or payment",
-    "owned business contact before commercial launch",
+    "dedicated business contact exists but is not configured in the commercial release or an agent-available Mail channel",
     "static privacy and terms updated from pre-launch state",
     "approved evidence retention value and delivery capacity",
     "security contact before security.txt",
@@ -140,9 +149,10 @@
   ],
   "nextActions": [
     "keep the deployed static preview local-only for intake and closed for payment",
-    "configure verified operator identity, jurisdiction, owned business contact, retention, and delivery capacity",
+    "publish and verify the free tenant-boundary matrix acquisition artifact",
+    "configure verified operator identity, jurisdiction, business contact, retention, and delivery capacity",
     "add the owned HTTPS intake and deletion route and pass the strict release gate before accepting customers",
-    "connect an authenticated approved business channel",
+    "attach an authenticated approved acquisition channel or use source-platform proposals under the verified operator identity",
     "run the ten-prospect paid-pilot experiment with individualized messages",
     "deliver one safely authorized staging-first pilot if won"
   ],

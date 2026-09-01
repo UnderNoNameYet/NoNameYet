@@ -212,7 +212,7 @@ def page_decor(canvas, doc):
         canvas.line(18 * mm, 14 * mm, 192 * mm, 14 * mm)
         canvas.setFont(font_regular, 7.5)
         canvas.setFillColor(MUTED)
-        canvas.drawString(18 * mm, 9 * mm, "TenantProof • canonical handoff • v0.3.0")
+        canvas.drawString(18 * mm, 9 * mm, "TenantProof • canonical handoff • v0.3.1")
         canvas.drawRightString(192 * mm, 9 * mm, str(page))
     canvas.restoreState()
 
@@ -249,7 +249,7 @@ story.extend([
     Paragraph("Product strategy, page specifications, UX system, technical architecture, safety boundaries, commercial model, roadmap, release state, and AI continuation protocol.", styles["TPSubtitle"]),
 ])
 status_data = [
-    [Paragraph("SNAPSHOT", styles["TPSmall"]), Paragraph("2026-08-31", styles["TPBody"])],
+    [Paragraph("SNAPSHOT", styles["TPSmall"]), Paragraph("2026-09-01", styles["TPBody"])],
     [Paragraph("STAGE", styles["TPSmall"]), Paragraph("GitHub Pages request-only preview live; commercial intake and payment closed", styles["TPBody"])],
     [Paragraph("QUALITY", styles["TPSmall"]), Paragraph("31/31 local gates passed; PR build and main deployment workflow succeeded", styles["TPBody"])],
     [Paragraph("COMMERCIAL", styles["TPSmall"]), Paragraph("$349 verification / $649 verification + repair; payments closed; no customers or revenue yet", styles["TPBody"])],
@@ -281,6 +281,7 @@ visuals = [
     ("01-home-desktop.png", "Desktop first viewport — category, evidence preview, and primary actions"),
     ("02-report-desktop.png", "Desktop report viewer — local import, matrix controls, and evidence shell"),
     ("03-request-mobile.png", "Mobile scope worksheet — package, application surface, and non-sensitive brief"),
+    ("08-sample-matrix-desktop.png", "Free fictional boundary matrix — paired controls and CSV download"),
     ("05-social-preview.png", "1200×630 social-preview asset"),
 ]
 for name, caption in visuals:

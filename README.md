@@ -50,6 +50,7 @@ Larger, production-only, regulated, or more sensitive work receives a manual quo
 - local-only JSON report import and print view
 - three-step local scope worksheet
 - methodology and authorization page
+- free fictional tenant-boundary matrix and downloadable CSV
 - privacy, terms, and branded 404
 - report schema 1.0 and validator
 - demo-only matrix runner locked against real targets

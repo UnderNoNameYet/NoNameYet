@@ -37,7 +37,7 @@ The orchestrator should run asset generation, HTML hardening, preview config gen
 
 Required:
 
-- seven HTML pages
+- eight HTML pages
 - CSS, browser JS, config JS, sample report
 - favicon, 192/512 icons, 1200×630 social image
 - manifest, robots, sitemap, `_headers`, `.nojekyll`, `llms.txt`
@@ -189,7 +189,7 @@ The public artifact contains `public/` contents only. Tests, docs, operations, h
 
 Against the real public origin:
 
-- root and six secondary routes load
+- root and seven secondary routes load
 - assets have correct content type
 - canonical/social image URLs resolve
 - no old RebuttalKit/Stay5 content appears

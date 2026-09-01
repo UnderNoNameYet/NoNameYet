@@ -9,7 +9,7 @@ const publicDir = path.join(root, 'public');
 const buildDir = path.join(root, 'build');
 fs.mkdirSync(buildDir, { recursive: true });
 const base = 'http://127.0.0.1:4173';
-const pages = ['index.html', 'report.html', 'methodology.html', 'request.html', 'privacy.html', 'terms.html', '404.html'];
+const pages = ['index.html', 'report.html', 'methodology.html', 'sample-matrix.html', 'request.html', 'privacy.html', 'terms.html', '404.html'];
 const results = {
   generatedAt: new Date().toISOString(),
   static: {},
@@ -45,7 +45,7 @@ function staticChecks() {
   const required = [
     ...pages,
     'assets/styles.css', 'assets/site.js', 'assets/report.js', 'assets/site-config.js',
-    'assets/sample-report.json', 'assets/favicon.svg', 'assets/tenantproof-og.png',
+    'assets/sample-report.json', 'assets/sample-boundary-matrix.csv', 'assets/favicon.svg', 'assets/tenantproof-og.png',
     'assets/icon-192.png', 'assets/icon-512.png', 'assets/site.webmanifest',
     'robots.txt', 'sitemap.xml', '_headers', '.nojekyll', 'llms.txt'
   ];
@@ -217,7 +217,7 @@ async function browserChecks() {
     const mobileErrors = [];
     mobile.on('console', message => { if (message.type() === 'error') mobileErrors.push(message.text()); });
     mobile.on('pageerror', error => mobileErrors.push(error.message));
-    for (const pageName of ['index.html', 'report.html', 'request.html']) {
+    for (const pageName of ['index.html', 'report.html', 'sample-matrix.html', 'request.html']) {
       await mobile.goto(`${base}/${pageName}`, { waitUntil: 'networkidle' });
       const overflow = await mobile.evaluate(() => ({ width: window.innerWidth, scroll: document.documentElement.scrollWidth }));
       assert(overflow.scroll <= overflow.width + 1, `${pageName} has mobile horizontal overflow: ${JSON.stringify(overflow)}`);
