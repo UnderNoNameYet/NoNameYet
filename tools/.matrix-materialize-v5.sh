@@ -1,4 +1,5 @@
 set -Eeuo pipefail
+BASE_HEAD="$(git rev-parse HEAD)"
 exec > >(tee /tmp/tenantproof-matrix-v5.log) 2>&1
 on_error() {
   status=$?
@@ -8,7 +9,9 @@ on_error() {
     echo "materializer_exit=$status"
     echo "--- last log bytes ---"
     tail -c 30000 /tmp/tenantproof-matrix-v5.log
-  } > MATERIALIZER_ERROR.txt
+  } > /tmp/tenantproof-matrix-v5-error.txt
+  git reset --hard "$BASE_HEAD"
+  cp /tmp/tenantproof-matrix-v5-error.txt MATERIALIZER_ERROR.txt
   rm -f tools/apply-sample-matrix.py
   git config user.name 'github-actions[bot]'
   git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
@@ -34,6 +37,11 @@ if source.count(old) != 1:
 path.write_text(source.replace(old, '**Snapshot:** 2026-09-01', 1), encoding='utf-8')
 PY
 
+tar -cf /tmp/tenantproof-matrix-transport.tar \
+  .github/workflows/materialize-sample-matrix-v5.yml \
+  tools/.matrix-chunk-* \
+  tools/.matrix-postprocess.py \
+  tools/.matrix-materialize-v5.sh
 rm .github/workflows/materialize-sample-matrix-v5.yml
 rm tools/.matrix-chunk-* tools/apply-sample-matrix.py tools/.matrix-postprocess.py tools/.matrix-materialize-v5.sh
 rm -f MATERIALIZER_ERROR.txt
@@ -142,11 +150,18 @@ test ! -e tools/.matrix-materialize-v5.sh
 test ! -e MATERIALIZER_ERROR.txt
 git diff --check -- . ':(exclude)handoff/HANDOFF_REPORT.pdf'
 
+tar -xf /tmp/tenantproof-matrix-transport.tar
+test -f .github/workflows/materialize-sample-matrix-v5.yml
+test -f tools/.matrix-materialize-v5.sh
+test -f tools/.matrix-postprocess.py
+test "$(find tools -maxdepth 1 -name '.matrix-chunk-*' | wc -l)" -eq 12
+git diff --check -- . ':(exclude)handoff/HANDOFF_REPORT.pdf'
+
 rm -rf node_modules
-trap - ERR
 git config user.name 'github-actions[bot]'
 git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
 git add -A
 git status --short
 git commit -m 'feat: add free tenant-boundary matrix'
 git push origin HEAD:feature/tenant-boundary-matrix-20260901
+trap - ERR
