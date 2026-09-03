@@ -2,6 +2,40 @@
 
 All notable product changes are recorded here. The project has not reached a commercially ready 1.0 release.
 
+## [Unreleased]
+
+No unreleased product changes are currently recorded.
+
+## [0.3.2] — 2026-09-03 — product-first Focus Workbench
+
+### Added
+
+- sidebar-free Focus Workbench at `report.html` with the real Scope → Matrix → Run → Repair → Report sequence
+- paired authorization contracts, before/after run evidence, reviewable fictional repair state, and a dismissible evidence dock
+- route-scoped `assets/workbench.css` and `assets/workbench.js`
+- public `sample-matrix.html` planning page and downloadable fictional `sample-boundary-matrix.csv`
+- automated coverage for stage navigation, filters, local import, keyboard row selection, evidence-dock behavior, mobile labels, reduced motion, and overflow
+
+### Changed
+
+- rebuilt the homepage around the executed product workflow instead of abstract artwork or long-form marketing copy
+- made the fictional workbench the primary product preview and preserved the concise fixed-scope pricing path
+- reordered the quality pipeline so screenshots and walkthrough media are generated before handoff synchronization
+- upgraded the Pages pull-request build to run the complete deterministic quality gate and verify a 26-file public-only artifact
+
+### Safety and truth
+
+- Northstar CRM and every finding remain explicitly fictional
+- the site remains static, request-only, same-origin, and closed to payment
+- no hosted account, credential collection, live scanner, operational Connections page, team administration, or recurring monitoring was added
+- Continuous Verification remains optional, unpriced, and evidence-gated
+- raw working evidence retention remains 14 days after accepted delivery unless a signed scope or law requires less
+
+### Release state
+
+- prepared in draft PR [#25](https://github.com/UnderNoNameYet/NoNameYet/pull/25)
+- v0.3.1 remains the live GitHub Pages release until this candidate passes review and is merged
+
 ## [0.3.1] — 2026-08-31 — request-only GitHub Pages preview
 
 ### Published
@@ -13,10 +47,8 @@ All notable product changes are recorded here. The project has not reached a com
 
 ### Quality and safety
 
-- fixed the CI preview-state assertions to match generated JSON syntax
 - preserved `state: preview` and `paymentMode: closed`
 - kept Northstar CRM explicitly fictional and customer intake local-only on the static site
-- reviewed the exact 198-file PR delta; the final diff contains no source-transfer workflow, staging reference, signed URL, private email, or credential-shaped secret
 - retained `047691e35c6b8d38ba5540d1fe4de345ed752a6c` as the pre-release rollback reference
 
 ## [0.3.0] — 2026-08-30 — canonical handoff release
@@ -24,17 +56,8 @@ All notable product changes are recorded here. The project has not reached a com
 ### Added
 
 - root `AGENTS.md` and compatibility `agent.md`
-- complete `handoff/` product, UX, architecture, commercial, security, roadmap, quality, and continuation package
-- selected handoff screenshots and walkthrough plan
-- documentation and orchestrated quality-gate design
-- root architecture, roadmap, security, contributing, and pull-request guidance
-
-### State
-
-- public Notion qualification form, launch page, and fictional sample report live
-- GitHub access restored; release branch created from inspected RebuttalKit v8 `main`
-- premium GitHub Pages deployment remains pending merge and live verification
-- payments closed
+- complete product, UX, architecture, commercial, security, roadmap, quality, and continuation handoff
+- selected screenshots, walkthrough plan, schema-aware report viewer, and deterministic quality tooling
 
 ## [0.2.0] — 2026-08-30 — production preparation
 
@@ -42,33 +65,15 @@ All notable product changes are recorded here. The project has not reached a com
 
 - external preview/ready runtime configuration
 - CSP-compatible HTML and portable security headers
-- canonical/social metadata and brand assets
-- manifest, sitemap, robots, `.nojekyll`, `llms.txt`, and 404
-- release-readiness checker
-- authorization, SOW, evidence, delivery, payment, intake, launch, marketing, operator, and GitHub runbooks
-
-### Changed
-
-- query-parameter package handling moved to external JS
-- public HTML contains no inline scripts or styles
-- secure-intake CTA hidden until ready HTTPS configuration
+- canonical/social metadata, brand assets, manifest, sitemap, robots, `.nojekyll`, `llms.txt`, and 404
+- release-readiness checker and operating runbooks
 
 ## [0.1.0] — 2026-08-30 — local MVP
 
 ### Added
 
-- premium responsive marketing site
-- interactive fictional before/after report
-- local JSON import
-- local scope worksheet with copy/download
-- methodology, privacy, terms
-- report schema/validator
-- demo-only matrix runner
-- Chromium QA and screenshots
+- responsive marketing site, fictional before/after report, local JSON import, local scope worksheet, schema validator, demo-only runner, and Chromium QA
 
 ### Safety
 
-- no external runtime requests
-- no browser persistence or form POST
-- no arbitrary target scanning
-- fictional evidence labeled
+- no external runtime requests, browser persistence, form POST, arbitrary target scanning, or unlabeled customer evidence

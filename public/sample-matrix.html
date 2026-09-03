@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- data-production-meta -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-src 'none'; worker-src 'none'; manifest-src 'self'">
+  <meta name="referrer" content="no-referrer">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="TenantProof">
+  <meta property="og:title" content="Supabase tenant-boundary matrix template — TenantProof">
+  <meta property="og:description" content="Download a free fictional CSV template for mapping Supabase tenant, role, resource, operation, and expected authorization outcomes.">
+  <meta property="og:url" content="https://undernonameyet.github.io/NoNameYet/sample-matrix.html">
+  <meta property="og:image" content="https://undernonameyet.github.io/NoNameYet/assets/tenantproof-og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="TenantProof tenant-boundary matrix template">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Supabase tenant-boundary matrix template — TenantProof">
+  <meta name="twitter:description" content="Map positive and negative Supabase authorization checks before testing begins.">
+  <meta name="twitter:image" content="https://undernonameyet.github.io/NoNameYet/assets/tenantproof-og.png">
+  <link rel="canonical" href="https://undernonameyet.github.io/NoNameYet/sample-matrix.html">
+  <link rel="manifest" href="assets/site.webmanifest">
+  <link rel="apple-touch-icon" href="assets/icon-192.png">
+  <meta name="description" content="Free fictional CSV template for mapping Supabase tenant, role, resource, operation, and expected authorization outcomes.">
+  <meta name="theme-color" content="#f5f2e9">
+  <title>Supabase tenant-boundary matrix template — TenantProof</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header"><div class="container nav">
+  <a class="brand" href="index.html" aria-label="TenantProof home"><svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="15" fill="#11231e"/><path d="M17 18h30v28H17zM32 18v28M17 32h30" fill="none" stroke="#8ce1bb" stroke-width="4"/></svg>TenantProof</a>
+  <button class="menu-button" type="button" aria-expanded="false" aria-controls="primary-navigation" aria-label="Toggle navigation" data-menu-button><svg width="21" height="21" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+  <nav class="nav-links" id="primary-navigation" aria-label="Primary navigation" data-nav-links data-open="false"><a class="nav-link" href="report.html">Sample report</a><a class="nav-link" href="methodology.html">Methodology</a><a class="nav-link" href="index.html#pricing">Pricing</a><a class="button button-small" href="request.html">Scope a review</a></nav>
+</div></header>
+<main id="main">
+  <section class="page-hero"><div class="container"><div class="breadcrumb"><a href="index.html">TenantProof</a> / Boundary matrix</div><p class="eyebrow">Free planning artifact</p><h1>Map the boundary before you test it.</h1><p class="lede">Turn “our RLS should isolate customers” into named actors, resources, operations, and expected outcomes. Download the fictional starter as CSV and adapt it privately.</p><div class="button-row"><a class="button" href="assets/sample-boundary-matrix.csv" download>Download the CSV template</a><a class="button button-secondary" href="methodology.html">Read the method</a></div></div></section>
+
+  <section class="section-sm"><div class="narrow prose">
+    <div class="notice"><strong>This template is fictional and static.</strong> Download it locally. Nothing is uploaded, executed, or treated as evidence, and it contains no customer data or credentials.</div>
+    <h2>1. Start with a falsifiable expectation</h2>
+    <p>A policy cannot be evaluated without intended behavior. Name the acting identity, its tenant and application role, the target tenant, the resource, the operation, and whether the action should be allowed or denied.</p>
+    <p>Do not write “users can access projects.” Write “a member in Tenant A may select Tenant A projects, but the same identity must receive no Tenant B rows.”</p>
+  </div></section>
+
+  <section class="section-sm surface-section"><div class="container">
+    <div class="section-heading"><div><p class="eyebrow">Fictional starter</p><h2>Pair every denied path with an allowed control.</h2></div><p>The allowed control catches accidental lockout. The denied control tests the actual tenant or role boundary.</p></div>
+    <div class="table-scroll" role="region" aria-label="Fictional sample tenant-boundary matrix" tabindex="0">
+      <table class="scope-table">
+        <thead><tr><th>Resource</th><th>Actor</th><th>Target</th><th>Operation</th><th>Expected</th></tr></thead>
+        <tbody>
+          <tr><td><code>projects</code></td><td>member · Tenant A</td><td>Tenant A</td><td>SELECT</td><td>Allow own-tenant rows</td></tr>
+          <tr><td><code>projects</code></td><td>member · Tenant A</td><td>Tenant B</td><td>SELECT</td><td>Deny foreign rows</td></tr>
+          <tr><td><code>projects</code></td><td>member · Tenant A</td><td>Tenant B</td><td>UPDATE</td><td>Deny reassignment</td></tr>
+          <tr><td><code>customer_notes</code></td><td>manager · Tenant A</td><td>Tenant A</td><td>DELETE</td><td>Allow own-tenant delete</td></tr>
+          <tr><td><code>customer_notes</code></td><td>manager · Tenant A</td><td>Tenant B</td><td>DELETE</td><td>Deny foreign delete</td></tr>
+          <tr><td><code>customer_notes</code></td><td>manager · Tenant A</td><td>Tenant A</td><td>INSERT</td><td>Allow valid note</td></tr>
+          <tr><td><code>customer_notes</code></td><td>manager · Tenant A</td><td>Tenant B</td><td>INSERT</td><td>Deny tenant assignment</td></tr>
+          <tr><td><code>archive_project()</code></td><td>manager · Tenant A</td><td>Tenant B</td><td>RPC</td><td>Deny foreign mutation</td></tr>
+          <tr><td><code>customer-files</code></td><td>member · Tenant A</td><td>Tenant A</td><td>DOWNLOAD</td><td>Allow own-tenant file</td></tr>
+          <tr><td><code>customer-files</code></td><td>member · Tenant A</td><td>Tenant B</td><td>LIST</td><td>Deny foreign metadata</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="button-row"><a class="button button-secondary" href="report.html">See the evidence format</a><a class="button button-secondary" href="request.html">Build a private scope brief</a></div>
+  </div></section>
+
+  <section class="section-sm"><div class="narrow prose">
+    <h2>2. Keep operations separate</h2>
+    <p>SELECT, INSERT, UPDATE, DELETE, RPC, upload, download, and list operations can fail differently. A read predicate does not prove proposed-row checks, function behavior, or storage paths.</p>
+    <ul><li><strong>SELECT:</strong> confirm no foreign rows or metadata are returned.</li><li><strong>INSERT:</strong> reject client-supplied ownership outside the acting tenant.</li><li><strong>UPDATE:</strong> test both which row can be targeted and which values the row may hold afterward.</li><li><strong>DELETE:</strong> confirm cascades and cleanup functions remain inside scope.</li><li><strong>RPC and storage:</strong> test the same role semantics through indirect paths.</li></ul>
+
+    <h2>3. Record enough context to reproduce the result</h2>
+    <p>For each executed check, capture a check ID, expected result, synthetic identity label, target resource, redacted request or SQL step, observed result, before/after state, environment, code revision, policy revision, and execution time.</p>
+    <div class="notice"><strong>An error is not enough.</strong> For a negative check, verify that no foreign row, file, role, or other side effect changed.</div>
+
+    <h2>4. Preserve uncertainty</h2>
+    <table class="scope-table"><thead><tr><th>Status</th><th>Meaning</th></tr></thead><tbody><tr><td>Pass</td><td>Observed behavior matched the expectation in the recorded context.</td></tr><tr><td>Fail</td><td>Observed behavior contradicted the expectation.</td></tr><tr><td>Untested</td><td>The planned check was not executed.</td></tr><tr><td>Out of scope</td><td>The path was excluded and receives no safety inference.</td></tr></tbody></table>
+
+    <h2>5. Stop before access becomes unsafe</h2>
+    <p>Do not execute the matrix until the verified owner has approved the target, environment, methods, identities, timing, stop conditions, evidence recipients, and retention. Prefer staging or a dedicated test project with synthetic data and revocable access.</p>
+  </div></section>
+
+  <section class="section"><div class="container"><div class="cta-band"><div><p class="eyebrow">Need independent evidence?</p><h2>Turn the matrix into an authorized review.</h2><p>Prepare a non-sensitive brief first. Do not submit keys, private repositories, production records, or vulnerability details through the public site.</p></div><a class="button button-light" href="request.html">Build a private scope brief</a></div></div></section>
+</main>
+<footer class="site-footer"><div class="container"><div class="footer-grid"><div class="footer-brand"><a class="brand" href="index.html">TenantProof</a><p>Evidence-driven tenant-boundary verification and repair for Supabase applications.</p></div><div><div class="footer-title">Product</div><div class="footer-links"><a href="report.html">Sample report</a><a href="sample-matrix.html">Boundary matrix</a><a href="methodology.html">Methodology</a></div></div><div><div class="footer-title">Trust</div><div class="footer-links"><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></div></div><div><div class="footer-title">Start</div><div class="footer-links"><a href="request.html">Scope a review</a></div></div></div><div class="footer-bottom"><span>© <span data-year></span> TenantProof. <span data-launch-state>Pre-launch preview.</span></span><span>Template rows are fictional and unexecuted.</span></div></div></footer>
+<script src="assets/site-config.js" defer></script><script src="assets/site.js" defer></script>
+</body>
+</html>

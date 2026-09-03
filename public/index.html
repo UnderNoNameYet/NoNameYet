@@ -9,292 +9,80 @@
   <meta name="robots" content="index,follow,max-image-preview:large">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="TenantProof">
-  <meta property="og:title" content="TenantProof — Prove every tenant boundary">
-  <meta property="og:description" content="TenantProof verifies and repairs Supabase tenant boundaries with synthetic identities, executed evidence, and regression tests.">
+  <meta property="og:title" content="TenantProof — Verify tenant isolation before you ship">
+  <meta property="og:description" content="TenantProof executes an approved Supabase tenant-boundary matrix and delivers redacted before-and-after evidence.">
   <meta property="og:url" content="https://undernonameyet.github.io/NoNameYet/">
   <meta property="og:image" content="https://undernonameyet.github.io/NoNameYet/assets/tenantproof-og.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="TenantProof authorization boundary report preview">
+  <meta property="og:image:alt" content="TenantProof fictional authorization workbench preview">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="TenantProof — Prove every tenant boundary">
-  <meta name="twitter:description" content="TenantProof verifies and repairs Supabase tenant boundaries with synthetic identities, executed evidence, and regression tests.">
+  <meta name="twitter:title" content="TenantProof — Verify tenant isolation before you ship">
+  <meta name="twitter:description" content="Executed Supabase tenant-boundary evidence, repair, and retest.">
   <meta name="twitter:image" content="https://undernonameyet.github.io/NoNameYet/assets/tenantproof-og.png">
   <link rel="canonical" href="https://undernonameyet.github.io/NoNameYet/">
   <link rel="manifest" href="assets/site.webmanifest">
   <link rel="apple-touch-icon" href="assets/icon-192.png">
-  <meta name="description" content="TenantProof verifies and repairs Supabase tenant boundaries with synthetic identities, executed evidence, and regression tests.">
-  <meta name="theme-color" content="#0c1815">
-  <title>TenantProof — Prove every tenant boundary</title>
+  <meta name="description" content="TenantProof executes an approved Supabase tenant-boundary matrix and delivers redacted before-and-after evidence.">
+  <meta name="theme-color" content="#17191c">
+  <title>TenantProof — Verify tenant isolation before you ship</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="assets/styles.css">
+  <link rel="stylesheet" href="assets/workbench.css">
 </head>
-<body>
+<body class="tp-page tp-home">
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header">
   <div class="container nav">
     <a class="brand" href="index.html" aria-label="TenantProof home">
-      <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="15" fill="#11231e"/><path d="M17 18h30v28H17zM32 18v28M17 32h30" fill="none" stroke="#8ce1bb" stroke-width="4"/><circle cx="24" cy="25" r="3" fill="#fffdf7"/><circle cx="40" cy="39" r="3" fill="#fffdf7"/></svg>
+      <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="15" fill="#17191c"/><path d="M17 18h30v28H17zM32 18v28M17 32h30" fill="none" stroke="#b8b7ff" stroke-width="4"/><circle cx="24" cy="25" r="3" fill="#fff"/><circle cx="40" cy="39" r="3" fill="#fff"/></svg>
       TenantProof
     </a>
     <button class="menu-button" type="button" aria-expanded="false" aria-controls="primary-navigation" aria-label="Toggle navigation" data-menu-button>
       <svg width="21" height="21" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
     </button>
     <nav class="nav-links" id="primary-navigation" aria-label="Primary navigation" data-nav-links data-open="false">
-      <a class="nav-link" href="report.html">Sample report</a>
-      <a class="nav-link" href="methodology.html">Methodology</a>
+      <a class="nav-link" href="report.html">Sample workbench</a>
+      <a class="nav-link" href="sample-matrix.html">Matrix</a>
+      <a class="nav-link" href="methodology.html">Method</a>
       <a class="nav-link" href="#pricing">Pricing</a>
       <a class="button button-small" href="request.html">Scope a review</a>
     </nav>
   </div>
 </header>
-
 <main id="main">
-  <section class="hero">
-    <div class="container hero-grid">
-      <div class="hero-copy">
-        <p class="eyebrow">Authorization evidence for Supabase SaaS</p>
-        <h1>A green RLS badge is <span class="hero-highlight">not proof.</span></h1>
-        <p class="lede">We test whether one customer can read or change another customer’s data, repair the boundary, and leave the regression checks in your repository.</p>
+  <section class="tp-home-hero">
+    <div class="container tp-home-grid">
+      <div class="tp-home-copy">
+        <p class="tp-kicker">Supabase authorization evidence</p>
+        <h1>Verify tenant isolation before you ship.</h1>
+        <p class="tp-home-lede">Run an approved cross-tenant matrix. Repair the failing rule. Rerun the same checks and keep the evidence.</p>
         <div class="button-row">
-          <a class="button button-light" href="#sample">Inspect the evidence <svg class="button-icon" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11M11 6l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-          <a class="button button-ghost-dark" href="request.html">Scope a review</a>
+          <a class="button" href="report.html">Open sample workbench</a>
+          <a class="button button-secondary" href="request.html">Prepare scope</a>
         </div>
-        <ul class="hero-trust" aria-label="Service safeguards">
-          <li>Staging first</li>
-          <li>Synthetic identities</li>
-          <li>PR-based repair</li>
-          <li>No secrets through this site</li>
-        </ul>
+        <div class="tp-safety-line" aria-label="Service safeguards"><span>Staging first</span><span>Synthetic data</span><span>Written authorization</span></div>
       </div>
-      <div class="hero-visual" aria-label="Illustration of a TenantProof boundary report">
-        <div class="product-window">
-          <div class="window-bar">
-            <div class="window-dots" aria-hidden="true"><span></span><span></span><span></span></div>
-            <span class="mono">Northstar CRM · before repair</span>
-            <span>Fictional demo</span>
-          </div>
-          <div class="window-body">
-            <div class="window-summary">
-              <div class="window-stat"><strong>16</strong><span>Boundaries exercised</span></div>
-              <div class="window-stat"><strong class="text-fail-light">4</strong><span>Failed</span></div>
-              <div class="window-stat"><strong class="text-pass-light">11</strong><span>Blocked</span></div>
-            </div>
-            <div class="mini-table">
-              <div class="mini-row header"><span>Resource</span><span>Actor</span><span>Result</span></div>
-              <div class="mini-row"><span class="mono">customer_notes</span><span>member</span><span class="signal signal-fail">Fail</span></div>
-              <div class="mini-row"><span class="mono">projects</span><span>member</span><span class="signal signal-pass">Pass</span></div>
-              <div class="mini-row"><span class="mono">archive_project()</span><span>manager</span><span class="signal signal-fail">Fail</span></div>
-              <div class="mini-row"><span class="mono">customer-files</span><span>member</span><span class="signal signal-pass">Pass</span></div>
-            </div>
-          </div>
+      <div class="tp-preview" aria-label="Fictional TenantProof run preview">
+        <div class="tp-preview-top"><span class="tp-preview-brand"><b>TP</b> TenantProof</span><span>Northstar CRM</span><span class="tp-demo-chip">Fictional demo</span></div>
+        <div class="tp-preview-rail" aria-hidden="true"><span class="done"><i>✓</i>Scope</span><span class="done"><i>✓</i>Matrix</span><span class="active"><i>3</i>Run</span><span><i>4</i>Repair</span><span><i>5</i>Report</span></div>
+        <div class="tp-preview-body">
+          <div class="tp-preview-heading"><span>Stage 3 · Run</span><strong>Run 003</strong><small>Same fixtures · revision 8f31c2a</small></div>
+          <div class="tp-preview-summary"><div><b>Verification complete with 4 findings</b><small>16 checks · redacted evidence</small></div><div class="tp-preview-counts"><span><b>11</b>Pass</span><span class="fail"><b>4</b>Fail</span><span><b>1</b>Open</span></div></div>
+          <div class="tp-preview-table"><div class="head"><span>Check</span><span>Resource</span><span>Observed</span><span>Result</span></div><div class="selected"><span>RLS-004</span><span>customer_notes</span><span>4 foreign rows</span><b class="tp-status fail">Fail</b></div><div><span>RLS-007</span><span>projects</span><span>Rejected</span><b class="tp-status pass">Pass</b></div><div><span>RPC-002</span><span>archive_project()</span><span>Mutation applied</span><b class="tp-status fail">Fail</b></div></div>
         </div>
-        <div class="orbit-note"><strong>Boundary failure reproduced</strong>Cross-tenant mutation accepted. Evidence is redacted in customer-facing output.</div>
       </div>
     </div>
   </section>
-
-  <div class="proof-strip">
-    <div class="container proof-strip-inner">
-      <div class="proof-label">What every review is designed to leave behind</div>
-      <div class="proof-item"><span class="proof-icon">01</span>Executed test matrix</div>
-      <div class="proof-item"><span class="proof-icon">02</span>Reviewable SQL patch</div>
-      <div class="proof-item"><span class="proof-icon">03</span>Repeatable regression checks</div>
-    </div>
-  </div>
-
-  <section class="section">
-    <div class="container">
-      <div class="section-heading reveal">
-        <div>
-          <p class="eyebrow">The authorization gap</p>
-          <h2>“RLS is enabled” answers the wrong question.</h2>
-        </div>
-        <p>The real question is whether each role can perform only the operations your product intends, against only the records it owns or is assigned.</p>
-      </div>
-      <div class="grid grid-3">
-        <article class="card problem-card reveal">
-          <span class="number">01 / READ</span>
-          <div class="card-icon">SELECT</div>
-          <h3>Can Tenant A retrieve Tenant B’s rows?</h3>
-          <p>We run negative checks with synthetic identities instead of inferring safety from a dashboard indicator.</p>
-        </article>
-        <article class="card problem-card reveal">
-          <span class="number">02 / WRITE</span>
-          <div class="card-icon">UPDATE</div>
-          <h3>Can an owned row be moved across tenants?</h3>
-          <p>Read policies can look correct while proposed-row checks still permit a cross-tenant reassignment.</p>
-        </article>
-        <article class="card problem-card reveal">
-          <span class="number">03 / PATH</span>
-          <div class="card-icon">RPC</div>
-          <h3>Do functions and storage preserve the boundary?</h3>
-          <p>Tables are only one surface. In-scope functions, object paths, and role transitions receive explicit results.</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section class="section-sm dark-section">
-    <div class="container">
-      <div class="callout reveal">
-        <div>
-          <p class="eyebrow">What we sell</p>
-          <h2>Evidence, repair, then evidence again.</h2>
-          <p class="lede">Not a generic checklist. Not a claim that the whole product has been certified. A bounded authorization engagement with observable outcomes.</p>
-        </div>
-        <ul class="callout-list">
-          <li><b>Model</b> Map tenants, roles, assignments, and permitted operations.</li>
-          <li><b>Attempt</b> Exercise agreed negative and positive controls in staging.</li>
-          <li><b>Patch</b> Deliver reviewable migrations and application changes.</li>
-          <li><b>Prove</b> Re-run the same checks and preserve regression coverage.</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="sample">
-    <div class="container">
-      <div class="section-heading reveal">
-        <div>
-          <p class="eyebrow">Interactive deliverable</p>
-          <h2>See exactly what passed, failed, and stayed untested.</h2>
-        </div>
-        <p>This fictional sample demonstrates the report format. It is not client work and contains no real customer data.</p>
-      </div>
-
-      <div class="report-shell reveal" data-report-root data-sample="true">
-        <div class="report-topbar">
-          <div class="report-title"><strong data-project-name>Loading sample…</strong><span data-report-id>TP-DEMO</span></div>
-          <span class="demo-label" data-demo-label>Fictional demo</span>
-        </div>
-        <div class="report-toolbar">
-          <div class="phase-toggle" aria-label="Report phase">
-            <button class="phase-button" type="button" data-phase="before" aria-pressed="true">Before repair</button>
-            <button class="phase-button" type="button" data-phase="after" aria-pressed="false">After repair</button>
-          </div>
-          <span class="report-meta" data-report-meta></span>
-        </div>
-        <div class="report-metrics" aria-label="Report summary">
-          <div class="metric"><strong class="metric-value" data-metric="total">–</strong><span class="metric-label">Total checks</span></div>
-          <div class="metric metric-pass"><strong class="metric-value" data-metric="pass">–</strong><span class="metric-label">Passed</span></div>
-          <div class="metric metric-fail"><strong class="metric-value" data-metric="fail">–</strong><span class="metric-label">Failed</span></div>
-          <div class="metric metric-unknown"><strong class="metric-value" data-metric="unknown">–</strong><span class="metric-label">Unresolved scope</span></div>
-        </div>
-        <div class="report-filters" aria-label="Report filters">
-          <input class="field-control filter-search" type="search" placeholder="Search checks" aria-label="Search checks" data-filter="query">
-          <select class="field-control" aria-label="Filter by actor" data-filter="actor"><option value="">All actors</option></select>
-          <select class="field-control" aria-label="Filter by area" data-filter="area"><option value="">All areas</option></select>
-          <select class="field-control" aria-label="Filter by operation" data-filter="operation"><option value="">All operations</option></select>
-          <select class="field-control" aria-label="Filter by status" data-filter="status"><option value="">All results</option></select>
-        </div>
-        <div class="report-grid">
-          <div class="table-scroll">
-            <table class="report-table">
-              <thead><tr><th>Resource</th><th>Actor</th><th>Operation</th><th>Result</th></tr></thead>
-              <tbody data-report-rows></tbody>
-            </table>
-            <div class="empty-state" data-report-empty hidden>No checks match these filters.</div>
-          </div>
-          <aside class="evidence-panel" aria-live="polite" data-evidence-panel><p class="evidence-empty">Loading evidence…</p></aside>
-        </div>
-        <div class="report-toolbar">
-          <span class="report-meta" data-visible-count>– shown</span>
-          <a class="button button-secondary button-small" href="report.html">Open full report viewer</a>
-        </div>
-        <div class="notice notice-error" role="status" data-report-notice hidden></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section dark-section">
-    <div class="container">
-      <div class="section-heading reveal">
-        <div>
-          <p class="eyebrow">The engagement</p>
-          <h2>One narrow boundary. Four accountable stages.</h2>
-        </div>
-        <p class="dark-muted">Production credentials are not the starting point. The default path uses staging, synthetic identities, and an agreed inventory.</p>
-      </div>
-      <div class="process-list">
-        <article class="process-step reveal"><div><h3>Scope the intended access model</h3><p>Document tenant ownership, roles, assignments, elevated paths, and the operations each actor should and should not perform.</p></div></article>
-        <article class="process-step reveal"><div><h3>Run positive and negative controls</h3><p>Use paired synthetic tenants to verify legitimate workflows and attempted cross-boundary actions without touching real customer records.</p></div></article>
-        <article class="process-step reveal"><div><h3>Repair the root authorization rule</h3><p>Prepare SQL migrations and application patches as a reviewable change—not an undocumented dashboard edit.</p></div></article>
-        <article class="process-step reveal"><div><h3>Re-run and hand off</h3><p>Compare before and after, identify anything untested, and preserve the agreed checks for future releases.</p></div></article>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="pricing">
-    <div class="container">
-      <div class="section-heading reveal">
-        <div><p class="eyebrow">Published starting scope</p><h2>Fixed entry points. No security theatre.</h2></div>
-        <p>Final scope is confirmed before payment or access. Larger role models, production-only paths, and regulated environments receive a manual quote.</p>
-      </div>
-      <div class="grid grid-2">
-        <article class="card price-card reveal">
-          <span class="price-label">Boundary verification</span>
-          <div class="price">$349</div><span class="price-suffix">fixed published scope</span>
-          <ul class="feature-list">
-            <li>Up to 12 tables and three roles</li>
-            <li>Read and write isolation matrix</li>
-            <li>Redacted evidence report</li>
-            <li>Remediation guidance</li>
-            <li>One verification retest</li>
-          </ul>
-          <a class="button button-secondary" href="request.html?package=verify">Scope verification</a>
-        </article>
-        <article class="card price-card featured reveal">
-          <span class="price-label">Verification + repair</span>
-          <div class="price">$649</div><span class="price-suffix">fixed published scope</span>
-          <ul class="feature-list">
-            <li>Up to 25 tables and three roles</li>
-            <li>In-scope functions and one storage bucket</li>
-            <li>SQL/RLS policy migrations</li>
-            <li>Reviewable pull request</li>
-            <li>Regression checks and one retest</li>
-          </ul>
-          <a class="button" href="request.html?package=repair">Scope verification + repair</a>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section class="section-sm surface-section">
-    <div class="narrow">
-      <p class="eyebrow">Questions before access</p>
-      <h2 class="faq-heading">Clear boundaries apply to our service too.</h2>
-      <div class="faq">
-        <details><summary>Do you need our production database credentials?</summary><p>No by default. The preferred workflow is an authorized staging or dedicated test project with synthetic identities. Any exception must be separately scoped.</p></details>
-        <details><summary>Is this a penetration test or compliance certification?</summary><p>No. TenantProof is a bounded authorization verification and remediation service. It does not certify an entire application or establish compliance.</p></details>
-        <details><summary>Will a passed report prove the app is secure forever?</summary><p>No. Results apply to the agreed scope, environment, and code state at the time of testing. Regression checks reduce the chance of recurrence but cannot cover untested paths.</p></details>
-        <details><summary>Can you scan a public app without the owner’s permission?</summary><p>No. We require written authorization and an agreed scope before executing tests. The public site does not accept targets, secrets, or automated scan requests.</p></details>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container">
-      <div class="cta-band reveal">
-        <div><p class="eyebrow">Before the next customer account</p><h2>Turn “we think it’s isolated” into a testable statement.</h2></div>
-        <a class="button button-light" href="request.html">Build a private scope brief</a>
-      </div>
-    </div>
-  </section>
+  <section class="tp-proof-bar" aria-label="TenantProof deliverables"><div class="container"><span>Approved matrix</span><span>Executed controls</span><span>Reviewable repair</span><span>Before/after evidence</span></div></section>
+  <section class="tp-section"><div class="container"><header class="tp-section-head"><p class="tp-kicker">The failure we test</p><h2>Customer A should never become Customer B.</h2><p>RLS being enabled does not prove your application’s role and tenant rules.</p></header><div class="tp-question-grid"><article><span>READ</span><h3>Can a member retrieve another tenant’s rows?</h3><p>Execute the denied path, not just the happy path.</p></article><article><span>WRITE</span><h3>Can an owned row move across tenants?</h3><p>Check proposed-row rules on insert and update.</p></article><article><span>RPC + STORAGE</span><h3>Do elevated paths preserve the boundary?</h3><p>Cover agreed functions and one storage bucket.</p></article></div></div></section>
+  <section class="tp-section tp-section-dark"><div class="container"><header class="tp-section-head"><p class="tp-kicker">One controlled review</p><h2>Scope. Attempt. Repair. Prove.</h2><p>Every stage stays tied to the same approved boundary.</p></header><ol class="tp-flow"><li><b>01</b><span><strong>Define the contract</strong>Roles, tenants, resources, expected allow and deny behavior.</span></li><li><b>02</b><span><strong>Run paired controls</strong>Synthetic positive and negative checks in staging.</span></li><li><b>03</b><span><strong>Repair the root rule</strong>Versioned SQL and application changes in a reviewable PR.</span></li><li><b>04</b><span><strong>Rerun and hand off</strong>Before/after evidence plus explicit unresolved scope.</span></li></ol></div></section>
+  <section class="tp-section"><div class="container tp-deliverable-grid"><div><p class="tp-kicker">Decision artifact</p><h2>Evidence before confidence.</h2><p class="tp-copy">Inspect each expectation, observation, redacted trace, remediation, and retest state. A pass applies only to the recorded scope and code state.</p><a class="button" href="report.html">Inspect the fictional report</a></div><div class="tp-before-after"><div><span>Before repair</span><strong>11 pass · 4 fail · 1 unresolved</strong><i class="before"></i></div><div><span>After repair</span><strong>15 pass · 0 fail · 1 unresolved</strong><i class="after"></i></div><small>Northstar CRM is fictional. These are demonstration results.</small></div></div></section>
+  <section class="tp-section tp-pricing" id="pricing"><div class="container"><header class="tp-section-head"><p class="tp-kicker">Published starting scope</p><h2>Choose the boundary, not a vague audit.</h2></header><div class="tp-price-grid"><article><span>Boundary Verification</span><strong>$349</strong><p>Up to 12 tables · 3 roles · evidence report · guidance · one retest.</p><a class="button button-secondary" href="request.html?package=verify">Scope verification</a></article><article class="featured"><span>Verification + Repair</span><strong>$649</strong><p>Up to 25 tables · selected functions · one bucket · PR repair · one retest.</p><a class="button" href="request.html?package=repair">Scope repair</a></article></div><p class="tp-price-note">Larger, production-only, regulated, or unusually sensitive work requires a manual quote.</p></div></section>
+  <section class="tp-section tp-boundaries"><div class="container"><div><p class="tp-kicker">Service boundaries</p><h2>No credentials through this site.</h2></div><ul><li>Written authorization before testing</li><li>Staging or dedicated test project by default</li><li>Synthetic identities and records</li><li>No certification or complete-security claim</li></ul></div></section>
+  <section class="tp-section"><div class="container"><div class="tp-cta"><div><p class="tp-kicker">Ready to make it testable?</p><h2>Prepare the boundary before access is discussed.</h2></div><a class="button" href="request.html">Build a local scope brief</a></div></div></section>
 </main>
-
-<footer class="site-footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-brand"><a class="brand" href="index.html"><svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="15" fill="#eef8f3"/><path d="M17 18h30v28H17zM32 18v28M17 32h30" fill="none" stroke="#187552" stroke-width="4"/></svg>TenantProof</a><p>Evidence-driven tenant-boundary verification and repair for Supabase applications.</p></div>
-      <div><div class="footer-title">Product</div><div class="footer-links"><a href="report.html">Sample report</a><a href="methodology.html">Methodology</a><a href="#pricing">Pricing</a></div></div>
-      <div><div class="footer-title">Trust</div><div class="footer-links"><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="methodology.html#authorization">Authorization policy</a></div></div>
-      <div><div class="footer-title">Start</div><div class="footer-links"><a href="request.html">Scope a review</a><a href="request.html#data-handling">Data-handling preferences</a></div></div>
-    </div>
-    <div class="footer-bottom"><span>© <span data-year></span> TenantProof. <span data-launch-state>Pre-launch preview.</span></span><span>No customer work or security outcomes are represented on this site.</span></div>
-  </div>
-</footer>
+<footer class="site-footer"><div class="container"><div class="footer-grid"><div class="footer-brand"><a class="brand" href="index.html">TenantProof</a><p>Executed tenant-boundary evidence for Supabase applications.</p></div><div><div class="footer-title">Product</div><div class="footer-links"><a href="report.html">Sample workbench</a><a href="sample-matrix.html">Boundary matrix</a><a href="#pricing">Pricing</a></div></div><div><div class="footer-title">Trust</div><div class="footer-links"><a href="methodology.html">Method</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></div></div><div><div class="footer-title">Start</div><div class="footer-links"><a href="request.html">Scope a review</a></div></div></div><div class="footer-bottom"><span>© <span data-year></span> TenantProof. <span data-launch-state>Pre-launch preview.</span></span><span>No customer work or outcomes are represented.</span></div></div></footer>
 <script src="assets/site-config.js" defer></script><script src="assets/site.js" defer></script>
-<script src="assets/report.js" defer></script>
 </body>
 </html>

@@ -1,8 +1,8 @@
 # Handoff asset manifest
 
-All media in this handoff is product/demo material. No customer evidence, credentials, private records, or real findings may be stored here.
+All media is product/demo material. No customer evidence, credentials, private records, or real findings may be stored here.
 
-## Current source assets
+## Source assets
 
 | Source | Dimensions | Purpose |
 |---|---:|---|
@@ -11,19 +11,21 @@ All media in this handoff is product/demo material. No customer evidence, creden
 | `public/assets/icon-512.png` | 512×512 | large manifest icon |
 | `public/assets/favicon.svg` | vector | browser icon |
 
-## Current generated captures
+## Generated captures
 
-| Source | Dimensions | Purpose |
-|---|---:|---|
-| `build/tenantproof-desktop.png` | 1440×7695 | full homepage visual QA |
-| `build/tenantproof-hero-desktop.png` | 1440×1050 | first-viewport/product preview |
-| `build/tenantproof-report-desktop.png` | 1440×1050 | report interface preview |
-| `build/tenantproof-mobile.png` | 390×11086 | full mobile homepage QA |
-| `build/tenantproof-request-mobile.png` | 390×2629 | mobile scope flow preview |
+`tools/capture-previews.mjs` regenerates deterministic review images from the exact public source:
 
-Selected versions are copied to `handoff/assets/` with stable names so another operator can inspect the intended state without regenerating first.
+| Stable handoff name | View |
+|---|---|
+| `handoff/assets/01-home-desktop.png` | product-first homepage/Run preview at desktop width |
+| `handoff/assets/02-report-desktop.png` | Focus Workbench Run stage |
+| `handoff/assets/03-request-mobile.png` | local request worksheet on mobile |
+| `handoff/assets/04-home-mobile-full.png` | complete mobile homepage |
+| `handoff/assets/08-sample-matrix-desktop.png` | Focus Workbench Matrix stage |
 
-## Planned handoff media names
+`tools/sync-handoff-assets.mjs` copies generated captures to stable names, copies the social image/icons, and writes `handoff/assets/SHA256SUMS`.
+
+## Complete stable media set
 
 ```text
 handoff/assets/
@@ -34,13 +36,13 @@ handoff/assets/
 ├── 05-social-preview.png
 ├── 06-icon-192.png
 ├── 07-icon-512.png
+├── 08-sample-matrix-desktop.png
 ├── walkthrough.webm
 └── SHA256SUMS
 
 handoff/HANDOFF_REPORT.pdf
+handoff/SOURCE_MANIFEST.json
 ```
-
-A very tall full desktop capture may remain in `build/` rather than the repository if size is excessive; the first viewport and key flows are the required handoff media.
 
 ## Regeneration
 
@@ -50,48 +52,36 @@ npm test
 node tools/capture-previews.mjs
 node tools/record-walkthrough.mjs
 npm run handoff:assets
+npm run handoff:pdf
+npm run source:manifest
+npm run docs:check
 ```
 
-The exact scripts must start and stop finite local servers; never leave a background port assumed to be active.
+`npm run quality` runs the canonical sequence, including capture before media synchronization. Scripts start and stop finite local servers; no background port is assumed.
 
-## Visual review checklist
+## Review checklist
 
-- no clipping/overflow
-- hero communicates buyer/problem/artifact/CTA
-- report statuses and selection are legible
-- fictional label visible
-- mobile pricing and form controls are readable
-- focus/hover/selected states make sense
-- OG subtitle does not collide with report card
-- no personal contact/placeholder leak
+- product-first hero communicates problem, workflow, artifact, and next step
+- Workbench Run and Matrix stages are spacious and legible
+- no permanent generic sidebar or inspector
+- report statuses, selection, and temporary evidence dock are understandable
+- Northstar CRM is visibly fictional on desktop and mobile
+- mobile pages have no document-level horizontal overflow
+- request controls and local-only language remain readable
+- focus, hover, selected, reduced-motion, and print states make sense
+- no personal contact, placeholder, session reference, or customer data leaks
 
-## Media update rule
+## Update rule
 
-Regenerate and replace media when any of these change:
+Regenerate media after changes to the hero, workbench stages, report table/dock, pricing, request flow, navigation, status vocabulary, or public launch/legal state. Never hand-edit generated screenshots, checksums, PDF, or source manifest.
 
-- hero/layout/brand tokens
-- report table/evidence panel
-- pricing or package copy
-- request flow
-- navigation/footer
-- status vocabulary
-- public legal/launch state
+## Walkthrough
 
-Update dimensions and checksums in this manifest after replacement.
+The generated VP9 walkthrough is a short, silent 1440×900 sequence showing:
 
-## Video content plan
+1. product-first homepage
+2. Workbench Run with before/after evidence
+3. Workbench Matrix paired controls
+4. mobile/request context where included by the generator
 
-The generated walkthrough is a 20-second, 1440×900 VP9 visual sequence. The canonical handoff report is also generated as a styled PDF from `handoff/HANDOFF_REPORT.md` plus selected screenshots.
-
-The walkthrough should show, without narration or customer data:
-
-1. homepage hero and category claim
-2. evidence section
-3. before/after report switch
-4. failed-check filter and evidence panel
-5. full sample report page
-6. local-only import notice
-7. three-step scope worksheet
-8. generated local brief and privacy language
-
-Keep it under one minute, 1440×900 or similar, and include no external account/session UI.
+It contains no external account/session UI, customer data, credentials, narration, or implied live execution.

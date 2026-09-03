@@ -162,7 +162,7 @@ The public product must let a skeptical founder answer five questions quickly:
 4. How much is the entry point?
 5. Can I request scope without exposing credentials or committing to payment?
 
-The sample report is the primary proof artifact. The form is qualification only.
+The sample report is the primary proof artifact. The free fictional matrix helps buyers define a testable boundary before qualification. The form is qualification only.
 
 ## 9. Non-functional requirements
 

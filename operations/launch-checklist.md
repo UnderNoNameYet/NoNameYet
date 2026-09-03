@@ -5,7 +5,7 @@
 - [ ] Operator legal name or registered entity approved
 - [ ] Public trading/display name approved
 - [ ] Jurisdiction and business address requirements reviewed
-- [ ] Owned business email configured; do not use the known personal Outlook address for cold outreach
+- [x] Dedicated TenantProof business email created; agent Mail attachment remains unavailable, so no email outreach has been sent
 - [ ] Privacy contact and deletion route configured
 - [ ] Terms reviewed for governing law, liability, taxes, and statutory rights
 - [ ] Evidence retention period approved
@@ -48,8 +48,8 @@
 - [ ] Public operator identity matches profiles used for outreach
 - [x] No fabricated client, case study, result, certification, or testimonial
 - [x] Sample report remains labeled fictional
-- [ ] Ten named prospects meet the target profile
-- [ ] Every message references a current, explicit buyer trigger
+- [x] Ten named prospects meet the target profile
+- [x] First five prepared messages reference current, explicit buyer triggers
 - [ ] Outreach channel and account approved by the user
 - [ ] Suppression list and response log ready
 - [ ] No bulk scraping or spam automation

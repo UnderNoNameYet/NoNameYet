@@ -1,8 +1,8 @@
 {
   "name": "tenantproof",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "private": true,
-  "description": "Static-first TenantProof product, local report viewer, scope worksheet, evidence schema, operations, and release handoff.",
+  "description": "Static-first TenantProof product, sidebar-free Focus Workbench, local report viewer, evidence schema, operations, and release handoff.",
   "scripts": {
     "serve": "python3 -m http.server 4173 --directory public",
     "assets": "python3 tools/generate-brand-assets.py",
@@ -13,6 +13,7 @@
     "release:check": "node tools/release-check.mjs",
     "release:strict": "node tools/release-check.mjs --strict",
     "release:bundle": "node tools/build-release.mjs",
+    "previews": "node tools/capture-previews.mjs",
     "walkthrough": "node tools/record-walkthrough.mjs",
     "handoff:assets": "node tools/sync-handoff-assets.mjs",
     "handoff:report": "python3 tools/build-handoff-report.py",
@@ -21,7 +22,5 @@
     "test": "node qa.mjs",
     "quality": "node tools/quality-gate.mjs"
   },
-  "engines": {
-    "node": ">=20"
-  }
+  "engines": { "node": ">=20" }
 }

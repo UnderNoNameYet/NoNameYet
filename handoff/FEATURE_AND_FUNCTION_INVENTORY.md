@@ -6,173 +6,108 @@ Status legend: **implemented**, **prepared**, **blocked**, **evidence-gated**, *
 
 | Capability | Status | Source | Notes |
 |---|---|---|---|
-| Responsive marketing page | implemented | `public/index.html` | Problem, proof, method, pricing, boundaries, CTA |
-| Interactive report preview | implemented | `public/index.html`, `assets/report.js` | Bundled fictional data |
-| Full report viewer | implemented | `public/report.html` | Local JSON import and print |
+| Product-first marketing page | implemented | `public/index.html`, `assets/workbench.css` | Compact value, realistic Run preview, method, price, boundaries |
+| Focus Workbench | implemented | `public/report.html` | Scope → Matrix → Run → Repair → Report; Run opens by default |
+| Paired boundary contracts | implemented/fictional | Workbench Matrix | Examples only; no execution |
+| Before/after report viewer | implemented | `assets/report.js` | 16 bundled fictional checks |
+| Temporary evidence dock | implemented | `assets/workbench.js` | Opens from selected Run row; dismissible; closes on stage change |
+| Reviewable repair state | implemented/fictional | Workbench Repair | Example SQL diff; never presented as merged/approved |
+| Local JSON report import | implemented | Workbench Report | Schema 1.0; 2 MB; browser memory only |
+| Print report | implemented | report/workbench scripts | No upload or hosted state |
 | Methodology/authorization | implemented | `public/methodology.html` | Scope, evidence, stop rules |
-| Local scope worksheet | implemented | `public/request.html`, `assets/site.js` | Three steps, no submission |
-| Privacy page | implemented/pre-launch | `public/privacy.html` | Must be updated before premium launch |
-| Terms page | implemented/pre-launch | `public/terms.html` | Must be updated before taking payment |
+| Local scope worksheet | implemented | `public/request.html`, `assets/site.js` | Three steps; no submission/storage |
+| Free boundary matrix | implemented | `public/sample-matrix.html`, CSV | Fictional paired controls; local download |
+| Privacy and terms | implemented/pre-commercial | public HTML | Must be updated with verified facts before payment |
 | Branded 404 | implemented | `public/404.html` | Recovery links |
-| Public qualification form | implemented | Notion | Anonymous, non-sensitive, private responses |
-| Public launch hub | implemented | Notion | Search-indexable request-only page |
-| Public sample report | implemented | Notion | Fictional and explicitly labeled |
-| Static-site intake link | blocked | release config | Requires usable owned HTTPS form URL in config |
-| Checkout | intentionally closed | config/operations | Invoice after scope is recommended |
-| Customer portal | evidence-gated | none | Do not build before repeated paid need |
+| Public qualification form | implemented/separate | Notion | Non-sensitive; operationally separate from static site |
+| Static-site secure intake link | blocked | release config | Requires verified owned HTTPS endpoint |
+| Checkout | intentionally closed | config/operations | Qualify, authorize, then invoice |
+| Hosted customer account | evidence-gated | none | Not V1 |
+| Connections/Team/Activity/Plan pages | evidence-gated | none | Design direction only, not operating product |
+| Continuous Verification | evidence-gated | none | Optional, unpriced, and not marketed as live |
 
 ## `assets/site.js`
 
-### Navigation
+- responsive marketing navigation with ARIA state
+- dynamic year and configuration-driven launch labels
+- optional reveal enhancement with reduced-motion fallback
+- HTTPS-only secure contact link in verified ready state
+- request-package query parser
+- three-step local scope navigation/validation with heading focus
+- local brief generation, clipboard fallback, and text download
 
-- `closeMenu()` — closes mobile navigation and resets `aria-expanded`.
-- menu click handler — toggles `data-open` and ARIA state.
-- link click/resize handlers — close menu after navigation and above 760 px.
-
-### Global metadata and motion
-
-- dynamic year populates `[data-year]`.
-- reveal observer progressively adds `.is-visible`.
-- reduced-motion and missing-IntersectionObserver paths show content immediately.
-- runtime config reads `window.TENANTPROOF_CONFIG`.
-- secure contact link appears only when `state === 'ready'` and `contactUrl` is HTTPS.
-- `[data-launch-state]` reports preview or public state.
-
-### Scope wizard
-
-- package query parser supports `?package=repair`.
-- native submit is prevented.
-- `showStep(index)` clamps step, toggles visibility, updates indicators/status, and moves heading focus.
-- `validateCurrentStep()` checks visible enabled fields and focuses/reports first failure.
-- delegated click handler handles next/previous controls.
-- `value(name)` normalizes text, radio, and checkbox values.
-- `selectedText(name)` returns visible select label.
-- `buildBrief()` creates the non-sensitive text artifact and manual-quote flag.
-- `renderSummary()` writes the brief and scope-fit message.
-- input/change listeners keep final summary current.
-- copy handler uses Clipboard API with selection fallback.
-- download handler creates/revokes a text object URL.
-
-### Invariants
-
-- no fetch, form submission, URL serialization, localStorage, or sessionStorage
-- no credential fields
-- generated brief always states that it is local and not authorization
+**Invariants:** no form transmission, field serialization, storage, credentials, or customer records.
 
 ## `assets/report.js`
 
-### Constants and validation
+- `STATUS_LABELS` maps schema states to browser labels
+- runtime validation checks schema 1.0, metadata, non-empty unique checks, fields, and phase states
+- sample fetch is same-origin and `no-store`
+- local import enforces 2,000,000 bytes and stays in memory
+- before/after phase, metrics, combined filters, visible count, keyboard-selectable rows, empty states, evidence, and print
+- any report-derived value is escaped or assigned with `textContent`
 
-- `STATUS_LABELS` is the sole browser label map.
-- `safeText(value)` normalizes null/undefined.
-- `validateReport(report)` checks object shape, schema version 1.0, project metadata, non-empty checks, unique IDs, required fields, and valid phase statuses.
+The command-line JSON-schema validator remains stricter release authority.
 
-The command-line JSON-schema validator is stricter and remains release authority.
+## `assets/workbench.js`
 
-### `ReportViewer`
+- discovers stage controls/panels and activates exactly one stage
+- maintains `aria-current="step"`
+- focuses active panel H2 after user stage activation
+- scrolls the stage surface to its start
+- closes evidence on stage change
+- opens the evidence dock on pointer, Enter, or Space row selection
+- closes the evidence dock on explicit action
+- bridges the Workbench Report print control to `window.print()`
+- initializes the Run stage
 
-- constructor initializes phase, report, active ID, filters, binds events, and loads sample.
-- `bind()` attaches phase, filter, row pointer/keyboard, print, file input, and drag/drop handlers.
-- `loadSample()` fetches same-origin sample with no-store.
-- `importFile(file)` enforces 2 MB, parses locally, validates, and discloses no upload.
-- `showNotice(message, error)` handles import/load feedback.
-- `setReport(report, sample)` resets state, sample label, metadata, filters, and render.
-- `populateFilters()` derives actor/area/operation/status choices from report data.
-- `visibleChecks()` combines all active filters.
-- `render()` coordinates metrics/table/evidence and generated date.
-- `renderMetrics()` calculates total/pass/fail/unresolved for current phase.
-- `renderTable()` rebuilds keyboard-focusable rows and empty/visible-count states.
-- `select(id)` updates ARIA selected state and evidence.
-- `renderEvidence()` shows expectation, status, observed output, redacted evidence, and remediation.
-- `escape(value)` converts untrusted values to escaped text before controlled templates.
-
-### Security invariant
-
-Any value from a report must pass through `escape()` or be assigned with `textContent`. Do not interpolate raw report values into `innerHTML`.
-
-## Report pipeline tools
+## Report pipeline
 
 | Tool | Responsibility | Status |
 |---|---|---|
-| `validate-report.mjs` | validate a report against 1.0 contract | implemented |
-| `demo-definition.json` | fictional scenario definitions | implemented |
+| `validate-report.mjs` | validate schema 1.0 reports | implemented |
+| `demo-definition.json` | fictional scenario contracts | implemented |
 | `demo-adapter.mjs` | deterministic before/after fixture | implemented |
-| `run-matrix.mjs` | orchestrate demo report generation | implemented, demo-locked |
-| real adapter template | customer-specific execution | evidence-gated; keep private |
-| signed report manifest | hash/version handoff | planned V1.2 |
+| `run-matrix.mjs` | generate demo report | implemented; rejects live mode |
+| real adapter template | customer-specific execution | evidence-gated/private |
+| signed report manifest | hash/version handoff | planned after paid validation |
 
-## Build and release tools
+## Build and release
 
 | Tool | Responsibility | Status |
 |---|---|---|
 | `generate-brand-assets.py` | icons/social image | implemented |
 | `harden-html.mjs` | CSP/canonical/social/config metadata | implemented |
-| `build-site-config.mjs` | validate/generate browser config | implemented |
-| `release-check.mjs` | launch-readiness report | implemented |
-| `capture-previews.mjs` | deterministic visual captures | implemented |
+| `build-site-config.mjs` | preview/ready config | implemented |
+| `release-check.mjs` | release facts/placeholder checks | implemented |
+| `capture-previews.mjs` | deterministic home/workbench/mobile captures | implemented |
+| `record-walkthrough.mjs` | generated product walkthrough | implemented |
+| `sync-handoff-assets.mjs` | stable handoff media names/checksums | implemented |
+| `build-handoff-report.py` | styled PDF handoff | implemented |
+| `build-source-manifest.mjs` | source role/hash manifest | implemented |
+| `check-docs.mjs` | handoff/link/truth checks | implemented |
 | `qa.mjs` | finite Chromium/static QA | implemented |
-| `check-docs.mjs` | handoff/link/placeholder checks | to be implemented in this handoff release |
-| `quality-gate.mjs` | orchestrated quality pass | to be implemented in this handoff release |
-| deploy artifact builder | copy only public output | planned before repository publish |
-| post-deploy smoke test | verify live origin | planned before repository publish |
+| `quality-gate.mjs` | ordered end-to-end gate | implemented |
+| `build-release.mjs` | copy only public output | implemented |
+| GitHub Pages workflow | PR validation + main deployment | implemented |
 
 ## Production support
 
-- meta CSP on every HTML page
-- `_headers` for compatible static hosts
-- canonical URLs
-- Open Graph/Twitter metadata
-- 1200×630 social image
-- 192/512 icons
-- web manifest
-- sitemap
-- robots
-- `.nojekyll`
-- `llms.txt`
+Eight HTML pages, restrictive meta CSP, `_headers`, canonical/social metadata, icons, social image, manifest, sitemap, robots, `.nojekyll`, `llms.txt`, schema/sample JSON, CSV template, and route-scoped workbench assets. The public artifact contains exactly 26 files.
 
-## Operational assets
+## Operational documents
 
-| Document | Job |
-|---|---|
-| `authorization-template.md` | written owner authorization and stop contacts |
-| `statement-of-work-template.md` | scope, deliverables, acceptance, exclusions |
-| `evidence-handling-policy.md` | classification, storage, redaction, deletion |
-| `delivery-runbook.md` | engagement execution and handoff |
-| `payment-refund-workflow.md` | request-only invoicing and exceptions |
-| `intake-architecture.md` | public vs secure intake boundaries |
-| `launch-checklist.md` | release facts and checks |
-| `marketing-experiment.md` | ten-day acquisition test |
-| `operator-decisions.md` | unresolved real-world inputs |
-| `github-release-runbook.md` | inspect/branch/PR/merge/deploy |
-
-## Notion soft-launch system
-
-### Intake database
-
-Properties: app/company, work email, public URL, stack, safe environment, table count, role count, boundary concern, package interest, requested date, safety acknowledgement, pipeline status, submission time.
-
-Views: requests table, status pipeline board, public form editor.
-
-Statuses: New, Qualified, Scope sent, Authorized, In review, Delivered, Closed.
-
-### Public form
-
-Required: app/company, work email, stack, test environment, boundary concern, package interest, non-sensitive acknowledgement.
-
-Optional: public URL, approximate tables/roles, desired date.
-
-Respondents cannot view their stored response and are told not to submit secrets.
+Authorization, statement of work, evidence handling, delivery, payment/refund, intake architecture, launch checklist, marketing experiment, operator decisions, and GitHub release runbook remain private repository guidance—not deployed pages.
 
 ## Feature-change protocol
 
-For any added behavior:
-
 1. state buyer problem and success metric
-2. add/update specification
-3. identify privacy and authorization impact
-4. implement smallest coherent path
-5. cover error/empty/mobile/keyboard/reduced-motion/print as applicable
+2. update the page/function/architecture specification
+3. identify privacy, authorization, retention, and credential impact
+4. implement the smallest coherent path
+5. cover error, empty, mobile, keyboard, reduced-motion, and print states as applicable
 6. add automated QA
-7. update screenshots and function inventory
+7. regenerate screenshots and walkthrough
 8. append decision and changelog
-9. run full quality gate
+9. run the full quality gate
+10. inspect the public-only artifact before merge

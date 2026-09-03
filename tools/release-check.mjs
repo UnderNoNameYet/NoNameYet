@@ -7,8 +7,8 @@ const publicDir = path.join(root, 'public');
 const configPath = path.join(root, 'config/site.preview.json');
 const config = JSON.parse(fs.readFileSync(configPath, 'utf8'));
 const required = [
-  'index.html', 'report.html', 'methodology.html', 'request.html', 'privacy.html', 'terms.html', '404.html',
-  'assets/styles.css', 'assets/site.js', 'assets/report.js', 'assets/site-config.js', 'assets/sample-report.json',
+  'index.html', 'report.html', 'methodology.html', 'sample-matrix.html', 'request.html', 'privacy.html', 'terms.html', '404.html',
+  'assets/styles.css', 'assets/site.js', 'assets/report.js', 'assets/site-config.js', 'assets/sample-report.json', 'assets/sample-boundary-matrix.csv',
   'assets/tenantproof-og.png', 'assets/icon-192.png', 'assets/icon-512.png', 'assets/site.webmanifest',
   'robots.txt', 'sitemap.xml', '_headers', '.nojekyll', 'llms.txt'
 ];

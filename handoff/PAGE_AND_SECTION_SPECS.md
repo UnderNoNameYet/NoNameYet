@@ -1,307 +1,189 @@
 # Page and section specifications
 
-This file defines the contract for every public page. A page change is incomplete until this specification and its acceptance criteria are updated.
+This file defines the contract for every public page. A page change is incomplete until this specification, QA, screenshots, decision log, and changelog agree.
 
-## Global shell
+## Global marketing shell
+
+Applies to every route except the dedicated workbench shell on `report.html`.
 
 ### Header
 
-**Purpose:** orient users and keep the conversion path persistent without dominating content.
-
-**Contains:**
-
 - TenantProof wordmark/home link
-- Sample report
-- Methodology
-- Pricing anchor
-- primary `Scope a review` button
-- mobile menu button with `aria-expanded` and controlled navigation ID
-
-**Behavior:**
-
-- desktop links remain visible
-- at 760 px and below, menu collapses
-- menu closes after navigation or desktop resize
-- keyboard focus remains visible
+- Sample workbench, Matrix, Method, and Pricing links
+- one primary `Scope a review` action
+- mobile menu with `aria-expanded` and an owned navigation ID
+- visible keyboard focus; menu closes after navigation or desktop resize
 
 ### Footer
 
-**Contains:** product summary, Product/Trust/Start link groups, dynamic year, launch-state label, and page-specific safety line.
+Product, Trust, and Start links; dynamic year; launch-state label; factual safety line. Never add invented addresses, registrations, customers, social accounts, or outcomes.
 
-**Rules:** no fake address, registration, social account, or customer logo. Launch state comes from external configuration.
-
-## `index.html` — primary marketing page
+## `index.html` — product-first marketing page
 
 ### Page job
 
-Convince the right founder that application-specific boundary evidence is worth requesting while disqualifying buyers seeking a generic badge or unauthorized scan.
+Let a Supabase SaaS founder understand the failure, workflow, deliverable, fixed starting scope, and next action without reading a long sales page.
 
 ### Sections
 
-1. **Hero — “A green RLS badge is not proof.”**
-   - core category statement
-   - concise explanation of executed tenant-boundary evidence
-   - primary CTA to scope page
-   - secondary CTA to sample report
-   - evidence dashboard preview
-   - must communicate value within first viewport
+1. **Hero**
+   - direct promise: verify tenant isolation before shipping
+   - short explanation of an approved matrix, controlled run, repair, rerun, and retained evidence
+   - primary action opens the sample workbench; secondary action prepares scope
+   - realistic fictional Run-stage preview, not abstract decoration
+   - staging, synthetic-data, and written-authorization safeguards
 
-2. **Problem — “RLS is enabled answers the wrong question.”**
-   - three concrete buyer questions:
-     - can Tenant A retrieve Tenant B rows?
-     - can an owned row move across tenants?
-     - do functions/storage preserve the boundary?
-   - avoid abstract fear or sensational breach language
+2. **Deliverable strip**
+   - approved matrix
+   - executed controls
+   - reviewable repair
+   - before/after evidence
 
-3. **Before/after evidence**
-   - fictional 16-check matrix summary
-   - show failures before and passing retest after
-   - preserve one unresolved state
-   - label demonstration prominently
+3. **Boundary questions**
+   - cross-tenant read
+   - tenant-reassignment write
+   - function and storage boundary
 
-4. **Interactive report preview**
-   - phase controls
-   - filters
-   - matrix table
-   - evidence panel
-   - link to full sample
-
-5. **Method — four stages**
-   - scope access model
-   - run positive and negative controls
-   - repair root rule
+4. **Controlled review method**
+   - define the contract
+   - run paired controls
+   - repair the root rule
    - rerun and hand off
 
+5. **Decision artifact**
+   - fictional before/after counts: 11/4/1 → 15/0/1
+   - explicit contextual-result limitation
+
 6. **Pricing**
-   - $349 and $649 packages
-   - limits and included outputs
-   - no fake discount, countdown, or “most popular” claim without data
-   - manual quote boundary
+   - Boundary Verification: $349
+   - Verification + Repair: $649
+   - manual-quote boundary for larger, production-only, regulated, or unusually sensitive work
 
-7. **Service boundaries**
-   - written authorization
-   - staging/synthetic default
-   - not a comprehensive pentest/certification/guarantee
-   - no credentials through public site
-
-8. **Closing CTA**
-   - restate transformation from assumption to testable statement
-   - one primary CTA to request page
+7. **Service boundaries and CTA**
+   - no credentials through the public site
+   - written authorization, staging, synthetic data, and no certification claim
+   - local scope brief before access is discussed
 
 ### Acceptance criteria
 
-- buyer, problem, artifact, price, and next action are visible without reading every section
-- sample remains fictional
-- one dominant CTA style
-- report interactions function on desktop/mobile
-- no performance-heavy hero media
+- first viewport identifies buyer, failure, artifact, workflow, and primary next step
+- copy remains concise; no repeated essay-length explanation
+- preview looks and behaves like the product
+- Northstar CRM remains visibly fictional
+- one dominant action hierarchy
+- no generic sidebar, abstract tenant circles, decorative paths, stock art, or performance-heavy hero media
+- desktop and 390 px mobile have no document-level horizontal overflow
 
-## `report.html` — report viewer
+## `report.html` — Focus Workbench
 
 ### Page job
 
-Show the exact output and allow a buyer/customer to inspect a redacted local report without uploading it.
+Let a buyer inspect the complete fictional workflow and open a compatible redacted report locally without creating a hosted account or upload surface.
 
-### Sections
+### Shell
 
-1. **Hero** — evidence traceability and report limitations.
-2. **Import zone** — choose or drag a `.json` report; 2 MB maximum; local-only notice.
-3. **Report shell**
-   - project name/report ID/environment
-   - fictional-demo badge when bundled sample is active
-   - before/after phase toggle
-   - total/pass/fail/unresolved metrics
-   - text/actor/area/operation/status filters
-   - visible count
-   - keyboard-selectable rows
-   - evidence detail panel
-   - print action
-4. **Interpretation notice** — pass is contextual, not permanent security.
-5. **Redaction explanation** — why customer-facing evidence excludes secrets and raw data.
+- compact product header with project, fictional label, review ID, Method, and Scope action
+- horizontal stage rail: **Scope → Matrix → Run → Repair → Report**
+- Run opens by default
+- no permanent left navigation, account sidebar, or always-open inspector
+- changing stage closes the temporary evidence dock and focuses the new stage heading when activated by pointer/keyboard
+
+### Stage 1 — Scope
+
+- approved environment, role/resource ceilings, selected functions/bucket, and production-host count
+- written authorization, synthetic fixtures, stop conditions, and temporary-access guardrails
+- clear statement that the workflow is fictional and not authorization
+
+### Stage 2 — Matrix
+
+- paired allow/deny contracts for read, write, RPC, and storage examples
+- each contract names actor, resource, operation, and expected outcome
+- unresolved storage path remains open rather than presented as a pass
+- link to the free planning matrix
+
+### Stage 3 — Run
+
+- before/after phase toggle
+- total, pass, fail, and open counts
+- text, actor, area, operation, and status filters
+- focusable horizontal table region on small screens
+- pointer, Enter, and Space row selection
+- selected row opens a dismissible bottom evidence dock
+- dock shows expectation, observed output, redacted evidence, remediation, and phase-appropriate state
+
+### Stage 4 — Repair
+
+- root-rule finding, affected path, observed contradiction, and exact retest contract
+- concise fictional SQL diff and branch/review state
+- timeline distinguishes reproduced, prepared, owner review, and controlled retest
+- never present a patch as merged or customer-approved
+
+### Stage 5 — Report
+
+- handoff contents and result limits
+- local `.json` import only
+- schema 1.0 and 2,000,000-byte maximum
+- no upload, persistence, or external request
+- print action for the bundled sample or valid local report
 
 ### States
 
-- sample loading
-- valid sample
+- sample loading and valid sample
 - valid local report
-- invalid JSON/schema
-- file too large
+- invalid JSON/runtime shape
+- oversized file
 - no filter matches
 - active row removed by filter
-- print layout
+- before/after evidence
+- dock open/closed
+- print
 
 ### Acceptance criteria
 
-- no report value is inserted as HTML
-- local import creates no upload/network request
-- row selection works with pointer, Enter, and Space
-- filters combine deterministically
-- selected evidence follows phase
-- empty result is understandable
+- all report values render with escaped text or `textContent`
+- local import causes no upload or network request
+- stage, phase, filter, selection, close, and print controls are keyboard operable
+- result color always has a text label
+- fictional labeling remains visible on desktop and mobile
+- reduced motion removes non-essential transitions
+- no document-level horizontal overflow at 390 px
+
+## `sample-matrix.html` — free planning artifact
+
+Static fictional matrix and local CSV download. It plans paired controls but executes nothing, collects nothing, stores nothing, and requests no credentials. The table must remain usable in a labeled focusable scroll region.
 
 ## `methodology.html` — method and authorization
 
-### Page job
-
-Reduce trust friction by making method, limitations, and stop conditions legible before access is discussed.
-
-### Sections
-
-1. Hero: narrow authorization claim, not the whole universe.
-2. Model intended boundary.
-3. Build synthetic test state.
-4. Record observable outcomes.
-5. Repair through versioned changes.
-6. Preserve uncertainty.
-7. Authorization policy.
-8. Default engagement boundary.
-9. Evidence handling.
-10. Stop conditions.
-11. Report vocabulary.
-12. CTA to private scope brief.
-
-### Acceptance criteria
-
-- no offensive testing recipe for arbitrary targets
-- authorization and scope precede execution
-- `untested` and `out_of_scope` semantics are explicit
-- staging and synthetic defaults are visible
+Explain the intended boundary, synthetic test state, observable outcomes, repair discipline, uncertainty, written authorization, stop conditions, evidence handling, report vocabulary, and limitations without providing an arbitrary-target testing recipe.
 
 ## `request.html` — local scope worksheet
 
-### Page job
+Three steps: package, application surface, and generated brief. Submit is prevented; nothing is sent or stored. Query parameter `?package=repair` may preselect the repair package. The secure-intake CTA appears only in a verified `ready` configuration with an HTTPS contact URL.
 
-Help a founder prepare a useful non-sensitive scope before entering the hosted qualification form.
+## `privacy.html` and `terms.html`
 
-### Step 1 — package
+Remain accurate for the static pre-commercial preview. Do not invent legal identity, jurisdiction, processor, contact, or launch readiness. Update them with verified facts and appropriate review before accepting money or customer evidence.
 
-- verification or verification + repair
-- query parameter `?package=repair` preselects repair
-- package limits displayed
+## `404.html`
 
-### Step 2 — application surface
-
-- app name
-- stack
-- environment
-- approximate tables and roles
-- functions/RPC and Storage indicators
-- main boundary concern
-
-### Step 3 — local brief
-
-- contact name and work email used only in local text
-- generated package/scope summary
-- manual-quote warning when limits exceeded
-- copy and download actions
-- secure-intake CTA appears only when release config is `ready` with HTTPS contact URL
-
-### Privacy contract
-
-- form submit is always prevented
-- no GET/POST transmission
-- no local/session storage
-- no credentials or production data requested
-- generated text states that it is local and is not authorization
-
-### Acceptance criteria
-
-- step validation focuses the first invalid field
-- headings receive focus after navigation
-- Enter never changes the URL
-- brief updates when final-step fields change
-- fallback selection works if clipboard permission fails
-
-## `privacy.html` — privacy and handling
-
-### Current role
-
-Pre-launch/static behavior notice. Before premium public deployment it must accurately name:
-
-- static host
-- public form processor
-- categories collected
-- purposes
-- inquiry retention
-- evidence retention
-- deletion/access contact route
-- operator/controller identity available at that time
-- any payment processor when activated
-
-### Required principle
-
-Do not invent legal identity, jurisdiction, processor, or contact. The page may state that contracting details are supplied before work/payment, but it must not claim launch readiness while placeholders remain.
-
-## `terms.html` — terms and limitations
-
-### Current role
-
-Describe non-engagement status, authorization requirement, service nature, result meaning, customer responsibilities, pricing limits, fictional demo, and pre-launch legal review.
-
-### Before accepting payment
-
-Add verified contracting party, jurisdiction, payment/refund terms, tax treatment, liability allocation, acceptance criteria, dispute path, and effective version. Obtain appropriate legal review; agent copy is not legal advice.
-
-## `404.html` — recovery route
-
-### Page job
-
-Recover an invalid route without creating anxiety.
-
-**Contains:** clear not-found message, home CTA, report CTA, same header/footer, no search field or telemetry.
+Clear recovery message, home/workbench actions, shared marketing shell, and no search or telemetry.
 
 ## Production support files
 
-### `robots.txt`
+- `robots.txt` and `sitemap.xml` reflect intentional indexing and all eight public HTML pages
+- `_headers` documents policy for compatible hosts; meta CSP remains the GitHub Pages fallback
+- `site.webmanifest`, icons, social image, `.nojekyll`, and `llms.txt` make no PWA, customer, or certification claim
 
-Allows the intended static site. Update only with intentional indexing decisions.
+## Deferred product pages
 
-### `sitemap.xml`
+Connections, Team, Activity, Plan, a customer portal, and Continuous Verification may be explored only after repeated paid demand and a new security/architecture decision. They are not public V1 routes or operating capabilities.
 
-Lists canonical public HTML pages. Must match `publicOrigin`.
+## Change checklist
 
-### `_headers`
-
-Portable policy for hosts that support it: CSP, referrer, nosniff, frame denial, Permissions Policy, HSTS, caching. GitHub Pages may ignore it, so meta CSP remains necessary.
-
-### `site.webmanifest`
-
-Brand metadata and icons. No PWA/offline claims unless a service worker is deliberately added and tested.
-
-### `llms.txt`
-
-Concise machine-readable description and claim boundaries.
-
-## Planned pages after paid validation
-
-### `/trust.html`
-
-Only after operator facts exist. Consolidate authorization, evidence handling, retention, subprocessors, security contact, and change history.
-
-### `/case-studies/<slug>.html`
-
-Only after a real customer approves exact content and audience in writing. Include context, scoped matrix, remediation, limitations, and measurable outcome; never expose architecture or sensitive findings.
-
-### `/faq.html`
-
-Add only from repeated buyer questions, not imagined objections. Likely subjects: access requirements, staging, timing, report use, retest, production-only scopes.
-
-### `/sample-matrix.html`
-
-Potential free planning artifact showing how to define actors/resources/operations without running a scan. Build only if it improves qualified conversion.
-
-### Customer delivery portal
-
-Not planned for V1. Consider after multiple paid engagements prove recurring needs around report history, regression runs, or stakeholder sharing.
-
-## Change checklist for any page
-
-- job and target reader still clear
-- headings preserve hierarchy
-- dominant CTA unchanged or decision logged
-- mobile/keyboard/reduced-motion/print reviewed
-- privacy/authorization claims reviewed
-- canonical/social metadata updated
-- sitemap updated if route changes
-- QA and screenshots regenerated
-- this file and changelog updated
+- page job and target reader remain clear
+- heading hierarchy and focus movement remain valid
+- dominant action and fictional labels remain truthful
+- mobile, keyboard, reduced-motion, print, and empty/error states reviewed
+- privacy, authorization, and retention claims reviewed
+- canonical/social metadata and sitemap updated when needed
+- automated QA, screenshots, function inventory, decision log, and changelog updated

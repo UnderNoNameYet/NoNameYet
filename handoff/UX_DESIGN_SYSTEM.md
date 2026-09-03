@@ -2,9 +2,20 @@
 
 ## Design intent
 
-TenantProof should feel like a premium engineering dossier: calm, exact, legible, and trustworthy. It must avoid hacker clichés, neon dashboards, generic AI gradients, stock padlocks, fake enterprise logos, and over-animated SaaS patterns.
+TenantProof should feel like a purpose-built engineering workbench: calm, exact, spacious, and credible. It must not resemble a generic admin template, a sketch, or an ornamental security landing page.
 
-The visual experience supports the commercial argument: evidence is structured, uncertainty is visible, and important actions are controlled.
+The interface exists to make a boundary contract, execution, repair, and evidence easy to inspect. Visual novelty must come from the product’s structure—not abstract shapes.
+
+## Non-negotiable direction
+
+- product behavior before marketing decoration
+- concise copy and strong information hierarchy
+- horizontal Scope → Matrix → Run → Repair → Report flow
+- no permanent generic SaaS sidebar
+- no permanently visible inspector
+- no abstract tenant circles, jagged seams, decorative boundary paths, hacker motifs, neon dashboards, or stock padlocks
+- no headline or concept resembling “Watch the boundary hold”
+- secondary operational concepts belong on separate future pages, not crowded into the core workbench
 
 ## Brand personality
 
@@ -15,198 +26,128 @@ The visual experience supports the commercial argument: evidence is structured, 
 - technical, but founder-readable
 - restrained, not sterile
 
-## Core palette
+## Visual sources
 
-Defined in `public/assets/styles.css`:
-
-| Token | Value | Use |
-|---|---|---|
-| `--ink` | `#11231e` | primary text, dark accents |
-| `--paper` | `#f5f2e9` | warm page background |
-| `--surface` | `#fffdf7` | cards and reading surfaces |
-| `--green` | `#187552` | primary action/pass accent |
-| `--green-soft` | `#ddefe6` | positive background |
-| `--red` | `#b8483f` | failed evidence only |
-| `--red-soft` | `#f8e1dd` | failed-state background |
-| `--amber` | `#a86d12` | unresolved/warning |
-| `--amber-soft` | `#f5ead2` | warning background |
-| `--dark` | `#0c1815` | hero/footer/report shell |
+- `public/assets/styles.css` supplies the shared marketing/legal baseline, global shell, forms, and existing status vocabulary
+- `public/assets/workbench.css` supplies route-scoped home and Focus Workbench composition
+- system fonts only; no external font or runtime dependency
 
 ### Color rules
 
-- Green is not proof by itself; pair status color with text and context.
-- Red means observed contradiction, not generic danger decoration.
-- Amber means uncertainty or action required.
-- Never rely on color alone.
-- Maintain WCAG AA contrast for text and controls; target AAA for body copy where practical.
+- graphite/ink establishes structure
+- warm paper keeps dense evidence readable
+- restrained violet identifies product controls, not security success
+- green means a recorded pass, red an observed contradiction, amber/open an unresolved state
+- never rely on color alone and never derive an aggregate “secure” badge
+- maintain WCAG AA text/control contrast; target AAA for body copy where practical
 
-## Typography
-
-- System-font stack only for speed, privacy, and platform coherence.
-- Editorial display scale for category statements.
-- Compact uppercase/letter-spaced labels for evidence metadata.
-- Body line length: approximately 60–75 characters on reading pages.
-- Avoid all-caps paragraphs or tiny security/legal copy.
-
-### Hierarchy
+## Typography and content density
 
 - one H1 per page
-- H1 communicates the page’s buyer job, not merely its title
-- H2 separates decision sections
-- H3 names concrete questions, stages, or findings
-- labels support scanning but never replace headings
+- short declarative headings; concrete nouns and verbs
+- compact metadata labels support scanning but never replace headings
+- body copy should normally stay within 60–75 characters per line
+- do not repeat the same value proposition across multiple long sections
+- use authentic details—check ID, resource, actor, operation, observation—rather than filler copy
 
 ## Layout
 
-### Containers
+### Marketing page
 
-- wide container for navigation, marketing grids, and report UI
-- narrow container for methodology/legal prose
-- generous vertical rhythm between conceptual sections
-- evidence density may increase inside the report shell, never across the whole page
+- compact editorial hero with an actual Run-stage preview
+- bounded section rhythm and visible deliverable/pricing choices
+- no oversized dead space or endless sales-page copy
 
-### Grids
+### Focus Workbench
 
-- desktop: asymmetric editorial hero and 2–4-column evidence/pricing grids
-- tablet: collapse gracefully before text becomes cramped
-- mobile: single-column reading flow; controls remain at least 44 px in practical hit area
+- compact global header
+- full-width horizontal stage rail
+- one primary stage surface at a time
+- tables, cards, and diffs use the width needed by the current task
+- evidence opens in a temporary bottom dock only after row selection
+- never compress navigation, table, and inspector into a permanent three-column layout
 
-### Breakpoint behavior
+### Responsive behavior
 
-- primary navigation collapses at 760 px
-- grids should collapse based on content fit, not device names
-- no horizontal page overflow at 390 px or narrower supported viewport
-- decorative elements may clip only inside intentional overflow-hidden containers
+- marketing navigation collapses at 760 px
+- stage rail may scroll horizontally inside its own region
+- matrix contracts and repair panes stack before becoming cramped
+- report tables may scroll only inside an explicit labeled focusable region
+- no document-level horizontal overflow at 390 px
+- mobile retains a prominent fictional-demo label
+- practical controls target at least a 44 px hit area
 
 ## Components
 
 ### Buttons
 
-- one visually dominant primary action per section
-- secondary actions use outline/text treatments
-- labels state outcome: `Scope a review`, `Open sample report`, `Prepare brief`
-- no fake urgency or disabled-looking links
+One dominant action per section. Labels state outcomes: `Open sample workbench`, `Prepare scope`, `Choose report`, `Print report`. Secondary actions use quieter treatments. No fake urgency.
 
-### Cards
+### Stage rail
 
-- use cards for bounded evidence, stages, packages, or constraints
-- avoid nested cards deeper than one level
-- borders and surface changes should communicate grouping, not decoration
+- five ordered controls with numeric/completed states
+- active stage uses `aria-current="step"`
+- stage switch reveals exactly one panel and can move focus to its H2
+- rail is workflow navigation, not a sitewide SaaS sidebar
 
-### Status chips
+### Matrix contracts
 
-- pass, fail, untested, out-of-scope always include text
-- labels map exactly to report schema
-- no “secure” aggregate badge
+Pair an allowed path with the corresponding denied comparison. Name the actor, resource, operation, and expectation. Preserve open/untested scope explicitly.
 
-### Notices and callouts
+### Evidence table and dock
 
-- green: method or safe next step
-- amber: uncertainty, handling rule, or pre-launch limitation
-- red: actual validation error or observed failed check
-- neutral: local-only/privacy explanation
+- keyboard-selectable rows with visible selected state
+- text labels for status
+- selected row opens a bottom dock containing redacted evidence and remediation
+- dock is dismissible, closes on stage change, and is not needed to understand the table
 
-### Forms
+### Repair diff
 
-- group fields by decision stage
-- labels always visible
+Use a compact reviewable change with affected path, observed contradiction, branch/review state, and retest contract. A fictional patch must never look merged or owner-approved.
+
+### Forms and imports
+
+- labels remain visible
 - help text says what not to submit where risk exists
-- errors use native validation where sufficient and focus the failing field
-- collect only what is needed for qualification
-- do not request credentials or customer records
-
-### Evidence table
-
-- supports scanning and keyboard row activation
-- keeps actor/resource/operation/expectation/status visible
-- mobile behavior must preserve meaning; horizontal table treatment is acceptable inside an explicit scroll region if announced and tested
-- selected row state must be visible beyond color
+- local report import states browser-memory-only behavior and 2 MB limit
+- scope form uses native validation and focuses the first invalid field
+- no credential or customer-record field
 
 ## Motion
 
-- reveal motion is optional enhancement, never required for content visibility
-- `.reveal` content is visible by default
-- IntersectionObserver adds the visible class as elements enter the viewport
-- `prefers-reduced-motion: reduce` disables non-essential movement
-- avoid parallax, looping video backgrounds, cursor effects, and security-themed glitch effects
+- motion is optional feedback, never the product idea
+- use brief opacity/position transitions for stage and dock changes only
+- no looping hero video, parallax, cursor effect, glitch effect, or decorative path animation
+- `prefers-reduced-motion: reduce` removes non-essential movement
+- content remains visible without IntersectionObserver or animation
 
 ## Accessibility
 
 Required for every release:
 
-- semantic landmarks and heading order
-- skip link
-- keyboard-operable navigation and report rows
-- visible focus style
-- `aria-expanded` on mobile menu
-- `aria-pressed` on report phase controls
-- form status text and focused step heading
-- status labels independent of color
-- images with accurate alt text or empty alt when decorative
+- semantic landmarks, one H1, and valid heading order
+- skip link and visible focus
+- keyboard navigation, phase controls, report rows, dock close, import, and print
+- `aria-expanded`, `aria-current`, `aria-pressed`, and live/status regions where applicable
+- status independent of color
+- stage headings focusable with `tabindex="-1"`
+- labeled table scroll region
 - 200% zoom inspection for critical pages
-- reduced-motion behavior
-- print-readable report
+- reduced-motion and print review
 
-Do not claim formal WCAG conformance until an appropriate audit is completed.
+Do not claim formal WCAG conformance without an appropriate audit.
 
-## Content design
+## Voice
 
-### Voice
+Prefer concrete observations such as “four comparison-tenant rows returned” or “the mutation was rejected.” Avoid “military-grade,” “unbreakable,” “bulletproof,” “AI-powered security” without a mechanism, and “guaranteed isolation.”
 
-Use short declarative sentences and concrete nouns. Prefer:
+## Fictional proof rules
 
-- “four foreign rows were returned”
-- “the comparison-tenant update was rejected”
-- “this check was not executed”
-
-Avoid:
-
-- “military-grade”
-- “unbreakable”
-- “bulletproof”
-- “AI-powered security” without a specific mechanism
-- “guaranteed isolation”
-
-### Trust sequence
-
-1. Name the feared failure.
-2. Distinguish badge from evidence.
-3. Show a fictional but structurally real deliverable.
-4. Explain the method and limits.
-5. Show fixed starting scope and price.
-6. Ask for non-sensitive qualification.
-
-### Fictional proof rules
-
-- label above the artifact, not in a buried footer
-- use fictional company/project/client labels
-- never say “we found” without the fictional context
-- no fake quote, logo, rating, or before/after customer result
-
-## UX metrics after launch
-
-Without invasive analytics, measure manually at first:
-
-- qualified requests / targeted contacts
-- sample-report opens from individualized outreach where the channel exposes click data
-- form completion count
-- serious conversations
-- objections by category
-- paid pilot conversion
-- time from request to signed scope
-
-Do not add tracking merely to create a dashboard. Add privacy-respecting measurement only after a concrete decision depends on it.
+- label the artifact before interaction on desktop and mobile
+- use only the fictional Northstar CRM sample in public examples
+- never say “we found” without fictional context
+- no fake buyer, quote, logo, rating, result, or urgency
 
 ## Competitive quality bar
 
-TenantProof does not need every feature competitors have. It must outperform on:
-
-- clarity of scope
-- evidence traceability
-- honest uncertainty
-- privacy-safe first contact
-- fixed entry price
-- quality of remediation handoff
-- speed from qualification to decision artifact
-
-Every proposed UI feature should improve one of those dimensions or be rejected.
+TenantProof must outperform through scope clarity, evidence traceability, honest uncertainty, privacy-safe first contact, fixed entry pricing, and a reviewable remediation handoff. A proposed UI feature that improves none of these should be rejected.
