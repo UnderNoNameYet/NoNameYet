@@ -9,59 +9,84 @@
   <meta name="robots" content="index,follow,max-image-preview:large">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="TenantProof">
-  <meta property="og:title" content="Sample authorization report — TenantProof">
-  <meta property="og:description" content="Explore a fictional TenantProof authorization report or open a redacted report locally in your browser.">
+  <meta property="og:title" content="Fictional verification workbench — TenantProof">
+  <meta property="og:description" content="Explore the fictional TenantProof scope, matrix, run, repair, and report workflow or open a redacted report locally.">
   <meta property="og:url" content="https://undernonameyet.github.io/NoNameYet/report.html">
   <meta property="og:image" content="https://undernonameyet.github.io/NoNameYet/assets/tenantproof-og.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="TenantProof redacted report viewer">
+  <meta property="og:image:alt" content="TenantProof fictional verification workbench">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Sample authorization report — TenantProof">
-  <meta name="twitter:description" content="Explore a fictional TenantProof authorization report or open a redacted report locally in your browser.">
+  <meta name="twitter:title" content="Fictional verification workbench — TenantProof">
+  <meta name="twitter:description" content="Scope, matrix, run, repair, and evidence in one fictional sample workflow.">
   <meta name="twitter:image" content="https://undernonameyet.github.io/NoNameYet/assets/tenantproof-og.png">
   <link rel="canonical" href="https://undernonameyet.github.io/NoNameYet/report.html">
   <link rel="manifest" href="assets/site.webmanifest">
   <link rel="apple-touch-icon" href="assets/icon-192.png">
-  <meta name="description" content="Explore a fictional TenantProof authorization report or open a redacted report locally in your browser.">
-  <meta name="theme-color" content="#f5f2e9">
-  <title>Sample authorization report — TenantProof</title>
+  <meta name="description" content="Explore the fictional TenantProof scope, matrix, run, repair, and report workflow or open a redacted report locally.">
+  <meta name="theme-color" content="#f6f5f1">
+  <title>Fictional verification workbench — TenantProof</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="assets/styles.css">
+  <link rel="stylesheet" href="assets/workbench.css">
 </head>
-<body>
-<a class="skip-link" href="#main">Skip to content</a>
-<header class="site-header"><div class="container nav">
-  <a class="brand" href="index.html" aria-label="TenantProof home"><svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="15" fill="#11231e"/><path d="M17 18h30v28H17zM32 18v28M17 32h30" fill="none" stroke="#8ce1bb" stroke-width="4"/></svg>TenantProof</a>
-  <button class="menu-button" type="button" aria-expanded="false" aria-controls="primary-navigation" aria-label="Toggle navigation" data-menu-button><svg width="21" height="21" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
-  <nav class="nav-links" id="primary-navigation" aria-label="Primary navigation" data-nav-links data-open="false"><a class="nav-link" href="report.html" aria-current="page">Sample report</a><a class="nav-link" href="methodology.html">Methodology</a><a class="nav-link" href="index.html#pricing">Pricing</a><a class="button button-small" href="request.html">Scope a review</a></nav>
-</div></header>
+<body class="tp-page tp-workbench-page">
+<a class="skip-link" href="#main">Skip to workbench</a>
+<header class="workbench-global">
+  <a class="workbench-brand" href="index.html" aria-label="TenantProof home"><span>TP</span><strong>TenantProof</strong></a>
+  <span class="workbench-project">Northstar CRM <small>Fictional demo</small></span>
+  <span class="workbench-review-id">Review TP-DEMO-0830</span>
+  <div class="workbench-global-actions"><a href="methodology.html">Method</a><a class="workbench-button" href="request.html">Scope a review</a></div>
+</header>
 <main id="main">
-  <section class="page-hero"><div class="container"><div class="breadcrumb"><a href="index.html">TenantProof</a> / Report viewer</div><p class="eyebrow">Local-first deliverable</p><h1>Every conclusion should point to an executed check.</h1><p class="lede">Explore the fictional report, compare before and after, or open a compatible redacted JSON report entirely inside your browser.</p></div></section>
-
-  <section class="section-sm"><div class="container">
-    <div class="import-zone no-print" data-import-zone>
-      <input type="file" id="report-file" accept="application/json,.json" data-report-file>
-      <h2 class="import-title">Open a TenantProof JSON report</h2>
-      <p class="import-note">Processed in this browser tab. The file is not uploaded or stored.</p>
-      <div class="button-row mt-16"><button class="button button-secondary button-small" type="button" data-choose-report>Choose report</button></div>
+  <div class="workbench-mobile-banner">Fictional demo · Northstar CRM</div>
+  <h1 class="visually-hidden">TenantProof fictional verification workbench</h1>
+  <div class="workbench" data-report-root data-sample="true">
+    <header class="workbench-railbar">
+      <div class="workbench-context"><span>Verification + Repair</span><strong data-project-name>Loading sample…</strong><small data-report-id>TP-DEMO</small></div>
+      <nav class="workbench-rail" aria-label="Review stages">
+        <button type="button" data-workbench-stage="scope"><i>1</i><span>Scope</span></button>
+        <button type="button" data-workbench-stage="matrix"><i>2</i><span>Matrix</span></button>
+        <button type="button" data-workbench-stage="run" data-active="true" aria-current="step"><i>3</i><span>Run</span></button>
+        <button type="button" data-workbench-stage="repair"><i>4</i><span>Repair</span></button>
+        <button type="button" data-workbench-stage="report"><i>5</i><span>Report</span></button>
+      </nav>
+      <div class="workbench-actions"><span class="tp-demo-chip" data-demo-label>Fictional demo</span><button class="workbench-button no-print" type="button" data-print-report>Print</button></div>
+    </header>
+    <div class="workbench-stage-wrap">
+      <section class="workbench-panel" data-workbench-panel="scope" hidden>
+        <header class="workbench-panel-head"><div><span>Stage 1 · Scope</span><h2 tabindex="-1">Approved boundary</h2><p>What may be exercised, where, and under which stop conditions.</p></div><span class="workbench-state good">Approved</span></header>
+        <div class="scope-focus" data-sample-workflow><article class="scope-primary"><span class="workbench-label">Environment</span><h3>Northstar CRM staging</h3><p>Two synthetic tenants, three application roles, selected functions, and one storage bucket.</p><div class="scope-facts"><span><b>25</b> table ceiling</span><span><b>3</b> roles</span><span><b>1</b> bucket</span><span><b>0</b> production hosts</span></div></article><article class="scope-guardrails"><h3>Execution guardrails</h3><ul><li><b>Written authorization</b><span>Owner, target, methods, window, and recipients agreed.</span></li><li><b>Synthetic fixtures</b><span>No production customer records in the planned run.</span></li><li><b>Stop conditions</b><span>Pause on real data, scope drift, impact, or uncertain ownership.</span></li><li><b>Temporary access</b><span>Least-privileged grants are revoked at handoff.</span></li></ul></article></div>
+        <div class="workbench-note"><strong>Fictional workflow preview.</strong> A real review begins only after verified written authorization.</div>
+      </section>
+      <section class="workbench-panel" data-workbench-panel="matrix" hidden>
+        <header class="workbench-panel-head"><div><span>Stage 2 · Matrix</span><h2 tabindex="-1">Paired boundary contracts</h2><p>Every allowed path is paired with a denied tenant or role control.</p></div><a class="workbench-button" href="sample-matrix.html">Open free matrix</a></header>
+        <div class="matrix-contracts" data-sample-workflow><article><header><span>Contract 01</span><strong>Member reads customer notes</strong></header><div class="matrix-pair allow"><i>ALLOW</i><p><b>Own tenant</b>Return the member’s assigned notes.</p></div><div class="matrix-pair deny"><i>DENY</i><p><b>Comparison tenant</b>Return zero foreign rows.</p></div><footer>SELECT · member · customer_notes</footer></article><article><header><span>Contract 02</span><strong>Manager archives a project</strong></header><div class="matrix-pair allow"><i>ALLOW</i><p><b>Assigned project</b>Apply the archive transition.</p></div><div class="matrix-pair deny"><i>DENY</i><p><b>Foreign project</b>Reject the RPC mutation.</p></div><footer>RPC · manager · archive_project()</footer></article><article><header><span>Contract 03</span><strong>Member updates a project</strong></header><div class="matrix-pair allow"><i>ALLOW</i><p><b>Owned record</b>Accept the intended field update.</p></div><div class="matrix-pair deny"><i>DENY</i><p><b>Tenant reassignment</b>Reject proposed foreign tenant ID.</p></div><footer>UPDATE · member · projects</footer></article><article><header><span>Contract 04</span><strong>Member lists customer files</strong></header><div class="matrix-pair allow"><i>ALLOW</i><p><b>Own prefix</b>List the permitted object path.</p></div><div class="matrix-pair open"><i>OPEN</i><p><b>Foreign prefix</b>Storage comparison remains untested.</p></div><footer>LIST · member · customer-files</footer></article></div>
+      </section>
+      <section class="workbench-panel" data-workbench-panel="run">
+        <header class="workbench-panel-head"><div><span>Stage 3 · Run</span><h2 tabindex="-1">Run 003</h2><p>Same fixtures, same approved matrix, revision <code>8f31c2a</code>.</p></div><div class="phase-toggle" aria-label="Report phase"><button class="phase-button" type="button" data-phase="before" aria-pressed="true">Before repair</button><button class="phase-button" type="button" data-phase="after" aria-pressed="false">After repair</button></div></header>
+        <div class="run-summary"><div><strong>Verification evidence</strong><span data-report-meta>Loading checks…</span></div><div class="run-metrics" aria-label="Report summary"><span><b data-metric="total">–</b>Total</span><span class="pass"><b data-metric="pass">–</b>Pass</span><span class="fail"><b data-metric="fail">–</b>Fail</span><span class="open"><b data-metric="unknown">–</b>Open</span></div></div>
+        <div class="report-filters no-print" aria-label="Report filters"><input class="field-control filter-search" type="search" placeholder="Search checks" aria-label="Search checks" data-filter="query"><select class="field-control" aria-label="Filter by actor" data-filter="actor"><option value="">All actors</option></select><select class="field-control" aria-label="Filter by area" data-filter="area"><option value="">All areas</option></select><select class="field-control" aria-label="Filter by operation" data-filter="operation"><option value="">All operations</option></select><select class="field-control" aria-label="Filter by status" data-filter="status"><option value="">All results</option></select></div>
+        <div class="run-table-wrap" role="region" aria-label="Verification checks; scroll horizontally on small screens" tabindex="0"><table class="report-table"><thead><tr><th>Resource</th><th>Actor</th><th>Operation</th><th>Result</th></tr></thead><tbody data-report-rows></tbody></table><div class="empty-state" data-report-empty hidden>No checks match these filters.</div></div><div class="run-foot"><span data-visible-count>– shown</span><span>Select a row to inspect redacted evidence.</span></div>
+      </section>
+      <section class="workbench-panel" data-workbench-panel="repair" hidden>
+        <header class="workbench-panel-head"><div><span>Stage 4 · Repair</span><h2 tabindex="-1">Review the policy change</h2><p>Repair the root authorization rule, then rerun the same contracts.</p></div><span class="workbench-state">Fictional patch</span></header>
+        <div class="repair-grid" data-sample-workflow><article class="repair-finding"><span class="workbench-label">Finding RLS-004</span><h3>Tenant membership was checked without record ownership.</h3><p>The policy admitted any organization member and omitted the row’s tenant predicate.</p><dl><div><dt>Affected</dt><dd>customer_notes · SELECT</dd></div><div><dt>Observed</dt><dd>4 comparison-tenant rows</dd></div><div><dt>Retest</dt><dd>Same actor, fixtures, and expectation</dd></div></dl></article><article class="repair-diff"><header><span>policies/customer_notes.sql</span><b>2 changed lines</b></header><pre><span class="minus">- using (is_org_member(org_id));</span>
+<span class="plus">+ using (tenant_id = app.current_tenant_id()</span>
+<span class="plus">+   and is_org_member(org_id));</span></pre><footer><span>Branch <code>tenantproof/rls-004</code></span><span>Awaiting owner review</span></footer></article></div>
+        <div class="repair-timeline"><span class="done"><i>✓</i><b>Finding reproduced</b></span><span class="done"><i>✓</i><b>Patch prepared</b></span><span class="active"><i>3</i><b>Owner review</b></span><span><i>4</i><b>Controlled retest</b></span></div>
+      </section>
+      <section class="workbench-panel" data-workbench-panel="report" hidden>
+        <header class="workbench-panel-head"><div><span>Stage 5 · Report</span><h2 tabindex="-1">Evidence handoff</h2><p>Open a compatible redacted report locally or print the bundled fictional sample.</p></div><button class="workbench-button" type="button" data-workbench-print>Print report</button></header>
+        <div class="report-handoff"><article><span class="workbench-label">Fictional sample</span><h3>Northstar CRM · TP-DEMO-0830</h3><p>16 scoped checks with before/after observations, remediation notes, and one unresolved storage path.</p><ul><li>Contextual pass/fail semantics</li><li>Explicit untested and out-of-scope states</li><li>Redacted customer-facing evidence</li><li>Code-state and environment context</li></ul></article><div class="import-zone no-print" data-import-zone><input type="file" id="report-file" accept="application/json,.json" data-report-file><span class="import-icon">JSON</span><h3>Open a redacted report</h3><p>Processed in this browser tab. Nothing is uploaded or stored.</p><button class="workbench-button" type="button" data-choose-report>Choose report</button><small>Schema 1.0 · 2 MB maximum</small></div></div>
+        <div class="workbench-note"><strong>Result limit.</strong> A pass applies only to the recorded expectation, actor, operation, environment, code state, and execution time.</div>
+      </section>
     </div>
-  </div></section>
-
-  <section class="section-sm pt-0"><div class="container">
-    <div class="report-shell" data-report-root data-sample="true">
-      <div class="report-topbar"><div class="report-title"><strong data-project-name>Loading sample…</strong><span data-report-id>TP-DEMO</span></div><span class="demo-label" data-demo-label>Fictional demo</span></div>
-      <div class="report-toolbar"><div class="phase-toggle" aria-label="Report phase"><button class="phase-button" type="button" data-phase="before" aria-pressed="true">Before repair</button><button class="phase-button" type="button" data-phase="after" aria-pressed="false">After repair</button></div><div class="toolbar-cluster"><span class="report-meta" data-report-meta></span><button class="button button-secondary button-small no-print" type="button" data-print-report>Print report</button></div></div>
-      <div class="report-metrics" aria-label="Report summary"><div class="metric"><strong class="metric-value" data-metric="total">–</strong><span class="metric-label">Total checks</span></div><div class="metric metric-pass"><strong class="metric-value" data-metric="pass">–</strong><span class="metric-label">Passed</span></div><div class="metric metric-fail"><strong class="metric-value" data-metric="fail">–</strong><span class="metric-label">Failed</span></div><div class="metric metric-unknown"><strong class="metric-value" data-metric="unknown">–</strong><span class="metric-label">Unresolved scope</span></div></div>
-      <div class="report-filters no-print" aria-label="Report filters"><input class="field-control filter-search" type="search" placeholder="Search checks" aria-label="Search checks" data-filter="query"><select class="field-control" aria-label="Filter by actor" data-filter="actor"><option value="">All actors</option></select><select class="field-control" aria-label="Filter by area" data-filter="area"><option value="">All areas</option></select><select class="field-control" aria-label="Filter by operation" data-filter="operation"><option value="">All operations</option></select><select class="field-control" aria-label="Filter by status" data-filter="status"><option value="">All results</option></select></div>
-      <div class="report-grid"><div class="table-scroll"><table class="report-table"><thead><tr><th>Resource</th><th>Actor</th><th>Operation</th><th>Result</th></tr></thead><tbody data-report-rows></tbody></table><div class="empty-state" data-report-empty hidden>No checks match these filters.</div></div><aside class="evidence-panel" aria-live="polite" data-evidence-panel><p class="evidence-empty">Loading evidence…</p></aside></div>
-      <div class="report-toolbar"><span class="report-meta" data-visible-count>– shown</span><span class="report-meta">Select a row to inspect redacted evidence.</span></div>
-      <div class="notice" role="status" data-report-notice hidden></div>
-    </div>
-  </div></section>
-
-  <section class="section-sm surface-section"><div class="narrow prose"><p class="eyebrow">How to read it</p><h2>Pass does not mean “secure forever.”</h2><p>A pass means the observed behavior matched the documented expectation for that check, environment, identity, and code state. Untested and out-of-scope paths remain visible instead of being silently treated as safe.</p><h3>Why the evidence is redacted</h3><p>Customer-facing reports should prove what was exercised without becoming a map of raw identifiers, keys, personal records, or sensitive implementation details. Full technical traces belong in the authorized engineering handoff.</p></div></section>
+    <div class="notice" role="status" data-report-notice hidden></div>
+    <section class="evidence-dock" data-evidence-dock aria-label="Selected check evidence" hidden><header><div><span>Evidence</span><strong>Selected check</strong></div><button type="button" data-close-evidence aria-label="Close evidence panel">Close</button></header><aside aria-live="polite" data-evidence-panel><p class="evidence-empty">Select a visible check to inspect its evidence.</p></aside></section>
+  </div>
 </main>
-<footer class="site-footer"><div class="container"><div class="footer-grid"><div class="footer-brand"><a class="brand" href="index.html">TenantProof</a><p>Evidence-driven tenant-boundary verification and repair for Supabase applications.</p></div><div><div class="footer-title">Product</div><div class="footer-links"><a href="report.html">Sample report</a><a href="methodology.html">Methodology</a><a href="index.html#pricing">Pricing</a></div></div><div><div class="footer-title">Trust</div><div class="footer-links"><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></div></div><div><div class="footer-title">Start</div><div class="footer-links"><a href="request.html">Scope a review</a></div></div></div><div class="footer-bottom"><span>© <span data-year></span> TenantProof. <span data-launch-state>Pre-launch preview.</span></span><span>Sample project and findings are fictional.</span></div></div></footer>
-<script src="assets/site-config.js" defer></script><script src="assets/site.js" defer></script><script src="assets/report.js" defer></script>
-</body></html>
+<footer class="workbench-footer"><span>Northstar CRM and all findings are fictional.</span><span>Local report files stay in browser memory.</span><a href="index.html">Return to TenantProof</a></footer>
+<script src="assets/site-config.js" defer></script><script src="assets/site.js" defer></script><script src="assets/report.js" defer></script><script src="assets/workbench.js" defer></script>
+</body>
+</html>
