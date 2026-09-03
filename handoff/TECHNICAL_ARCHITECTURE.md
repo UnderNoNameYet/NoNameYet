@@ -2,127 +2,89 @@
 
 ## Architecture decision
 
-TenantProof V1 is a static, dependency-light web product plus a controlled service workflow. The browser experience uses semantic HTML, one CSS file, small vanilla JavaScript modules, and local JSON. This is intentional: it minimizes attack surface, privacy disclosures, operational cost, and release complexity before paid validation.
+TenantProof V1 is a static, dependency-light web product plus a controlled service workflow. The browser experience uses semantic HTML, CSS, small vanilla JavaScript modules, and local JSON. This minimizes attack surface, privacy disclosures, operational cost, and release complexity before paid validation.
 
 ## Runtime topology
 
 ```text
 Browser
-├── static HTML pages
-├── assets/styles.css
-├── assets/site-config.js
-├── assets/site.js
-├── assets/report.js
-└── assets/sample-report.json
+├── eight static HTML pages
+├── assets/styles.css              shared baseline
+├── assets/workbench.css           home/workbench composition
+├── assets/site-config.js          immutable preview/ready facts
+├── assets/site.js                 global shell + local scope worksheet
+├── assets/report.js               report data/filters/evidence engine
+├── assets/workbench.js            stage rail + evidence dock + print bridge
+└── assets/sample-report.json      fictional schema-1.0 sample
 
-Local/operator tooling
+Local/CI tooling
 ├── report schema + validator
-├── demo-only matrix definition/adapter/runner
-├── HTML hardener
-├── brand asset generator
-├── release config builder/checker
-├── browser QA
-├── documentation checker
-└── preview/walkthrough capture
+├── demo-only matrix fixture/runner
+├── HTML hardener + brand generator
+├── preview/ready config builder + release checker
+├── Chromium browser/static QA
+├── preview and walkthrough capture
+├── handoff media/PDF/source-manifest generation
+└── public-only release builder
 
 Service operations
 ├── public non-sensitive qualification form
 ├── private intake pipeline
-├── written authorization + SOW
-├── secure access exchange outside website
-├── controlled test execution
+├── written authorization + signed scope
+├── secure access exchange outside the website
+├── controlled staging-first execution
 └── redacted evidence delivery
 ```
 
-No public backend, customer account system, credential vault, database, analytics service, or payment API is part of the static site.
+No public backend, customer account system, credential vault, database, analytics service, payment API, operational Connections page, or recurring monitor is part of V1.
 
-## Directory responsibilities
+## Public route responsibilities
 
-### `public/`
+### `index.html`
 
-Only deployable content. GitHub Pages or another static host must use this directory as the artifact root.
+Product-first marketing route. It loads the shared shell plus `workbench.css` for the realistic fictional Run-stage preview. It has no report data engine and no external runtime dependency.
 
-### `public/assets/styles.css`
+### `report.html`
 
-Single visual source of truth: tokens, layout, components, responsive behavior, status styles, reduced motion, print rules.
+Focus Workbench route. It loads `report.js` for sample loading, validation, filtering, metrics, evidence rendering, local import, and phase changes; it then loads `workbench.js` for the five-stage shell, temporary evidence dock, and workbench print control.
 
-### `public/assets/site-config.js`
+The two modules deliberately separate data semantics from presentation choreography. Report-derived strings still pass through the established escaping/text-content boundary.
 
-Generated runtime configuration exposed as immutable `window.TENANTPROOF_CONFIG`. It controls launch state, contact link visibility, operator metadata, payment mode, and retention value. Never hand-edit in a release; generate from an approved JSON config.
+### Secondary routes
 
-### `public/assets/site.js`
-
-Global navigation, reveal enhancement, launch-state labels, request-page package selection, three-step worksheet, validation, brief generation, copy, and download.
-
-### `public/assets/report.js`
-
-Schema-aware browser report viewer. It validates minimal runtime shape, loads the bundled sample, imports local files, filters, computes metrics, renders rows/evidence, supports keyboard selection, and prints.
-
-### `schema/report.schema.json`
-
-Canonical report schema version 1.0. It is stricter than UI assumptions and rejects unknown top-level/state/check properties.
-
-### `tools/validate-report.mjs`
-
-Command-line structural validation for report files.
-
-### `tools/run-matrix.mjs`
-
-Orchestrates scenarios only when `--mode=demo`. It exits with code 2 for live mode. A real adapter must never be accepted from the public website; it belongs to an authorized customer workspace and separate operating procedure.
-
-### `tools/demo-definition.json` and `tools/demo-adapter.mjs`
-
-Fictional deterministic fixture. Used to prove pipeline shape without touching a network or real target.
-
-### `tools/harden-html.mjs`
-
-Adds/maintains security, canonical, social, manifest, and configuration metadata. Must remain idempotent.
-
-### `tools/build-site-config.mjs`
-
-Validates preview/ready configuration and writes browser JS. Ready state requires HTTPS origin/contact, display name, business email, valid payment mode, and 1–365 day evidence retention.
-
-### `tools/release-check.mjs`
-
-Checks release files, CSP compatibility, sitemap origin, launch configuration, legal placeholders, security contact, and a fresh GitHub verification marker.
-
-### `qa.mjs`
-
-Finite local Chromium suite. It starts/stops its own server and validates static files, claims, links, CSP, interactions, local import, form privacy, responsive behavior, console output, and external requests.
+`methodology.html`, `sample-matrix.html`, `request.html`, `privacy.html`, `terms.html`, and `404.html` continue to use the shared stylesheet and small global script. This avoids turning every page into an application shell.
 
 ## Browser data flow
 
-### Report sample
+### Bundled fictional report
 
 1. `report.js` fetches same-origin `assets/sample-report.json` with `cache: no-store`.
-2. Runtime validator checks schema version, metadata, checks, IDs, and statuses.
-3. `setReport` stores data in memory.
-4. Renderer uses `textContent` and created DOM nodes.
-5. No report data is persisted.
+2. Runtime checks validate schema version, metadata, IDs, fields, and statuses.
+3. Data stays in memory.
+4. Metrics, filters, rows, and the evidence panel derive from the current phase.
+5. Report strings are escaped or assigned with `textContent`.
 
 ### Local report import
 
-1. User selects/drops a local file.
-2. Browser rejects size above 2,000,000 bytes.
-3. `File.text()` reads into memory.
-4. JSON parse and validation run locally.
-5. Report replaces in-memory sample.
-6. UI says nothing was uploaded.
-7. Refresh clears imported data.
+1. The user chooses or drops a local `.json` file.
+2. The browser rejects files above 2,000,000 bytes.
+3. `File.text()`, JSON parsing, and runtime validation run locally.
+4. A valid report replaces the in-memory sample.
+5. No upload, POST, persistence, analytics event, or external request occurs.
+6. Refresh clears imported data.
 
-### Scope worksheet
+### Workbench navigation
 
-1. Query parameter may preselect repair package.
-2. Form submit is prevented.
-3. Step navigation validates visible fields.
-4. Final text is assembled from field values.
-5. Copy uses Clipboard API with selection fallback.
-6. Download uses an object URL revoked after click.
-7. No fetch, POST, storage, or URL serialization occurs.
+1. `workbench.js` activates exactly one of Scope, Matrix, Run, Repair, or Report.
+2. `aria-current="step"` follows the active control.
+3. User-initiated changes can focus the panel H2.
+4. Any open evidence dock closes on stage change.
+5. Selecting a Run row opens the dock; Close hides it.
+6. Scope, Matrix, and Repair content is an explicitly fictional workflow illustration, not executed customer state.
 
-### Hosted qualification
+### Local scope worksheet
 
-The current public Notion form is operationally separate from the static worksheet. It collects only non-sensitive qualification fields into a private Notion database. The premium site’s secure-intake CTA remains hidden until a real HTTPS form URL is inserted in release configuration.
+Query parameters may preselect a package, but form submission is prevented. Validation, brief generation, copy, and text download are local. No field value is sent, persisted, or serialized into the URL.
 
 ## Configuration model
 
@@ -139,100 +101,45 @@ The current public Notion form is operationally separate from the static workshe
 }
 ```
 
-### Preview
-
-- CTA hidden
-- footer says pre-launch preview
-- payment closed
-- placeholders allowed only in non-public examples/docs
-
-### Ready
-
-- HTTPS intake CTA visible
-- operator/contact/retention required
-- legal copy must be launch-state
-- strict release check must pass
-
-### Payment modes
-
-- `closed`: qualification only
-- `invoice`: operator issues invoice after signed scope; no browser payment URL needed
-- `payment_link`: requires owned HTTPS processor URL; not recommended for initial unrestricted use
+The candidate remains `preview` with `paymentMode: closed`. Ready state requires verified HTTPS contact/origin, operator facts, business email, legal copy, payment mode, and a 1–365 day retention value.
 
 ## Security controls
 
-### Meta CSP
+- restrictive meta CSP on every HTML page; `_headers` documents compatible-host policy
+- same-origin scripts, styles, images, manifest, and fetches only
+- `form-action 'none'`, `object-src 'none'`, `base-uri 'none'`, and no frames/workers
+- untrusted imported report strings rendered as text
+- no public credentials, customer adapters, raw evidence, or production records in repository/browser intake
+- 14-day default for raw working evidence after accepted delivery unless a signed scope or law requires less
 
-```text
-default-src 'self';
-script-src 'self';
-style-src 'self';
-img-src 'self' data:;
-font-src 'self';
-connect-src 'self';
-object-src 'none';
-base-uri 'none';
-form-action 'none';
-frame-src 'none';
-worker-src 'none';
-manifest-src 'self'
-```
+## Build and deployment
 
-Host headers additionally target frame denial, HSTS, nosniff, restricted Permissions Policy, and cache control. GitHub Pages may not honor `_headers`; meta CSP is the static fallback.
+The pull-request Pages job installs pinned Pillow/ReportLab and Playwright, downloads Chromium, installs FFmpeg, exposes Chromium at a stable executable path, and runs `npm run quality`.
 
-### Trust boundaries
+The quality orchestrator:
 
-- public browser is untrusted
-- imported report is untrusted data
-- report strings are rendered as text
-- public form is non-sensitive only
-- real credentials never transit the site/repository/Notion intake
-- customer adapters and evidence stay outside the public repo
+1. generates brand assets and hardens HTML
+2. builds preview configuration
+3. validates and regenerates the fictional report while rejecting live mode
+4. syntax-checks browser scripts
+5. runs browser/static QA
+6. builds the public-only bundle
+7. captures homepage, Workbench Run/Matrix, and mobile previews
+8. records the walkthrough
+9. synchronizes handoff media and builds the PDF/source manifest
+10. checks documentation, release readiness, and secret/private-email patterns
 
-## Deployment architecture
-
-Preferred GitHub Pages pipeline:
-
-1. repository source and docs on `main`
-2. workflow builds/validates from source
-3. artifact contains `public/` only
-4. Pages deploys artifact
-5. post-deploy smoke check verifies canonical routes, assets, CSP, and CTA
-
-Do not commit `node_modules`, raw customer evidence, release credentials, private config, temporary reports, or QA logs.
+GitHub Pages uploads only `dist/`, copied from `public/`. The v0.3.2 artifact contract is exactly 26 files. Handoff, operations, source tooling, local reports, logs, and raw evidence stay outside the deployment.
 
 ## Scaling thresholds
 
-Stay static until one or more occur:
-
-- at least three paid engagements need shared report history
-- buyers repeatedly request scheduled regression runs
-- manual report creation becomes the delivery bottleneck
-- multiple operators need access controls and audit logs
-- customer data residency or contractual controls require dedicated infrastructure
-
-At that point, write a new architecture decision record before selecting a backend. Do not default to Supabase merely because customers use it; choose based on TenantProof’s own threat model.
+Keep the product static until repeated paid engagements demonstrate a need for shared history, scheduled regression runs, multiple-operator permissions, or customer-specific infrastructure. Before implementing Connections, Team, Activity, Plan, Continuous Verification, a portal, or a backend, write a new security/architecture decision covering credential custody, access control, auditability, retention, tenancy, incident response, and cost.
 
 ## Failure and rollback
 
-- invalid release config: build must fail
-- CSP/console/mobile defect: do not deploy
-- broken intake: revert CTA to closed preview and preserve public report/methodology
-- incorrect claim/legal copy: rollback immediately
-- GitHub Pages failure: retain prior known-good deployment and inspect workflow logs
-- report schema change: support old version or clearly reject it; never silently reinterpret
-
-## Future technical work
-
-Prioritized only after launch blockers:
-
-1. documentation/asset quality gate
-2. deploy-only-public release builder
-3. live form URL integration
-4. post-deploy smoke test against public origin
-5. optional privacy-respecting event counters after a decision need exists
-6. signed report manifest/hash for customer handoff
-7. customer-specific private adapter template
-8. regression CI template inside customer repositories
-
-Customer portal, automated scanning, and recurring SaaS remain evidence-gated V2/V3 decisions.
+- invalid configuration, CSP/console/mobile defect, missing artifact, documentation mismatch, or secret scan: fail the build
+- broken intake: stay/return to closed preview
+- incorrect claim/legal copy: roll back immediately
+- schema change: support or explicitly reject old versions; never silently reinterpret
+- Pages failure: retain the prior known-good v0.3.1 deployment and inspect the workflow
+- this candidate has no migration or hosted state; rollback is a source revert

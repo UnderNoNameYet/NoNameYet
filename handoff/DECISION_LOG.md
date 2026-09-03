@@ -132,7 +132,7 @@ Append new decisions; do not silently rewrite prior rationale. Dates use Asia/Ca
 
 **Decision:** squash-merge PR [#23](https://github.com/UnderNoNameYet/NoNameYet/pull/23) and publish TenantProof from direct source while preserving `state: preview`, local-only static intake, and `paymentMode: closed`.
 
-**Why:** the exact 198-file delta was inspected, the PR build passed, the public-only artifact boundary was enforced, the source-transfer workflow was removed, and live public routes showed the intended TenantProof and fictional Northstar CRM content.
+**Why:** the exact delta was inspected, the PR build passed, the public-only artifact boundary was enforced, and live public routes showed the intended TenantProof and fictional Northstar CRM content.
 
 **Evidence:** merge `6bc99104bb91b32afb50c8c7d9b416d74566f8ed`; deployment [run #40](https://github.com/UnderNoNameYet/NoNameYet/actions/runs/33372340582) succeeded; pre-release rollback `047691e35c6b8d38ba5540d1fe4de345ed752a6c` remains documented.
 
@@ -142,6 +142,30 @@ Append new decisions; do not silently rewrite prior rationale. Dates use Asia/Ca
 
 **Decision:** add a static fictional matrix page and downloadable CSV before expanding the product or adding a scanner.
 
-**Why:** current paid requests repeatedly ask for explicit tenant/role authorization validation. A matrix lets buyers experience the core method, improves scope quality, and creates an educational inbound artifact without credentials, tracking, uploads, or unsupported security claims.
+**Why:** a matrix lets buyers experience the core method and improves scope quality without credentials, tracking, uploads, execution, or unsupported claims.
 
 **Constraint:** the template is unexecuted planning material, not evidence, certification, or a public testing tool.
+
+## 2026-09-03 — Make the workflow the product interface
+
+**Decision:** rebuild the homepage around a realistic fictional Run preview and make `report.html` a horizontal Focus Workbench: Scope → Matrix → Run → Repair → Report.
+
+**Why:** abstract boundary art and long copy did not explain how TenantProof works. One stage at a time gives the matrix, execution, repair, and handoff enough space while keeping the product concrete and engaging.
+
+**Constraints:** no generic permanent sidebar, no permanent inspector, no cramped three-column application shell, and no hidden fictional labeling. Evidence appears in a temporary dismissible dock only after selection.
+
+## 2026-09-03 — Keep premium workspace concepts deferred
+
+**Decision:** do not ship Connections, Team, Activity, Plan, hosted accounts, or Continuous Verification as live V1 product surfaces.
+
+**Why:** those concepts require credential custody, access control, auditability, billing, retention, and incident-response decisions unsupported by current paid evidence.
+
+**Constraint:** Continuous Verification remains optional and unpriced. Reconsider only after repeated paid demand and a new security/architecture decision.
+
+## 2026-09-03 — Run the complete quality gate in pull requests
+
+**Decision:** install deterministic browser, media, and PDF dependencies in the Pages build and run `npm run quality` before accepting the 26-file artifact.
+
+**Why:** generated screenshots, walkthrough, handoff copies, PDF, source manifest, documentation, release state, and secret scanning must agree with the exact source under review.
+
+**Constraint:** pull requests validate but do not deploy. GitHub Pages still uploads only `dist/` after changes reach `main`.

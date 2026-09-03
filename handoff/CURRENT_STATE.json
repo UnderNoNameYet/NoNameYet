@@ -1,34 +1,34 @@
 {
-  "snapshotAt": "2026-09-01T16:00:45+05:30",
+  "snapshotAt": "2026-09-03T11:00:34+05:30",
   "product": "TenantProof",
   "corePromise": "Prove that Customer A cannot read or modify Customer B's data.",
-  "stage": "GitHub Pages request-only technical preview live; commercial intake and payment closed",
-  "sourcePath": "repository root on current main",
+  "stage": "v0.3.2 Focus Workbench release candidate in draft PR; v0.3.1 request-only preview remains live",
+  "sourcePath": "design/tenantproof-focus-workbench-v032",
   "repository": {
     "owner": "UnderNoNameYet",
     "name": "NoNameYet",
     "defaultBranch": "main",
-    "publicOriginCandidate": "https://undernonameyet.github.io/NoNameYet/",
     "access": "connected_published_and_verified",
     "tenantProofDeployed": true,
     "authenticatedUser": "MYIndieDEV",
-    "inspectedMainSha": "6bc99104bb91b32afb50c8c7d9b416d74566f8ed",
-    "releaseBranch": "launch/tenantproof-v1 (merged)",
-    "existingProduct": "TenantProof v0.3.1 request-only technical preview",
+    "inspectedMainSha": "f17ff3476735f423445cb37cb6084b3763c42269",
+    "liveVersion": "0.3.1",
+    "candidateVersion": "0.3.2",
+    "candidateBranch": "design/tenantproof-focus-workbench-v032",
+    "candidatePullRequestNumber": 25,
+    "candidatePullRequestUrl": "https://github.com/UnderNoNameYet/NoNameYet/pull/25",
     "pagesWorkflow": ".github/workflows/pages.yml",
-    "releaseTransport": "direct source on main; temporary materializer and staging references removed",
+    "releaseTransport": "direct source with a public-only build artifact",
     "preReleaseRollbackSha": "047691e35c6b8d38ba5540d1fe4de345ed752a6c",
-    "pullRequestNumber": 23,
-    "pullRequestUrl": "https://github.com/UnderNoNameYet/NoNameYet/pull/23",
+    "publishedPullRequestNumber": 23,
+    "publishedPullRequestUrl": "https://github.com/UnderNoNameYet/NoNameYet/pull/23",
     "mergeSha": "6bc99104bb91b32afb50c8c7d9b416d74566f8ed",
-    "mergedAt": "2026-08-31T08:19:02Z",
     "workflowRunNumber": 40,
     "workflowRunUrl": "https://github.com/UnderNoNameYet/NoNameYet/actions/runs/33372340582",
     "workflowConclusion": "success",
-    "deployedAt": "2026-08-31T08:19:39Z",
     "deployedUrl": "https://undernonameyet.github.io/NoNameYet/",
     "liveVerifiedAt": "2026-08-31T08:51:01Z",
-    "liveVerification": "primary HTML routes and fictional report JSON fetched successfully; exact artifact passed local Chromium QA"
+    "liveVerification": "v0.3.1 primary HTML routes and fictional report JSON fetched successfully"
   },
   "packages": [
     {
@@ -50,7 +50,7 @@
   ],
   "payment": {
     "mode": "closed",
-    "recommendedInitialProcessor": "operator-owned Stripe invoice or source-platform escrow after qualification",
+    "recommendedInitialProcessor": "operator-owned invoice or source-platform escrow after qualification and signed scope",
     "activated": false
   },
   "safety": {
@@ -72,62 +72,51 @@
       "terms.html",
       "404.html"
     ],
+    "publicArtifactFiles": 26,
     "reportSchema": "1.0",
+    "reportImportLimitBytes": 2000000,
     "sampleReportId": "TP-DEMO-0830",
     "sampleProject": "Northstar CRM",
     "sampleFictional": true,
     "publicRuntimeDependencies": 0,
     "siteConfigState": "preview",
-    "publicSampleMatrix": {
-      "route": "sample-matrix.html",
-      "download": "assets/sample-boundary-matrix.csv",
-      "fictional": true,
-      "executesTests": false,
-      "collectsData": false
-    }
+    "paymentMode": "closed",
+    "workbench": {
+      "route": "report.html",
+      "stages": ["Scope", "Matrix", "Run", "Repair", "Report"],
+      "defaultStage": "Run",
+      "permanentSidebar": false,
+      "permanentInspector": false,
+      "temporaryEvidenceDock": true,
+      "localReportImport": true,
+      "hostedAccounts": false
+    },
+    "deferredWorkspaceConcepts": [
+      "Connections",
+      "Team",
+      "Activity",
+      "Plan",
+      "Continuous Verification"
+    ]
   },
   "quality": {
-    "latestKnownResult": "pass",
-    "latestRunAt": "2026-09-01T12:40:05.264Z",
-    "qualityGateSteps": 31,
-    "documentationChecks": 137,
-    "handoffPdfPages": 11,
-    "walkthroughDurationSeconds": 20,
-    "requiredFiles": 24,
+    "latestKnownResult": "local_pass_github_pr_in_progress",
+    "latestLocalRunAt": "2026-09-03T05:45:00Z",
+    "qualityGateCommands": 17,
+    "requiredFiles": 26,
     "htmlPages": 8,
     "sampleChecks": 16,
-    "before": {
-      "pass": 11,
-      "fail": 4,
-      "unresolved": 1
-    },
-    "after": {
-      "pass": 15,
-      "fail": 0,
-      "unresolved": 1
-    },
+    "before": { "pass": 11, "fail": 4, "unresolved": 1 },
+    "after": { "pass": 15, "fail": 0, "unresolved": 1 },
     "consoleErrors": 0,
     "externalRuntimeRequests": 0,
     "mobileOverflowPages": 0,
     "browserPersistenceCalls": 0,
     "postRequests": 0,
     "demoRunnerLocked": true,
-    "mustRerunAfterChanges": false,
-    "sourceManifestFiles": 102,
-    "githubPullRequestBuild": "success",
-    "githubMainBuildAndDeploy": "success",
-    "liveStaticRouteFetch": "pass",
-    "sourceManifestBytes": 4712015
-  },
-  "softLaunch": {
-    "publicQualificationForm": true,
-    "privateIntakePipeline": true,
-    "publicNotionLaunchPage": true,
-    "publicFictionalSampleReport": true,
-    "formSmokeTest": "passed_and_test_row_deleted",
-    "searchIndexing": true,
-    "githubPagesRequestOnlyPreview": true,
-    "publicSampleBoundaryMatrix": true
+    "githubPullRequestBuild": "in_progress",
+    "githubMainBuildAndDeploy": "not_run_for_candidate",
+    "mustRerunAfterChanges": true
   },
   "commercialTruth": {
     "customers": 0,
@@ -138,23 +127,21 @@
     "targetIsGuarantee": false
   },
   "blockers": [
-    "owned HTTPS intake and deletion route inserted into commercial release config",
     "verified legal contracting identity and jurisdiction before customer intake or payment",
-    "dedicated business contact exists but is not configured in the commercial release or an agent-available Mail channel",
-    "static privacy and terms updated from pre-launch state",
-    "approved evidence retention value and delivery capacity",
-    "security contact before security.txt",
+    "owned HTTPS intake and deletion route before commercial release",
+    "owned business contact configured in commercial release",
+    "launch-state privacy and terms",
+    "approved delivery capacity",
     "payment processor, tax, and refund configuration before accepting money",
     "authenticated approved acquisition channel before individualized outreach"
   ],
   "nextActions": [
-    "keep the deployed static preview local-only for intake and closed for payment",
-    "publish and verify the free tenant-boundary matrix acquisition artifact",
-    "configure verified operator identity, jurisdiction, business contact, retention, and delivery capacity",
-    "add the owned HTTPS intake and deletion route and pass the strict release gate before accepting customers",
-    "attach an authenticated approved acquisition channel or use source-platform proposals under the verified operator identity",
-    "run the ten-prospect paid-pilot experiment with individualized messages",
-    "deliver one safely authorized staging-first pilot if won"
+    "finish PR 25 documentation and generated handoff reconciliation",
+    "require the complete GitHub quality workflow to pass",
+    "inspect the PR diff and 26-file public-only artifact",
+    "keep the current site request-only and closed for payment",
+    "merge only after review, then verify the new GitHub Pages deployment",
+    "configure real operator and commercial facts before accepting customer work"
   ],
   "frozenProducts": [
     "RebuttalKit",
@@ -163,5 +150,5 @@
     "ClearCal proposal",
     "Relay migration"
   ],
-  "localReleaseMirror": "/data/tenantproof-final"
+  "localReleaseMirror": "/data/tenantproof-impl"
 }
