@@ -4,153 +4,97 @@
 
 - GitHub: `UnderNoNameYet/NoNameYet`
 - default branch: `main`
-- intended public origin: `https://undernonameyet.github.io/NoNameYet/`
-- canonical source: repository root on current `main`
+- public origin: `https://undernonameyet.github.io/NoNameYet/`
+- canonical source after release: repository root on current `main`
+- current inspected main: `f17ff3476735f423445cb37cb6084b3763c42269`
+- v0.3.2 candidate branch: `design/tenantproof-focus-workbench-v032`
+- draft pull request: [#25](https://github.com/UnderNoNameYet/NoNameYet/pull/25)
 
-Current published `main` is `6bc99104bb91b32afb50c8c7d9b416d74566f8ed`. Historical SHA `047691e35c6b8d38ba5540d1fe4de345ed752a6c` is context and rollback only; inspect `main` again before every future release.
+The known live v0.3.1 publication came from PR [#23](https://github.com/UnderNoNameYet/NoNameYet/pull/23), merge `6bc99104bb91b32afb50c8c7d9b416d74566f8ed`, and successful Pages [run #40](https://github.com/UnderNoNameYet/NoNameYet/actions/runs/33372340582). `047691e35c6b8d38ba5540d1fe4de345ed752a6c` remains the pre-release rollback reference.
 
-## Current publication state
+## Authorization and limits
 
-GitHub access is operational. PR [#23](https://github.com/UnderNoNameYet/NoNameYet/pull/23) was squash-merged at `6bc99104bb91b32afb50c8c7d9b416d74566f8ed` and successful workflow [run #40](https://github.com/UnderNoNameYet/NoNameYet/actions/runs/33372340582) deployed the TenantProof request-only preview. The permanent workflow publishes only the validated `dist/` artifact. `047691e35c6b8d38ba5540d1fe4de345ed752a6c` is the pre-release rollback point.
+The user authorized routine branch, pull-request, quality, merge, and publication decisions. This never overrides connection permissions, legal/account facts, platform confirmations, secret handling, customer authorization, or safe testing boundaries.
 
-## Owner authorization
+## v0.3.2 release contents
 
-The user explicitly authorized the agent to:
+- approved product-first homepage and Focus Workbench
+- `workbench.css` and `workbench.js`
+- free matrix route/CSV from the base feature work
+- expanded Chromium/static QA
+- corrected capture-before-sync quality order
+- pinned CI browser/media/PDF dependencies
+- coherent v0.3.2 handoff, architecture, roadmap, decisions, and release metadata
+- failed materializer/finalizer artifacts removed
 
-- choose implementation/release details
-- put specs and handoff documents on `main`
-- create branches and pull requests
-- merge after quality checks
-- avoid repeated routine permission prompts
+## Source inclusion policy
 
-This does not override connection permissions, legal identity, secret handling, third-party platform confirmations, or safe testing requirements.
+Keep on `main`:
 
-## Completed first GitHub publication
-
-1. Authenticated and inspected the old RebuttalKit `main`.
-2. Created `launch/tenantproof-v1` from `047691e35c6b8d38ba5540d1fe4de345ed752a6c`.
-3. Materialized direct TenantProof source and removed temporary transport.
-4. Opened and inspected PR [#23](https://github.com/UnderNoNameYet/NoNameYet/pull/23).
-5. Passed local quality, documentation, and PR build gates.
-6. Reviewed the exact file delta and secret/transport patterns.
-7. Squash-merged at `6bc99104bb91b32afb50c8c7d9b416d74566f8ed`.
-8. Confirmed successful Pages run #40 and primary live routes.
-
-## Main-branch contents
-
-Include:
-
-- `AGENTS.md` and `agent.md`
-- root README/architecture/roadmap/security/changelog/contributing
-- `public/`
-- `schema/`
-- `tools/`
-- `operations/`
-- `handoff/` and selected media
-- package scripts
-- CI/workflow and PR template
-- deterministic test source where repository policy permits
+- instructions and root product/repository docs
+- `public/`, schema, tools, operations, handoff, package scripts, CI, PR template, and deterministic test source
 
 Exclude:
 
-- `node_modules`
-- environment secrets
-- real release/customer configuration if private
-- raw evidence or customer reports
-- customer-specific adapters
-- signed authorization/SOW
-- payment credentials/invoices
-- generated server logs
-- ephemeral QA output
-- local archives
+- `node_modules`, `.env`, release/customer secrets
+- raw evidence, customer reports/adapters, signed authorization/SOW
+- payment credentials/invoices, private production config
+- generated server logs, ephemeral QA output, local archives
 
 ## Deployment artifact
 
-Publish only the contents of `public/`.
+Publish only `dist/`, generated exclusively from `public/`. The v0.3.2 artifact contract is exactly 26 files and eight HTML pages. Tests, docs, operations, handoff, source config, and build output must not be web-accessible.
 
-The phrase “everything in main other than testers” must not lead to deleting quality controls. The professional default is:
+## Pull-request workflow
 
-- source tests/checkers remain versioned but are not deployed
-- generated test artifacts/logs remain untracked
-- public sample stays because it is a product artifact and clearly fictional
+1. checkout
+2. Node 20 and Python 3.12
+3. install pinned Pillow/ReportLab and Playwright Chromium; install FFmpeg
+4. expose the downloaded Chromium executable at a stable `chromium` path
+5. run `npm run quality`
+6. verify `state: preview`, `paymentMode: closed`, and exactly 26 `dist/` files
+7. on pull requests: stop after validation
+8. on `main`: configure Pages, upload `dist/`, deploy, then verify live routes
 
-If current repository policy truly requires tests off `main`, create a dedicated protected quality branch/workflow only after inspecting the repo; do not silently weaken CI.
+No release config secret may appear in logs or client JavaScript. Only intentionally public facts belong in `site-config.js`.
 
-## Historical first-publication commit plan
+## PR acceptance
 
-Suggested commits:
+- product problem, scope, safety/truth boundaries, and deferred features documented
+- local/CI evidence and generated visual assets reviewed
+- exact changed-file list and relevant diff inspected
+- secret/private-email scan clean
+- no unresolved review thread or failing check
+- public-only artifact and rollback verified
+- Northstar CRM explicitly fictional
 
-1. `feat: add TenantProof static product`
-2. `docs: add canonical product and handoff specifications`
-3. `ops: add authorization and delivery runbooks`
-4. `test: add deterministic release quality gates`
-5. `ci: publish validated public artifact`
+Draft PR #25 remains draft until those conditions are true.
 
-Use fewer commits if the GitHub API makes atomic coherent commits safer. Never split a build so `main` can deploy an incomplete mix.
+## Generated handoff policy
 
-## Pull-request body requirements
-
-- problem and scope
-- page/feature inventory
-- claim and safety boundaries
-- before/after repository map
-- QA output
-- screenshots/video links
-- config/legal blockers resolved
-- deployment artifact contents
-- rollback steps
-- explicit note that sample is fictional
-
-## CI order
-
-```text
-checkout
-node 20 + python
-install only if dependencies exist
-assets
-harden
-config
-report validation
-fixture generation
-live-mode rejection
-syntax/docs/static/browser QA
-release readiness (non-strict for a closed preview; strict for commercial-ready config)
-artifact = public/
-deploy
-post-deploy smoke
-```
-
-Do not expose release config secrets through build logs or client JS. Only public facts belong in `site-config.js`.
+Screenshots, walkthrough, PDF, checksums, and source manifest are generated by the quality run from current source. Before merge, reconcile committed generated files with the successful candidate output or run a guarded branch finalization that commits only the known generated paths. Never let an automatic finalizer modify `main`, deploy, or copy arbitrary build output.
 
 ## Rollback
 
-- retain previous known-good Pages artifact or merge SHA
-- revert the release PR or redeploy prior artifact
-- switch site config to preview/closed if intake/payment is unsafe
-- verify rollback routes/assets/CSP
-- document incident and corrective action
+- retain the prior known-good Pages merge/artifact
+- revert the v0.3.2 merge or redeploy the prior artifact
+- keep/switch configuration to preview and closed payment if intake is unsafe
+- verify routes, assets, CSP, sample data, and workbench interaction after rollback
+- document cause and corrective action
 
-## Release versions
+There is no migration or hosted state in this candidate.
+
+## Versions
 
 - `0.1.0` — local MVP
-- `0.2.0` — production preparation + public Notion soft launch
+- `0.2.0` — production preparation and Notion soft launch
 - `0.3.0` — canonical handoff/spec/quality release
-- `0.3.1` — published request-only technical preview
+- `0.3.1` — live request-only technical preview
+- `0.3.2` — Focus Workbench release candidate
 - `1.0.0` — first commercially ready public release after strict checks
 
-Do not label 1.0 until the deployed origin and intake path are verified.
+Do not mark v0.3.2 live until Pages succeeds and routes/interactions are verified. Do not label 1.0 until owned intake, operator/commercial facts, legal state, and strict release checks are complete.
 
 ## Release marker
 
-`release/github-verification.json` is local/ignored until GitHub inspection succeeds. Required shape:
-
-```json
-{
-  "repository": "UnderNoNameYet/NoNameYet",
-  "mainSha": "40 lowercase hex characters",
-  "verifiedAt": "ISO-8601",
-  "workflow": ".github/workflows/..."
-}
-```
-
-The readiness checker validates repository and SHA shape; the operator must ensure the marker reflects the current inspected main.
+`release/github-verification.json` remains local/ignored until inspection succeeds. It records repository, a 40-character main SHA, verification timestamp, and workflow path. The checker validates shape; the operator ensures it reflects the current inspected main.

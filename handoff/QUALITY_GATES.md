@@ -1,206 +1,185 @@
 # Quality gates
 
-No material release is complete because it “looks good.” It must pass deterministic checks and a manual evidence review.
+A material release is not complete because it looks good. It must pass deterministic checks and a manual evidence review.
 
-## One-command target
+## One-command gate
 
 ```bash
 npm run quality
 ```
 
-The orchestrator should run asset generation, HTML hardening, preview config generation, report validation, demo generation, documentation checks, static/browser QA, release-readiness analysis, and credential scan. A launch build additionally runs `npm run release:strict` with real configuration and a fresh GitHub verification marker.
+The v0.3.2 orchestrator runs, in order:
+
+1. brand asset generation
+2. HTML hardening
+3. preview configuration
+4. report validation
+5. deterministic fictional report generation
+6. explicit live-mode rejection
+7. JavaScript syntax checks
+8. browser/static QA
+9. public-only release build
+10. preview capture
+11. walkthrough generation
+12. handoff-media synchronization
+13. handoff PDF generation
+14. source-manifest generation
+15. documentation integrity
+16. release-readiness analysis
+17. credential/private-email scan
+
+Capture must happen before handoff synchronization. A commercial launch additionally requires `npm run release:strict` with verified real configuration and a fresh GitHub marker.
 
 ## Gate 1 — repository hygiene
 
-- no `node_modules`
-- no `.env` or release secrets
-- no customer reports, adapters, credentials, signed documents, or raw evidence
-- generated logs excluded from deploy artifact
-- all handoff files present
-- internal Markdown links resolve
-- no unresolved merge markers
-- no unexpected large binary
+- no `node_modules`, `.env`, secret, customer report, private adapter, signed agreement, raw evidence, or QA log
+- no failed-materializer/finalizer artifact
+- required handoff files and internal links resolve
+- no merge marker, unexpected large binary, or session-only compressed URL
 - `AGENTS.md` and `agent.md` exist
 
 ## Gate 2 — syntax and deterministic tooling
 
 - Node scripts parse under Node 20+
-- Python asset generator runs
-- JSON files parse
-- report schema validates
-- demo report is deterministic in structure
+- Python brand/PDF tools run with pinned Pillow and ReportLab
+- Playwright Chromium and FFmpeg are available in CI
+- JSON and schema files parse
+- demo report structure is deterministic
 - live mode exits non-zero
 - hardener is idempotent
-- config builder rejects invalid/unsafe ready state
+- configuration builder rejects unsafe ready state
 
-## Gate 3 — public static files
+## Gate 3 — public artifact
 
-Required:
+The v0.3.2 artifact contains exactly 26 files and eight HTML pages, including:
 
-- eight HTML pages
-- CSS, browser JS, config JS, sample report
-- favicon, 192/512 icons, 1200×630 social image
-- manifest, robots, sitemap, `_headers`, `.nojekyll`, `llms.txt`
+- shared CSS/JS/config/sample data
+- `assets/workbench.css` and `assets/workbench.js`
+- favicon, 192/512 icons, and 1200×630 social image
+- sample matrix CSV
+- manifest, robots, sitemap, `_headers`, `.nojekyll`, and `llms.txt`
 
 Checks:
 
-- no inline `style=`
-- no inline script
-- meta CSP present
-- external site config present
 - one H1 and one main landmark per page
-- internal links resolve
-- canonical URLs match public origin
-- no remote runtime assets
-- no forbidden claims/placeholders
+- no inline script or style attribute
+- restrictive meta CSP and external runtime config
+- same-origin runtime assets only
+- internal links/canonical URLs resolve
+- no forbidden product, customer, legal, or commercial claim
+- GitHub Pages upload source is `dist/`, copied only from `public/`
 
-## Gate 4 — report behavior
+## Gate 4 — Focus Workbench behavior
 
-- sample loads
+- Run is the default stage
+- Scope → Matrix → Run → Repair → Report navigation activates one panel
+- active stage has `aria-current="step"`
+- user stage changes focus the panel H2 and close the evidence dock
 - before counts: 11 pass, 4 fail, 1 unresolved
 - after counts: 15 pass, 0 fail, 1 unresolved
-- status filter returns expected rows
-- phase change updates metrics/evidence
-- row activation works with pointer/keyboard
-- local sample import succeeds and says nothing uploaded
-- invalid/large file path is understandable
-- print action produces readable layout
-- dynamic report values cannot inject markup
+- phase change updates metrics and evidence
+- text/actor/area/operation/status filters combine correctly
+- pointer, Enter, and Space select rows
+- selected rows open the temporary evidence dock; Close dismisses it
+- local sample import succeeds and states that nothing was uploaded
+- invalid/oversized/no-match states are understandable
+- both print controls invoke print
+- report-derived values cannot inject markup
 
 ## Gate 5 — request privacy
 
 - repair query parameter preselects package
-- step validation works
-- Enter cannot submit or alter URL
-- final brief contains expected fields
-- manual-quote thresholds are correct
+- step validation and heading focus work
+- Enter cannot submit or alter the URL
+- final brief and manual-quote thresholds are correct
 - copy/download stay local
-- no browser persistence
-- no POST requests
-- secure-intake link stays hidden in preview
-- ready state shows only HTTPS contact URL
+- no browser persistence or POST request
+- secure-intake link is hidden in preview and requires HTTPS in ready state
+- no credential or production-data field
 
 ## Gate 6 — browser and responsive
 
-Run Chromium at minimum:
+Run Chromium at minimum at 1440×960/1050 and 390×844:
 
-- desktop 1440×1050
-- mobile 390 px wide
+- every page returns success
+- no console/page error or external runtime request
+- no document-level horizontal overflow
+- stage rail/table overflow stays inside announced regions
+- mobile fictional-demo banner remains visible
+- navigation and all critical controls are keyboard operable
+- reduced motion removes non-essential transitions without hiding content
+- focus is visible and unobscured
+- print layout remains readable
 
-Verify:
-
-- all pages return success
-- no console/page errors
-- no external runtime requests
-- no page horizontal overflow
-- mobile menu opens/closes and ARIA state matches
-- critical CTA is visible
-- forms remain usable with keyboard
-- reduced motion shows all content
-- focus is not obscured
-
-Manual spot-check in Safari/Firefox is required before a commercial launch when available.
+Safari/Firefox manual spot checks are required before commercial launch when available.
 
 ## Gate 7 — visual review
 
-Capture and inspect:
+Inspect regenerated:
 
-- desktop full page
-- desktop first viewport
-- desktop report
-- mobile full page
-- mobile scope worksheet
-- social-preview image
-- 192/512 icons
+- product-first desktop homepage
+- Focus Workbench Run stage
+- Focus Workbench Matrix stage
+- mobile homepage
+- mobile request page
+- social image and 192/512 icons
 - walkthrough video
+- styled handoff PDF
 
-Reject release for:
-
-- clipped copy
-- invisible reveal content
-- overlapping controls
-- weak contrast
-- broken status color/label
-- unreadable table/evidence panel
-- accidental placeholder/operator data
-- misleading fictional proof
+Reject for cramped simultaneous panes, a generic permanent sidebar, a permanent inspector, clipped text, weak contrast, misleading status, stale fictional labeling, abstract boundary decoration, placeholder/operator data, or any customer evidence.
 
 ## Gate 8 — accessibility
 
-Minimum manual checks:
+- skip link, landmarks, valid heading order, and one H1
+- visible focus and keyboard-only critical flow
+- `aria-expanded`, `aria-current`, `aria-pressed`, status/live regions
+- stage headings focusable with `tabindex="-1"`
+- status independent of color
+- labeled focusable table scroll region
+- import/button labels and errors
+- 200% zoom, reduced motion, mobile, and print review
 
-- keyboard-only full critical flow
-- visible focus
-- skip link
-- heading/landmark structure
-- menu and phase ARIA states
-- form labels/help/errors
-- status not color-only
-- 200% zoom
-- reduced motion
-- print report
+Automated checks supplement but do not replace manual review. Do not claim formal WCAG conformance without an audit.
 
-Automated scans may supplement but not replace manual checks. Do not claim formal conformance without a real audit.
+## Gate 9 — security, privacy, and truth
 
-## Gate 9 — security/privacy
+- CSP remains restrictive; no third-party script/font/tracker
+- no public credential upload or arbitrary scanner
+- imports stay local and untrusted values render as text
+- repository scan is clean of credentials and private emails
+- Northstar CRM and every result remain explicitly fictional
+- no customer/revenue/testimonial/certification/guarantee claim
+- prices and limits agree everywhere
+- retention remains 14 days after accepted delivery unless scope/law requires less
+- `state: preview` and `paymentMode: closed` remain true for this release
+- Connections, Team, Activity, Plan, hosted accounts, and Continuous Verification are not represented as live
 
-- CSP remains restrictive
-- no new third-party script/font/tracker
-- no public credential field/upload
-- imported reports remain local
-- source/evidence is escaped
-- secret scan is clean
-- privacy notice matches actual processors/collection
-- form and evidence retention are documented
-- security contact is real before `security.txt`
+## Gate 10 — release readiness and deploy isolation
 
-## Gate 10 — commercial truth
+`release-check.mjs` may report known blockers for a closed technical preview, but the blockers must be accurate. A premium-ready release requires verified HTTPS intake/deletion, operator identity/contact, legal copy, retention, processor state, delivery capacity, and GitHub verification.
 
-- prices and limits consistent everywhere
-- no revenue/customer/testimonial claim without source
-- fictional Northstar CRM label visible
-- no guarantee/certification/unhackable wording
-- result limitations visible
-- payment mode matches actual processor state
-- capacity and acceptance are not implied by checkout
+Only `public/` enters `dist/`. Tests, docs, operations, handoff, configs, customer material, and build logs remain non-public source.
 
-## Gate 11 — release readiness
+## Pull request and post-deploy gates
 
-`release-check.mjs` must report no blockers for a public premium release:
+Before merge:
 
-- config state ready
-- HTTPS origin/intake
-- operator display name
-- owned business contact
-- retention value
-- launch-state privacy/terms
-- fresh GitHub verification record
-- required files/CSP/sitemap
+- inspect changed-file list and focused diff
+- complete workflow is green
+- generated screenshots/video/PDF/source manifest correspond to current source
+- target artifact contains exactly 26 files
+- no unresolved review thread or blocker
+- rollback remains known
 
-Warnings must be reviewed, not ignored.
-
-## Gate 12 — deploy isolation
-
-The public artifact contains `public/` contents only. Tests, docs, operations, handoff, build logs, configs, customer material, and source tooling are not web-accessible unless explicitly copied for a public reason.
-
-“Testers not in main” is interpreted as: test tooling may live in source control for professional quality, but no test harness/log/fixture beyond the labeled public sample may enter the deployed website artifact. If the repository owner instead requires tests on a separate branch, document and enforce that in the inspected repository workflow before merge.
-
-## Post-deploy gate
-
-Against the real public origin:
+After merge:
 
 - root and seven secondary routes load
-- assets have correct content type
-- canonical/social image URLs resolve
-- no old RebuttalKit/Stay5 content appears
-- report sample and interactions work
-- mobile menu works
-- intake CTA reaches the owned qualification form
-- no console/CSP errors
-- no unexpected external requests
-- 404 route recovers
-- rollback commit/workflow is known
+- `workbench.css`, `workbench.js`, sample JSON, CSV, icons, and social image resolve
+- Focus Workbench stage/phase/filter/dock/local-import behavior works
+- canonical URLs/CSP are correct
+- no old product content or unexpected request appears
+- v0.3.2 state is recorded only after successful deployment verification
 
-## Evidence retention for QA
+## QA evidence retention
 
-Commit small deterministic source/tests. Store generated logs locally. Include selected product screenshots/video in `handoff/assets/`; do not include customer evidence.
+Commit small deterministic source/tests and selected fictional screenshots/video. Keep generated logs local/ephemeral. Never include customer evidence.
