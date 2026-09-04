@@ -35,22 +35,18 @@ This delegation does not permit fabrication. An AI cannot become the legal contr
 
 Use `handoff/README.md` as the complete index.
 
-## Current state — 2026-08-31
+## Current state — 2026-09-04
 
-- Product specification: complete.
-- Local static MVP: complete.
-- Browser/responsive/privacy baseline QA: passing.
-- Production-preparation assets and runbooks: complete.
-- Public Notion qualification form: live and smoke-tested with synthetic data.
-- Public Notion launch page and fictional sample report: live.
-- GitHub Pages request-only preview: live at `https://undernonameyet.github.io/NoNameYet/`.
-- GitHub release: PR [#23](https://github.com/UnderNoNameYet/NoNameYet/pull/23) was squash-merged to `main` at `6bc99104bb91b32afb50c8c7d9b416d74566f8ed`.
-- Deployment: workflow [run #40](https://github.com/UnderNoNameYet/NoNameYet/actions/runs/33372340582) completed successfully and published only the generated public artifact.
-- Legacy RebuttalKit trees and the temporary source materializer are absent from current `main`; rollback SHA is `047691e35c6b8d38ba5540d1fe4de345ed752a6c`.
-- Payment: closed.
-- Customer work, testimonials, revenue, and real findings: none; never imply otherwise.
+- Product specification, static MVP, production-preparation assets, and operating safeguards: complete.
+- Product UI: v0.3.2 is live with the concise product-first homepage, free boundary matrix, and sidebar-free Focus Workbench organized as Scope → Matrix → Run → Repair → Report.
+- GitHub release: PR [#25](https://github.com/UnderNoNameYet/NoNameYet/pull/25) was squash-merged to `main` at `8ae0bea48491b1442b1181e2c1bed21b1f2479e1` on 2026-09-03.
+- Deployment: main workflow run #49 completed successfully. The exact commit check reports a successful build, and public verification on 2026-09-04 returned the v0.3.2 homepage, workbench, matrix, methodology, request, privacy, terms, 404, report JSON, and matrix CSV.
+- Deployment boundary: exactly 26 files generated from `public/`; repository handoff, operations, tests, and build output remain unpublished.
+- Runtime state: request-only preview, `state: preview`, `paymentMode: closed`, local worksheet/report import, and no hosted account, analytics, scanner, or credential collection.
+- Payment, commercial intake, customer work, testimonials, revenue, and real findings: none; never imply otherwise.
+- Immediate prior known-good main is `f17ff3476735f423445cb37cb6084b3763c42269`; the older pre-TenantProof rollback reference is `047691e35c6b8d38ba5540d1fe4de345ed752a6c`.
 
-The canonical machine source is the current repository root on `main`; `/data/tenantproof-final` is only the release-session mirror. Historical paths for RebuttalKit, Stay5, screenshot concepts, or ClearCal may not exist and are not active products.
+The canonical machine source is the current repository root on `main`; local `/data/` paths are release-session mirrors only. Historical paths for RebuttalKit, Stay5, screenshot concepts, or ClearCal are not active products.
 
 ## Offer and pricing
 

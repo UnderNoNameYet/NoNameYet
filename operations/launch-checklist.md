@@ -25,6 +25,8 @@
 
 - [x] Responsive product site
 - [x] Interactive fictional report
+- [x] Product-first Focus Workbench with Scope → Matrix → Run → Repair → Report
+- [x] Free fictional boundary-matrix page and CSV
 - [x] Local report import
 - [x] Local scope worksheet
 - [x] CSP-compatible external scripts and styles
@@ -36,12 +38,14 @@
 - [ ] Run strict release check
 - [x] GitHub connection restored and authenticated
 - [x] Inspect current `main` and pull-request template
-- [x] Create a release branch from inspected `main`
-- [x] Push direct source and open pull request #23
-- [x] Review exact diff and successful PR CI
-- [x] Apply standing deployment authorization after checks
-- [x] Squash-merge and verify successful Pages deployment
-- [x] Fetch every primary live route and fictional report data
+- [x] Initial TenantProof publication: PR #23 and post-deployment reconciliation PR #24
+- [x] Focus Workbench release branch created from inspected `main`
+- [x] PR #25 exact 47-file diff, generated media, and exact-head CI reviewed
+- [x] Automated review requested twice; no submitted review, thread, or actionable comment returned
+- [x] Apply standing deployment authorization only after checks
+- [x] Squash-merge PR #25 at `8ae0bea48491b1442b1181e2c1bed21b1f2479e1`
+- [x] Verify successful main Pages workflow run #49 and the 26-file public-only contract
+- [x] Fetch every primary live route plus fictional report JSON and boundary-matrix CSV
 
 ## D. Marketing readiness
 

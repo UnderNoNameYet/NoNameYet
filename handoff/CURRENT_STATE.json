@@ -1,9 +1,9 @@
 {
-  "snapshotAt": "2026-09-03T11:00:34+05:30",
+  "snapshotAt": "2026-09-04T10:15:58+05:30",
   "product": "TenantProof",
   "corePromise": "Prove that Customer A cannot read or modify Customer B's data.",
-  "stage": "v0.3.2 Focus Workbench release candidate in draft PR; v0.3.1 request-only preview remains live",
-  "sourcePath": "design/tenantproof-focus-workbench-v032",
+  "stage": "v0.3.2 Focus Workbench request-only technical preview live; commercial intake and payment closed",
+  "sourcePath": "repository root on current main",
   "repository": {
     "owner": "UnderNoNameYet",
     "name": "NoNameYet",
@@ -11,24 +11,24 @@
     "access": "connected_published_and_verified",
     "tenantProofDeployed": true,
     "authenticatedUser": "MYIndieDEV",
-    "inspectedMainSha": "f17ff3476735f423445cb37cb6084b3763c42269",
-    "liveVersion": "0.3.1",
-    "candidateVersion": "0.3.2",
-    "candidateBranch": "design/tenantproof-focus-workbench-v032",
-    "candidatePullRequestNumber": 25,
-    "candidatePullRequestUrl": "https://github.com/UnderNoNameYet/NoNameYet/pull/25",
+    "inspectedMainSha": "8ae0bea48491b1442b1181e2c1bed21b1f2479e1",
+    "liveVersion": "0.3.2",
     "pagesWorkflow": ".github/workflows/pages.yml",
-    "releaseTransport": "direct source with a public-only build artifact",
-    "preReleaseRollbackSha": "047691e35c6b8d38ba5540d1fe4de345ed752a6c",
-    "publishedPullRequestNumber": 23,
-    "publishedPullRequestUrl": "https://github.com/UnderNoNameYet/NoNameYet/pull/23",
-    "mergeSha": "6bc99104bb91b32afb50c8c7d9b416d74566f8ed",
-    "workflowRunNumber": 40,
-    "workflowRunUrl": "https://github.com/UnderNoNameYet/NoNameYet/actions/runs/33372340582",
+    "releaseTransport": "direct source with a 26-file public-only build artifact",
+    "preReleaseRollbackSha": "f17ff3476735f423445cb37cb6084b3763c42269",
+    "publishedPullRequestNumber": 25,
+    "publishedPullRequestUrl": "https://github.com/UnderNoNameYet/NoNameYet/pull/25",
+    "mergeSha": "8ae0bea48491b1442b1181e2c1bed21b1f2479e1",
+    "workflowRunNumber": 49,
+    "workflowRunUrl": "https://github.com/UnderNoNameYet/NoNameYet/actions/workflows/pages.yml?query=branch%3Amain",
     "workflowConclusion": "success",
     "deployedUrl": "https://undernonameyet.github.io/NoNameYet/",
-    "liveVerifiedAt": "2026-08-31T08:51:01Z",
-    "liveVerification": "v0.3.1 primary HTML routes and fictional report JSON fetched successfully"
+    "liveVerifiedAt": "2026-09-04T04:45:58Z",
+    "liveVerification": "v0.3.2 home, report, methodology, sample matrix, request, privacy, terms, 404, fictional report JSON, and fictional matrix CSV fetched successfully",
+    "priorKnownGoodMainSha": "f17ff3476735f423445cb37cb6084b3763c42269",
+    "legacyPreTenantProofRollbackSha": "047691e35c6b8d38ba5540d1fe4de345ed752a6c",
+    "mergedAt": "2026-09-03T06:24:19Z",
+    "workflowChecksUrl": "https://github.com/UnderNoNameYet/NoNameYet/commit/8ae0bea48491b1442b1181e2c1bed21b1f2479e1/checks"
   },
   "packages": [
     {
@@ -83,7 +83,13 @@
     "paymentMode": "closed",
     "workbench": {
       "route": "report.html",
-      "stages": ["Scope", "Matrix", "Run", "Repair", "Report"],
+      "stages": [
+        "Scope",
+        "Matrix",
+        "Run",
+        "Repair",
+        "Report"
+      ],
       "defaultStage": "Run",
       "permanentSidebar": false,
       "permanentInspector": false,
@@ -100,23 +106,35 @@
     ]
   },
   "quality": {
-    "latestKnownResult": "local_pass_github_pr_in_progress",
+    "latestKnownResult": "local_pr_main_and_live_pass",
     "latestLocalRunAt": "2026-09-03T05:45:00Z",
     "qualityGateCommands": 17,
     "requiredFiles": 26,
     "htmlPages": 8,
     "sampleChecks": 16,
-    "before": { "pass": 11, "fail": 4, "unresolved": 1 },
-    "after": { "pass": 15, "fail": 0, "unresolved": 1 },
+    "before": {
+      "pass": 11,
+      "fail": 4,
+      "unresolved": 1
+    },
+    "after": {
+      "pass": 15,
+      "fail": 0,
+      "unresolved": 1
+    },
     "consoleErrors": 0,
     "externalRuntimeRequests": 0,
     "mobileOverflowPages": 0,
     "browserPersistenceCalls": 0,
     "postRequests": 0,
     "demoRunnerLocked": true,
-    "githubPullRequestBuild": "in_progress",
-    "githubMainBuildAndDeploy": "not_run_for_candidate",
-    "mustRerunAfterChanges": true
+    "githubPullRequestBuild": "success",
+    "githubMainBuildAndDeploy": "success",
+    "mustRerunAfterChanges": false,
+    "exactHeadPullRequestSha": "1d474a8eaeb58c8202562c1f58366c9b520385ec",
+    "releaseMergeSha": "8ae0bea48491b1442b1181e2c1bed21b1f2479e1",
+    "mainWorkflowRunNumber": 49,
+    "liveRouteVerification": "pass"
   },
   "commercialTruth": {
     "customers": 0,
@@ -136,12 +154,11 @@
     "authenticated approved acquisition channel before individualized outreach"
   ],
   "nextActions": [
-    "finish PR 25 documentation and generated handoff reconciliation",
-    "require the complete GitHub quality workflow to pass",
-    "inspect the PR diff and 26-file public-only artifact",
-    "keep the current site request-only and closed for payment",
-    "merge only after review, then verify the new GitHub Pages deployment",
-    "configure real operator and commercial facts before accepting customer work"
+    "keep the current site request-only and payment closed",
+    "configure verified operator identity, jurisdiction, owned HTTPS intake/deletion, security contact, delivery capacity, and launch-state legal facts before accepting customer work",
+    "run the strict commercial release gate only after those facts exist",
+    "prefer one safely authorized paid pilot over speculative workspace or recurring-monitoring features",
+    "measure repeated demand before implementing Connections, Team, Activity, Plan, or Continuous Verification"
   ],
   "frozenProducts": [
     "RebuttalKit",

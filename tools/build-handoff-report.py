@@ -141,9 +141,9 @@ cover = Table([[cover_content]], colWidths=[174 * mm], hAlign="LEFT")
 cover.setStyle(TableStyle([("BACKGROUND", (0, 0), (-1, -1), DARK), ("BOX", (0, 0), (-1, -1), 0, DARK), ("LEFTPADDING", (0, 0), (-1, -1), 12), ("RIGHTPADDING", (0, 0), (-1, -1), 12), ("TOPPADDING", (0, 0), (-1, -1), 15), ("BOTTOMPADDING", (0, 0), (-1, -1), 15)]))
 story.extend([cover, Spacer(1, 4 * mm), Paragraph("Focus Workbench for executed tenant-boundary evidence", styles["TPSubtitle"]), Spacer(1, 14 * mm), Paragraph("Prove that Customer A cannot read or modify Customer B’s data.", styles["TPTitle"]), Paragraph("Product strategy, workflow, UX system, architecture, safety boundaries, commercial state, roadmap, and release protocol.", styles["TPSubtitle"])])
 status_data = [
-    [Paragraph("SNAPSHOT", styles["TPSmall"]), Paragraph("2026-09-03", styles["TPBody"])],
-    [Paragraph("STAGE", styles["TPSmall"]), Paragraph("v0.3.2 Focus Workbench candidate in draft PR; v0.3.1 remains live", styles["TPBody"])],
-    [Paragraph("QUALITY", styles["TPSmall"]), Paragraph("Local Chromium QA passed; complete GitHub candidate gate required before merge", styles["TPBody"])],
+    [Paragraph("SNAPSHOT", styles["TPSmall"]), Paragraph("2026-09-04", styles["TPBody"])],
+    [Paragraph("STAGE", styles["TPSmall"]), Paragraph("v0.3.2 Focus Workbench request-only preview live", styles["TPBody"])],
+    [Paragraph("QUALITY", styles["TPSmall"]), Paragraph("PR/main quality passed; 26-file artifact and live routes verified", styles["TPBody"])],
     [Paragraph("COMMERCIAL", styles["TPSmall"]), Paragraph("$349 verification / $649 verification + repair; payments closed; no customers or revenue", styles["TPBody"])],
 ]
 status = Table(status_data, colWidths=[32 * mm, 137 * mm], hAlign="LEFT")
