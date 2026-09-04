@@ -22,6 +22,7 @@ Status legend: **implemented**, **prepared**, **blocked**, **evidence-gated**, *
 | Public qualification form | implemented/separate | Notion | Non-sensitive; operationally separate from static site |
 | Static-site secure intake link | blocked | release config | Requires verified owned HTTPS endpoint |
 | Checkout | intentionally closed | config/operations | Qualify, authorize, then invoice |
+| First-pilot readiness gate | implemented/blocked | `tools/check-pilot-readiness.mjs`, private config | Reports stage blockers; strict modes fail until verified facts exist |
 | Hosted customer account | evidence-gated | none | Not V1 |
 | Connections/Team/Activity/Plan pages | evidence-gated | none | Design direction only, not operating product |
 | Continuous Verification | evidence-gated | none | Optional, unpriced, and not marketed as live |
@@ -79,7 +80,8 @@ The command-line JSON-schema validator remains stricter release authority.
 | `generate-brand-assets.py` | icons/social image | implemented |
 | `harden-html.mjs` | CSP/canonical/social/config metadata | implemented |
 | `build-site-config.mjs` | preview/ready config | implemented |
-| `release-check.mjs` | release facts/placeholder checks | implemented |
+| `release-check.mjs` | release facts/placeholder checks | implemented; prefers ignored release config when present |
+| `check-pilot-readiness.mjs` | outreach/intake/payment/first-pilot/launch gate | implemented; committed template remains blocked |
 | `capture-previews.mjs` | deterministic home/workbench/mobile captures | implemented |
 | `record-walkthrough.mjs` | generated product walkthrough | implemented |
 | `sync-handoff-assets.mjs` | stable handoff media names/checksums | implemented |
@@ -97,7 +99,7 @@ Eight HTML pages, restrictive meta CSP, `_headers`, canonical/social metadata, i
 
 ## Operational documents
 
-Authorization, statement of work, evidence handling, delivery, payment/refund, intake architecture, launch checklist, marketing experiment, operator decisions, and GitHub release runbook remain private repository guidance—not deployed pages.
+Authorization, statement of work, evidence handling, delivery, payment/refund, intake architecture, first-pilot readiness, launch checklist, marketing experiment, operator decisions, and GitHub release runbook remain private repository guidance—not deployed pages.
 
 ## Feature-change protocol
 

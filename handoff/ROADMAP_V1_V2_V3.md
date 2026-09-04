@@ -19,9 +19,9 @@ Roadmap items are ordered by buyer evidence and risk, not excitement. Dates are 
 - free fictional tenant-boundary matrix and downloadable CSV
 - canonical handoff and quality tooling
 
-### V1.2 Focus Workbench — release candidate
+### V1.2 Focus Workbench — complete
 
-Implemented on `design/tenantproof-focus-workbench-v032` and under review in PR [#25](https://github.com/UnderNoNameYet/NoNameYet/pull/25):
+Released through PR [#25](https://github.com/UnderNoNameYet/NoNameYet/pull/25) at `8ae0bea48491b1442b1181e2c1bed21b1f2479e1` and deployed by successful main Pages run #49:
 
 - concise product-first homepage
 - horizontal Scope → Matrix → Run → Repair → Report workbench
@@ -30,15 +30,21 @@ Implemented on `design/tenantproof-focus-workbench-v032` and under review in PR 
 - local schema-1.0 report import and print
 - route-scoped visual system with responsive/accessibility coverage
 - full pull-request quality gate and 26-file public artifact contract
+- generated captures, walkthrough, PDF, manifest, focused diff, and live routes verified
 
-Exit gate:
+Documentation-only reconciliation PR #26 and successful run #54 left the public product unchanged.
 
-- CI green on current head
-- generated captures, walkthrough, PDF, manifest, and docs inspected
-- focused diff and public artifact verified
-- merge and live route/interaction smoke test complete
+### V1.3 commercially ready request flow — gate prepared; real facts blocked
 
-### V1.3 commercially ready request flow — blocked on real facts
+Prepared without opening intake or payment:
+
+- machine-readable 12-gate readiness template
+- ignored private operator record
+- separate outreach, intake, payment, first-pilot, and launch-experiment results
+- non-strict analysis in `npm run quality`
+- strict `pilot:strict` and combined `commercial:strict` commands
+
+Still blocked on real facts:
 
 - verified contracting identity and jurisdiction
 - owned business contact and HTTPS intake/deletion route

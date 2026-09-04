@@ -6,6 +6,7 @@ const buildDir = path.join(root, 'build');
 const required = [
   'AGENTS.md', 'agent.md', 'README.md', 'ARCHITECTURE.md', 'ROADMAP.md', 'SECURITY.md', 'CHANGELOG.md', 'CONTRIBUTING.md', '.github/pull_request_template.md',
   'handoff/README.md', 'handoff/HANDOFF_REPORT.md', 'handoff/PRODUCT_SPEC.md', 'handoff/PAGE_AND_SECTION_SPECS.md', 'handoff/UX_DESIGN_SYSTEM.md', 'handoff/TECHNICAL_ARCHITECTURE.md', 'handoff/FEATURE_AND_FUNCTION_INVENTORY.md', 'handoff/REPORT_ENGINE_SPEC.md', 'handoff/SECURITY_PRIVACY_AND_SAFETY.md', 'handoff/OPERATIONS_AND_INTAKE.md', 'handoff/COMMERCIAL_AND_PAYMENTS.md', 'handoff/GTM_AND_VALIDATION.md', 'handoff/ROADMAP_V1_V2_V3.md', 'handoff/DECISION_LOG.md', 'handoff/REJECTED_IDEAS_AND_LEARNINGS.md', 'handoff/QUALITY_GATES.md', 'handoff/RELEASE_AND_REPOSITORY.md', 'handoff/AI_CONTINUATION.md', 'handoff/CURRENT_STATE.json', 'handoff/ASSET_MANIFEST.md', 'handoff/GITHUB_PUBLICATION.md',
+  'operations/pilot-readiness-gate.md', 'config/pilot-readiness.example.json', 'tools/check-pilot-readiness.mjs',
   'handoff/assets/01-home-desktop.png', 'handoff/assets/02-report-desktop.png', 'handoff/assets/03-request-mobile.png', 'handoff/assets/04-home-mobile-full.png', 'handoff/assets/05-social-preview.png', 'handoff/assets/06-icon-192.png', 'handoff/assets/07-icon-512.png', 'handoff/assets/08-sample-matrix-desktop.png', 'handoff/assets/walkthrough.webm', 'handoff/assets/SHA256SUMS', 'handoff/HANDOFF_REPORT.pdf', 'handoff/SOURCE_MANIFEST.json'
 ];
 const failures = [], warnings = [], checks = [];
@@ -31,6 +32,14 @@ add(packageJson.version === '0.3.2', 'Package version matches handoff release');
 add(Boolean(packageJson.scripts?.quality), 'Package exposes quality command');
 add(Boolean(packageJson.scripts?.['docs:check']), 'Package exposes documentation check');
 add(Boolean(packageJson.scripts?.['release:bundle']), 'Package exposes public-only release builder');
+add(Boolean(packageJson.scripts?.['pilot:check']), 'Package exposes pilot readiness check');
+add(Boolean(packageJson.scripts?.['pilot:strict']), 'Package exposes strict first-pilot gate');
+add(Boolean(packageJson.scripts?.['commercial:strict']), 'Package exposes combined commercial gate');
+const pilotTemplate = JSON.parse(fs.readFileSync(path.join(root, 'config/pilot-readiness.example.json'), 'utf8'));
+add(pilotTemplate.schemaVersion === 1 && Object.values(pilotTemplate.gates || {}).length === 12, 'Pilot readiness template contains all gates');
+add(Object.values(pilotTemplate.gates || {}).every(gate => gate?.status === 'blocked'), 'Committed pilot readiness template remains blocked');
+const gitignore = fs.readFileSync(path.join(root, '.gitignore'), 'utf8');
+add(gitignore.split(/\r?\n/).includes('config/pilot-readiness.json'), 'Private pilot readiness record is ignored');
 function pngDimensions(file) { const data = fs.readFileSync(file); if (data.toString('ascii', 1, 4) !== 'PNG') return null; return { width: data.readUInt32BE(16), height: data.readUInt32BE(20) }; }
 const dimensions = { '05-social-preview.png': [1200, 630], '06-icon-192.png': [192, 192], '07-icon-512.png': [512, 512] };
 for (const [name, expected] of Object.entries(dimensions)) { const file = path.join(root, 'handoff/assets', name); if (!fs.existsSync(file)) continue; const actual = pngDimensions(file); add(actual?.width === expected[0] && actual?.height === expected[1], `${name} dimensions are ${expected[0]}x${expected[1]}`); }

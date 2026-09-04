@@ -46,6 +46,8 @@
 - [x] Squash-merge PR #25 at `8ae0bea48491b1442b1181e2c1bed21b1f2479e1`
 - [x] Verify successful main Pages workflow run #49 and the 26-file public-only contract
 - [x] Fetch every primary live route plus fictional report JSON and boundary-matrix CSV
+- [x] Reconcile publication records through PR #26 and verify successful unchanged Pages run #54
+- [x] Prepare deterministic first-pilot readiness tooling with a fully blocked committed template
 
 ## D. Marketing readiness
 
@@ -59,8 +61,17 @@
 - [ ] No bulk scraping or spam automation
 - [ ] Stop rule: no serious conversation after ten well-matched contacts means reassess the offer
 
-## E. Launch decision
+## E. First-pilot readiness
+
+- [x] Blocked committed readiness template and ignored private record path prepared
+- [x] Non-strict readiness analysis included in `npm run quality`
+- [ ] Every required private gate supported by a current evidence reference
+- [ ] `npm run pilot:strict` passes before accepting a first pilot
+- [ ] `npm run commercial:strict` passes before activating the ten-contact launch experiment
+- [ ] Customer-specific SOW, authorization, target, window, and stop contacts verified before execution
+
+## F. Launch decision
 
 The closed technical preview is live and does not accept or transmit static-site requests. Commercial intake may open only after operator identity, privacy contact, intake handling, written authorization, and delivery capacity are ready.
 
-Payment may open only after the buyer and scope are qualified. Technical publication, commercial intake, payment activation, and outbound marketing remain separate gates.
+Payment may open only after the buyer and scope are qualified. Technical publication, commercial intake, payment activation, outbound marketing, and target-specific authorization remain separate gates.

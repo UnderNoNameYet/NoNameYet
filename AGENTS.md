@@ -43,6 +43,7 @@ Use `handoff/README.md` as the complete index.
 - Deployment: main workflow run #49 completed successfully. The exact commit check reports a successful build, and public verification on 2026-09-04 returned the v0.3.2 homepage, workbench, matrix, methodology, request, privacy, terms, 404, report JSON, and matrix CSV.
 - Deployment boundary: exactly 26 files generated from `public/`; repository handoff, operations, tests, and build output remain unpublished.
 - Runtime state: request-only preview, `state: preview`, `paymentMode: closed`, local worksheet/report import, and no hosted account, analytics, scanner, or credential collection.
+- First-pilot readiness: a deterministic private-configuration gate is prepared; the committed template remains fully blocked and does not authorize outreach, intake, payment, or testing.
 - Payment, commercial intake, customer work, testimonials, revenue, and real findings: none; never imply otherwise.
 - Immediate prior known-good main is `f17ff3476735f423445cb37cb6084b3763c42269`; the older pre-TenantProof rollback reference is `047691e35c6b8d38ba5540d1fe4de345ed752a6c`.
 
@@ -125,13 +126,16 @@ npm run harden
 npm run config:preview
 npm run validate:report
 npm run demo:report
+npm run pilot:check
+npm run pilot:strict
+npm run commercial:strict
 npm run release:check
 npm run docs:check
 npm test
 npm run quality
 ```
 
-`npm run release:strict` is expected to fail until real launch configuration and a fresh GitHub verification marker exist.
+`npm run pilot:strict`, `npm run release:strict`, and `npm run commercial:strict` are expected to fail until their required operator, launch, and GitHub facts exist.
 
 ## Editing rules
 
@@ -155,7 +159,7 @@ The owner authorized autonomous branching, merging, and deployment after checks 
 2. Search for repository instructions and pull-request templates.
 3. Create a focused branch.
 4. Add the smallest coherent release.
-5. Run `npm run quality` and `npm run release:strict` when launch facts exist.
+5. Run `npm run quality`; run `npm run commercial:strict` only when verified operator, pilot, public-release, and GitHub facts exist.
 6. Open a pull request with risk, evidence, screenshots, and rollback notes.
 7. Merge only when required checks pass and the diff matches the release manifest.
 8. Inspect the deployed URL after merge; rollback on content, privacy, CSP, routing, or conversion defects.

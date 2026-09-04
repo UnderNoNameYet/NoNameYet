@@ -1,21 +1,21 @@
 {
-  "generatedAt": "2026-09-04T05:31:01.953Z",
+  "generatedAt": "2026-09-04T07:15:51.487Z",
   "product": "TenantProof",
   "version": "0.3.2",
   "sourceOfTruth": "AGENTS.md and handoff/README.md",
   "deployRoot": "public/",
-  "files": 104,
-  "bytes": 3122064,
+  "files": 107,
+  "bytes": 3144588,
   "byRole": {
     "repository-root": 11,
     "repository-workflow": 2,
-    "release-configuration": 2,
+    "release-configuration": 3,
     "handoff-source": 22,
     "handoff-media": 14,
-    "operations-private-template": 10,
+    "operations-private-template": 11,
     "deployable-public": 26,
     "report-contract": 1,
-    "build-quality-tooling": 16
+    "build-quality-tooling": 17
   },
   "entries": [
     {
@@ -39,14 +39,14 @@
     {
       "path": ".gitignore",
       "role": "repository-root",
-      "bytes": 119,
-      "sha256": "c408eb79eb30b5ca2f8aa5c5cb27ae71226aaf56878a162284f44daabc912016"
+      "bytes": 147,
+      "sha256": "c24bcc06c31142cad172418be7915f13c8d70068e78be7f23e382b671f0d65a5"
     },
     {
       "path": "AGENTS.md",
       "role": "repository-root",
-      "bytes": 11039,
-      "sha256": "51987a007ca4b55f4e9acfcf68c1ed285f42591c837e629f084323b3170e196f"
+      "bytes": 11392,
+      "sha256": "d0e2c66c1ab093fd8d74127adeb1afb65b74ed872717c3e11d37d2fc956aea73"
     },
     {
       "path": "ARCHITECTURE.md",
@@ -57,8 +57,8 @@
     {
       "path": "CHANGELOG.md",
       "role": "repository-root",
-      "bytes": 4039,
-      "sha256": "32a42ba92704f733de01d63beeb7fbe5bf0042d6b009f7e139cbb77be3a9f6f8"
+      "bytes": 4760,
+      "sha256": "39de77b67fefa06d43dde7d9fdb0772b026ee420da7275fba86d2701d090e394"
     },
     {
       "path": "CONTRIBUTING.md",
@@ -69,8 +69,8 @@
     {
       "path": "README.md",
       "role": "repository-root",
-      "bytes": 7001,
-      "sha256": "5fa93859bef75ee03c4750a9a7a6159d48ea05363923a03efe10ffdd6fbf0d6c"
+      "bytes": 7770,
+      "sha256": "49d1f9101ea3692fa554c25877ae959679ba57cafc6878e802ff933f4b21f9a2"
     },
     {
       "path": "ROADMAP.md",
@@ -89,6 +89,12 @@
       "role": "repository-root",
       "bytes": 340,
       "sha256": "20753299067804487a80034e71c81aab50882db30e5b5df9459ca1ca013e129f"
+    },
+    {
+      "path": "config/pilot-readiness.example.json",
+      "role": "release-configuration",
+      "bytes": 1223,
+      "sha256": "800bd18a9a8ccc9d8b5320e375be415828280a0e9195ee416767404cb80f0454"
     },
     {
       "path": "config/site.preview.json",
@@ -123,20 +129,20 @@
     {
       "path": "handoff/CURRENT_STATE.json",
       "role": "handoff-source",
-      "bytes": 6042,
-      "sha256": "8688b02dcf5016b19b1779e17fc4600e1fa44b40fafddcabe41ab3f386ed81f1"
+      "bytes": 6746,
+      "sha256": "c72cbc9c4cdfdd3784c804fc157582d90493669d966791cbecec0f33e09cdc3c"
     },
     {
       "path": "handoff/DECISION_LOG.md",
       "role": "handoff-source",
-      "bytes": 8759,
-      "sha256": "423390c7c8064c382d6eaa374c108b90d8724ec87e6345a7d717d30c8bc31797"
+      "bytes": 9633,
+      "sha256": "18b899a20b5cd09bbb2a5d534952419764cd301f9688ec632ae4c9c845efb9b5"
     },
     {
       "path": "handoff/FEATURE_AND_FUNCTION_INVENTORY.md",
       "role": "handoff-source",
-      "bytes": 6414,
-      "sha256": "45e15fd2e1912781ba5813bf66eaf09f5a65ab159e0501b6ec977286bb4ff36e"
+      "bytes": 6790,
+      "sha256": "c0961c8d251d3b6ab0fa50454be96a25f4d686357b1b8c59c85c7af551b0bb3d"
     },
     {
       "path": "handoff/GITHUB_PUBLICATION.md",
@@ -183,14 +189,14 @@
     {
       "path": "handoff/QUALITY_GATES.md",
       "role": "handoff-source",
-      "bytes": 7161,
-      "sha256": "32fc17392a48bd0427d8fe4bc10c6f44801dfe9f45783f0853ef4e2ad502c8aa"
+      "bytes": 8023,
+      "sha256": "8810d8b4ef4d024f1cf6cde611c297a8ff095fc49b0d7b6d6356a39d5fba328c"
     },
     {
       "path": "handoff/README.md",
       "role": "handoff-source",
-      "bytes": 3252,
-      "sha256": "ea229056ce19dbf4716f89bf22c1994772ea3bb7d2e960ecb1cd13409ca337c1"
+      "bytes": 3281,
+      "sha256": "a3cc87b1ded7a8e4a32a1101fa23278dbd126187c3cd2aa83f1aa8a0f4e0dfcb"
     },
     {
       "path": "handoff/REJECTED_IDEAS_AND_LEARNINGS.md",
@@ -213,8 +219,8 @@
     {
       "path": "handoff/ROADMAP_V1_V2_V3.md",
       "role": "handoff-source",
-      "bytes": 5804,
-      "sha256": "6ad7c1d07b96eaa6628a5d552c1e64ca2f97f01737e9381efb8bc232af5e3b28"
+      "bytes": 6166,
+      "sha256": "64f6f02bee71c73cdc175a82c96ee503ad63a664d0a132eefff42687b0d73766"
     },
     {
       "path": "handoff/SECURITY_PRIVACY_AND_SAFETY.md",
@@ -225,8 +231,8 @@
     {
       "path": "handoff/TECHNICAL_ARCHITECTURE.md",
       "role": "handoff-source",
-      "bytes": 7056,
-      "sha256": "c96acf43657bcaabb7f94987a26f0c6c857550661edf3bca2ae291c88bc751eb"
+      "bytes": 7551,
+      "sha256": "b3bcd44edb633b1cf3bea549d0164f00c367f37d0e240d86b1b3c698567e9e4e"
     },
     {
       "path": "handoff/UX_DESIGN_SYSTEM.md",
@@ -339,8 +345,8 @@
     {
       "path": "operations/github-release-runbook.md",
       "role": "operations-private-template",
-      "bytes": 2656,
-      "sha256": "1b610ff5c3d01e4eaafe4c62acdb7e43a8ab39851bc8c0f7032c5ae666d626c8"
+      "bytes": 2865,
+      "sha256": "1bb340bc0bad1e285ccfb28d7e9ae38710ff81c7cb9406525c04eb419dc72545"
     },
     {
       "path": "operations/intake-architecture.md",
@@ -351,8 +357,8 @@
     {
       "path": "operations/launch-checklist.md",
       "role": "operations-private-template",
-      "bytes": 3340,
-      "sha256": "546427dae3a86f0ac12c2a3973b05a20cd5d2a1c92e1ba0427d5b84df8ef44de"
+      "bytes": 4086,
+      "sha256": "a31c726a8147b2a65d3d18a866c84a808992c4e7296f479eb116068d86bf882f"
     },
     {
       "path": "operations/marketing-experiment.md",
@@ -363,14 +369,20 @@
     {
       "path": "operations/operator-decisions.md",
       "role": "operations-private-template",
-      "bytes": 2516,
-      "sha256": "183941cccb2223659596a7e42dbbe4b59fbd7bea982f68474f3241b917cbacb0"
+      "bytes": 3217,
+      "sha256": "c139b756c7600b3d02e093b8c6da256ef45c5fe5f1225c56052f4198b39bc255"
     },
     {
       "path": "operations/payment-refund-workflow.md",
       "role": "operations-private-template",
       "bytes": 2923,
       "sha256": "d78d96efe225702f7a28dfafa7c0cb0224e405d314095cfb36708dc0432a98bd"
+    },
+    {
+      "path": "operations/pilot-readiness-gate.md",
+      "role": "operations-private-template",
+      "bytes": 3861,
+      "sha256": "42727dc2e974528c27e0d0fa3fd0c2df2f257e4004a2137d7ad82ec5cc2ed475"
     },
     {
       "path": "operations/statement-of-work-template.md",
@@ -381,8 +393,8 @@
     {
       "path": "package.json",
       "role": "repository-root",
-      "bytes": 1270,
-      "sha256": "7f48fcd8679bb8ef19d0745ff7dda079dc18f46bcc1542a150dfa4a076ae2810"
+      "bytes": 1557,
+      "sha256": "957e56e54677ed3a0b88a6bff6ac3fcd029377cddbb4aaf36ddf946c6a35541e"
     },
     {
       "path": "public/.nojekyll",
@@ -567,8 +579,8 @@
     {
       "path": "tools/build-source-manifest.mjs",
       "role": "build-quality-tooling",
-      "bytes": 2475,
-      "sha256": "54da6109b7f3ef20400021134e21d568fa0092e02653325c0e0825680f90e780"
+      "bytes": 2531,
+      "sha256": "2728ffa8bb8ea2567f459725135c5521e8ceb070a2031070aa6e846b954e782b"
     },
     {
       "path": "tools/capture-previews.mjs",
@@ -579,8 +591,14 @@
     {
       "path": "tools/check-docs.mjs",
       "role": "build-quality-tooling",
-      "bytes": 6947,
-      "sha256": "2d70c1b27ec4db2b802e93ed21d10e6b1447fe8df2b4abccb68a6267a2434f6c"
+      "bytes": 7945,
+      "sha256": "d07182cd7cda0d984c59aa69ee8b0b0ff5489d28f4f92fb0e090f5c3f8b7bea4"
+    },
+    {
+      "path": "tools/check-pilot-readiness.mjs",
+      "role": "build-quality-tooling",
+      "bytes": 8079,
+      "sha256": "5af18ae74428d46d99df8807e60bb43a7cda17ff138321016642655107929bf2"
     },
     {
       "path": "tools/demo-adapter.mjs",
@@ -609,8 +627,8 @@
     {
       "path": "tools/quality-gate.mjs",
       "role": "build-quality-tooling",
-      "bytes": 4350,
-      "sha256": "f0f0abca8f90ad42067ca5ef1b9e2008cec4f7ad22311302ef502b1761c7f193"
+      "bytes": 4454,
+      "sha256": "1f5b4574f00d3091820389988d7c44afbb7bb507631af09a23088b35a47dd889"
     },
     {
       "path": "tools/record-walkthrough.mjs",
@@ -621,8 +639,8 @@
     {
       "path": "tools/release-check.mjs",
       "role": "build-quality-tooling",
-      "bytes": 4494,
-      "sha256": "d3867f03c63e8c3b347c36a3cd5d3b4ab6758b52647242fdc0b5714d8529b72d"
+      "bytes": 5181,
+      "sha256": "e227a8a8199745934ec425ea2176cec0c9346a60eba815d5cee60d4c6f641a9a"
     },
     {
       "path": "tools/run-matrix.mjs",

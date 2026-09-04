@@ -169,3 +169,11 @@ Append new decisions; do not silently rewrite prior rationale. Dates use Asia/Ca
 **Why:** generated screenshots, walkthrough, handoff copies, PDF, source manifest, documentation, release state, and secret scanning must agree with the exact source under review.
 
 **Constraint:** pull requests validate but do not deploy. GitHub Pages still uploads only `dist/` after changes reach `main`.
+
+## 2026-09-04 — Separate technical quality from first-pilot readiness
+
+**Decision:** add a deterministic, machine-readable readiness gate with separate outreach, intake, payment, first-pilot, and launch-experiment states.
+
+**Why:** the v0.3.2 product and deployment are technically complete, but green CI cannot verify legal identity, jurisdiction, owned accounts, legal review, capacity, or authorization. A dedicated gate prevents technical quality from being mistaken for permission to accept customer work.
+
+**Constraints:** the committed template stays fully blocked; real evidence references remain in an ignored private file; non-strict quality reports blockers without opening the preview; strict commands fail until facts are verified. Global readiness never replaces a customer-specific SOW, written authorization, target, execution window, or stop conditions.

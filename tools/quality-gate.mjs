@@ -35,6 +35,7 @@ run('sync handoff media', process.execPath, ['tools/sync-handoff-assets.mjs']);
 run('build handoff PDF', 'python3', ['tools/build-handoff-report.py']);
 run('build source manifest', process.execPath, ['tools/build-source-manifest.mjs']);
 run('documentation integrity', process.execPath, ['tools/check-docs.mjs']);
+run('pilot-readiness analysis', process.execPath, ['tools/check-pilot-readiness.mjs']);
 run('release-readiness analysis', process.execPath, ['tools/release-check.mjs']);
 const textRoots = ['AGENTS.md', 'agent.md', 'README.md', 'ARCHITECTURE.md', 'ROADMAP.md', 'SECURITY.md', 'CHANGELOG.md', 'CONTRIBUTING.md', 'public', 'schema', 'tools', 'operations', 'handoff', 'config', 'package.json'];
 const credentialPatterns = [/sk-[A-Za-z0-9]{20,}/, /BEGIN (?:RSA|OPENSSH|EC) PRIVATE KEY/, /service[_-]?role[^\n]{0,40}[A-Za-z0-9._-]{24,}/i, /@outlook\.com/i];
@@ -43,7 +44,7 @@ const secretHits = [];
 for (const file of textRoots.flatMap(collectText)) { if (/\.(png|webm|svg|ico|zip|pdf)$/i.test(file)) continue; const content = fs.readFileSync(file, 'utf8'); for (const pattern of credentialPatterns) if (pattern.test(content)) secretHits.push({ file: path.relative(root, file), pattern: String(pattern) }); }
 steps.push({ name: 'credential and private-email scan', ok: secretHits.length === 0, hits: secretHits.length });
 if (secretHits.length) { failed = true; console.error(JSON.stringify(secretHits, null, 2)); } else console.log('[pass] credential and private-email scan');
-const summary = { generatedAt: new Date().toISOString(), ok: !failed, steps, note: 'Release strict remains a separate launch gate while preview blockers exist.' };
+const summary = { generatedAt: new Date().toISOString(), ok: !failed, steps, note: 'Pilot and release strict remain separate commercial gates while verified facts are blocked.' };
 fs.writeFileSync(path.join(buildDir, 'quality-gate.json'), `${JSON.stringify(summary, null, 2)}\n`);
 console.log(JSON.stringify({ ok: summary.ok, steps: steps.length, failed: steps.filter(step => !step.ok).map(step => step.name) }, null, 2));
 if (failed) process.exit(1);

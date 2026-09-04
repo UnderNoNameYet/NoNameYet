@@ -5,6 +5,7 @@ dist/
 .env
 .env.*
 config/site.release.json
+config/pilot-readiness.json
 release/github-verification.json
 .DS_Store
 *.log

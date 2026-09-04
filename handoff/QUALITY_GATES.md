@@ -25,10 +25,11 @@ The v0.3.2 orchestrator runs, in order:
 13. handoff PDF generation
 14. source-manifest generation
 15. documentation integrity
-16. release-readiness analysis
-17. credential/private-email scan
+16. pilot-readiness analysis
+17. release-readiness analysis
+18. credential/private-email scan
 
-Capture must happen before handoff synchronization. A commercial launch additionally requires `npm run release:strict` with verified real configuration and a fresh GitHub marker.
+Capture must happen before handoff synchronization. The non-strict pilot and release analyses must accurately report blockers without failing the closed preview. A first pilot requires `npm run pilot:strict`; the launch experiment additionally requires `npm run commercial:strict` with verified private readiness, real release configuration, and a fresh GitHub marker.
 
 ## Gate 1 — repository hygiene
 
@@ -154,11 +155,15 @@ Automated checks supplement but do not replace manual review. Do not claim forma
 - `state: preview` and `paymentMode: closed` remain true for this release
 - Connections, Team, Activity, Plan, hosted accounts, and Continuous Verification are not represented as live
 
-## Gate 10 — release readiness and deploy isolation
+## Gate 10 — pilot readiness, release readiness, and deploy isolation
 
-`release-check.mjs` may report known blockers for a closed technical preview, but the blockers must be accurate. A premium-ready release requires verified HTTPS intake/deletion, operator identity/contact, legal copy, retention, processor state, delivery capacity, and GitHub verification.
+`check-pilot-readiness.mjs` separates outreach, intake, payment, first-pilot, and launch-experiment capability. The committed template must remain fully blocked; verified evidence references belong only in the ignored private record. A green non-strict quality run is not commercial authorization.
 
-Only `public/` enters `dist/`. Tests, docs, operations, handoff, configs, customer material, and build logs remain non-public source.
+`release-check.mjs` may report known blockers for a closed technical preview, but the blockers must be accurate. When present, it prefers the ignored real release configuration instead of requiring edits to the committed preview configuration. A ready release requires verified HTTPS intake/deletion, operator identity/contact, legal copy, retention, processor state, delivery capacity, and GitHub verification.
+
+`commercial:strict` combines the launch-experiment gate and public-release gate. It still does not replace customer-specific SOW, written authorization, target verification, or stop conditions.
+
+Only `public/` enters `dist/`. Tests, docs, operations, handoff, private configs, customer material, and build logs remain non-public source.
 
 ## Pull request and post-deploy gates
 
