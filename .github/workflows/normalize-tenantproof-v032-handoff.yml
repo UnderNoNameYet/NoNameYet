@@ -1,0 +1,75 @@
+name: Normalize TenantProof v0.3.2 handoff artifact
+
+on:
+  push:
+    branches:
+      - docs/tenantproof-v032-post-deploy
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: tenantproof-v032-handoff-normalizer
+  cancel-in-progress: false
+
+jobs:
+  normalize:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout reconciliation branch
+        uses: actions/checkout@v4
+        with:
+          ref: docs/tenantproof-v032-post-deploy
+          fetch-depth: 0
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Restore unchanged visual artifact and reconcile manifest
+        shell: bash
+        run: |
+          set -euo pipefail
+          git fetch origin main
+          git checkout origin/main -- handoff/assets/walkthrough.webm handoff/assets/SHA256SUMS
+          rm .github/workflows/normalize-tenantproof-v032-handoff.yml
+          npm run handoff:manifest
+          npm run docs:check
+          test "$(git diff --name-only origin/main -- public | wc -l)" -eq 0
+
+      - name: Restrict and commit normalization
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import subprocess
+          allowed = {
+              '.github/workflows/normalize-tenantproof-v032-handoff.yml',
+              'handoff/SOURCE_MANIFEST.json',
+              'handoff/assets/SHA256SUMS',
+              'handoff/assets/walkthrough.webm',
+          }
+          lines = subprocess.check_output(['git', 'status', '--porcelain'], text=True).splitlines()
+          changed = []
+          for line in lines:
+              path = line[3:]
+              if ' -> ' in path:
+                  path = path.split(' -> ', 1)[1]
+              changed.append(path)
+          unexpected = sorted(set(changed) - allowed)
+          print({'changed': changed, 'unexpected': unexpected})
+          if unexpected:
+              raise SystemExit(f'Unexpected normalization change: {unexpected}')
+          required = allowed
+          missing = sorted(required - set(changed))
+          if missing:
+              raise SystemExit(f'Missing expected normalization change: {missing}')
+          PY
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A
+          git commit -m 'chore: preserve reviewed v0.3.2 walkthrough artifact'
+          git push origin "HEAD:${GITHUB_REF_NAME}"
