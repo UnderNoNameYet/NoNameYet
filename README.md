@@ -16,7 +16,7 @@ It sells an agreed authorization matrix, executed before/after evidence, remedia
 | Browser/responsive/privacy QA | passing; rerun after every change |
 | Public qualification form | live through Notion; non-sensitive only |
 | Public launch/sample pages | live through Notion |
-| GitHub Pages request-only preview | live from `6bc99104bb91` after PR [#23](https://github.com/UnderNoNameYet/NoNameYet/pull/23) and successful deployment |
+| GitHub Pages request-only preview | v0.3.2 live from `8ae0bea48491` after PR [#25](https://github.com/UnderNoNameYet/NoNameYet/pull/25), successful run #49, and documentation-only reconciliation through PR #26/run #54 |
 | Payments | closed |
 | Customers/revenue/testimonials | none |
 
@@ -58,6 +58,7 @@ Larger, production-only, regulated, or more sensitive work receives a manual quo
 - CSP-compatible HTML and portable security headers
 - sitemap, manifest, social image, and application icons
 - authorization, SOW, evidence, delivery, payment, intake, launch, and marketing runbooks
+- deterministic first-pilot readiness gate with a blocked committed template and ignored operator record
 - deterministic browser/static/documentation/release quality gates
 - public-only deployment artifact builder
 - complete handoff package with screenshots/video
@@ -98,6 +99,9 @@ npm run harden              # normalize CSP/canonical/social metadata
 npm run config:preview      # generate preview browser config
 npm run validate:report     # validate fictional public report
 npm run demo:report         # generate fictional demo report
+npm run pilot:check        # report current commercial blockers without opening the preview
+npm run pilot:strict       # require first-pilot operating capability
+npm run commercial:strict  # require launch-experiment and public-release readiness
 npm run walkthrough         # create 20-second handoff video
 npm run handoff:assets      # copy/hash selected media
 npm run handoff:report      # build styled PDF handoff report
@@ -125,7 +129,7 @@ npm run quality             # full non-strict quality gate
 
 ## Quality and release
 
-`npm run quality` validates source syntax, brand assets, HTML hardening, preview configuration, report schema, demo generation, live-mode rejection, browser behavior, public-only artifact isolation, handoff media, documentation integrity, release readiness, and credential/private-email scanning.
+`npm run quality` validates source syntax, brand assets, HTML hardening, preview configuration, report schema, demo generation, live-mode rejection, browser behavior, public-only artifact isolation, handoff media, documentation integrity, pilot-readiness reporting, release readiness, and credential/private-email scanning. Its non-strict readiness reports preserve honest blockers without treating the closed preview as a failure.
 
 A public premium release additionally requires `npm run release:strict` with:
 
@@ -134,6 +138,8 @@ A public premium release additionally requires `npm run release:strict` with:
 - launch-state privacy/terms
 - evidence-retention value
 - fresh GitHub repository verification
+
+Commercial activation also requires the ignored private pilot-readiness record and `npm run commercial:strict`; neither a green technical quality run nor the committed blocked template grants permission to accept work.
 
 ## Current blockers
 

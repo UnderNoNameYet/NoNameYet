@@ -38,7 +38,13 @@ Everything below is a factual account, legal, or identity decision that cannot b
 
 ## Repository status
 
-The request-only GitHub Pages preview is live from `6bc99104bb91b32afb50c8c7d9b416d74566f8ed` after PR #23 and successful deployment run #40. Repository access is no longer a blocker. Commercial intake, payment, and real testing remain blocked by the factual decisions above.
+The v0.3.2 request-only GitHub Pages preview is live from product release `8ae0bea48491b1442b1181e2c1bed21b1f2479e1` after PR #25 and successful deployment run #49. Documentation-only reconciliation PR #26 merged at `2a2fdba942bdd7c8e49d7486e866ddbdaaebd77b`, and run #54 redeployed the unchanged public artifact successfully. Repository access is no longer a blocker. Commercial intake, payment, and real testing remain blocked by the factual decisions above.
+
+## Readiness record
+
+Use `operations/pilot-readiness-gate.md` as the controlling workflow. Copy the blocked example to the ignored `config/pilot-readiness.json`, verify each underlying fact privately, and run `npm run pilot:check`. The committed example must remain blocked.
+
+`npm run pilot:strict` covers first-pilot operating capability. `npm run commercial:strict` additionally requires the approved acquisition channel and public release facts. Neither command replaces customer-specific written authorization.
 
 ## Recommended launch mode
 

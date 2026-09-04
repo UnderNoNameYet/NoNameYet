@@ -6,7 +6,7 @@ Public candidate: `https://undernonameyet.github.io/NoNameYet/`
 
 ## Current state
 
-GitHub access is operational. PR [#23](https://github.com/UnderNoNameYet/NoNameYet/pull/23) replaced RebuttalKit, was squash-merged to `main` at `6bc99104bb91b32afb50c8c7d9b416d74566f8ed`, and deployed successfully through [workflow run #40](https://github.com/UnderNoNameYet/NoNameYet/actions/runs/33372340582). The request-only preview is live at `https://undernonameyet.github.io/NoNameYet/`. `047691e35c6b8d38ba5540d1fe4de345ed752a6c` is retained only as the pre-release rollback point.
+GitHub access is operational. The v0.3.2 product release shipped through PR [#25](https://github.com/UnderNoNameYet/NoNameYet/pull/25) at `8ae0bea48491b1442b1181e2c1bed21b1f2479e1` and successful main workflow run #49. Documentation-only PR [#26](https://github.com/UnderNoNameYet/NoNameYet/pull/26) reconciled the handoff at `2a2fdba942bdd7c8e49d7486e866ddbdaaebd77b`; run #54 redeployed the unchanged 26-file public artifact successfully. The request-only preview is live at `https://undernonameyet.github.io/NoNameYet/`. `f17ff3476735f423445cb37cb6084b3763c42269` is the immediate pre-v0.3.2 rollback, while `047691e35c6b8d38ba5540d1fe4de345ed752a6c` remains the legacy pre-TenantProof reference.
 
 ## Completed first-publication sequence
 

@@ -22,6 +22,7 @@ Local/CI tooling
 ├── demo-only matrix fixture/runner
 ├── HTML hardener + brand generator
 ├── preview/ready config builder + release checker
+├── first-pilot readiness checker + ignored operator record
 ├── Chromium browser/static QA
 ├── preview and walkthrough capture
 ├── handoff media/PDF/source-manifest generation
@@ -101,7 +102,9 @@ Query parameters may preselect a package, but form submission is prevented. Vali
 }
 ```
 
-The candidate remains `preview` with `paymentMode: closed`. Ready state requires verified HTTPS contact/origin, operator facts, business email, legal copy, payment mode, and a 1–365 day retention value.
+The live release remains `preview` with `paymentMode: closed`. Ready state requires verified HTTPS contact/origin, operator facts, business email, legal copy, payment mode, and a 1–365 day retention value. `release-check.mjs` prefers ignored `config/site.release.json` when it exists, so real facts never require changing the committed preview source.
+
+Commercial capability is tracked separately in ignored `config/pilot-readiness.json`. Its committed example is fully blocked. The checker reports outreach, intake, payment, first-pilot, and launch-experiment stages without exposing private evidence references.
 
 ## Security controls
 
@@ -127,7 +130,7 @@ The quality orchestrator:
 7. captures homepage, Workbench Run/Matrix, and mobile previews
 8. records the walkthrough
 9. synchronizes handoff media and builds the PDF/source manifest
-10. checks documentation, release readiness, and secret/private-email patterns
+10. checks documentation, pilot readiness, release readiness, and secret/private-email patterns
 
 GitHub Pages uploads only `dist/`, copied from `public/`. The v0.3.2 artifact contract is exactly 26 files. Handoff, operations, source tooling, local reports, logs, and raw evidence stay outside the deployment.
 
@@ -141,5 +144,5 @@ Keep the product static until repeated paid engagements demonstrate a need for s
 - broken intake: stay/return to closed preview
 - incorrect claim/legal copy: roll back immediately
 - schema change: support or explicitly reject old versions; never silently reinterpret
-- Pages failure: retain the prior known-good v0.3.1 deployment and inspect the workflow
+- Pages failure: retain the prior known-good published artifact and inspect the workflow
 - this candidate has no migration or hosted state; rollback is a source revert

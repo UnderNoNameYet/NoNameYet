@@ -1,5 +1,5 @@
 {
-  "snapshotAt": "2026-09-04T10:15:58+05:30",
+  "snapshotAt": "2026-09-04T11:58:00+05:30",
   "product": "TenantProof",
   "corePromise": "Prove that Customer A cannot read or modify Customer B's data.",
   "stage": "v0.3.2 Focus Workbench request-only technical preview live; commercial intake and payment closed",
@@ -108,7 +108,7 @@
   "quality": {
     "latestKnownResult": "local_pr_main_and_live_pass",
     "latestLocalRunAt": "2026-09-03T05:45:00Z",
-    "qualityGateCommands": 17,
+    "qualityGateCommands": 18,
     "requiredFiles": 26,
     "htmlPages": 8,
     "sampleChecks": 16,
@@ -155,6 +155,7 @@
   ],
   "nextActions": [
     "keep the current site request-only and payment closed",
+    "copy the blocked pilot-readiness example to the ignored private record and verify only facts supported by operator evidence",
     "configure verified operator identity, jurisdiction, owned HTTPS intake/deletion, security contact, delivery capacity, and launch-state legal facts before accepting customer work",
     "run the strict commercial release gate only after those facts exist",
     "prefer one safely authorized paid pilot over speculative workspace or recurring-monitoring features",
@@ -167,5 +168,21 @@
     "ClearCal proposal",
     "Relay migration"
   ],
-  "localReleaseMirror": "/data/tenantproof-impl"
+  "localReleaseMirror": "/data/tenantproof-impl",
+  "pilotReadiness": {
+    "status": "gate_prepared_external_facts_blocked",
+    "checker": "npm run pilot:check",
+    "firstPilotStrict": "npm run pilot:strict",
+    "commercialStrict": "npm run commercial:strict",
+    "privateConfig": "config/pilot-readiness.json (ignored)",
+    "committedTemplateBlocked": true,
+    "verifiedGates": 0,
+    "requiredGates": 12,
+    "outreachReady": false,
+    "intakeReady": false,
+    "paymentReady": false,
+    "firstPilotReady": false,
+    "launchExperimentReady": false,
+    "engagementSpecificAuthorizationStillRequired": true
+  }
 }

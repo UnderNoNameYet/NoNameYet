@@ -40,6 +40,7 @@ The canonical executable templates are in [`../operations/`](../operations/):
 - launch checklist
 - marketing experiment
 - operator decisions
+- first-pilot readiness gate
 - GitHub release runbook
 
 Handoff documents explain intent. Operational documents are the templates used during real work. If they conflict, stop and reconcile the inconsistency rather than choosing silently.

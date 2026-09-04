@@ -4,7 +4,19 @@ All notable product changes are recorded here. The project has not reached a com
 
 ## [Unreleased]
 
-No unreleased product changes are currently recorded.
+### Operations
+
+- added a deterministic 12-gate first-pilot readiness checker with separate outreach, intake, payment, first-pilot, and launch-experiment results
+- added a fully blocked committed template and ignored private operator record
+- added `pilot:check`, `pilot:strict`, and combined `commercial:strict` commands
+- made release readiness prefer the ignored real release configuration when present
+
+### Safety and truth
+
+- technical quality continues to pass for the closed preview while non-strict readiness reports real blockers
+- strict readiness fails until verified operator, legal, intake, payment, capacity, channel, and access facts exist
+- global readiness does not replace customer-specific written authorization
+- no public product or runtime file changed
 
 ## [0.3.2] — 2026-09-03 — product-first Focus Workbench
 
