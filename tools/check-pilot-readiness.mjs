@@ -62,25 +62,35 @@ const warnings = [];
 let config = null;
 try {
   config = JSON.parse(fs.readFileSync(configPath, 'utf8'));
-} catch (error) {
-  errors.push(`Readiness configuration could not be loaded: ${error.message}`);
+} catch {
+  errors.push('Readiness configuration could not be loaded or parsed');
 }
 
 if (!Object.hasOwn(stages, selectedStage)) {
-  errors.push(`Unknown stage: ${selectedStage}`);
+  errors.push(`Unknown stage; expected one of: ${Object.keys(stages).join(', ')}`);
 }
 
 const gateStates = {};
 if (config) {
+  if (!config || typeof config !== 'object' || Array.isArray(config)) {
+    errors.push('Readiness configuration must be an object');
+  }
   if (config.schemaVersion !== 1) errors.push('schemaVersion must be 1');
+  if (typeof config.reviewedAt !== 'string') errors.push('reviewedAt must be a string');
+  if (typeof config.reviewedBy !== 'string') errors.push('reviewedBy must be a string');
+  if (typeof config.attestation !== 'boolean') errors.push('attestation must be a boolean');
+
+  const allowedTopLevel = new Set(['schemaVersion', 'reviewedAt', 'reviewedBy', 'attestation', 'gates']);
+  const unknownTopLevelCount = Object.keys(config).filter(key => !allowedTopLevel.has(key)).length;
+  if (unknownTopLevelCount) errors.push(`Configuration contains ${unknownTopLevelCount} unsupported top-level field(s)`);
+
   if (!config.gates || typeof config.gates !== 'object' || Array.isArray(config.gates)) {
     errors.push('gates must be an object');
   }
 
   const suppliedKeys = Object.keys(config.gates || {});
-  for (const key of suppliedKeys) {
-    if (!Object.hasOwn(gateDefinitions, key)) errors.push(`Unknown readiness gate: ${key}`);
-  }
+  const unknownGateCount = suppliedKeys.filter(key => !Object.hasOwn(gateDefinitions, key)).length;
+  if (unknownGateCount) errors.push(`gates contains ${unknownGateCount} unknown gate(s)`);
 
   for (const [key, label] of Object.entries(gateDefinitions)) {
     const item = config.gates?.[key];
@@ -89,27 +99,34 @@ if (config) {
       gateStates[key] = { label, status: 'invalid' };
       continue;
     }
-    if (!['blocked', 'verified'].includes(item.status)) {
-      errors.push(`${key}.status must be blocked or verified`);
-    }
-    const status = item.status === 'verified' ? 'verified' : 'blocked';
-    if (status === 'verified' && !String(item.evidenceReference || '').trim()) {
+
+    const unknownFieldCount = Object.keys(item).filter(field => !['status', 'evidenceReference'].includes(field)).length;
+    if (unknownFieldCount) errors.push(`${key} contains ${unknownFieldCount} unsupported field(s)`);
+
+    const validStatus = ['blocked', 'verified'].includes(item.status);
+    if (!validStatus) errors.push(`${key}.status must be blocked or verified`);
+    if (typeof item.evidenceReference !== 'string') {
+      errors.push(`${key}.evidenceReference must be a string`);
+    } else if (item.status === 'verified' && !item.evidenceReference.trim()) {
       errors.push(`${key} is verified without an evidenceReference`);
     }
-    gateStates[key] = { label, status };
+    gateStates[key] = { label, status: validStatus ? item.status : 'invalid' };
   }
 
   const anyVerified = Object.values(gateStates).some(item => item.status === 'verified');
   if (anyVerified) {
-    if (!String(config.reviewedBy || '').trim()) errors.push('reviewedBy is required when any gate is verified');
+    if (typeof config.reviewedBy !== 'string' || !config.reviewedBy.trim()) {
+      errors.push('reviewedBy is required when any gate is verified');
+    }
     if (config.attestation !== true) errors.push('attestation must be true when any gate is verified');
-    if (!/^\d{4}-\d{2}-\d{2}$/.test(config.reviewedAt || '')) {
+    if (typeof config.reviewedAt !== 'string' || !/^\d{4}-\d{2}-\d{2}$/.test(config.reviewedAt)) {
       errors.push('reviewedAt must be a YYYY-MM-DD date when any gate is verified');
     } else {
       const reviewedAt = Date.parse(`${config.reviewedAt}T00:00:00Z`);
-      const ageDays = (Date.now() - reviewedAt) / 86_400_000;
-      if (!Number.isFinite(reviewedAt) || ageDays < -1 || ageDays > 30) {
-        errors.push('reviewedAt must be current within the last 30 days');
+      const validCalendarDate = Number.isFinite(reviewedAt) && new Date(reviewedAt).toISOString().slice(0, 10) === config.reviewedAt;
+      const ageDays = validCalendarDate ? (Date.now() - reviewedAt) / 86_400_000 : Number.NaN;
+      if (!validCalendarDate || ageDays < -1 || ageDays > 30) {
+        errors.push('reviewedAt must be a real date current within the last 30 days');
       }
     }
   } else {
@@ -118,6 +135,7 @@ if (config) {
 }
 
 const usingTemplate = path.normalize(configPath) === path.normalize(exampleConfigPath);
+const usingPrivateConfig = path.normalize(configPath) === path.normalize(privateConfigPath);
 if (usingTemplate) warnings.push('Using the committed blocked template; copy it to the ignored private configuration before verification');
 warnings.push('Global readiness never replaces customer-specific written authorization, scope, target verification, or stop conditions');
 
@@ -133,7 +151,7 @@ for (const [stage, requiredGates] of Object.entries(stages)) {
 const selectedResult = stageResults[selectedStage] || { ready: false, blockers: [] };
 const report = {
   generatedAt: new Date().toISOString(),
-  source: path.relative(root, configPath).replaceAll(path.sep, '/'),
+  source: usingTemplate ? 'committed-template' : usingPrivateConfig ? 'private-operator-record' : 'explicit-operator-record',
   usingTemplate,
   strict,
   selectedStage,
