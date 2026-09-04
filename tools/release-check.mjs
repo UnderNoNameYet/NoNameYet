@@ -2,9 +2,19 @@
 import fs from 'node:fs';
 import path from 'node:path';
 
+function arg(name, fallback) {
+  const prefix = `--${name}=`;
+  const inline = process.argv.find(value => value.startsWith(prefix));
+  if (inline) return inline.slice(prefix.length);
+  const index = process.argv.indexOf(`--${name}`);
+  return index >= 0 ? process.argv[index + 1] : fallback;
+}
+
 const root = path.resolve(import.meta.dirname, '..');
 const publicDir = path.join(root, 'public');
-const configPath = path.join(root, 'config/site.preview.json');
+const previewConfigPath = path.join(root, 'config/site.preview.json');
+const releaseConfigPath = path.join(root, 'config/site.release.json');
+const configPath = path.resolve(arg('config', fs.existsSync(releaseConfigPath) ? releaseConfigPath : previewConfigPath));
 const config = JSON.parse(fs.readFileSync(configPath, 'utf8'));
 const required = [
   'index.html', 'report.html', 'methodology.html', 'sample-matrix.html', 'request.html', 'privacy.html', 'terms.html', '404.html',
@@ -47,7 +57,7 @@ const legal = [fs.readFileSync(path.join(publicDir, 'privacy.html'), 'utf8'), fs
 if (/pre-launch|will be published before|must be updated/i.test(legal)) block('Public privacy/terms still contain pre-launch placeholders'); else pass('Public legal copy is launch-state copy');
 if (!fs.existsSync(path.join(publicDir, '.well-known/security.txt'))) warn('security.txt awaits an owned security contact');
 
-const githubMarker = path.join(root, 'release/github-verification.json');
+const githubMarker = path.resolve(arg('verification', path.join(root, 'release/github-verification.json')));
 if (!fs.existsSync(githubMarker)) {
   block('Fresh GitHub repository verification record is not present in this checkout');
 } else {
@@ -65,6 +75,8 @@ if (!fs.existsSync(githubMarker)) {
 
 const report = {
   generatedAt: new Date().toISOString(),
+  config: path.relative(root, configPath).replaceAll(path.sep, '/'),
+  usingPreviewConfig: path.normalize(configPath) === path.normalize(previewConfigPath),
   ready: blockers.length === 0,
   releaseMode: config.paymentMode === 'closed' ? 'request-only candidate' : 'payment candidate',
   passed,

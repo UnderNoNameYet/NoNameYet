@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "",
+  "reviewedBy": "",
+  "attestation": false,
+  "gates": {
+    "contractingIdentity": {
+      "status": "blocked",
+      "evidenceReference": ""
+    },
+    "jurisdictionAndTax": {
+      "status": "blocked",
+      "evidenceReference": ""
+    },
+    "businessContact": {
+      "status": "blocked",
+      "evidenceReference": ""
+    },
+    "httpsIntakeAndDeletion": {
+      "status": "blocked",
+      "evidenceReference": ""
+    },
+    "launchLegalCopy": {
+      "status": "blocked",
+      "evidenceReference": ""
+    },
+    "evidenceRetention": {
+      "status": "blocked",
+      "evidenceReference": ""
+    },
+    "securityContact": {
+      "status": "blocked",
+      "evidenceReference": ""
+    },
+    "deliveryCapacity": {
+      "status": "blocked",
+      "evidenceReference": ""
+    },
+    "sowAndAuthorizationReviewed": {
+      "status": "blocked",
+      "evidenceReference": ""
+    },
+    "secureAccessExchange": {
+      "status": "blocked",
+      "evidenceReference": ""
+    },
+    "processorAndRefunds": {
+      "status": "blocked",
+      "evidenceReference": ""
+    },
+    "approvedAcquisitionChannel": {
+      "status": "blocked",
+      "evidenceReference": ""
+    }
+  }
+}
