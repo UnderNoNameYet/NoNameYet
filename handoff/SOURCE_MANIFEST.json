@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-04T05:28:41.828Z",
+  "generatedAt": "2026-09-04T05:31:01.953Z",
   "product": "TenantProof",
   "version": "0.3.2",
   "sourceOfTruth": "AGENTS.md and handoff/README.md",
@@ -304,7 +304,7 @@
       "path": "handoff/assets/SHA256SUMS",
       "role": "handoff-media",
       "bytes": 782,
-      "sha256": "1568acd24ecbc553635b8012954fe95c4cdfb957efa760de50a17335c778e96c"
+      "sha256": "63aac76b83bc215115e3a3db1c446e80f8f7a6bf94e7e71dcccb148270c822a3"
     },
     {
       "path": "handoff/assets/walkthrough-storyboard.svg",
@@ -316,7 +316,7 @@
       "path": "handoff/assets/walkthrough.webm",
       "role": "handoff-media",
       "bytes": 706830,
-      "sha256": "e83b903548e3e5f81710cb74f74e13383a91185c0e87c1f2ae8b5fc1db59ef9b"
+      "sha256": "438d92e94e137cad47ba9f8943bf0462ccacca701dccba98af669fb25100c82d"
     },
     {
       "path": "operations/authorization-template.md",
