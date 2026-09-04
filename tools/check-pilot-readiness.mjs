@@ -59,9 +59,11 @@ const stages = {
 
 const errors = [];
 const warnings = [];
-let config = null;
+let config;
+let configLoaded = false;
 try {
   config = JSON.parse(fs.readFileSync(configPath, 'utf8'));
+  configLoaded = true;
 } catch {
   errors.push('Readiness configuration could not be loaded or parsed');
 }
@@ -71,66 +73,68 @@ if (!Object.hasOwn(stages, selectedStage)) {
 }
 
 const gateStates = {};
-if (config) {
-  if (!config || typeof config !== 'object' || Array.isArray(config)) {
+if (configLoaded) {
+  const configIsObject = config !== null && typeof config === 'object' && !Array.isArray(config);
+  if (!configIsObject) {
     errors.push('Readiness configuration must be an object');
-  }
-  if (config.schemaVersion !== 1) errors.push('schemaVersion must be 1');
-  if (typeof config.reviewedAt !== 'string') errors.push('reviewedAt must be a string');
-  if (typeof config.reviewedBy !== 'string') errors.push('reviewedBy must be a string');
-  if (typeof config.attestation !== 'boolean') errors.push('attestation must be a boolean');
-
-  const allowedTopLevel = new Set(['schemaVersion', 'reviewedAt', 'reviewedBy', 'attestation', 'gates']);
-  const unknownTopLevelCount = Object.keys(config).filter(key => !allowedTopLevel.has(key)).length;
-  if (unknownTopLevelCount) errors.push(`Configuration contains ${unknownTopLevelCount} unsupported top-level field(s)`);
-
-  if (!config.gates || typeof config.gates !== 'object' || Array.isArray(config.gates)) {
-    errors.push('gates must be an object');
-  }
-
-  const suppliedKeys = Object.keys(config.gates || {});
-  const unknownGateCount = suppliedKeys.filter(key => !Object.hasOwn(gateDefinitions, key)).length;
-  if (unknownGateCount) errors.push(`gates contains ${unknownGateCount} unknown gate(s)`);
-
-  for (const [key, label] of Object.entries(gateDefinitions)) {
-    const item = config.gates?.[key];
-    if (!item || typeof item !== 'object' || Array.isArray(item)) {
-      errors.push(`Missing readiness gate: ${key}`);
-      gateStates[key] = { label, status: 'invalid' };
-      continue;
-    }
-
-    const unknownFieldCount = Object.keys(item).filter(field => !['status', 'evidenceReference'].includes(field)).length;
-    if (unknownFieldCount) errors.push(`${key} contains ${unknownFieldCount} unsupported field(s)`);
-
-    const validStatus = ['blocked', 'verified'].includes(item.status);
-    if (!validStatus) errors.push(`${key}.status must be blocked or verified`);
-    if (typeof item.evidenceReference !== 'string') {
-      errors.push(`${key}.evidenceReference must be a string`);
-    } else if (item.status === 'verified' && !item.evidenceReference.trim()) {
-      errors.push(`${key} is verified without an evidenceReference`);
-    }
-    gateStates[key] = { label, status: validStatus ? item.status : 'invalid' };
-  }
-
-  const anyVerified = Object.values(gateStates).some(item => item.status === 'verified');
-  if (anyVerified) {
-    if (typeof config.reviewedBy !== 'string' || !config.reviewedBy.trim()) {
-      errors.push('reviewedBy is required when any gate is verified');
-    }
-    if (config.attestation !== true) errors.push('attestation must be true when any gate is verified');
-    if (typeof config.reviewedAt !== 'string' || !/^\d{4}-\d{2}-\d{2}$/.test(config.reviewedAt)) {
-      errors.push('reviewedAt must be a YYYY-MM-DD date when any gate is verified');
-    } else {
-      const reviewedAt = Date.parse(`${config.reviewedAt}T00:00:00Z`);
-      const validCalendarDate = Number.isFinite(reviewedAt) && new Date(reviewedAt).toISOString().slice(0, 10) === config.reviewedAt;
-      const ageDays = validCalendarDate ? (Date.now() - reviewedAt) / 86_400_000 : Number.NaN;
-      if (!validCalendarDate || ageDays < -1 || ageDays > 30) {
-        errors.push('reviewedAt must be a real date current within the last 30 days');
-      }
-    }
   } else {
-    warnings.push('No commercial readiness gate is verified');
+    if (config.schemaVersion !== 1) errors.push('schemaVersion must be 1');
+    if (typeof config.reviewedAt !== 'string') errors.push('reviewedAt must be a string');
+    if (typeof config.reviewedBy !== 'string') errors.push('reviewedBy must be a string');
+    if (typeof config.attestation !== 'boolean') errors.push('attestation must be a boolean');
+
+    const allowedTopLevel = new Set(['schemaVersion', 'reviewedAt', 'reviewedBy', 'attestation', 'gates']);
+    const unknownTopLevelCount = Object.keys(config).filter(key => !allowedTopLevel.has(key)).length;
+    if (unknownTopLevelCount) errors.push(`Configuration contains ${unknownTopLevelCount} unsupported top-level field(s)`);
+
+    if (!config.gates || typeof config.gates !== 'object' || Array.isArray(config.gates)) {
+      errors.push('gates must be an object');
+    }
+
+    const suppliedKeys = Object.keys(config.gates || {});
+    const unknownGateCount = suppliedKeys.filter(key => !Object.hasOwn(gateDefinitions, key)).length;
+    if (unknownGateCount) errors.push(`gates contains ${unknownGateCount} unknown gate(s)`);
+
+    for (const [key, label] of Object.entries(gateDefinitions)) {
+      const item = config.gates?.[key];
+      if (!item || typeof item !== 'object' || Array.isArray(item)) {
+        errors.push(`Missing readiness gate: ${key}`);
+        gateStates[key] = { label, status: 'invalid' };
+        continue;
+      }
+
+      const unknownFieldCount = Object.keys(item).filter(field => !['status', 'evidenceReference'].includes(field)).length;
+      if (unknownFieldCount) errors.push(`${key} contains ${unknownFieldCount} unsupported field(s)`);
+
+      const validStatus = ['blocked', 'verified'].includes(item.status);
+      if (!validStatus) errors.push(`${key}.status must be blocked or verified`);
+      if (typeof item.evidenceReference !== 'string') {
+        errors.push(`${key}.evidenceReference must be a string`);
+      } else if (item.status === 'verified' && !item.evidenceReference.trim()) {
+        errors.push(`${key} is verified without an evidenceReference`);
+      }
+      gateStates[key] = { label, status: validStatus ? item.status : 'invalid' };
+    }
+
+    const anyVerified = Object.values(gateStates).some(item => item.status === 'verified');
+    if (anyVerified) {
+      if (typeof config.reviewedBy !== 'string' || !config.reviewedBy.trim()) {
+        errors.push('reviewedBy is required when any gate is verified');
+      }
+      if (config.attestation !== true) errors.push('attestation must be true when any gate is verified');
+      if (typeof config.reviewedAt !== 'string' || !/^\d{4}-\d{2}-\d{2}$/.test(config.reviewedAt)) {
+        errors.push('reviewedAt must be a YYYY-MM-DD date when any gate is verified');
+      } else {
+        const reviewedAt = Date.parse(`${config.reviewedAt}T00:00:00Z`);
+        const validCalendarDate = Number.isFinite(reviewedAt) && new Date(reviewedAt).toISOString().slice(0, 10) === config.reviewedAt;
+        const ageDays = validCalendarDate ? (Date.now() - reviewedAt) / 86_400_000 : Number.NaN;
+        if (!validCalendarDate || ageDays < -1 || ageDays > 30) {
+          errors.push('reviewedAt must be a real date current within the last 30 days');
+        }
+      }
+    } else {
+      warnings.push('No commercial readiness gate is verified');
+    }
   }
 }
 
