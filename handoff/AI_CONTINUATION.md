@@ -6,7 +6,7 @@ Use this when handing TenantProof to another advanced model or developer.
 
 > You are continuing TenantProof, a productized Supabase/PostgreSQL tenant-isolation verification and repair service. Do not invent a new product. Read `AGENTS.md` and every file linked from `handoff/README.md` before editing. The core promise is: “Prove that Customer A cannot read or modify Customer B’s data.” The product sells executed authorization evidence, remediation, and regression protection—not an automated badge or security guarantee.
 >
-> Current state: the premium request-only preview is live at `https://undernonameyet.github.io/NoNameYet/` from main SHA `6bc99104bb91b32afb50c8c7d9b416d74566f8ed` after PR #23 and successful Pages run #40; the local quality package passed; a public Notion qualification form, private pipeline, launch page, and fictional sample report exist; payment and static commercial intake are closed; there are no customers, revenue, testimonials, or real findings. Preserve those truths.
+> Current state: v0.3.2 is live at `https://undernonameyet.github.io/NoNameYet/` from release merge `8ae0bea48491b1442b1181e2c1bed21b1f2479e1` after PR #25 and successful main Pages run #49. The release contains the product-first homepage, free fictional matrix, and sidebar-free Scope → Matrix → Run → Repair → Report Focus Workbench in an exact 26-file public-only artifact. Payment and commercial intake remain closed; there are no customers, revenue, testimonials, or real findings. Preserve those truths.
 >
 > First, inspect `handoff/CURRENT_STATE.json`, run `npm run quality`, and reconcile any drift. If GitHub is available, inspect current `main`, repository instructions, Pages workflow, and PR template before writing. Commit product source, specs, operations, handoff, media, and quality tooling. Publish only `public/`. The user authorized autonomous merging after checks, but do not bypass account permissions, fabricate legal/account facts, expose private email, or test any real target without written authorization.
 >
@@ -34,7 +34,7 @@ Use this when handing TenantProof to another advanced model or developer.
 - real testing: written authorization required
 - raw evidence recommendation: 14 days
 - customers/revenue/testimonials: none
-- GitHub request-only preview: deployed from `6bc99104bb91b32afb50c8c7d9b416d74566f8ed` through PR #23 and successful Pages run #40
+- GitHub request-only preview: v0.3.2 deployed from `8ae0bea48491b1442b1181e2c1bed21b1f2479e1` through PR #25 and successful main Pages run #49
 - private Outlook email: never expose/use for cold outreach without explicit specific approval
 
 ## Decision authority

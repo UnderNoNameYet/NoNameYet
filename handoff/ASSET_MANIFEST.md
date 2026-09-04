@@ -52,8 +52,8 @@ npm test
 node tools/capture-previews.mjs
 node tools/record-walkthrough.mjs
 npm run handoff:assets
-npm run handoff:pdf
-npm run source:manifest
+npm run handoff:report
+npm run handoff:manifest
 npm run docs:check
 ```
 

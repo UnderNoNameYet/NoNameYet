@@ -33,8 +33,9 @@ No unreleased product changes are currently recorded.
 
 ### Release state
 
-- prepared in draft PR [#25](https://github.com/UnderNoNameYet/NoNameYet/pull/25)
-- v0.3.1 remains the live GitHub Pages release until this candidate passes review and is merged
+- released through squash-merged PR [#25](https://github.com/UnderNoNameYet/NoNameYet/pull/25) at `8ae0bea48491b1442b1181e2c1bed21b1f2479e1`
+- deployed by successful main Pages workflow run #49 with an exact 26-file public-only artifact
+- live v0.3.2 routes and fictional JSON/CSV artifacts verified on 2026-09-04 at `https://undernonameyet.github.io/NoNameYet/`
 
 ## [0.3.1] — 2026-08-31 — request-only GitHub Pages preview
 

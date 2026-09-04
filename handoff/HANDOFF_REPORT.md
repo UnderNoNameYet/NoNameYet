@@ -1,17 +1,17 @@
 # TenantProof handoff report
 
-**Snapshot:** 2026-09-03  
-**Product stage:** v0.3.2 Focus Workbench release candidate in draft PR; v0.3.1 request-only preview remains live  
+**Snapshot:** 2026-09-04  
+**Product stage:** v0.3.2 Focus Workbench request-only technical preview live  
 **Commercial stage:** no customer or revenue yet; static intake and payment closed  
-**Next objective:** pass the complete release gate, inspect and merge the focused UI PR, verify Pages, then configure real operator/commercial facts before any paid pilot
+**Next objective:** preserve the live release, configure real operator/commercial facts, and validate one safely authorized paid pilot before expanding the product surface
 
 ## Executive summary
 
 TenantProof is a productized Supabase/PostgreSQL tenant-isolation verification and repair service. It turns a buyer-approved authorization model into paired controls and produces redacted before/after evidence. The promise remains narrow: **Prove that Customer A cannot read or modify Customer B’s data.**
 
-The v0.3.2 candidate replaces abstract presentation with the actual workflow. The public homepage shows a concise fictional Run preview, while `report.html` is now a spacious Focus Workbench organized as **Scope → Matrix → Run → Repair → Report**. The interface preserves local report import, schema 1.0, filters, keyboard selection, print, contextual result limits, and an explicit unresolved state.
+The live v0.3.2 release replaces abstract presentation with the actual workflow. The public homepage shows a concise fictional Run preview, while `report.html` is a spacious Focus Workbench organized as **Scope → Matrix → Run → Repair → Report**. The interface preserves local report import, schema 1.0, filters, keyboard selection, print, contextual result limits, and an explicit unresolved state.
 
-The candidate is in draft PR [#25](https://github.com/UnderNoNameYet/NoNameYet/pull/25). It is not yet the live deployment. The known-good v0.3.1 request-only preview remains at `https://undernonameyet.github.io/NoNameYet/` from PR [#23](https://github.com/UnderNoNameYet/NoNameYet/pull/23) and successful deployment [run #40](https://github.com/UnderNoNameYet/NoNameYet/actions/runs/33372340582).
+PR [#25](https://github.com/UnderNoNameYet/NoNameYet/pull/25) was squash-merged at `8ae0bea48491b1442b1181e2c1bed21b1f2479e1`. Main Pages workflow run #49 completed successfully and published the 26-file `public/` artifact at `https://undernonameyet.github.io/NoNameYet/`. Public fetches on 2026-09-04 confirmed the v0.3.2 homepage, workbench, matrix, supporting routes, fictional report JSON, and fictional matrix CSV.
 
 ## Product thesis
 
@@ -66,7 +66,7 @@ Connections, Team, Activity, Plan, hosted customer workspaces, and Continuous Ve
 
 ## Quality state
 
-Local deterministic Chromium QA passed for the implementation candidate:
+Local deterministic Chromium QA passed for the released implementation:
 
 - exactly 26 public files and 8 HTML pages expected
 - 16 fictional sample checks
@@ -78,7 +78,7 @@ Local deterministic Chromium QA passed for the implementation candidate:
 - zero console/page errors, external runtime requests, browser persistence calls, and POST requests
 - demo runner rejects live mode
 
-The GitHub PR build runs the complete quality orchestrator with Playwright Chromium, FFmpeg, Pillow, and ReportLab. At this snapshot it is still a release requirement, not a claimed pass. After every material source change, rerun and inspect the generated captures, walkthrough, PDF, source manifest, docs result, and public-only bundle.
+The exact-head PR build passed the complete quality orchestrator with Playwright Chromium, FFmpeg, Pillow, and ReportLab. Main workflow run #49 then passed and deployed the same 26-file public-only contract. After every material source change, rerun and inspect the generated captures, walkthrough, PDF, source manifest, documentation result, and public-only bundle.
 
 ## Commercial model
 
@@ -93,14 +93,13 @@ Payment stays closed until a real contracting party, jurisdiction, owned busines
 
 ## Continuation plan
 
-1. Keep v0.3.1 live while PR #25 is a draft.
-2. Require the complete pull-request quality job to pass.
-3. Inspect the exact changed-file list, generated media, source manifest, and 26-file `dist/` boundary.
-4. Resolve every failure; do not bypass or weaken the gate.
-5. Convert the PR to ready only after documentation and generated artifacts agree.
-6. Merge with rollback preserved, then verify the new GitHub Pages routes and assets.
-7. Keep intake/payment closed until real commercial blockers are resolved.
-8. Prefer one safely authorized paid pilot over building speculative workspace or SaaS features.
+1. Preserve the v0.3.2 request-only preview and its public-only deployment boundary.
+2. Keep `state: preview`, `paymentMode: closed`, and all fictional labels until verified commercial facts exist.
+3. Configure the real contracting identity, jurisdiction, owned HTTPS intake/deletion route, security contact, delivery capacity, processor/tax/refund position, and launch-state legal copy.
+4. Run `npm run release:strict` only after those blockers are truthfully resolved; do not weaken the gate.
+5. Prefer one safely authorized paid pilot over speculative workspace, billing, connection, or recurring-monitoring features.
+6. For any product change, use a focused branch, exact-head CI, changed-file/secret review, generated-artifact reconciliation, and live route verification after merge.
+7. Keep customer evidence, credentials, authorization records, and engagement workspaces outside this public repository.
 
 ## Design direction to preserve
 
