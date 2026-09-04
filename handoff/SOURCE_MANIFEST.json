@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-09-04T06:42:03.493Z",
+  "generatedAt": "2026-09-04T06:55:41.335Z",
   "product": "TenantProof",
   "version": "0.3.2",
   "sourceOfTruth": "AGENTS.md and handoff/README.md",
   "deployRoot": "public/",
   "files": 107,
-  "bytes": 3142781,
+  "bytes": 3144322,
   "byRole": {
     "repository-root": 11,
     "repository-workflow": 2,
@@ -597,8 +597,8 @@
     {
       "path": "tools/check-pilot-readiness.mjs",
       "role": "build-quality-tooling",
-      "bytes": 6328,
-      "sha256": "6ec9afac29a993fde6adfc67db74bbab7bc9c4d837e2c19934afd08898690871"
+      "bytes": 7869,
+      "sha256": "de103e7e702f7c56c4e3d19d8b5bd65e00d1341397e6a00349f718e1dcecba66"
     },
     {
       "path": "tools/demo-adapter.mjs",
