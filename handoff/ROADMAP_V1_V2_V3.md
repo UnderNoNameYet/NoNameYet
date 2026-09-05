@@ -15,7 +15,7 @@ Roadmap items are ordered by buyer evidence and risk, not excitement. Dates are 
 - external preview/ready configuration and closed payment state
 - CSP/canonical/social/manifest/sitemap/robots support
 - authorization, SOW, evidence, delivery, payment, intake, launch, and marketing runbooks
-- public Notion qualification path and private intake pipeline
+- private Notion qualification form, intake pipeline, and launch control prepared; publication deferred until commercial facts are verified
 - free fictional tenant-boundary matrix and downloadable CSV
 - canonical handoff and quality tooling
 
@@ -34,14 +34,17 @@ Released through PR [#25](https://github.com/UnderNoNameYet/NoNameYet/pull/25) a
 
 Documentation-only reconciliation PR #26 and successful run #54 left the public product unchanged.
 
-### V1.2.1 buyer proof pack — candidate
+### V1.2.1 buyer proof pack — complete
+
+Released through PR [#28](https://github.com/UnderNoNameYet/NoNameYet/pull/28) at `0be0d8d1009619d4abc5a48d7c08f68392c93967` and deployed by successful main Pages [run #64](https://github.com/UnderNoNameYet/NoNameYet/actions/runs/33949379579):
 
 - deterministic four-page fictional report PDF generated from the canonical schema-1.0 sample
 - direct download inside the Workbench Report stage
 - PDF signature, size, fictional-label, and public-artifact checks
-- 27-file candidate deployment contract
+- exact 27-file public-only deployment contract
+- direct live-file verification at 53,284 bytes with SHA-256 `ced694b73a81d98630f31ee283f0120605bd2431bf9aca5911acedb3d80ca07e`
 
-This improves proposal and buyer-review utility without expanding into hosted accounts, credential custody, scanning, or recurring monitoring. Mark complete only after pull-request CI, main deployment, and the live PDF route are verified.
+This improves proposal and buyer-review utility without expanding into hosted accounts, credential custody, scanning, or recurring monitoring.
 
 ### V1.3 commercially ready request flow — gate prepared; real facts blocked
 
@@ -75,8 +78,7 @@ No payment or customer evidence is accepted before these blockers are resolved.
 
 ## Near-term backlog — only if it improves conversion or delivery
 
-- static link to verified owned qualification form
-- downloadable fictional report PDF
+- publish and link the verified owned qualification form only after legal/privacy/delivery gates pass
 - post-deploy smoke-test automation
 - signed checksum manifest for customer handoff
 - Safari/Firefox print polish

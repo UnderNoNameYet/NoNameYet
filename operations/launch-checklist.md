@@ -48,7 +48,9 @@
 - [x] Fetch every primary live route plus fictional report JSON and boundary-matrix CSV
 - [x] Reconcile publication records through PR #26 and verify successful unchanged Pages run #54
 - [x] Prepare deterministic first-pilot readiness tooling with a fully blocked committed template
-- [ ] Publish and verify the v0.3.3 downloadable fictional report PDF and 27-file public-only contract
+- [x] Publish and verify the v0.3.3 downloadable fictional report PDF through PR #28, main run #64, and the 27-file public-only contract
+- [x] Prepare a private Notion request database, qualification form, and launch-control page
+- [ ] Approve privacy/operator facts, then explicitly publish the Notion qualification form
 
 ## D. Marketing readiness
 

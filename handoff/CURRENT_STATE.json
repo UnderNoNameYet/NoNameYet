@@ -1,8 +1,8 @@
 {
-  "snapshotAt": "2026-09-05T11:34:58+05:30",
+  "snapshotAt": "2026-09-05T06:28:00Z",
   "product": "TenantProof",
   "corePromise": "Prove that Customer A cannot read or modify Customer B's data.",
-  "stage": "v0.3.2 Focus Workbench request-only technical preview live; v0.3.3 buyer-proof candidate in progress; commercial intake and payment closed",
+  "stage": "v0.3.3 buyer-proof request-only technical preview live; commercial intake and payment closed",
   "sourcePath": "repository root on current main",
   "repository": {
     "owner": "UnderNoNameYet",
@@ -11,27 +11,24 @@
     "access": "connected_published_and_verified",
     "tenantProofDeployed": true,
     "authenticatedUser": "MYIndieDEV",
-    "inspectedMainSha": "88cdf9837780b864a3527f3b568b10512f170461",
-    "liveVersion": "0.3.2",
-    "candidateVersion": "0.3.3",
-    "candidateBranch": "product/tenantproof-buyer-proof-v033",
-    "candidatePublicArtifactFiles": 27,
+    "inspectedMainSha": "0be0d8d1009619d4abc5a48d7c08f68392c93967",
+    "liveVersion": "0.3.3",
     "pagesWorkflow": ".github/workflows/pages.yml",
-    "releaseTransport": "direct source with a 26-file public-only build artifact",
-    "preReleaseRollbackSha": "f17ff3476735f423445cb37cb6084b3763c42269",
-    "publishedPullRequestNumber": 25,
-    "publishedPullRequestUrl": "https://github.com/UnderNoNameYet/NoNameYet/pull/25",
-    "mergeSha": "8ae0bea48491b1442b1181e2c1bed21b1f2479e1",
-    "workflowRunNumber": 49,
-    "workflowRunUrl": "https://github.com/UnderNoNameYet/NoNameYet/actions/workflows/pages.yml?query=branch%3Amain",
+    "releaseTransport": "direct source with a 27-file public-only build artifact",
+    "preReleaseRollbackSha": "88cdf9837780b864a3527f3b568b10512f170461",
+    "publishedPullRequestNumber": 28,
+    "publishedPullRequestUrl": "https://github.com/UnderNoNameYet/NoNameYet/pull/28",
+    "mergeSha": "0be0d8d1009619d4abc5a48d7c08f68392c93967",
+    "workflowRunNumber": 64,
+    "workflowRunUrl": "https://github.com/UnderNoNameYet/NoNameYet/actions/runs/33949379579",
     "workflowConclusion": "success",
     "deployedUrl": "https://undernonameyet.github.io/NoNameYet/",
-    "liveVerifiedAt": "2026-09-04T04:45:58Z",
-    "liveVerification": "v0.3.2 home, report, methodology, sample matrix, request, privacy, terms, 404, fictional report JSON, and fictional matrix CSV fetched successfully",
-    "priorKnownGoodMainSha": "f17ff3476735f423445cb37cb6084b3763c42269",
+    "liveVerifiedAt": "2026-09-05T06:20:00Z",
+    "liveVerification": "v0.3.3 home, report, methodology, sample matrix, request, privacy, terms, 404, fictional report JSON, fictional matrix CSV, and downloadable fictional PDF fetched successfully",
+    "priorKnownGoodMainSha": "88cdf9837780b864a3527f3b568b10512f170461",
     "legacyPreTenantProofRollbackSha": "047691e35c6b8d38ba5540d1fe4de345ed752a6c",
-    "mergedAt": "2026-09-03T06:24:19Z",
-    "workflowChecksUrl": "https://github.com/UnderNoNameYet/NoNameYet/commit/8ae0bea48491b1442b1181e2c1bed21b1f2479e1/checks"
+    "mergedAt": "2026-09-05T06:16:46Z",
+    "workflowChecksUrl": "https://github.com/UnderNoNameYet/NoNameYet/commit/0be0d8d1009619d4abc5a48d7c08f68392c93967/checks"
   },
   "packages": [
     {
@@ -75,14 +72,13 @@
       "terms.html",
       "404.html"
     ],
-    "publicArtifactFiles": 26,
-    "candidatePublicArtifactFiles": 27,
+    "publicArtifactFiles": 27,
     "reportSchema": "1.0",
     "reportImportLimitBytes": 2000000,
     "sampleReportId": "TP-DEMO-0830",
     "sampleProject": "Northstar CRM",
     "sampleFictional": true,
-    "downloadableFictionalPdf": "candidate",
+    "downloadableFictionalPdf": "live",
     "publicRuntimeDependencies": 0,
     "siteConfigState": "preview",
     "paymentMode": "closed",
@@ -108,11 +104,16 @@
       "Activity",
       "Plan",
       "Continuous Verification"
-    ]
+    ],
+    "privateOperatorWorkspace": {
+      "requestDatabase": "prepared_private",
+      "qualificationForm": "prepared_private_unpublished",
+      "launchControl": "prepared_private"
+    }
   },
   "quality": {
     "latestKnownResult": "local_pr_main_and_live_pass",
-    "latestLocalRunAt": "2026-09-03T05:45:00Z",
+    "latestLocalRunAt": "2026-09-05T06:27:53.004Z",
     "qualityGateCommands": 19,
     "requiredFiles": 27,
     "htmlPages": 8,
@@ -136,10 +137,13 @@
     "githubPullRequestBuild": "success",
     "githubMainBuildAndDeploy": "success",
     "mustRerunAfterChanges": false,
-    "exactHeadPullRequestSha": "1d474a8eaeb58c8202562c1f58366c9b520385ec",
-    "releaseMergeSha": "8ae0bea48491b1442b1181e2c1bed21b1f2479e1",
-    "mainWorkflowRunNumber": 49,
-    "liveRouteVerification": "pass"
+    "exactHeadPullRequestSha": "10068fd64305995553eabe3c93c90642fec2ecb6",
+    "releaseMergeSha": "0be0d8d1009619d4abc5a48d7c08f68392c93967",
+    "mainWorkflowRunNumber": 64,
+    "liveRouteVerification": "pass",
+    "mainWorkflowRunUrl": "https://github.com/UnderNoNameYet/NoNameYet/actions/runs/33949379579",
+    "livePdfBytes": 53284,
+    "livePdfSha256": "ced694b73a81d98630f31ee283f0120605bd2431bf9aca5911acedb3d80ca07e"
   },
   "commercialTruth": {
     "customers": 0,
@@ -159,13 +163,14 @@
     "authenticated approved acquisition channel before individualized outreach"
   ],
   "nextActions": [
-    "finish v0.3.3 buyer-proof pull-request quality, deploy the 27-file artifact, and verify the public PDF route",
-    "keep the current site request-only and payment closed",
+    "preserve the verified v0.3.3 request-only preview and 27-file public-only deployment boundary",
+    "keep the Notion qualification form private, the static site request-only, and payment closed until commercial facts are verified",
+    "record the exact legal contracting identity and actual operating jurisdiction without inventing an entity or location",
+    "confirm delivery capacity and approve the temporary public business contact, privacy/deletion handling, and launch-state legal copy",
+    "configure an authenticated acquisition channel, secure temporary-access exchange, and invoice processor before opening the corresponding gates",
     "copy the blocked pilot-readiness example to the ignored private record and verify only facts supported by operator evidence",
-    "configure verified operator identity, jurisdiction, owned HTTPS intake/deletion, security contact, delivery capacity, and launch-state legal facts before accepting customer work",
     "run the strict commercial release gate only after those facts exist",
-    "prefer one safely authorized paid pilot over speculative workspace or recurring-monitoring features",
-    "measure repeated demand before implementing Connections, Team, Activity, Plan, or Continuous Verification"
+    "prefer one safely authorized paid pilot over speculative workspace or recurring-monitoring features"
   ],
   "frozenProducts": [
     "RebuttalKit",
@@ -174,7 +179,7 @@
     "ClearCal proposal",
     "Relay migration"
   ],
-  "localReleaseMirror": "/data/tenantproof-impl",
+  "localReleaseMirror": "/data/tenantproof",
   "pilotReadiness": {
     "status": "gate_prepared_external_facts_blocked",
     "checker": "npm run pilot:check",

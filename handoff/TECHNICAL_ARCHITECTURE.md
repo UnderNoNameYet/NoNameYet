@@ -151,4 +151,4 @@ Keep the product static until repeated paid engagements demonstrate a need for s
 - incorrect claim/legal copy: roll back immediately
 - schema change: support or explicitly reject old versions; never silently reinterpret
 - Pages failure: retain the prior known-good published artifact and inspect the workflow
-- this candidate has no migration or hosted state; rollback is a source revert
+- this release has no migration or hosted state; rollback is a source revert

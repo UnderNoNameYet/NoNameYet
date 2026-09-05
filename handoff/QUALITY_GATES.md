@@ -187,7 +187,7 @@ After merge:
 - Focus Workbench stage/phase/filter/dock/local-import behavior works
 - canonical URLs/CSP are correct
 - no old product content or unexpected request appears
-- v0.3.2 state is recorded only after successful deployment verification
+- v0.3.3 state is recorded only after successful deployment and direct fictional-PDF verification
 
 ## QA evidence retention
 

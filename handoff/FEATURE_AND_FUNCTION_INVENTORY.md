@@ -20,7 +20,7 @@ Status legend: **implemented**, **prepared**, **blocked**, **evidence-gated**, *
 | Free boundary matrix | implemented | `public/sample-matrix.html`, CSV | Fictional paired controls; local download |
 | Privacy and terms | implemented/pre-commercial | public HTML | Must be updated with verified facts before payment |
 | Branded 404 | implemented | `public/404.html` | Recovery links |
-| Public qualification form | implemented/separate | Notion | Non-sensitive; operationally separate from static site |
+| Qualification form and private pipeline | prepared/private | Notion | Non-sensitive; intentionally unpublished until commercial facts and privacy handling are verified |
 | Static-site secure intake link | blocked | release config | Requires verified owned HTTPS endpoint |
 | Checkout | intentionally closed | config/operations | Qualify, authorize, then invoice |
 | First-pilot readiness gate | implemented/blocked | `tools/check-pilot-readiness.mjs`, private config | Reports stage blockers; strict modes fail until verified facts exist |

@@ -4,6 +4,10 @@ All notable product changes are recorded here. The project has not reached a com
 
 ## [Unreleased]
 
+- No unreleased product changes.
+
+## [0.3.3] — 2026-09-05 — buyer-ready fictional proof pack
+
 ### Product
 
 - added a deterministic four-page fictional verification PDF generated from the canonical Northstar CRM report
@@ -28,6 +32,14 @@ All notable product changes are recorded here. The project has not reached a com
 - strict readiness fails until verified operator, legal, intake, payment, capacity, channel, and access facts exist
 - global readiness does not replace customer-specific written authorization
 - the commercial state remains preview/request-only and payment remains closed
+- the separate Notion request form and pipeline remain private until operator, legal, privacy, and delivery facts are verified
+
+### Release state
+
+- released through squash-merged PR [#28](https://github.com/UnderNoNameYet/NoNameYet/pull/28) at `0be0d8d1009619d4abc5a48d7c08f68392c93967`
+- deployed by successful main Pages [run #64](https://github.com/UnderNoNameYet/NoNameYet/actions/runs/33949379579) with an exact 27-file public-only artifact
+- live routes, fictional JSON/CSV artifacts, and the four-page fictional PDF were verified on 2026-09-05
+- live PDF: 53,284 bytes; SHA-256 `ced694b73a81d98630f31ee283f0120605bd2431bf9aca5911acedb3d80ca07e`
 
 ## [0.3.2] — 2026-09-03 — product-first Focus Workbench
 
