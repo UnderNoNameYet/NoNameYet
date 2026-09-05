@@ -8,26 +8,27 @@ A material release is not complete because it looks good. It must pass determini
 npm run quality
 ```
 
-The v0.3.2 orchestrator runs, in order:
+The v0.3.3 orchestrator runs, in order:
 
 1. brand asset generation
 2. HTML hardening
 3. preview configuration
 4. report validation
-5. deterministic fictional report generation
-6. explicit live-mode rejection
-7. JavaScript syntax checks
-8. browser/static QA
-9. public-only release build
-10. preview capture
-11. walkthrough generation
-12. handoff-media synchronization
-13. handoff PDF generation
-14. source-manifest generation
-15. documentation integrity
-16. pilot-readiness analysis
-17. release-readiness analysis
-18. credential/private-email scan
+5. deterministic fictional report PDF generation
+6. deterministic fictional report generation
+7. explicit live-mode rejection
+8. JavaScript syntax checks
+9. browser/static QA
+10. public-only release build
+11. preview capture
+12. walkthrough generation
+13. handoff-media synchronization
+14. handoff PDF generation
+15. source-manifest generation
+16. documentation integrity
+17. pilot-readiness analysis
+18. release-readiness analysis
+19. credential/private-email scan
 
 Capture must happen before handoff synchronization. The non-strict pilot and release analyses must accurately report blockers without failing the closed preview. A first pilot requires `npm run pilot:strict`; the launch experiment additionally requires `npm run commercial:strict` with verified private readiness, real release configuration, and a fresh GitHub marker.
 
@@ -46,18 +47,20 @@ Capture must happen before handoff synchronization. The non-strict pilot and rel
 - Playwright Chromium and FFmpeg are available in CI
 - JSON and schema files parse
 - demo report structure is deterministic
+- fictional sample PDF is generated from the canonical report with deterministic metadata
 - live mode exits non-zero
 - hardener is idempotent
 - configuration builder rejects unsafe ready state
 
 ## Gate 3 — public artifact
 
-The v0.3.2 artifact contains exactly 26 files and eight HTML pages, including:
+The v0.3.3 artifact contains exactly 27 files and eight HTML pages, including:
 
 - shared CSS/JS/config/sample data
 - `assets/workbench.css` and `assets/workbench.js`
 - favicon, 192/512 icons, and 1200×630 social image
 - sample matrix CSV
+- four-page downloadable fictional report PDF
 - manifest, robots, sitemap, `_headers`, `.nojekyll`, and `llms.txt`
 
 Checks:
@@ -86,6 +89,7 @@ Checks:
 - invalid/oversized/no-match states are understandable
 - both print controls invoke print
 - report-derived values cannot inject markup
+- downloadable PDF has a valid signature, credible size, and explicit fictional labeling
 
 ## Gate 5 — request privacy
 
@@ -172,14 +176,14 @@ Before merge:
 - inspect changed-file list and focused diff
 - complete workflow is green
 - generated screenshots/video/PDF/source manifest correspond to current source
-- target artifact contains exactly 26 files
+- target artifact contains exactly 27 files
 - no unresolved review thread or blocker
 - rollback remains known
 
 After merge:
 
 - root and seven secondary routes load
-- `workbench.css`, `workbench.js`, sample JSON, CSV, icons, and social image resolve
+- `workbench.css`, `workbench.js`, sample JSON, CSV, fictional PDF, icons, and social image resolve
 - Focus Workbench stage/phase/filter/dock/local-import behavior works
 - canonical URLs/CSP are correct
 - no old product content or unexpected request appears

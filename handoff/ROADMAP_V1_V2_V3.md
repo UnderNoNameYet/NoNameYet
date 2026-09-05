@@ -34,6 +34,15 @@ Released through PR [#25](https://github.com/UnderNoNameYet/NoNameYet/pull/25) a
 
 Documentation-only reconciliation PR #26 and successful run #54 left the public product unchanged.
 
+### V1.2.1 buyer proof pack — candidate
+
+- deterministic four-page fictional report PDF generated from the canonical schema-1.0 sample
+- direct download inside the Workbench Report stage
+- PDF signature, size, fictional-label, and public-artifact checks
+- 27-file candidate deployment contract
+
+This improves proposal and buyer-review utility without expanding into hosted accounts, credential custody, scanning, or recurring monitoring. Mark complete only after pull-request CI, main deployment, and the live PDF route are verified.
+
 ### V1.3 commercially ready request flow — gate prepared; real facts blocked
 
 Prepared without opening intake or payment:

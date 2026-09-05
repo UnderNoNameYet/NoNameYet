@@ -14,6 +14,8 @@
 
 The live v0.3.2 request-only preview is published from direct source. The older PR [#23](https://github.com/UnderNoNameYet/NoNameYet/pull/23) / run #40 pair is retained as v0.3.1 history, not current publication state. `047691e35c6b8d38ba5540d1fe4de345ed752a6c` remains the older pre-TenantProof recovery reference.
 
+The v0.3.3 buyer-proof candidate adds a generated fictional report PDF. Its expected artifact contract is 27 files; keep v0.3.2 as the recorded live release until the candidate PR, main deployment, and public PDF fetch are verified.
+
 ## Authorization and limits
 
 The user authorized routine branch, pull-request, quality, merge, and publication decisions. This never overrides connection permissions, legal/account facts, platform confirmations, secret handling, customer authorization, or safe testing boundaries.
@@ -54,7 +56,7 @@ Publish only `dist/`, generated exclusively from `public/`. The v0.3.2 artifact 
 3. install pinned Pillow/ReportLab and Playwright Chromium; install FFmpeg
 4. expose the downloaded Chromium executable at a stable `chromium` path
 5. run `npm run quality`
-6. verify `state: preview`, `paymentMode: closed`, and exactly 26 `dist/` files
+6. verify `state: preview`, `paymentMode: closed`, and exactly 27 `dist/` files for v0.3.3
 7. on pull requests: stop after validation
 8. on `main`: configure Pages, upload `dist/`, deploy, then verify live routes
 
@@ -93,6 +95,7 @@ There is no migration or hosted state in v0.3.2.
 - `0.3.0` — canonical handoff/spec/quality release
 - `0.3.1` — initial request-only GitHub Pages preview
 - `0.3.2` — live product-first Focus Workbench preview
+- `0.3.3` — buyer-ready fictional PDF proof pack (candidate until deployment verification)
 - `1.0.0` — first commercially ready public release after strict checks
 
 v0.3.2 is live and verified within the documented network limits. Do not label 1.0 until owned intake, operator/commercial facts, legal state, and strict release checks are complete.

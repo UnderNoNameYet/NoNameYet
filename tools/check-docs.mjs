@@ -6,7 +6,7 @@ const buildDir = path.join(root, 'build');
 const required = [
   'AGENTS.md', 'agent.md', 'README.md', 'ARCHITECTURE.md', 'ROADMAP.md', 'SECURITY.md', 'CHANGELOG.md', 'CONTRIBUTING.md', '.github/pull_request_template.md',
   'handoff/README.md', 'handoff/HANDOFF_REPORT.md', 'handoff/PRODUCT_SPEC.md', 'handoff/PAGE_AND_SECTION_SPECS.md', 'handoff/UX_DESIGN_SYSTEM.md', 'handoff/TECHNICAL_ARCHITECTURE.md', 'handoff/FEATURE_AND_FUNCTION_INVENTORY.md', 'handoff/REPORT_ENGINE_SPEC.md', 'handoff/SECURITY_PRIVACY_AND_SAFETY.md', 'handoff/OPERATIONS_AND_INTAKE.md', 'handoff/COMMERCIAL_AND_PAYMENTS.md', 'handoff/GTM_AND_VALIDATION.md', 'handoff/ROADMAP_V1_V2_V3.md', 'handoff/DECISION_LOG.md', 'handoff/REJECTED_IDEAS_AND_LEARNINGS.md', 'handoff/QUALITY_GATES.md', 'handoff/RELEASE_AND_REPOSITORY.md', 'handoff/AI_CONTINUATION.md', 'handoff/CURRENT_STATE.json', 'handoff/ASSET_MANIFEST.md', 'handoff/GITHUB_PUBLICATION.md',
-  'operations/pilot-readiness-gate.md', 'config/pilot-readiness.example.json', 'tools/check-pilot-readiness.mjs',
+  'operations/pilot-readiness-gate.md', 'config/pilot-readiness.example.json', 'tools/check-pilot-readiness.mjs', 'tools/build-sample-report-pdf.py',
   'handoff/assets/01-home-desktop.png', 'handoff/assets/02-report-desktop.png', 'handoff/assets/03-request-mobile.png', 'handoff/assets/04-home-mobile-full.png', 'handoff/assets/05-social-preview.png', 'handoff/assets/06-icon-192.png', 'handoff/assets/07-icon-512.png', 'handoff/assets/08-sample-matrix-desktop.png', 'handoff/assets/walkthrough.webm', 'handoff/assets/SHA256SUMS', 'handoff/HANDOFF_REPORT.pdf', 'handoff/SOURCE_MANIFEST.json'
 ];
 const failures = [], warnings = [], checks = [];
@@ -25,10 +25,11 @@ add(current.repository?.tenantProofDeployed === true && /^[a-f0-9]{40}$/.test(cu
 add(current.commercialTruth?.customers === 0 && current.commercialTruth?.revenueUsd === 0, 'Current state preserves commercial truth');
 add(current.safety?.writtenAuthorizationRequired === true, 'Current state requires authorization');
 const sourceManifest = JSON.parse(fs.readFileSync(path.join(root, 'handoff/SOURCE_MANIFEST.json'), 'utf8'));
-add(sourceManifest.product === 'TenantProof' && sourceManifest.version === '0.3.2', 'Source manifest identifies handoff release');
+add(sourceManifest.product === 'TenantProof' && sourceManifest.version === '0.3.3', 'Source manifest identifies handoff release');
 add(sourceManifest.deployRoot === 'public/' && sourceManifest.files >= 60, 'Source manifest covers repository and public-only deploy root');
 const packageJson = JSON.parse(fs.readFileSync(path.join(root, 'package.json'), 'utf8'));
-add(packageJson.version === '0.3.2', 'Package version matches handoff release');
+add(packageJson.version === '0.3.3', 'Package version matches handoff release');
+add(Boolean(packageJson.scripts?.['sample:pdf']), 'Package exposes fictional sample PDF generation');
 add(Boolean(packageJson.scripts?.quality), 'Package exposes quality command');
 add(Boolean(packageJson.scripts?.['docs:check']), 'Package exposes documentation check');
 add(Boolean(packageJson.scripts?.['release:bundle']), 'Package exposes public-only release builder');

@@ -4,6 +4,17 @@ All notable product changes are recorded here. The project has not reached a com
 
 ## [Unreleased]
 
+### Product
+
+- added a deterministic four-page fictional verification PDF generated from the canonical Northstar CRM report
+- added a direct PDF download inside the Focus Workbench Report stage for proposals and buyer review
+- expanded the public-only artifact contract from 26 to 27 files
+
+### Quality
+
+- added PDF signature, minimum-size, release-presence, and public-artifact isolation checks
+- kept the PDF generated from the report source so the web sample and downloadable evidence cannot drift silently
+
 ### Operations
 
 - added a deterministic 12-gate first-pilot readiness checker with separate outreach, intake, payment, first-pilot, and launch-experiment results
@@ -16,7 +27,7 @@ All notable product changes are recorded here. The project has not reached a com
 - technical quality continues to pass for the closed preview while non-strict readiness reports real blockers
 - strict readiness fails until verified operator, legal, intake, payment, capacity, channel, and access facts exist
 - global readiness does not replace customer-specific written authorization
-- no public product or runtime file changed
+- the commercial state remains preview/request-only and payment remains closed
 
 ## [0.3.2] — 2026-09-03 — product-first Focus Workbench
 

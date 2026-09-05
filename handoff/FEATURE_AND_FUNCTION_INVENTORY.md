@@ -13,6 +13,7 @@ Status legend: **implemented**, **prepared**, **blocked**, **evidence-gated**, *
 | Temporary evidence dock | implemented | `assets/workbench.js` | Opens from selected Run row; dismissible; closes on stage change |
 | Reviewable repair state | implemented/fictional | Workbench Repair | Example SQL diff; never presented as merged/approved |
 | Local JSON report import | implemented | Workbench Report | Schema 1.0; 2 MB; browser memory only |
+| Downloadable fictional report PDF | implemented | Workbench Report, `tools/build-sample-report-pdf.py` | Four-page buyer proof asset generated from the canonical sample; no customer evidence |
 | Print report | implemented | report/workbench scripts | No upload or hosted state |
 | Methodology/authorization | implemented | `public/methodology.html` | Scope, evidence, stop rules |
 | Local scope worksheet | implemented | `public/request.html`, `assets/site.js` | Three steps; no submission/storage |
@@ -67,6 +68,7 @@ The command-line JSON-schema validator remains stricter release authority.
 | Tool | Responsibility | Status |
 |---|---|---|
 | `validate-report.mjs` | validate schema 1.0 reports | implemented |
+| `build-sample-report-pdf.py` | generate buyer-ready fictional PDF from the canonical sample | implemented |
 | `demo-definition.json` | fictional scenario contracts | implemented |
 | `demo-adapter.mjs` | deterministic before/after fixture | implemented |
 | `run-matrix.mjs` | generate demo report | implemented; rejects live mode |
@@ -95,7 +97,7 @@ The command-line JSON-schema validator remains stricter release authority.
 
 ## Production support
 
-Eight HTML pages, restrictive meta CSP, `_headers`, canonical/social metadata, icons, social image, manifest, sitemap, robots, `.nojekyll`, `llms.txt`, schema/sample JSON, CSV template, and route-scoped workbench assets. The public artifact contains exactly 26 files.
+Eight HTML pages, restrictive meta CSP, `_headers`, canonical/social metadata, icons, social image, manifest, sitemap, robots, `.nojekyll`, `llms.txt`, schema/sample JSON, CSV template, downloadable fictional PDF, and route-scoped workbench assets. The v0.3.3 public artifact contains exactly 27 files.
 
 ## Operational documents
 

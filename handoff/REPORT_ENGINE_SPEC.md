@@ -143,6 +143,18 @@ If those change materially, create a new check or explain why results are not di
 
 The sample demonstrates structure only. It cannot be presented as client work, a testimonial, a case study, or proof of revenue.
 
+### Downloadable fictional PDF
+
+`tools/build-sample-report-pdf.py` renders the canonical sample into
+`public/assets/tenantproof-fictional-report.pdf`.
+
+- four A4 pages: decision summary, contradictions/repair/retest, complete matrix, and method/limits
+- deterministic PDF metadata and content
+- prominently fictional on every page
+- generated from the same JSON used by the interactive Workbench
+- contains no customer data, authorization, production evidence, testimonial, or revenue claim
+- validated for PDF signature and minimum size before entering the public-only artifact
+
 ## Demo runner
 
 `tools/run-matrix.mjs`:
@@ -167,6 +179,7 @@ A real execution adapter must be created per authorized engagement in a private 
 - phase toggle recalculates metrics and evidence
 - rows are keyboard selectable
 - report is printable
+- fictional sample is downloadable as a compact PDF
 - all report strings are escaped
 
 ## Delivery bundle — future paid engagement

@@ -48,6 +48,7 @@
 - [x] Fetch every primary live route plus fictional report JSON and boundary-matrix CSV
 - [x] Reconcile publication records through PR #26 and verify successful unchanged Pages run #54
 - [x] Prepare deterministic first-pilot readiness tooling with a fully blocked committed template
+- [ ] Publish and verify the v0.3.3 downloadable fictional report PDF and 27-file public-only contract
 
 ## D. Marketing readiness
 

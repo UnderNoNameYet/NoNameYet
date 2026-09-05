@@ -177,3 +177,11 @@ Append new decisions; do not silently rewrite prior rationale. Dates use Asia/Ca
 **Why:** the v0.3.2 product and deployment are technically complete, but green CI cannot verify legal identity, jurisdiction, owned accounts, legal review, capacity, or authorization. A dedicated gate prevents technical quality from being mistaken for permission to accept customer work.
 
 **Constraints:** the committed template stays fully blocked; real evidence references remain in an ignored private file; non-strict quality reports blockers without opening the preview; strict commands fail until facts are verified. Global readiness never replaces a customer-specific SOW, written authorization, target, execution window, or stop conditions.
+
+## 2026-09-05 — Add a buyer-ready fictional PDF before adding product scope
+
+**Decision:** generate a compact four-page fictional verification report from the canonical Northstar CRM JSON and expose it from the Workbench Report stage.
+
+**Why:** the interactive Workbench demonstrates product behavior, but proposals and qualification conversations also need a portable artifact that a buyer can inspect or share quickly. A generated PDF strengthens proof of deliverable structure without requiring a backend, credentials, customer evidence, testimonials, or speculative workspace features.
+
+**Constraints:** every page is labeled fictional; the PDF contains no real authorization, customer, production, revenue, or finding claim; the JSON remains the source of truth; public checkout and intake stay closed; the artifact must pass deterministic generation, PDF validation, public-only bundling, and live-route verification.

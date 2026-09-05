@@ -39,9 +39,10 @@ Use `handoff/README.md` as the complete index.
 
 - Product specification, static MVP, production-preparation assets, and operating safeguards: complete.
 - Product UI: v0.3.2 is live with the concise product-first homepage, free boundary matrix, and sidebar-free Focus Workbench organized as Scope → Matrix → Run → Repair → Report.
+- Buyer proof: a v0.3.3 candidate adds a deterministic four-page fictional PDF generated from the canonical sample; do not call it live until pull-request, deployment, and public-file verification pass.
 - GitHub release: PR [#25](https://github.com/UnderNoNameYet/NoNameYet/pull/25) was squash-merged to `main` at `8ae0bea48491b1442b1181e2c1bed21b1f2479e1` on 2026-09-03.
 - Deployment: main workflow run #49 completed successfully. The exact commit check reports a successful build, and public verification on 2026-09-04 returned the v0.3.2 homepage, workbench, matrix, methodology, request, privacy, terms, 404, report JSON, and matrix CSV.
-- Deployment boundary: exactly 26 files generated from `public/`; repository handoff, operations, tests, and build output remain unpublished.
+- Deployment boundary: the live v0.3.2 artifact contains exactly 26 files; the v0.3.3 candidate contains 27 after generating the fictional PDF. Repository handoff, operations, tests, and build output remain unpublished.
 - Runtime state: request-only preview, `state: preview`, `paymentMode: closed`, local worksheet/report import, and no hosted account, analytics, scanner, or credential collection.
 - First-pilot readiness: a deterministic private-configuration gate is prepared; the committed template remains fully blocked and does not authorize outreach, intake, payment, or testing.
 - Payment, commercial intake, customer work, testimonials, revenue, and real findings: none; never imply otherwise.
@@ -125,6 +126,7 @@ npm run assets
 npm run harden
 npm run config:preview
 npm run validate:report
+npm run sample:pdf
 npm run demo:report
 npm run pilot:check
 npm run pilot:strict
