@@ -138,7 +138,7 @@ The quality orchestrator:
 10. synchronizes handoff media and builds the handoff PDF/source manifest
 11. checks documentation, pilot readiness, release readiness, and secret/private-email patterns
 
-GitHub Pages uploads only `dist/`, copied from `public/`. The v0.4.0 candidate artifact contract is exactly 29 files, including the generated canonical fictional report PDF and byte-identical legacy PDF/social aliases. Handoff, operations, source tooling, local reports, logs, and raw evidence stay outside the deployment.
+GitHub Pages uploads only `dist/`, copied from `public/`. The live v0.4.0 artifact contract is exactly 29 files, including the generated canonical fictional report PDF and byte-identical legacy PDF/social aliases. Handoff, operations, source tooling, local reports, logs, and raw evidence stay outside the deployment.
 
 ## Scaling thresholds
 

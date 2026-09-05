@@ -38,16 +38,16 @@ Use `handoff/README.md` as the complete index.
 ## Current state — 2026-09-05
 
 - Product specification, static MVP, production-preparation assets, and operating safeguards: complete.
-- Live baseline: v0.3.3 is deployed under the former TenantProof name with the concise product-first homepage, free boundary matrix, sidebar-free Focus Workbench organized as Scope → Matrix → Run → Repair → Report, and a deterministic four-page fictional report PDF generated from the canonical sample.
-- Rebrand candidate: v0.4.0 changes the public name to TenantBoundary after a same-category naming collision. It keeps the service, promise, prices, workflow, safety boundaries, and fictional sample intact.
-- GitHub baseline: PR [#28](https://github.com/UnderNoNameYet/NoNameYet/pull/28) was squash-merged at `0be0d8d1009619d4abc5a48d7c08f68392c93967`; PR [#29](https://github.com/UnderNoNameYet/NoNameYet/pull/29) reconciled the handoff on `main` at `a1baa9ebde9bf1b1a05d7a0563ee9927ff96f9af`.
-- Deployment: main workflow [run #66](https://github.com/UnderNoNameYet/NoNameYet/actions/runs/33950062374) completed successfully for the unchanged v0.3.3 baseline. The v0.4.0 candidate must pass exact-head CI and live verification before this section calls it deployed.
-- Deployment boundary: the candidate artifact contains exactly 29 files generated from `public/`: 27 functional files plus canonical TenantBoundary PDF/social assets and two byte-identical legacy aliases. Repository handoff, operations, tests, and build output remain unpublished.
+- Live release: TenantBoundary v0.4.0 is deployed with the concise product-first homepage, free boundary matrix, sidebar-free Focus Workbench organized as Scope → Matrix → Run → Repair → Report, and a deterministic four-page fictional report PDF generated from the canonical sample.
+- Rebrand: v0.4.0 changed the public name from TenantProof to TenantBoundary after a same-category naming collision. The service, promise, prices, workflow, safety boundaries, and fictional sample stayed intact.
+- GitHub release: PR [#30](https://github.com/UnderNoNameYet/NoNameYet/pull/30) passed exact-head CI and was squash-merged to `main` at `bc5ed44111084cea80dc157a3cfbabacf30eec61` on 2026-09-05.
+- Deployment: main workflow [run #68](https://github.com/UnderNoNameYet/NoNameYet/actions/runs/33952234143) completed successfully. Public verification returned every key v0.4.0 route, fictional JSON/CSV, canonical PDF/social assets, and former-path aliases.
+- Deployment boundary: the live artifact contains exactly 29 files generated from `public/`: 27 functional files plus the canonical TenantBoundary PDF/social assets and two byte-identical former-path aliases. Repository handoff, operations, tests, and build output remain unpublished.
 - Runtime state: request-only preview, `state: preview`, `paymentMode: closed`, local worksheet/report import, and no hosted account, analytics, scanner, or credential collection.
-- Intake state: a private Notion request database, form, and launch-control page are prepared, but the form is intentionally unpublished until operator, legal, privacy, and delivery facts are verified.
+- Intake state: the private Notion request database, form, launch control, and zero-cost revenue sprint use the TenantBoundary name. The form remains intentionally unpublished until its HTTPS intake/deletion and launch-state privacy gates are ready.
 - First-pilot readiness: a deterministic private-configuration gate is prepared; 3 of 12 operator gates are verified privately (business contact, security contact, and delivery capacity). The committed template remains fully blocked, and no outreach, intake, payment, or testing is authorized yet.
 - Payment, commercial intake, customer work, testimonials, revenue, and real findings: none; never imply otherwise.
-- Immediate prior known-good main is `a1baa9ebde9bf1b1a05d7a0563ee9927ff96f9af`; the older pre-TenantProof rollback reference is `047691e35c6b8d38ba5540d1fe4de345ed752a6c`.
+- Immediate pre-v0.4.0 rollback main is `a1baa9ebde9bf1b1a05d7a0563ee9927ff96f9af`; the older pre-TenantProof rollback reference is `047691e35c6b8d38ba5540d1fe4de345ed752a6c`.
 
 The canonical machine source is the current repository root on `main`; local `/data/` paths are release-session mirrors only. Historical paths for RebuttalKit, Stay5, screenshot concepts, or ClearCal are not active products.
 

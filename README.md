@@ -13,10 +13,10 @@ It sells an agreed authorization matrix, executed before/after evidence, remedia
 | Product specification | complete |
 | Local static MVP | complete |
 | Production preparation | complete for the closed technical preview |
-| Browser/responsive/privacy QA | v0.3.3 baseline passing; v0.4.0 candidate requires a fresh exact-head run |
+| Browser/responsive/privacy QA | local, exact-head PR, main deployment, and live verification passed for v0.4.0 |
 | Qualification workflow | private Notion database/form prepared; form intentionally unpublished |
-| GitHub Pages request-only preview | v0.3.3 remains live under the former TenantProof name; v0.4.0 is the TenantBoundary rebrand candidate |
-| Buyer proof pack | live deterministic four-page fictional PDF; generated from the canonical sample |
+| GitHub Pages request-only preview | TenantBoundary v0.4.0 live from `bc5ed4411108` after PR [#30](https://github.com/UnderNoNameYet/NoNameYet/pull/30) and successful main [run #68](https://github.com/UnderNoNameYet/NoNameYet/actions/runs/33952234143) |
+| Buyer proof pack | live deterministic four-page fictional PDF with a byte-identical former-path alias; generated from the canonical sample |
 | Payments | closed |
 | Customers/revenue/testimonials | none |
 
