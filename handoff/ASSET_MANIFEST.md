@@ -11,6 +11,14 @@ All media is product/demo material. No customer evidence, credentials, private r
 | `public/assets/icon-512.png` | 512×512 | large manifest icon |
 | `public/assets/favicon.svg` | vector | browser icon |
 
+## Generated public proof asset
+
+| Output | Format | Purpose |
+|---|---:|---|
+| `public/assets/tenantproof-fictional-report.pdf` | four-page A4 PDF | portable buyer/proposal sample generated from `sample-report.json` |
+
+`tools/build-sample-report-pdf.py` creates this file with deterministic metadata. It is ignored in source control, generated before QA/release bundling, and included only in the 27-file v0.3.3 public artifact. Every page identifies the report as fictional.
+
 ## Generated captures
 
 `tools/capture-previews.mjs` regenerates deterministic review images from the exact public source:
@@ -48,6 +56,7 @@ handoff/SOURCE_MANIFEST.json
 
 ```bash
 npm run assets
+npm run sample:pdf
 npm test
 node tools/capture-previews.mjs
 node tools/record-walkthrough.mjs
@@ -73,7 +82,7 @@ npm run docs:check
 
 ## Update rule
 
-Regenerate media after changes to the hero, workbench stages, report table/dock, pricing, request flow, navigation, status vocabulary, or public launch/legal state. Never hand-edit generated screenshots, checksums, PDF, or source manifest.
+Regenerate media after changes to the hero, workbench stages, report table/dock, pricing, request flow, navigation, status vocabulary, or public launch/legal state. Regenerate the fictional report PDF whenever the canonical sample or its evidence semantics change. Never hand-edit generated screenshots, checksums, PDF, or source manifest.
 
 ## Walkthrough
 

@@ -7,5 +7,6 @@ dist/
 config/site.release.json
 config/pilot-readiness.json
 release/github-verification.json
+public/assets/tenantproof-fictional-report.pdf
 .DS_Store
 *.log

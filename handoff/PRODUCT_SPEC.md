@@ -164,6 +164,8 @@ The public product must let a skeptical founder answer five questions quickly:
 
 The sample report is the primary proof artifact. The free fictional matrix helps buyers define a testable boundary before qualification. The form is qualification only.
 
+The same canonical fictional report is also available as a compact four-page PDF so a buyer can inspect or share the deliverable structure without operating the interactive Workbench.
+
 ## 9. Non-functional requirements
 
 - static-first and fast
@@ -179,6 +181,7 @@ The sample report is the primary proof artifact. The free fictional matrix helps
 - restrictive CSP
 - printable report
 - local report import limit: 2 MB
+- deterministic downloadable fictional report PDF
 
 ## 10. Acceptance criteria
 
@@ -203,6 +206,7 @@ The sample report is the primary proof artifact. The free fictional matrix helps
 - imports local JSON without upload
 - rejects files over 2 MB or invalid reports
 - prints readable report
+- downloads a prominently fictional PDF generated from the canonical sample
 
 ### Scope worksheet
 

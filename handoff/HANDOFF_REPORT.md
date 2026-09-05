@@ -1,9 +1,9 @@
 # TenantProof handoff report
 
-**Snapshot:** 2026-09-04  
-**Product stage:** v0.3.2 Focus Workbench request-only technical preview live  
-**Commercial stage:** no customer or revenue yet; static intake and payment closed  
-**Next objective:** preserve the live release, configure real operator/commercial facts, and validate one safely authorized paid pilot before expanding the product surface
+- **Snapshot:** 2026-09-05
+- **Product stage:** v0.3.2 Focus Workbench request-only technical preview live; v0.3.3 buyer-proof candidate in progress
+- **Commercial stage:** no customer or revenue yet; static intake and payment closed
+- **Next objective:** preserve the live release, configure real operator/commercial facts, and validate one safely authorized paid pilot before expanding the product surface
 
 ## Executive summary
 
@@ -12,6 +12,8 @@ TenantProof is a productized Supabase/PostgreSQL tenant-isolation verification a
 The live v0.3.2 release replaces abstract presentation with the actual workflow. The public homepage shows a concise fictional Run preview, while `report.html` is a spacious Focus Workbench organized as **Scope → Matrix → Run → Repair → Report**. The interface preserves local report import, schema 1.0, filters, keyboard selection, print, contextual result limits, and an explicit unresolved state.
 
 PR [#25](https://github.com/UnderNoNameYet/NoNameYet/pull/25) was squash-merged at `8ae0bea48491b1442b1181e2c1bed21b1f2479e1`. Main Pages workflow run #49 completed successfully and published the 26-file `public/` artifact at `https://undernonameyet.github.io/NoNameYet/`. Public fetches on 2026-09-04 confirmed the v0.3.2 homepage, workbench, matrix, supporting routes, fictional report JSON, and fictional matrix CSV.
+
+The v0.3.3 candidate adds a deterministic four-page fictional report PDF generated from the same canonical JSON as the interactive Workbench. It gives proposals and buyer conversations a compact proof artifact without adding a backend, customer data, a claim of real work, or commercial activation. Its candidate public-only contract is 27 files.
 
 ## Product thesis
 
@@ -40,6 +42,7 @@ It executes the agreed positive and negative paths in a controlled environment, 
 - temporary bottom evidence dock with redacted trace and remediation
 - fictional reviewable SQL Repair state and retest timeline
 - local JSON Report import, 2 MB maximum, browser memory only, and print
+- v0.3.3 candidate: direct download of a four-page fictional PDF generated from the canonical sample
 
 ### Supporting routes
 
@@ -79,6 +82,8 @@ Local deterministic Chromium QA passed for the released implementation:
 - demo runner rejects live mode
 
 The exact-head PR build passed the complete quality orchestrator with Playwright Chromium, FFmpeg, Pillow, and ReportLab. Main workflow run #49 then passed and deployed the same 26-file public-only contract. After every material source change, rerun and inspect the generated captures, walkthrough, PDF, source manifest, documentation result, and public-only bundle.
+
+The v0.3.3 candidate extends the gate to 27 files and validates the generated sample PDF’s signature, minimum size, source linkage, fictional labeling, and deployment isolation. It is not recorded as live until its pull request, main deployment, and public file fetch succeed.
 
 ## Commercial model
 

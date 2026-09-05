@@ -19,6 +19,8 @@
 
 Current `main` contains direct TenantProof v0.3.2 source. The public product remains a request-only technical preview. Static intake and report import are local-only, payment is closed, and Northstar CRM remains explicitly fictional.
 
+A v0.3.3 buyer-proof candidate is being prepared on `product/tenantproof-buyer-proof-v033`. It adds a deterministic four-page fictional PDF and a 27-file candidate public artifact. This record must not call that candidate published until its pull request, main workflow, and live PDF route are verified.
+
 ## Publication outcome
 
 PR #25 shipped the concise product-first homepage, the sidebar-free Scope → Matrix → Run → Repair → Report Focus Workbench, the free fictional matrix/CSV, expanded interaction QA, and a corrected capture-before-sync quality sequence.
@@ -37,7 +39,7 @@ The release changed 47 expected product, handoff, quality, workflow, and operati
 
 ## CI and deployment boundary
 
-The permanent workflow uses Node 20, Python 3.12, pinned Playwright/Pillow/ReportLab, and FFmpeg. It runs `npm run quality`, confirms `state: preview`, confirms `paymentMode: closed`, requires exactly 26 files in `dist/`, and deploys only outside pull-request events.
+The live v0.3.2 workflow uses Node 20, Python 3.12, pinned Playwright/Pillow/ReportLab, and FFmpeg. It runs `npm run quality`, confirms `state: preview`, confirms `paymentMode: closed`, requires exactly 26 files in `dist/`, and deploys only outside pull-request events. The v0.3.3 candidate changes that contract to 27 files after generating the fictional PDF; record it as permanent only after merge and deployment verification.
 
 `npm run quality` validates static and browser behavior, captures product media, records the walkthrough, synchronizes stable handoff assets, regenerates the PDF/source manifest, checks documentation, runs the release-readiness baseline, and builds `dist/` from `public/` only.
 

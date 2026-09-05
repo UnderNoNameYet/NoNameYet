@@ -17,6 +17,7 @@ It sells an agreed authorization matrix, executed before/after evidence, remedia
 | Public qualification form | live through Notion; non-sensitive only |
 | Public launch/sample pages | live through Notion |
 | GitHub Pages request-only preview | v0.3.2 live from `8ae0bea48491` after PR [#25](https://github.com/UnderNoNameYet/NoNameYet/pull/25), successful run #49, and documentation-only reconciliation through PR #26/run #54 |
+| Buyer proof pack | v0.3.3 candidate: deterministic four-page fictional PDF; not live until PR/deploy verification |
 | Payments | closed |
 | Customers/revenue/testimonials | none |
 
@@ -47,6 +48,7 @@ Larger, production-only, regulated, or more sensitive work receives a manual quo
 
 - premium responsive marketing site
 - interactive fictional before/after report
+- deterministic four-page fictional report PDF for buyer review and proposals
 - local-only JSON report import and print view
 - three-step local scope worksheet
 - methodology and authorization page
@@ -98,6 +100,7 @@ npm run assets              # generate icons/social image
 npm run harden              # normalize CSP/canonical/social metadata
 npm run config:preview      # generate preview browser config
 npm run validate:report     # validate fictional public report
+npm run sample:pdf          # generate the fictional downloadable PDF
 npm run demo:report         # generate fictional demo report
 npm run pilot:check        # report current commercial blockers without opening the preview
 npm run pilot:strict       # require first-pilot operating capability
@@ -129,7 +132,7 @@ npm run quality             # full non-strict quality gate
 
 ## Quality and release
 
-`npm run quality` validates source syntax, brand assets, HTML hardening, preview configuration, report schema, demo generation, live-mode rejection, browser behavior, public-only artifact isolation, handoff media, documentation integrity, pilot-readiness reporting, release readiness, and credential/private-email scanning. Its non-strict readiness reports preserve honest blockers without treating the closed preview as a failure.
+`npm run quality` validates source syntax, brand assets, HTML hardening, preview configuration, report schema, fictional PDF generation, demo generation, live-mode rejection, browser behavior, public-only artifact isolation, handoff media, documentation integrity, pilot-readiness reporting, release readiness, and credential/private-email scanning. Its non-strict readiness reports preserve honest blockers without treating the closed preview as a failure.
 
 A public premium release additionally requires `npm run release:strict` with:
 

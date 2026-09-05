@@ -121,6 +121,7 @@ Let a buyer inspect the complete fictional workflow and open a compatible redact
 ### Stage 5 — Report
 
 - handoff contents and result limits
+- deterministic downloadable fictional PDF generated from the canonical sample report
 - local `.json` import only
 - schema 1.0 and 2,000,000-byte maximum
 - no upload, persistence, or external request
@@ -142,6 +143,7 @@ Let a buyer inspect the complete fictional workflow and open a compatible redact
 
 - all report values render with escaped text or `textContent`
 - local import causes no upload or network request
+- downloadable PDF remains prominently fictional and contains no customer evidence
 - stage, phase, filter, selection, close, and print controls are keyboard operable
 - result color always has a text label
 - fictional labeling remains visible on desktop and mobile
@@ -172,7 +174,7 @@ Clear recovery message, home/workbench actions, shared marketing shell, and no s
 
 - `robots.txt` and `sitemap.xml` reflect intentional indexing and all eight public HTML pages
 - `_headers` documents policy for compatible hosts; meta CSP remains the GitHub Pages fallback
-- `site.webmanifest`, icons, social image, `.nojekyll`, and `llms.txt` make no PWA, customer, or certification claim
+- `site.webmanifest`, icons, social image, downloadable fictional report PDF, `.nojekyll`, and `llms.txt` make no customer or certification claim
 
 ## Deferred product pages
 

@@ -21,6 +21,7 @@ run('generate brand assets', 'python3', ['tools/generate-brand-assets.py']);
 run('harden HTML', process.execPath, ['tools/harden-html.mjs']);
 run('build preview config', process.execPath, ['tools/build-site-config.mjs']);
 run('validate public sample report', process.execPath, ['tools/validate-report.mjs', 'public/assets/sample-report.json']);
+run('build fictional sample PDF', 'python3', ['tools/build-sample-report-pdf.py']);
 run('generate fictional demo report', process.execPath, ['tools/run-matrix.mjs', '--mode=demo', '--out=build/demo-generated-report.json']);
 run('reject live matrix mode', process.execPath, ['tools/run-matrix.mjs', '--mode=live'], { expectedStatus: 2 });
 const scriptFiles = [];

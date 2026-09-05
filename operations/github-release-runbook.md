@@ -8,6 +8,8 @@ Public candidate: `https://undernonameyet.github.io/NoNameYet/`
 
 GitHub access is operational. The v0.3.2 product release shipped through PR [#25](https://github.com/UnderNoNameYet/NoNameYet/pull/25) at `8ae0bea48491b1442b1181e2c1bed21b1f2479e1` and successful main workflow run #49. Documentation-only PR [#26](https://github.com/UnderNoNameYet/NoNameYet/pull/26) reconciled the handoff at `2a2fdba942bdd7c8e49d7486e866ddbdaaebd77b`; run #54 redeployed the unchanged 26-file public artifact successfully. The request-only preview is live at `https://undernonameyet.github.io/NoNameYet/`. `f17ff3476735f423445cb37cb6084b3763c42269` is the immediate pre-v0.3.2 rollback, while `047691e35c6b8d38ba5540d1fe4de345ed752a6c` remains the legacy pre-TenantProof reference.
 
+The v0.3.3 buyer-proof candidate adds a generated fictional report PDF and raises the candidate public-only contract to 27 files. It remains unpublished until exact-head quality, changed-file review, merge, main deployment, and direct PDF fetch verification pass.
+
 ## Completed first-publication sequence
 
 1. Authenticated as `MYIndieDEV` and inspected the prior `main`.

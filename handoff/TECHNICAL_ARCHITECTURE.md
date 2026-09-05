@@ -15,10 +15,13 @@ Browser
 ├── assets/site.js                 global shell + local scope worksheet
 ├── assets/report.js               report data/filters/evidence engine
 ├── assets/workbench.js            stage rail + evidence dock + print bridge
-└── assets/sample-report.json      fictional schema-1.0 sample
+├── assets/sample-report.json      fictional schema-1.0 sample
+└── assets/tenantproof-fictional-report.pdf
+                                    generated fictional buyer proof
 
 Local/CI tooling
 ├── report schema + validator
+├── deterministic fictional report PDF generator
 ├── demo-only matrix fixture/runner
 ├── HTML hardener + brand generator
 ├── preview/ready config builder + release checker
@@ -50,6 +53,8 @@ Product-first marketing route. It loads the shared shell plus `workbench.css` fo
 Focus Workbench route. It loads `report.js` for sample loading, validation, filtering, metrics, evidence rendering, local import, and phase changes; it then loads `workbench.js` for the five-stage shell, temporary evidence dock, and workbench print control.
 
 The two modules deliberately separate data semantics from presentation choreography. Report-derived strings still pass through the established escaping/text-content boundary.
+
+The Report stage also links the four-page fictional PDF generated from the same canonical JSON. The file is built before QA and release bundling, carries deterministic metadata, and remains clearly labeled as demonstration material.
 
 ### Secondary routes
 
@@ -123,16 +128,17 @@ The quality orchestrator:
 
 1. generates brand assets and hardens HTML
 2. builds preview configuration
-3. validates and regenerates the fictional report while rejecting live mode
-4. syntax-checks browser scripts
-5. runs browser/static QA
-6. builds the public-only bundle
-7. captures homepage, Workbench Run/Matrix, and mobile previews
-8. records the walkthrough
-9. synchronizes handoff media and builds the PDF/source manifest
-10. checks documentation, pilot readiness, release readiness, and secret/private-email patterns
+3. validates the fictional JSON report and generates its downloadable PDF
+4. regenerates the fictional report fixture while rejecting live mode
+5. syntax-checks browser scripts
+6. runs browser/static QA, including PDF signature and size checks
+7. builds the public-only bundle
+8. captures homepage, Workbench Run/Matrix, and mobile previews
+9. records the walkthrough
+10. synchronizes handoff media and builds the handoff PDF/source manifest
+11. checks documentation, pilot readiness, release readiness, and secret/private-email patterns
 
-GitHub Pages uploads only `dist/`, copied from `public/`. The v0.3.2 artifact contract is exactly 26 files. Handoff, operations, source tooling, local reports, logs, and raw evidence stay outside the deployment.
+GitHub Pages uploads only `dist/`, copied from `public/`. The v0.3.3 artifact contract is exactly 27 files, including the generated fictional report PDF. Handoff, operations, source tooling, local reports, logs, and raw evidence stay outside the deployment.
 
 ## Scaling thresholds
 
