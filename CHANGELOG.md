@@ -2,7 +2,11 @@
 
 All notable product changes are recorded here. The project has not reached a commercially ready 1.0 release.
 
-## [Unreleased] — v0.4.0 TenantBoundary rebrand candidate
+## [Unreleased]
+
+- No unreleased product changes.
+
+## [0.4.0] — 2026-09-05 — TenantBoundary working-name release
 
 ### Brand
 
@@ -15,7 +19,7 @@ All notable product changes are recorded here. The project has not reached a com
 - added canonical `tenantboundary-fictional-report.pdf` and `tenantboundary-og.png` assets
 - retained the former PDF and social-image paths as byte-identical aliases so existing links do not break
 - kept schema 1.0 compatible with both `TP-` and `TB-` check identifiers
-- expanded the candidate public-only artifact contract from 27 to 29 files
+- expanded the public-only artifact contract from 27 to 29 files
 
 ### Commercial state
 
@@ -25,9 +29,12 @@ All notable product changes are recorded here. The project has not reached a com
 
 ### Release state
 
-- candidate branch: `product/tenantboundary-rebrand-v040`
-- previous live baseline: v0.3.3, published under the former TenantProof name
-- exact-head CI, merge, deployment, and live route verification are still required before v0.4.0 is called live
+- released through exact-head PR [#30](https://github.com/UnderNoNameYet/NoNameYet/pull/30) and squash merge `bc5ed44111084cea80dc157a3cfbabacf30eec61`
+- deployed through successful main Pages [run #68](https://github.com/UnderNoNameYet/NoNameYet/actions/runs/33952234143) with the exact 29-file public-only artifact
+- verified eight HTML routes, preview/closed configuration, `TB-DEMO-0830`, canonical PDF/social assets, and both former-path aliases on 2026-09-05
+- live PDF: 53,287 bytes; SHA-256 `8ef66a08cddcc7e877441aa006e7815d7fc84c9e87f5f9e7778c1a74f700fd84`
+- live social image: 68,225 bytes; SHA-256 `5667c5414898fcbd3d3213872fd8626f2e31680c9642b0e027df7f1e76c1dc73`
+- public text-route scan found no former-name text; compatibility remains only in the two intentionally retained asset paths and historical documentation
 
 ## [0.3.3] — 2026-09-05 — buyer-ready fictional proof pack
 

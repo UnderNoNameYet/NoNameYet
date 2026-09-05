@@ -46,14 +46,16 @@ Released through PR [#28](https://github.com/UnderNoNameYet/NoNameYet/pull/28) a
 
 This improves proposal and buyer-review utility without expanding into hosted accounts, credential custody, scanning, or recurring monitoring.
 
-### V1.2.2 TenantBoundary rebrand — candidate
+### V1.2.2 TenantBoundary rebrand — complete
+
+Released through PR [#30](https://github.com/UnderNoNameYet/NoNameYet/pull/30) at `bc5ed44111084cea80dc157a3cfbabacf30eec61` and deployed by successful main Pages [run #68](https://github.com/UnderNoNameYet/NoNameYet/actions/runs/33952234143):
 
 - rename all visible public product copy after a same-category TenantProof naming collision
 - preserve the offer, workflow, safety model, prices, and fictional sample
 - add canonical TenantBoundary PDF/social assets and byte-identical former-path aliases
 - retain schema 1.0 compatibility with both `TP-` and `TB-` check identifiers
 - expand the public-only deployment contract from 27 to 29 files
-- publish only after fresh local quality, exact-head CI, changed-file review, deploy, and live verification
+- passed fresh local quality, exact-head CI, all 88 changed-file review, deployment, and live verification
 
 ### V1.3 commercially ready request flow — gate prepared; real facts blocked
 
@@ -72,7 +74,6 @@ Three private gates are verified: business contact, security contact, and delive
 - launch-state privacy/terms
 - processor, payout, and refund position before accepting money
 - authenticated approved acquisition channel before individualized outreach
-- strict release configuration and post-deploy verification
 
 No payment or customer evidence is accepted before these blockers are resolved.
 

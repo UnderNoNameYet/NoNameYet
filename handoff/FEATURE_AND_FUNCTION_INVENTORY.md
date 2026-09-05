@@ -97,7 +97,7 @@ The command-line JSON-schema validator remains stricter release authority.
 
 ## Production support
 
-Eight HTML pages, restrictive meta CSP, `_headers`, canonical/social metadata, icons, social image, manifest, sitemap, robots, `.nojekyll`, `llms.txt`, schema/sample JSON, CSV template, downloadable fictional PDF, and route-scoped workbench assets. The v0.4.0 candidate public artifact contains exactly 29 files, including canonical TenantBoundary PDF/social assets and byte-identical former-path aliases.
+Eight HTML pages, restrictive meta CSP, `_headers`, canonical/social metadata, icons, social image, manifest, sitemap, robots, `.nojekyll`, `llms.txt`, schema/sample JSON, CSV template, downloadable fictional PDF, and route-scoped workbench assets. The live v0.4.0 public artifact contains exactly 29 files, including canonical TenantBoundary PDF/social assets and byte-identical former-path aliases.
 
 ## Operational documents
 

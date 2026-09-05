@@ -49,7 +49,7 @@
 - [x] Reconcile publication records through PR #26 and verify successful unchanged Pages run #54
 - [x] Prepare deterministic first-pilot readiness tooling with a fully blocked committed template
 - [x] Publish and verify the v0.3.3 downloadable fictional report PDF through PR #28, main run #64, and the 27-file public-only contract
-- [ ] Publish and verify the v0.4.0 TenantBoundary rebrand, 29-file contract, canonical assets, and byte-identical former-path aliases
+- [x] Publish and verify the v0.4.0 TenantBoundary rebrand, 29-file contract, canonical assets, and byte-identical former-path aliases through PR #30 and main run #68
 - [x] Prepare a private Notion request database, qualification form, and launch-control page
 - [ ] Approve privacy/operator facts, then explicitly publish the Notion qualification form
 

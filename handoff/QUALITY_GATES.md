@@ -8,7 +8,7 @@ A material release is not complete because it looks good. It must pass determini
 npm run quality
 ```
 
-The v0.4.0 candidate orchestrator runs, in order:
+The v0.4.0 orchestrator runs, in order:
 
 1. brand asset generation
 2. HTML hardening
@@ -54,7 +54,7 @@ Capture must happen before handoff synchronization. The non-strict pilot and rel
 
 ## Gate 3 — public artifact
 
-The v0.4.0 candidate artifact contains exactly 29 files and eight HTML pages, including:
+The v0.4.0 artifact contains exactly 29 files and eight HTML pages, including:
 
 - shared CSS/JS/config/sample data
 - `assets/workbench.css` and `assets/workbench.js`
