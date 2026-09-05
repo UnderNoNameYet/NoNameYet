@@ -98,6 +98,12 @@ Append new decisions; do not silently rewrite prior rationale. Dates use Asia/Ca
 
 **Why:** preserve momentum and create an honest request path without exposing a personal email or waiting for static deployment.
 
+## 2026-09-05 — Keep the prepared qualification form private
+
+**Decision:** retain the configured Notion request database, form, and launch-control page privately until the operator’s exact legal identity, jurisdiction, privacy/deletion handling, business contact, and delivery capacity are verified.
+
+**Why:** GitHub Pages now carries the product and buyer proof. Publishing intake before the controller, response path, and operating capacity are factual would create avoidable privacy and fulfillment risk.
+
 ## 2026-08-30 — No invented legal owner
 
 **Decision:** agent owns product decisions but does not claim to be the legal contracting party.

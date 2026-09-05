@@ -14,10 +14,9 @@ It sells an agreed authorization matrix, executed before/after evidence, remedia
 | Local static MVP | complete |
 | Production preparation | complete for the closed technical preview |
 | Browser/responsive/privacy QA | passing; rerun after every change |
-| Public qualification form | live through Notion; non-sensitive only |
-| Public launch/sample pages | live through Notion |
-| GitHub Pages request-only preview | v0.3.2 live from `8ae0bea48491` after PR [#25](https://github.com/UnderNoNameYet/NoNameYet/pull/25), successful run #49, and documentation-only reconciliation through PR #26/run #54 |
-| Buyer proof pack | v0.3.3 candidate: deterministic four-page fictional PDF; not live until PR/deploy verification |
+| Qualification workflow | private Notion database/form prepared; form intentionally unpublished |
+| GitHub Pages request-only preview | v0.3.3 live from `0be0d8d10096` after PR [#28](https://github.com/UnderNoNameYet/NoNameYet/pull/28) and successful main [run #64](https://github.com/UnderNoNameYet/NoNameYet/actions/runs/33949379579) |
+| Buyer proof pack | live deterministic four-page fictional PDF; generated from the canonical sample |
 | Payments | closed |
 | Customers/revenue/testimonials | none |
 

@@ -110,7 +110,7 @@ Resume only after written clarification or amended scope.
 - detailed exploitable findings
 - database dumps
 
-The current public Notion form is explicit about these limits, allows anonymous submission, hides stored responses from respondents, and writes to a private database.
+The prepared private Notion form is explicit about these limits, allows anonymous submission once published, hides stored responses from respondents, and writes to a private database. It remains unpublished until operator, legal, privacy, and delivery facts are verified.
 
 ## Evidence classification
 
@@ -165,7 +165,7 @@ Run credential-shaped secret scanning before release. GitHub Advanced Security m
 
 ## Privacy status
 
-The static site currently has pre-launch privacy/terms copy and must not be treated as legally complete. The public Notion form is a soft-launch intake surface, so before active scaled promotion publish an accurate notice covering:
+The static site currently has pre-launch privacy/terms copy and must not be treated as legally complete. The Notion form remains private. Before publishing it or actively promoting intake, publish an accurate notice covering:
 
 - controller/operator identity
 - Notion as form processor

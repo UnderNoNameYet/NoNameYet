@@ -35,18 +35,18 @@ This delegation does not permit fabrication. An AI cannot become the legal contr
 
 Use `handoff/README.md` as the complete index.
 
-## Current state — 2026-09-04
+## Current state — 2026-09-05
 
 - Product specification, static MVP, production-preparation assets, and operating safeguards: complete.
-- Product UI: v0.3.2 is live with the concise product-first homepage, free boundary matrix, and sidebar-free Focus Workbench organized as Scope → Matrix → Run → Repair → Report.
-- Buyer proof: a v0.3.3 candidate adds a deterministic four-page fictional PDF generated from the canonical sample; do not call it live until pull-request, deployment, and public-file verification pass.
-- GitHub release: PR [#25](https://github.com/UnderNoNameYet/NoNameYet/pull/25) was squash-merged to `main` at `8ae0bea48491b1442b1181e2c1bed21b1f2479e1` on 2026-09-03.
-- Deployment: main workflow run #49 completed successfully. The exact commit check reports a successful build, and public verification on 2026-09-04 returned the v0.3.2 homepage, workbench, matrix, methodology, request, privacy, terms, 404, report JSON, and matrix CSV.
-- Deployment boundary: the live v0.3.2 artifact contains exactly 26 files; the v0.3.3 candidate contains 27 after generating the fictional PDF. Repository handoff, operations, tests, and build output remain unpublished.
+- Product UI: v0.3.3 is live with the concise product-first homepage, free boundary matrix, sidebar-free Focus Workbench organized as Scope → Matrix → Run → Repair → Report, and a deterministic four-page fictional report PDF generated from the canonical sample.
+- GitHub release: PR [#28](https://github.com/UnderNoNameYet/NoNameYet/pull/28) was squash-merged to `main` at `0be0d8d1009619d4abc5a48d7c08f68392c93967` on 2026-09-05.
+- Deployment: main workflow [run #64](https://github.com/UnderNoNameYet/NoNameYet/actions/runs/33949379579) completed successfully. Public verification returned the v0.3.3 homepage, Workbench, supporting routes, fictional JSON/CSV, and downloadable fictional PDF.
+- Deployment boundary: the live artifact contains exactly 27 files generated from `public/`. Repository handoff, operations, tests, and build output remain unpublished.
 - Runtime state: request-only preview, `state: preview`, `paymentMode: closed`, local worksheet/report import, and no hosted account, analytics, scanner, or credential collection.
+- Intake state: a private Notion request database, form, and launch-control page are prepared, but the form is intentionally unpublished until operator, legal, privacy, and delivery facts are verified.
 - First-pilot readiness: a deterministic private-configuration gate is prepared; the committed template remains fully blocked and does not authorize outreach, intake, payment, or testing.
 - Payment, commercial intake, customer work, testimonials, revenue, and real findings: none; never imply otherwise.
-- Immediate prior known-good main is `f17ff3476735f423445cb37cb6084b3763c42269`; the older pre-TenantProof rollback reference is `047691e35c6b8d38ba5540d1fe4de345ed752a6c`.
+- Immediate prior known-good main is `88cdf9837780b864a3527f3b568b10512f170461`; the older pre-TenantProof rollback reference is `047691e35c6b8d38ba5540d1fe4de345ed752a6c`.
 
 The canonical machine source is the current repository root on `main`; local `/data/` paths are release-session mirrors only. Historical paths for RebuttalKit, Stay5, screenshot concepts, or ClearCal are not active products.
 

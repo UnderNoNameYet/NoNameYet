@@ -4,9 +4,11 @@
 
 TenantProof is request-only. The public experience qualifies a problem; it never grants authorization, accepts credentials, or guarantees acceptance.
 
-## Current soft-launch system
+## Prepared private intake system
 
-### Public qualification form
+### Private qualification form — publication blocked
+
+The Notion form is configured and writes to a private pipeline, but it is not public. Keep it private until the operator approves the exact legal identity and jurisdiction, privacy/deletion handling, business contact, delivery capacity, and launch-state copy.
 
 Required fields:
 

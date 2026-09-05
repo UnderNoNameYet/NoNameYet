@@ -2,13 +2,13 @@
 
 Target repository: `UnderNoNameYet/NoNameYet`  
 Target base branch: `main`  
-Public candidate: `https://undernonameyet.github.io/NoNameYet/`
+Public origin: `https://undernonameyet.github.io/NoNameYet/`
 
 ## Current state
 
-GitHub access is operational. The v0.3.2 product release shipped through PR [#25](https://github.com/UnderNoNameYet/NoNameYet/pull/25) at `8ae0bea48491b1442b1181e2c1bed21b1f2479e1` and successful main workflow run #49. Documentation-only PR [#26](https://github.com/UnderNoNameYet/NoNameYet/pull/26) reconciled the handoff at `2a2fdba942bdd7c8e49d7486e866ddbdaaebd77b`; run #54 redeployed the unchanged 26-file public artifact successfully. The request-only preview is live at `https://undernonameyet.github.io/NoNameYet/`. `f17ff3476735f423445cb37cb6084b3763c42269` is the immediate pre-v0.3.2 rollback, while `047691e35c6b8d38ba5540d1fe4de345ed752a6c` remains the legacy pre-TenantProof reference.
+GitHub access is operational. The v0.3.3 buyer-proof release shipped through PR [#28](https://github.com/UnderNoNameYet/NoNameYet/pull/28) at `0be0d8d1009619d4abc5a48d7c08f68392c93967` and successful main [workflow run #64](https://github.com/UnderNoNameYet/NoNameYet/actions/runs/33949379579). The request-only preview and generated four-page fictional report PDF are live in an exact 27-file public-only artifact. Direct fetch verification passed on 2026-09-05. `88cdf9837780b864a3527f3b568b10512f170461` is the immediate rollback, while `047691e35c6b8d38ba5540d1fe4de345ed752a6c` remains the legacy pre-TenantProof reference.
 
-The v0.3.3 buyer-proof candidate adds a generated fictional report PDF and raises the candidate public-only contract to 27 files. It remains unpublished until exact-head quality, changed-file review, merge, main deployment, and direct PDF fetch verification pass.
+The separate Notion qualification form remains private. Publication of product proof is not permission to open intake, payment, outreach, or real testing.
 
 ## Completed first-publication sequence
 

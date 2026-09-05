@@ -11,7 +11,7 @@ Everything below is a factual account, legal, or identity decision that cannot b
    Needed for enforceable terms, invoices, tax treatment, governing law, and required business disclosures.
 
 3. **Owned business contact email**  
-   Do not expose or use the known personal Outlook address for cold outreach. An owned domain mailbox is preferred.
+   A dedicated temporary mailbox exists but is not committed to this public repository. Confirm whether it may be used for public inquiries, privacy/deletion requests, and security contact; an owned-domain mailbox remains preferred.
 
 4. **Owned HTTPS intake URL**  
    Must collect only the approved non-secret fields and provide a privacy/deletion route. File upload should remain disabled for the first pilots.
@@ -38,7 +38,9 @@ Everything below is a factual account, legal, or identity decision that cannot b
 
 ## Repository status
 
-The v0.3.2 request-only GitHub Pages preview is live from product release `8ae0bea48491b1442b1181e2c1bed21b1f2479e1` after PR #25 and successful deployment run #49. Documentation-only reconciliation PR #26 merged at `2a2fdba942bdd7c8e49d7486e866ddbdaaebd77b`, and run #54 redeployed the unchanged public artifact successfully. Repository access is no longer a blocker. Commercial intake, payment, and real testing remain blocked by the factual decisions above.
+The v0.3.3 request-only GitHub Pages preview is live from product release `0be0d8d1009619d4abc5a48d7c08f68392c93967` after PR #28 and successful deployment run #64. The generated four-page fictional report PDF and exact 27-file public-only contract were verified directly. Repository access and portable buyer proof are no longer blockers.
+
+A private Notion request database, qualification form, and launch-control page are prepared. The form remains intentionally unpublished. Commercial intake, payment, outreach, and real testing remain blocked by the factual decisions above.
 
 ## Readiness record
 
