@@ -1,29 +1,29 @@
-# TenantProof handoff report
+# TenantBoundary handoff report
 
 - **Snapshot:** 2026-09-05
-- **Product stage:** v0.3.3 buyer-proof request-only technical preview live and verified
+- **Product stage:** v0.4.0 TenantBoundary rebrand candidate; v0.3.3 former-name baseline live and verified
 - **Commercial stage:** no customer or revenue yet; private qualification form, static intake, and payment closed
 - **Next objective:** preserve the live release, configure real operator/commercial facts, and validate one safely authorized paid pilot before expanding the product surface
 
 ## Executive summary
 
-TenantProof is a productized Supabase/PostgreSQL tenant-isolation verification and repair service. It turns a buyer-approved authorization model into paired controls and produces redacted before/after evidence. The promise remains narrow: **Prove that Customer A cannot read or modify Customer B’s data.**
+TenantBoundary is a productized Supabase/PostgreSQL tenant-isolation verification and repair service. It turns a buyer-approved authorization model into paired controls and produces redacted before/after evidence. The promise remains narrow: **Prove that Customer A cannot read or modify Customer B’s data.**
 
-The live v0.3.3 release presents the actual workflow rather than abstract positioning. The public homepage shows a concise fictional Run preview, while `report.html` is a spacious Focus Workbench organized as **Scope → Matrix → Run → Repair → Report**. The interface preserves local report import, schema 1.0, filters, keyboard selection, print, contextual result limits, and an explicit unresolved state.
+The v0.4.0 TenantBoundary candidate preserves the actual workflow rather than abstract positioning. The public homepage shows a concise fictional Run preview, while `report.html` is a spacious Focus Workbench organized as **Scope → Matrix → Run → Repair → Report**. The interface preserves local report import, schema 1.0, filters, keyboard selection, print, contextual result limits, and an explicit unresolved state.
 
-PR [#28](https://github.com/UnderNoNameYet/NoNameYet/pull/28) was squash-merged at `0be0d8d1009619d4abc5a48d7c08f68392c93967`. Main Pages [run #64](https://github.com/UnderNoNameYet/NoNameYet/actions/runs/33949379579) completed successfully and published the exact 27-file `public/` artifact at `https://undernonameyet.github.io/NoNameYet/`. Public fetches on 2026-09-05 confirmed the homepage, Workbench, matrix, supporting routes, fictional JSON/CSV, and downloadable fictional PDF.
+The live v0.3.3 baseline was published under the former TenantProof name through PR [#28](https://github.com/UnderNoNameYet/NoNameYet/pull/28). Main Pages [run #66](https://github.com/UnderNoNameYet/NoNameYet/actions/runs/33950062374) verified the unchanged baseline at `https://undernonameyet.github.io/NoNameYet/`. The v0.4.0 candidate requires a fresh exact-head build, merge, deploy, and public fetch before TenantBoundary is called live.
 
 The deterministic four-page fictional report PDF is generated from the same canonical JSON as the interactive Workbench. It gives proposals and buyer conversations a compact proof artifact without adding a backend, customer data, a claim of real work, or commercial activation. The live PDF is visibly fictional on every page.
 
 ## Product thesis
 
-RLS presence does not encode an application’s tenant and role semantics. TenantProof records those semantics as:
+RLS presence does not encode an application’s tenant and role semantics. TenantBoundary records those semantics as:
 
 `actor × tenant × resource × operation × expected result`
 
 It executes the agreed positive and negative paths in a controlled environment, records the observation, repairs the root rule when in scope, reruns the same contract, and hands off evidence with limitations. The deliverable is an engineering decision artifact—not a scanner score, badge, certification, or guarantee.
 
-## v0.3.3 public product
+## v0.4.0 TenantBoundary candidate
 
 ### Homepage
 
@@ -71,7 +71,7 @@ Connections, Team, Activity, Plan, hosted customer workspaces, and Continuous Ve
 
 Local deterministic Chromium QA passed for the released implementation:
 
-- exactly 27 public files and 8 HTML pages expected
+- exactly 29 public files and 8 HTML pages expected
 - 16 fictional sample checks
 - before: 11 pass, 4 fail, 1 unresolved
 - after: 15 pass, 0 fail, 1 unresolved
@@ -81,7 +81,7 @@ Local deterministic Chromium QA passed for the released implementation:
 - zero console/page errors, external runtime requests, browser persistence calls, and POST requests
 - demo runner rejects live mode
 
-The exact-head PR build passed the complete quality orchestrator with Playwright Chromium, FFmpeg, Pillow, and ReportLab. Main workflow run #64 then passed and deployed the same 27-file public-only contract. After every material source change, rerun and inspect the generated captures, walkthrough, PDFs, source manifest, documentation result, and public-only bundle.
+The v0.3.3 exact-head PR build and main deployment passed the complete quality orchestrator with Playwright Chromium, FFmpeg, Pillow, and ReportLab. The v0.4.0 candidate must rerun the same gates against its 29-file public-only contract. After every material source change, rerun and inspect the generated captures, walkthrough, PDFs, source manifest, documentation result, and public-only bundle.
 
 The gate validates the generated sample PDF’s signature, minimum size, source linkage, fictional labeling, browser download filename, and deployment isolation. The live four-page A4 file was fetched successfully at 53,284 bytes with SHA-256 `ced694b73a81d98630f31ee283f0120605bd2431bf9aca5911acedb3d80ca07e`.
 
@@ -100,7 +100,7 @@ A private Notion request database, qualification form, and launch-control page a
 
 ## Continuation plan
 
-1. Preserve the verified v0.3.3 request-only preview and its 27-file public-only deployment boundary.
+1. Publish and live-verify the v0.4.0 TenantBoundary rebrand while preserving the verified v0.3.3 rollback baseline.
 2. Keep `state: preview`, `paymentMode: closed`, and all fictional labels until verified commercial facts exist.
 3. Configure the real contracting identity, jurisdiction, owned HTTPS intake/deletion route, security contact, delivery capacity, processor/tax/refund position, and launch-state legal copy.
 4. Run `npm run release:strict` only after those blockers are truthfully resolved; do not weaken the gate.
@@ -120,7 +120,7 @@ A private Notion request database, qualification form, and launch-control page a
 
 ## Historical context
 
-RebuttalKit, Stay5, the App Store screenshot service/ClearCal proposal, and Relay migration concepts are frozen or rejected. Do not revive them as TenantProof proof, merge their positioning into this product, or use their artifacts as customer evidence.
+RebuttalKit, Stay5, the App Store screenshot service/ClearCal proposal, and Relay migration concepts are frozen or rejected. Do not revive them as TenantBoundary proof, merge their positioning into this product, or use their artifacts as customer evidence.
 
 ## Handoff integrity
 

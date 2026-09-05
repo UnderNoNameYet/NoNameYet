@@ -1,18 +1,18 @@
 # AI continuation protocol
 
-Use this when handing TenantProof to another advanced model or developer.
+Use this when handing TenantBoundary to another advanced model or developer.
 
 ## Copyable continuation brief
 
-> You are continuing TenantProof, a productized Supabase/PostgreSQL tenant-isolation verification and repair service. Do not invent a new product. Read `AGENTS.md` and every file linked from `handoff/README.md` before editing. The core promise is: “Prove that Customer A cannot read or modify Customer B’s data.” The product sells executed authorization evidence, remediation, and regression protection—not an automated badge or security guarantee.
+> You are continuing TenantBoundary, a productized Supabase/PostgreSQL tenant-isolation verification and repair service. Do not invent a new product. Read `AGENTS.md` and every file linked from `handoff/README.md` before editing. The core promise is: “Prove that Customer A cannot read or modify Customer B’s data.” The product sells executed authorization evidence, remediation, and regression protection—not an automated badge or security guarantee.
 >
-> Current state: v0.3.3 is live at `https://undernonameyet.github.io/NoNameYet/` from release merge `0be0d8d1009619d4abc5a48d7c08f68392c93967` after PR #28 and successful main Pages run #64. The release contains the product-first homepage, free fictional matrix, sidebar-free Scope → Matrix → Run → Repair → Report Focus Workbench, and a deterministic four-page fictional PDF in an exact 27-file public-only artifact. Payment and commercial intake remain closed; there are no customers, revenue, testimonials, or real findings. Preserve those truths.
+> Current state: v0.3.3 remains live at `https://undernonameyet.github.io/NoNameYet/` under the former TenantProof name. Branch `product/tenantboundary-rebrand-v040` is the v0.4.0 TenantBoundary rebrand candidate. It preserves the product-first homepage, free fictional matrix, sidebar-free Scope → Matrix → Run → Repair → Report Focus Workbench, and deterministic four-page fictional PDF while expanding the public contract to 29 files for canonical assets plus byte-identical legacy aliases. Payment and commercial intake remain closed; there are no customers, revenue, testimonials, or real findings. Preserve those truths.
 >
-> A private Notion request database, qualification form, and launch-control page are prepared. The form is intentionally unpublished. Do not make it public until exact operator/legal facts, privacy/deletion handling, delivery capacity, and launch-state copy are verified.
+> A private Notion request database, qualification form, and launch-control page are prepared. The form is intentionally unpublished. Three of twelve operator-readiness gates are verified privately: business contact, security contact, and delivery capacity. Do not make the form public until the remaining intake and legal gates are verified.
 >
 > First, inspect `handoff/CURRENT_STATE.json`, run `npm run quality`, and reconcile any drift. If GitHub is available, inspect current `main`, repository instructions, Pages workflow, and PR template before writing. Commit product source, specs, operations, handoff, media, and quality tooling. Publish only `public/`. The user authorized autonomous merging after checks, but do not bypass account permissions, fabricate legal/account facts, expose private email, or test any real target without written authorization.
 >
-> Next objective: configure a real operator identity, jurisdiction, owned business contact, HTTPS intake/deletion route, retention, delivery capacity, and launch-state legal copy; then run no more than ten highly matched acquisition attempts through an authenticated approved business account. Prefer one paid pilot to vanity traffic. Stop/revise if ten contacts produce no serious conversation. Never use bulk spam, fake proof, blind discounts, or unsupported claims.
+> Next objective: pass the v0.4.0 quality/release gates, publish TenantBoundary, and verify the live 29-file artifact. Then use the free Upwork Basic path for one highly matched India-eligible Supabase review; do not buy a domain, paid tool, or paid lead before revenue. Configure contracting/payout facts only when a platform or actual contract requires them. Prefer one paid pilot to vanity traffic. Never use bulk spam, fake proof, blind discounts, or unsupported claims.
 
 ## Mandatory first actions
 
@@ -26,7 +26,7 @@ Use this when handing TenantProof to another advanced model or developer.
 
 ## Facts that must remain true until evidence changes
 
-- product: TenantProof
+- product: TenantBoundary
 - prices: $349 / $649 starting packages
 - public checkout: closed
 - sample: fictional Northstar CRM
@@ -36,10 +36,10 @@ Use this when handing TenantProof to another advanced model or developer.
 - real testing: written authorization required
 - raw evidence recommendation: 14 days
 - customers/revenue/testimonials: none
-- GitHub request-only preview: v0.3.3 deployed from `0be0d8d1009619d4abc5a48d7c08f68392c93967` through PR #28 and successful main Pages run #64
-- buyer proof: live four-page fictional PDF generated from the canonical sample in the 27-file public-only artifact
+- GitHub request-only preview: v0.3.3 live under the former TenantProof name; v0.4.0 TenantBoundary candidate not yet deployed
+- buyer proof: deterministic four-page fictional PDF generated from the canonical sample; candidate artifact has 29 public files and byte-identical former-path aliases
 - qualification form: prepared privately in Notion and intentionally unpublished
-- private Outlook email: never expose/use for cold outreach without explicit specific approval
+- dedicated Outlook contact: approved privately for business, privacy, and security response; do not expose its address in repository source
 
 ## Decision authority
 

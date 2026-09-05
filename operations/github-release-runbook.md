@@ -1,4 +1,4 @@
-# TenantProof GitHub release runbook
+# TenantBoundary GitHub release runbook
 
 Target repository: `UnderNoNameYet/NoNameYet`  
 Target base branch: `main`  
@@ -6,14 +6,14 @@ Public origin: `https://undernonameyet.github.io/NoNameYet/`
 
 ## Current state
 
-GitHub access is operational. The v0.3.3 buyer-proof release shipped through PR [#28](https://github.com/UnderNoNameYet/NoNameYet/pull/28) at `0be0d8d1009619d4abc5a48d7c08f68392c93967` and successful main [workflow run #64](https://github.com/UnderNoNameYet/NoNameYet/actions/runs/33949379579). The request-only preview and generated four-page fictional report PDF are live in an exact 27-file public-only artifact. Direct fetch verification passed on 2026-09-05. `88cdf9837780b864a3527f3b568b10512f170461` is the immediate rollback, while `047691e35c6b8d38ba5540d1fe4de345ed752a6c` remains the legacy pre-TenantProof reference.
+GitHub access is operational. The v0.3.3 buyer-proof baseline shipped under the former TenantProof name through PR [#28](https://github.com/UnderNoNameYet/NoNameYet/pull/28); documentation reconciliation reached `a1baa9ebde9bf1b1a05d7a0563ee9927ff96f9af` and successful main [workflow run #66](https://github.com/UnderNoNameYet/NoNameYet/actions/runs/33950062374). Branch `product/tenantboundary-rebrand-v040` is the v0.4.0 candidate with an exact 29-file public-only contract. `a1baa9ebde9bf1b1a05d7a0563ee9927ff96f9af` is the immediate rollback, while `047691e35c6b8d38ba5540d1fe4de345ed752a6c` remains the legacy pre-TenantProof reference.
 
 The separate Notion qualification form remains private. Publication of product proof is not permission to open intake, payment, outreach, or real testing.
 
 ## Completed first-publication sequence
 
 1. Authenticated as `MYIndieDEV` and inspected the prior `main`.
-2. Created `launch/tenantproof-v1` from `047691e35c6b8d38ba5540d1fe4de345ed752a6c`.
+2. Created `launch/tenantboundary-v1` from `047691e35c6b8d38ba5540d1fe4de345ed752a6c`.
 3. Materialized direct source without retaining a signed URL or staging token.
 4. Removed temporary transport and legacy RebuttalKit trees before review.
 5. Opened PR [#23](https://github.com/UnderNoNameYet/NoNameYet/pull/23) with risk, truth, artifact, and rollback notes.
@@ -24,7 +24,7 @@ The separate Notion qualification form remains private. Publication of product p
 
 ## Pull-request intent
 
-- Replace the previously rejected public product with the approved TenantProof request-only release.
+- Replace the previously rejected public product with the approved TenantBoundary request-only release.
 - Keep payment and customer intake closed until operator configuration is complete.
 - Preserve clear fictional-demo labeling.
 - Include rollback instructions to the current `main` SHA observed at release time.

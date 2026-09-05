@@ -41,7 +41,7 @@
     reveals.forEach(node => observer.observe(node));
   }
 
-  const config = window.TENANTPROOF_CONFIG || {};
+  const config = window.TENANTBOUNDARY_CONFIG || {};
   const contactLink = document.querySelector('[data-contact-link]');
   if (contactLink && config.state === 'ready' && /^https:\/\//.test(config.contactUrl || '')) {
     contactLink.href = config.contactUrl;
@@ -123,7 +123,7 @@
     const custom = (value('package') === 'repair' && tables > 25) ||
       (value('package') !== 'repair' && tables > 12) || roles > 3;
     const lines = [
-      'TENANTPROOF REVIEW BRIEF',
+      'TENANTBOUNDARY REVIEW BRIEF',
       '========================',
       '',
       `Package: ${packageName}${custom ? ' (manual quote required)' : ''}`,
@@ -198,7 +198,7 @@
     const url = URL.createObjectURL(blob);
     const anchor = document.createElement('a');
     anchor.href = url;
-    anchor.download = 'tenantproof-review-brief.txt';
+    anchor.download = 'tenantboundary-review-brief.txt';
     document.body.appendChild(anchor);
     anchor.click();
     anchor.remove();

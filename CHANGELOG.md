@@ -2,11 +2,36 @@
 
 All notable product changes are recorded here. The project has not reached a commercially ready 1.0 release.
 
-## [Unreleased]
+## [Unreleased] — v0.4.0 TenantBoundary rebrand candidate
 
-- No unreleased product changes.
+### Brand
+
+- renamed all visible public product copy from TenantProof to TenantBoundary after finding an active same-category open-source project using the former name
+- changed new fictional report and check identifiers from `TP-` to `TB-`
+- updated the site, report, generated PDF, metadata, manifest, icons, social image, operations, and handoff without changing the offer or safety boundary
+
+### Compatibility
+
+- added canonical `tenantboundary-fictional-report.pdf` and `tenantboundary-og.png` assets
+- retained the former PDF and social-image paths as byte-identical aliases so existing links do not break
+- kept schema 1.0 compatible with both `TP-` and `TB-` check identifiers
+- expanded the candidate public-only artifact contract from 27 to 29 files
+
+### Commercial state
+
+- kept the site request-only, payment closed, the Notion form private, and customer/revenue/testimonial counts at zero
+- recorded 3 of 12 private operator-readiness gates as verified: business contact, security contact, and delivery capacity
+- selected a zero-cost acquisition constraint; do not buy a domain or paid lead before revenue
+
+### Release state
+
+- candidate branch: `product/tenantboundary-rebrand-v040`
+- previous live baseline: v0.3.3, published under the former TenantProof name
+- exact-head CI, merge, deployment, and live route verification are still required before v0.4.0 is called live
 
 ## [0.3.3] — 2026-09-05 — buyer-ready fictional proof pack
+
+This release was published under the former TenantProof name.
 
 ### Product
 
@@ -85,7 +110,7 @@ All notable product changes are recorded here. The project has not reached a com
 
 - preserved `state: preview` and `paymentMode: closed`
 - kept Northstar CRM explicitly fictional and customer intake local-only on the static site
-- retained `047691e35c6b8d38ba5540d1fe4de345ed752a6c` as the pre-release rollback reference
+- retained `047691e35c6b8d38ba5540d1fe4de345ed752a6c` as the pre-TenantProof rollback reference
 
 ## [0.3.0] — 2026-08-30 — canonical handoff release
 

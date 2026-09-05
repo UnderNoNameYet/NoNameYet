@@ -1,34 +1,39 @@
 {
-  "snapshotAt": "2026-09-05T06:28:00Z",
-  "product": "TenantProof",
+  "snapshotAt": "2026-09-05T07:10:15.029Z",
+  "product": "TenantBoundary",
   "corePromise": "Prove that Customer A cannot read or modify Customer B's data.",
-  "stage": "v0.3.3 buyer-proof request-only technical preview live; commercial intake and payment closed",
-  "sourcePath": "repository root on current main",
+  "stage": "v0.4.0 TenantBoundary rebrand candidate; v0.3.3 TenantProof request-only preview remains live; commercial intake and payment closed",
+  "sourcePath": "repository branch product/tenantboundary-rebrand-v040",
   "repository": {
     "owner": "UnderNoNameYet",
     "name": "NoNameYet",
     "defaultBranch": "main",
     "access": "connected_published_and_verified",
-    "tenantProofDeployed": true,
     "authenticatedUser": "MYIndieDEV",
-    "inspectedMainSha": "0be0d8d1009619d4abc5a48d7c08f68392c93967",
+    "inspectedMainSha": "a1baa9ebde9bf1b1a05d7a0563ee9927ff96f9af",
     "liveVersion": "0.3.3",
     "pagesWorkflow": ".github/workflows/pages.yml",
-    "releaseTransport": "direct source with a 27-file public-only build artifact",
+    "releaseTransport": "live: direct source with a 27-file public-only build artifact; candidate: 29 files including canonical assets and two byte-identical legacy aliases",
     "preReleaseRollbackSha": "88cdf9837780b864a3527f3b568b10512f170461",
     "publishedPullRequestNumber": 28,
     "publishedPullRequestUrl": "https://github.com/UnderNoNameYet/NoNameYet/pull/28",
     "mergeSha": "0be0d8d1009619d4abc5a48d7c08f68392c93967",
-    "workflowRunNumber": 64,
-    "workflowRunUrl": "https://github.com/UnderNoNameYet/NoNameYet/actions/runs/33949379579",
+    "workflowRunNumber": 66,
+    "workflowRunUrl": "https://github.com/UnderNoNameYet/NoNameYet/actions/runs/33950062374",
     "workflowConclusion": "success",
     "deployedUrl": "https://undernonameyet.github.io/NoNameYet/",
     "liveVerifiedAt": "2026-09-05T06:20:00Z",
-    "liveVerification": "v0.3.3 home, report, methodology, sample matrix, request, privacy, terms, 404, fictional report JSON, fictional matrix CSV, and downloadable fictional PDF fetched successfully",
+    "liveVerification": "TenantProof v0.3.3 home, report, methodology, sample matrix, request, privacy, terms, 404, fictional report JSON, fictional matrix CSV, and downloadable fictional PDF fetched successfully",
     "priorKnownGoodMainSha": "88cdf9837780b864a3527f3b568b10512f170461",
-    "legacyPreTenantProofRollbackSha": "047691e35c6b8d38ba5540d1fe4de345ed752a6c",
     "mergedAt": "2026-09-05T06:16:46Z",
-    "workflowChecksUrl": "https://github.com/UnderNoNameYet/NoNameYet/commit/0be0d8d1009619d4abc5a48d7c08f68392c93967/checks"
+    "workflowChecksUrl": "https://github.com/UnderNoNameYet/NoNameYet/commit/a1baa9ebde9bf1b1a05d7a0563ee9927ff96f9af/checks",
+    "publicProductDeployed": true,
+    "liveBrand": "TenantProof",
+    "candidateBrand": "TenantBoundary",
+    "candidateVersion": "0.4.0",
+    "candidateBranch": "product/tenantboundary-rebrand-v040",
+    "candidatePublicArtifactFiles": 29,
+    "legacyPreProductRollbackSha": "047691e35c6b8d38ba5540d1fe4de345ed752a6c"
   },
   "packages": [
     {
@@ -72,10 +77,10 @@
       "terms.html",
       "404.html"
     ],
-    "publicArtifactFiles": 27,
+    "publicArtifactFiles": 29,
     "reportSchema": "1.0",
     "reportImportLimitBytes": 2000000,
-    "sampleReportId": "TP-DEMO-0830",
+    "sampleReportId": "TB-DEMO-0830",
     "sampleProject": "Northstar CRM",
     "sampleFictional": true,
     "downloadableFictionalPdf": "live",
@@ -109,13 +114,19 @@
       "requestDatabase": "prepared_private",
       "qualificationForm": "prepared_private_unpublished",
       "launchControl": "prepared_private"
-    }
+    },
+    "livePublicArtifactFiles": 27,
+    "candidateCanonicalFictionalPdf": "assets/tenantboundary-fictional-report.pdf",
+    "legacyAssetAliases": [
+      "assets/tenantproof-fictional-report.pdf",
+      "assets/tenantproof-og.png"
+    ]
   },
   "quality": {
-    "latestKnownResult": "local_pr_main_and_live_pass",
-    "latestLocalRunAt": "2026-09-05T06:27:53.004Z",
-    "qualityGateCommands": 19,
-    "requiredFiles": 27,
+    "latestKnownResult": "local_v0.4.0_candidate_pass",
+    "latestLocalRunAt": "2026-09-05T07:10:15.029Z",
+    "qualityGateCommands": 37,
+    "requiredFiles": 29,
     "htmlPages": 8,
     "sampleChecks": 16,
     "before": {
@@ -134,16 +145,24 @@
     "browserPersistenceCalls": 0,
     "postRequests": 0,
     "demoRunnerLocked": true,
-    "githubPullRequestBuild": "success",
-    "githubMainBuildAndDeploy": "success",
     "mustRerunAfterChanges": false,
-    "exactHeadPullRequestSha": "10068fd64305995553eabe3c93c90642fec2ecb6",
-    "releaseMergeSha": "0be0d8d1009619d4abc5a48d7c08f68392c93967",
-    "mainWorkflowRunNumber": 64,
-    "liveRouteVerification": "pass",
-    "mainWorkflowRunUrl": "https://github.com/UnderNoNameYet/NoNameYet/actions/runs/33949379579",
-    "livePdfBytes": 53284,
-    "livePdfSha256": "ced694b73a81d98630f31ee283f0120605bd2431bf9aca5911acedb3d80ca07e"
+    "candidateVersion": "0.4.0",
+    "candidateBrand": "TenantBoundary",
+    "candidatePdfBytes": 11159,
+    "candidatePdfSha256": "0d767d0292f604fb1582f29dd90eed80965b65383d425d620925b2f71cb66ddc",
+    "candidateLegacyAliasesByteIdentical": true,
+    "candidatePullRequestBuild": "pending",
+    "candidateMainBuildAndDeploy": "pending",
+    "candidateLiveRouteVerification": "pending",
+    "baselineGitHubPullRequestBuild": "success",
+    "baselineGitHubMainBuildAndDeploy": "success",
+    "baselineExactHeadPullRequestSha": "10068fd64305995553eabe3c93c90642fec2ecb6",
+    "baselineReleaseMergeSha": "0be0d8d1009619d4abc5a48d7c08f68392c93967",
+    "baselineMainWorkflowRunNumber": 64,
+    "baselineLiveRouteVerification": "pass",
+    "baselineMainWorkflowRunUrl": "https://github.com/UnderNoNameYet/NoNameYet/actions/runs/33949379579",
+    "baselineLivePdfBytes": 53284,
+    "baselineLivePdfSha256": "ced694b73a81d98630f31ee283f0120605bd2431bf9aca5911acedb3d80ca07e"
   },
   "commercialTruth": {
     "customers": 0,
@@ -154,22 +173,19 @@
     "targetIsGuarantee": false
   },
   "blockers": [
-    "verified legal contracting identity and jurisdiction before customer intake or payment",
-    "owned HTTPS intake and deletion route before commercial release",
-    "owned business contact configured in commercial release",
-    "launch-state privacy and terms",
-    "approved delivery capacity",
-    "payment processor, tax, and refund configuration before accepting money",
+    "contracting identity and tax details before accepting a customer contract or payment; not required to publish the app",
+    "owned HTTPS intake and deletion route before commercial intake opens",
+    "launch-state privacy and terms before commercial intake opens",
+    "payment processor, payout, tax, and refund configuration before accepting money",
     "authenticated approved acquisition channel before individualized outreach"
   ],
   "nextActions": [
-    "preserve the verified v0.3.3 request-only preview and 27-file public-only deployment boundary",
+    "finish and quality-test the TenantBoundary v0.4.0 rebrand while preserving the live TenantProof v0.3.3 rollback baseline",
+    "publish the rebrand through an exact-head pull request and verify all 29 public files, canonical assets, and byte-identical legacy aliases",
     "keep the Notion qualification form private, the static site request-only, and payment closed until commercial facts are verified",
-    "record the exact legal contracting identity and actual operating jurisdiction without inventing an entity or location",
-    "confirm delivery capacity and approve the temporary public business contact, privacy/deletion handling, and launch-state legal copy",
-    "configure an authenticated acquisition channel, secure temporary-access exchange, and invoice processor before opening the corresponding gates",
-    "copy the blocked pilot-readiness example to the ignored private record and verify only facts supported by operator evidence",
-    "run the strict commercial release gate only after those facts exist",
+    "use only zero-cost acquisition: create or finish a free Upwork Basic profile and target the single best-fit India-eligible Supabase review",
+    "do not buy a domain, paid tool, or paid lead until revenue exists",
+    "configure HTTPS intake, launch legal copy, and payout details only when they are needed to open the corresponding gate",
     "prefer one safely authorized paid pilot over speculative workspace or recurring-monitoring features"
   ],
   "frozenProducts": [
@@ -181,19 +197,37 @@
   ],
   "localReleaseMirror": "/data/tenantproof",
   "pilotReadiness": {
-    "status": "gate_prepared_external_facts_blocked",
+    "status": "private_record_partially_verified",
     "checker": "npm run pilot:check",
     "firstPilotStrict": "npm run pilot:strict",
     "commercialStrict": "npm run commercial:strict",
     "privateConfig": "config/pilot-readiness.json (ignored)",
     "committedTemplateBlocked": true,
-    "verifiedGates": 0,
+    "verifiedGates": 3,
     "requiredGates": 12,
     "outreachReady": false,
     "intakeReady": false,
     "paymentReady": false,
     "firstPilotReady": false,
     "launchExperimentReady": false,
-    "engagementSpecificAuthorizationStillRequired": true
+    "engagementSpecificAuthorizationStillRequired": true,
+    "verifiedGateNames": [
+      "businessContact",
+      "securityContact",
+      "deliveryCapacity"
+    ],
+    "remainingOutreachBlockers": [
+      "contractingIdentity",
+      "httpsIntakeAndDeletion",
+      "launchLegalCopy",
+      "approvedAcquisitionChannel"
+    ]
+  },
+  "brandDecision": {
+    "candidate": "TenantBoundary",
+    "approvedByOperator": true,
+    "reason": "TenantProof collides with an active same-category open-source project; TenantBoundary had no exact GitHub repository match and preliminary RDAP checks returned not found for .com, .dev, and .io",
+    "clearanceLimit": "Preliminary collision reduction only; not trademark clearance, and no domain purchase is authorized",
+    "compatibility": "Keep old PDF and social-image paths as byte-identical aliases while all visible public copy uses TenantBoundary"
   }
 }

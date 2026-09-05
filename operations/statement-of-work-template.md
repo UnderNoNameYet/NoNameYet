@@ -1,4 +1,4 @@
-# TenantProof statement of work template
+# TenantBoundary statement of work template
 
 > Draft operational template. Obtain jurisdiction-specific legal review before using it with a paying customer.
 
@@ -58,7 +58,7 @@ The signed authorization matrix is the controlling scope. A listed package limit
 - Maintain current backups and recovery capability.
 - Provide repository access appropriate to the repair package.
 - Designate a technical contact and stop contact.
-- Review and deploy changes; TenantProof does not deploy to production by default.
+- Review and deploy changes; TenantBoundary does not deploy to production by default.
 - Avoid sending credentials through the public website or ordinary email.
 
 ## Schedule
@@ -83,7 +83,7 @@ The public website does not collect payment. An invoice is issued only after thi
 ## Cancellation and refund
 
 - Before work begins: full refund of amounts paid.
-- If TenantProof cannot safely begin or cannot work within the agreed authorization: full refund of the unstarted milestone.
+- If TenantBoundary cannot safely begin or cannot work within the agreed authorization: full refund of the unstarted milestone.
 - After a milestone begins: completed work and evidence are delivered; any unused milestone amount is refunded according to the written milestone allocation.
 - Finding no boundary failure is still completion of a verification milestone.
 - Refunds are not conditioned on finding a vulnerability, obtaining certification, or achieving a business outcome.
@@ -96,7 +96,7 @@ Use the separate evidence-handling policy and any signed confidentiality agreeme
 
 - Customer retains ownership of customer code and data.
 - Customer receives the engagement-specific patch and regression checks upon payment.
-- TenantProof retains pre-existing methodology, generic templates, and non-customer-specific tooling.
+- TenantBoundary retains pre-existing methodology, generic templates, and non-customer-specific tooling.
 - No customer finding, name, logo, or testimonial may be published without separate written permission.
 
 ## Limitations
@@ -111,6 +111,6 @@ Liability cap, indemnity, governing law, dispute process, and required notices: 
 Name / title: `{{NAME_AND_TITLE}}`  
 Signature / date: `{{SIGNATURE_AND_DATE}}`
 
-**TenantProof operator**  
+**TenantBoundary operator**  
 Name / title: `{{NAME_AND_TITLE}}`  
 Signature / date: `{{SIGNATURE_AND_DATE}}`

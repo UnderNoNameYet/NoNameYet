@@ -46,6 +46,15 @@ Released through PR [#28](https://github.com/UnderNoNameYet/NoNameYet/pull/28) a
 
 This improves proposal and buyer-review utility without expanding into hosted accounts, credential custody, scanning, or recurring monitoring.
 
+### V1.2.2 TenantBoundary rebrand — candidate
+
+- rename all visible public product copy after a same-category TenantProof naming collision
+- preserve the offer, workflow, safety model, prices, and fictional sample
+- add canonical TenantBoundary PDF/social assets and byte-identical former-path aliases
+- retain schema 1.0 compatibility with both `TP-` and `TB-` check identifiers
+- expand the public-only deployment contract from 27 to 29 files
+- publish only after fresh local quality, exact-head CI, changed-file review, deploy, and live verification
+
 ### V1.3 commercially ready request flow — gate prepared; real facts blocked
 
 Prepared without opening intake or payment:
@@ -56,12 +65,13 @@ Prepared without opening intake or payment:
 - non-strict analysis in `npm run quality`
 - strict `pilot:strict` and combined `commercial:strict` commands
 
-Still blocked on real facts:
+Three private gates are verified: business contact, security contact, and delivery capacity. Still blocked on real facts needed for the corresponding commercial stage:
 
-- verified contracting identity and jurisdiction
-- owned business contact and HTTPS intake/deletion route
-- launch-state privacy/terms and monitored security contact
-- processor, tax/refund position, and delivery capacity
+- contracting identity/tax details before accepting a contract or payment
+- HTTPS intake/deletion route
+- launch-state privacy/terms
+- processor, payout, and refund position before accepting money
+- authenticated approved acquisition channel before individualized outreach
 - strict release configuration and post-deploy verification
 
 No payment or customer evidence is accepted before these blockers are resolved.
@@ -92,7 +102,7 @@ The polished design exploration included Connections, Team, Activity, Plan, and 
 Reconsider only when repeated paid engagements demonstrate the need and a new security/architecture decision covers:
 
 - credential custody and revocation
-- TenantProof’s own tenant isolation
+- TenantBoundary’s own tenant isolation
 - authentication/MFA and role access
 - audit logging and incident response
 - evidence retention/deletion and data residency

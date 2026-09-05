@@ -1,9 +1,9 @@
-# TenantProof
+# TenantBoundary
 
-TenantProof is a productized, authorized tenant-boundary verification and remediation service for Supabase applications.
+TenantBoundary is a productized, authorized tenant-boundary verification and remediation service for Supabase applications.
 
 ## Core claim
-TenantProof tests whether one synthetic customer identity can read or modify another synthetic customer's in-scope data. It produces an executed matrix, redacted evidence, and—when purchased—reviewable policy patches and regression checks.
+TenantBoundary tests whether one synthetic customer identity can read or modify another synthetic customer's in-scope data. It produces an executed matrix, redacted evidence, and—when purchased—reviewable policy patches and regression checks.
 
 ## Important limitations
 - It is not a general penetration test.

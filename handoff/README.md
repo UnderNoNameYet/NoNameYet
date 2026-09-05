@@ -1,4 +1,4 @@
-# TenantProof handoff index
+# TenantBoundary handoff index
 
 This folder is the durable context package for a new AI or human operator. It is intentionally more explicit than a normal README so continuation does not depend on chat history.
 

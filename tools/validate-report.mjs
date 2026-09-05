@@ -21,7 +21,7 @@ export function validateReport(report) {
     }
     if (ids.has(check?.id)) errors.push(`${label}: duplicate id`);
     ids.add(check?.id);
-    if (check?.id && !/^TP-[A-Z0-9-]+$/.test(check.id)) errors.push(`${label}: invalid id format`);
+    if (check?.id && !/^(?:TP|TB)-[A-Z0-9-]+$/.test(check.id)) errors.push(`${label}: invalid id format`);
     for (const phase of ['before', 'after']) {
       const state = check?.[phase];
       if (!statuses.has(state?.status)) errors.push(`${label}: invalid ${phase} status`);

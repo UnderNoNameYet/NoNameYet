@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 from pathlib import Path
 from PIL import Image, ImageDraw, ImageFont
+import shutil
 import subprocess
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -48,7 +49,7 @@ for radius in range(480, 40, -8):
 d.rectangle((0,0,610,H), fill=(12,24,21))
 mark = logo(64)
 im.paste(mark, (70, 58), mark)
-d.text((152, 73), "TenantProof", font=font(30, True), fill=(238,248,243))
+d.text((152, 73), "TenantBoundary", font=font(30, True), fill=(238,248,243))
 d.text((70, 184), "A green RLS badge", font=font(70, True), fill=(238,248,243))
 d.text((70, 265), "is not proof.", font=font(70, True), fill=(140,225,187))
 d.text((72, 382), "Executed tenant-boundary evidence", font=font(28), fill=(184,201,194))
@@ -72,5 +73,6 @@ for i,(name,status) in enumerate(rows):
     text=(255,184,174) if status=="FAIL" else (158,229,194)
     d.rounded_rectangle(pill, radius=13, fill=color)
     d.text((1028,y+2), status, font=font(12,True), fill=text)
-im.save(OUT / "tenantproof-og.png", optimize=True)
-print({"generated": ["icon-192.png", "icon-512.png", "tenantproof-og.png"], "font_regular": REG, "font_bold": BOLD})
+im.save(OUT / "tenantboundary-og.png", optimize=True)
+shutil.copyfile(OUT / "tenantboundary-og.png", OUT / "tenantproof-og.png")
+print({"generated": ["icon-192.png", "icon-512.png", "tenantboundary-og.png", "tenantproof-og.png"], "font_regular": REG, "font_bold": BOLD})

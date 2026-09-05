@@ -1,4 +1,4 @@
-window.TENANTPROOF_CONFIG = Object.freeze({
+window.TENANTBOUNDARY_CONFIG = Object.freeze({
   "state": "preview",
   "publicOrigin": "https://undernonameyet.github.io/NoNameYet/",
   "contactUrl": "",

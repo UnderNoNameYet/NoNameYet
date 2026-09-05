@@ -36,7 +36,7 @@ for (const scenario of definition.scenarios) {
 
 const report = {
   schemaVersion: '1.0',
-  reportId: `TP-LAB-${new Date().toISOString().slice(0, 10).replaceAll('-', '')}`,
+  reportId: `TB-LAB-${new Date().toISOString().slice(0, 10).replaceAll('-', '')}`,
   project: definition.project,
   scope: { ...definition.scope, generatedAt: new Date().toISOString() },
   checks

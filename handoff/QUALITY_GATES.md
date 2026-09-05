@@ -8,7 +8,7 @@ A material release is not complete because it looks good. It must pass determini
 npm run quality
 ```
 
-The v0.3.3 orchestrator runs, in order:
+The v0.4.0 candidate orchestrator runs, in order:
 
 1. brand asset generation
 2. HTML hardening
@@ -54,7 +54,7 @@ Capture must happen before handoff synchronization. The non-strict pilot and rel
 
 ## Gate 3 — public artifact
 
-The v0.3.3 artifact contains exactly 27 files and eight HTML pages, including:
+The v0.4.0 candidate artifact contains exactly 29 files and eight HTML pages, including:
 
 - shared CSS/JS/config/sample data
 - `assets/workbench.css` and `assets/workbench.js`
@@ -176,7 +176,7 @@ Before merge:
 - inspect changed-file list and focused diff
 - complete workflow is green
 - generated screenshots/video/PDF/source manifest correspond to current source
-- target artifact contains exactly 27 files
+- target artifact contains exactly 29 files
 - no unresolved review thread or blocker
 - rollback remains known
 
@@ -187,7 +187,7 @@ After merge:
 - Focus Workbench stage/phase/filter/dock/local-import behavior works
 - canonical URLs/CSP are correct
 - no old product content or unexpected request appears
-- v0.3.3 state is recorded only after successful deployment and direct fictional-PDF verification
+- v0.4.0 live state is recorded only after successful deployment and direct canonical/legacy fictional-PDF verification
 
 ## QA evidence retention
 

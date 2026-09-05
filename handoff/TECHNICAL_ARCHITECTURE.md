@@ -2,7 +2,7 @@
 
 ## Architecture decision
 
-TenantProof V1 is a static, dependency-light web product plus a controlled service workflow. The browser experience uses semantic HTML, CSS, small vanilla JavaScript modules, and local JSON. This minimizes attack surface, privacy disclosures, operational cost, and release complexity before paid validation.
+TenantBoundary V1 is a static, dependency-light web product plus a controlled service workflow. The browser experience uses semantic HTML, CSS, small vanilla JavaScript modules, and local JSON. This minimizes attack surface, privacy disclosures, operational cost, and release complexity before paid validation.
 
 ## Runtime topology
 
@@ -16,7 +16,7 @@ Browser
 ├── assets/report.js               report data/filters/evidence engine
 ├── assets/workbench.js            stage rail + evidence dock + print bridge
 ├── assets/sample-report.json      fictional schema-1.0 sample
-└── assets/tenantproof-fictional-report.pdf
+└── assets/tenantboundary-fictional-report.pdf
                                     generated fictional buyer proof
 
 Local/CI tooling
@@ -138,7 +138,7 @@ The quality orchestrator:
 10. synchronizes handoff media and builds the handoff PDF/source manifest
 11. checks documentation, pilot readiness, release readiness, and secret/private-email patterns
 
-GitHub Pages uploads only `dist/`, copied from `public/`. The v0.3.3 artifact contract is exactly 27 files, including the generated fictional report PDF. Handoff, operations, source tooling, local reports, logs, and raw evidence stay outside the deployment.
+GitHub Pages uploads only `dist/`, copied from `public/`. The v0.4.0 candidate artifact contract is exactly 29 files, including the generated canonical fictional report PDF and byte-identical legacy PDF/social aliases. Handoff, operations, source tooling, local reports, logs, and raw evidence stay outside the deployment.
 
 ## Scaling thresholds
 

@@ -8,24 +8,24 @@
   <meta name="referrer" content="no-referrer">
   <meta name="robots" content="index,follow,max-image-preview:large">
   <meta property="og:type" content="website">
-  <meta property="og:site_name" content="TenantProof">
-  <meta property="og:title" content="TenantProof — Verify tenant isolation before you ship">
-  <meta property="og:description" content="TenantProof executes an approved Supabase tenant-boundary matrix and delivers redacted before-and-after evidence.">
+  <meta property="og:site_name" content="TenantBoundary">
+  <meta property="og:title" content="TenantBoundary — Verify tenant isolation before you ship">
+  <meta property="og:description" content="TenantBoundary executes an approved Supabase tenant-boundary matrix and delivers redacted before-and-after evidence.">
   <meta property="og:url" content="https://undernonameyet.github.io/NoNameYet/">
-  <meta property="og:image" content="https://undernonameyet.github.io/NoNameYet/assets/tenantproof-og.png">
+  <meta property="og:image" content="https://undernonameyet.github.io/NoNameYet/assets/tenantboundary-og.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="TenantProof fictional authorization workbench preview">
+  <meta property="og:image:alt" content="TenantBoundary fictional authorization workbench preview">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="TenantProof — Verify tenant isolation before you ship">
+  <meta name="twitter:title" content="TenantBoundary — Verify tenant isolation before you ship">
   <meta name="twitter:description" content="Executed Supabase tenant-boundary evidence, repair, and retest.">
-  <meta name="twitter:image" content="https://undernonameyet.github.io/NoNameYet/assets/tenantproof-og.png">
+  <meta name="twitter:image" content="https://undernonameyet.github.io/NoNameYet/assets/tenantboundary-og.png">
   <link rel="canonical" href="https://undernonameyet.github.io/NoNameYet/">
   <link rel="manifest" href="assets/site.webmanifest">
   <link rel="apple-touch-icon" href="assets/icon-192.png">
-  <meta name="description" content="TenantProof executes an approved Supabase tenant-boundary matrix and delivers redacted before-and-after evidence.">
+  <meta name="description" content="TenantBoundary executes an approved Supabase tenant-boundary matrix and delivers redacted before-and-after evidence.">
   <meta name="theme-color" content="#17191c">
-  <title>TenantProof — Verify tenant isolation before you ship</title>
+  <title>TenantBoundary — Verify tenant isolation before you ship</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="assets/styles.css">
   <link rel="stylesheet" href="assets/workbench.css">
@@ -34,9 +34,9 @@
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header">
   <div class="container nav">
-    <a class="brand" href="index.html" aria-label="TenantProof home">
+    <a class="brand" href="index.html" aria-label="TenantBoundary home">
       <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="15" fill="#17191c"/><path d="M17 18h30v28H17zM32 18v28M17 32h30" fill="none" stroke="#b8b7ff" stroke-width="4"/><circle cx="24" cy="25" r="3" fill="#fff"/><circle cx="40" cy="39" r="3" fill="#fff"/></svg>
-      TenantProof
+      TenantBoundary
     </a>
     <button class="menu-button" type="button" aria-expanded="false" aria-controls="primary-navigation" aria-label="Toggle navigation" data-menu-button>
       <svg width="21" height="21" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
@@ -63,8 +63,8 @@
         </div>
         <div class="tp-safety-line" aria-label="Service safeguards"><span>Staging first</span><span>Synthetic data</span><span>Written authorization</span></div>
       </div>
-      <div class="tp-preview" aria-label="Fictional TenantProof run preview">
-        <div class="tp-preview-top"><span class="tp-preview-brand"><b>TP</b> TenantProof</span><span>Northstar CRM</span><span class="tp-demo-chip">Fictional demo</span></div>
+      <div class="tp-preview" aria-label="Fictional TenantBoundary run preview">
+        <div class="tp-preview-top"><span class="tp-preview-brand"><b>TB</b> TenantBoundary</span><span>Northstar CRM</span><span class="tp-demo-chip">Fictional demo</span></div>
         <div class="tp-preview-rail" aria-hidden="true"><span class="done"><i>✓</i>Scope</span><span class="done"><i>✓</i>Matrix</span><span class="active"><i>3</i>Run</span><span><i>4</i>Repair</span><span><i>5</i>Report</span></div>
         <div class="tp-preview-body">
           <div class="tp-preview-heading"><span>Stage 3 · Run</span><strong>Run 003</strong><small>Same fixtures · revision 8f31c2a</small></div>
@@ -74,7 +74,7 @@
       </div>
     </div>
   </section>
-  <section class="tp-proof-bar" aria-label="TenantProof deliverables"><div class="container"><span>Approved matrix</span><span>Executed controls</span><span>Reviewable repair</span><span>Before/after evidence</span></div></section>
+  <section class="tp-proof-bar" aria-label="TenantBoundary deliverables"><div class="container"><span>Approved matrix</span><span>Executed controls</span><span>Reviewable repair</span><span>Before/after evidence</span></div></section>
   <section class="tp-section"><div class="container"><header class="tp-section-head"><p class="tp-kicker">The failure we test</p><h2>Customer A should never become Customer B.</h2><p>RLS being enabled does not prove your application’s role and tenant rules.</p></header><div class="tp-question-grid"><article><span>READ</span><h3>Can a member retrieve another tenant’s rows?</h3><p>Execute the denied path, not just the happy path.</p></article><article><span>WRITE</span><h3>Can an owned row move across tenants?</h3><p>Check proposed-row rules on insert and update.</p></article><article><span>RPC + STORAGE</span><h3>Do elevated paths preserve the boundary?</h3><p>Cover agreed functions and one storage bucket.</p></article></div></div></section>
   <section class="tp-section tp-section-dark"><div class="container"><header class="tp-section-head"><p class="tp-kicker">One controlled review</p><h2>Scope. Attempt. Repair. Prove.</h2><p>Every stage stays tied to the same approved boundary.</p></header><ol class="tp-flow"><li><b>01</b><span><strong>Define the contract</strong>Roles, tenants, resources, expected allow and deny behavior.</span></li><li><b>02</b><span><strong>Run paired controls</strong>Synthetic positive and negative checks in staging.</span></li><li><b>03</b><span><strong>Repair the root rule</strong>Versioned SQL and application changes in a reviewable PR.</span></li><li><b>04</b><span><strong>Rerun and hand off</strong>Before/after evidence plus explicit unresolved scope.</span></li></ol></div></section>
   <section class="tp-section"><div class="container tp-deliverable-grid"><div><p class="tp-kicker">Decision artifact</p><h2>Evidence before confidence.</h2><p class="tp-copy">Inspect each expectation, observation, redacted trace, remediation, and retest state. A pass applies only to the recorded scope and code state.</p><a class="button" href="report.html">Inspect the fictional report</a></div><div class="tp-before-after"><div><span>Before repair</span><strong>11 pass · 4 fail · 1 unresolved</strong><i class="before"></i></div><div><span>After repair</span><strong>15 pass · 0 fail · 1 unresolved</strong><i class="after"></i></div><small>Northstar CRM is fictional. These are demonstration results.</small></div></div></section>
@@ -82,7 +82,7 @@
   <section class="tp-section tp-boundaries"><div class="container"><div><p class="tp-kicker">Service boundaries</p><h2>No credentials through this site.</h2></div><ul><li>Written authorization before testing</li><li>Staging or dedicated test project by default</li><li>Synthetic identities and records</li><li>No certification or complete-security claim</li></ul></div></section>
   <section class="tp-section"><div class="container"><div class="tp-cta"><div><p class="tp-kicker">Ready to make it testable?</p><h2>Prepare the boundary before access is discussed.</h2></div><a class="button" href="request.html">Build a local scope brief</a></div></div></section>
 </main>
-<footer class="site-footer"><div class="container"><div class="footer-grid"><div class="footer-brand"><a class="brand" href="index.html">TenantProof</a><p>Executed tenant-boundary evidence for Supabase applications.</p></div><div><div class="footer-title">Product</div><div class="footer-links"><a href="report.html">Sample workbench</a><a href="sample-matrix.html">Boundary matrix</a><a href="#pricing">Pricing</a></div></div><div><div class="footer-title">Trust</div><div class="footer-links"><a href="methodology.html">Method</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></div></div><div><div class="footer-title">Start</div><div class="footer-links"><a href="request.html">Scope a review</a></div></div></div><div class="footer-bottom"><span>© <span data-year></span> TenantProof. <span data-launch-state>Pre-launch preview.</span></span><span>No customer work or outcomes are represented.</span></div></div></footer>
+<footer class="site-footer"><div class="container"><div class="footer-grid"><div class="footer-brand"><a class="brand" href="index.html">TenantBoundary</a><p>Executed tenant-boundary evidence for Supabase applications.</p></div><div><div class="footer-title">Product</div><div class="footer-links"><a href="report.html">Sample workbench</a><a href="sample-matrix.html">Boundary matrix</a><a href="#pricing">Pricing</a></div></div><div><div class="footer-title">Trust</div><div class="footer-links"><a href="methodology.html">Method</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></div></div><div><div class="footer-title">Start</div><div class="footer-links"><a href="request.html">Scope a review</a></div></div></div><div class="footer-bottom"><span>© <span data-year></span> TenantBoundary. <span data-launch-state>Pre-launch preview.</span></span><span>No customer work or outcomes are represented.</span></div></div></footer>
 <script src="assets/site-config.js" defer></script><script src="assets/site.js" defer></script>
 </body>
 </html>

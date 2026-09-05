@@ -104,6 +104,22 @@ Append new decisions; do not silently rewrite prior rationale. Dates use Asia/Ca
 
 **Why:** GitHub Pages now carries the product and buyer proof. Publishing intake before the controller, response path, and operating capacity are factual would create avoidable privacy and fulfillment risk.
 
+## 2026-09-05 — Rename the public working brand to TenantBoundary
+
+**Decision:** rename the public product from TenantProof to TenantBoundary in v0.4.0 while retaining byte-identical aliases for the two previously published asset paths.
+
+**Why:** TenantProof collides with an active same-category open-source tenant-isolation project. A preliminary exact-name GitHub search and RDAP checks found no equivalent TenantBoundary collision for the candidate repository/name and returned not-found signals for `.com`, `.dev`, and `.io`. This reduces immediate confusion but is not legal or trademark clearance.
+
+**Constraints:** do not buy a domain before revenue; keep the repository URL unchanged; keep payment and public intake closed; preserve schema 1.0 compatibility with former `TP-` check identifiers; never rewrite old releases as if they used the new name.
+
+## 2026-09-05 — Separate app publication from contracting identity
+
+**Decision:** publish the static request-only app without asking for or publishing the operator’s legal name. Request legal/payout identity only inside the contracting or payment platform when an actual transaction requires it.
+
+**Why:** a public product preview can exist without a legal entity or public legal name. Conflating publication with contracting created unnecessary friction and did not reduce app-level risk.
+
+**Constraints:** keep payment closed and customer testing unauthorized until the relevant contract, payout, tax, secure-access, and customer-specific authorization facts exist.
+
 ## 2026-08-30 — No invented legal owner
 
 **Decision:** agent owns product decisions but does not claim to be the legal contracting party.
@@ -136,9 +152,9 @@ Append new decisions; do not silently rewrite prior rationale. Dates use Asia/Ca
 
 ## 2026-08-31 — Publish the closed GitHub Pages preview
 
-**Decision:** squash-merge PR [#23](https://github.com/UnderNoNameYet/NoNameYet/pull/23) and publish TenantProof from direct source while preserving `state: preview`, local-only static intake, and `paymentMode: closed`.
+**Decision:** squash-merge PR [#23](https://github.com/UnderNoNameYet/NoNameYet/pull/23) and publish TenantBoundary from direct source while preserving `state: preview`, local-only static intake, and `paymentMode: closed`.
 
-**Why:** the exact delta was inspected, the PR build passed, the public-only artifact boundary was enforced, and live public routes showed the intended TenantProof and fictional Northstar CRM content.
+**Why:** the exact delta was inspected, the PR build passed, the public-only artifact boundary was enforced, and live public routes showed the intended TenantBoundary and fictional Northstar CRM content.
 
 **Evidence:** merge `6bc99104bb91b32afb50c8c7d9b416d74566f8ed`; deployment [run #40](https://github.com/UnderNoNameYet/NoNameYet/actions/runs/33372340582) succeeded; pre-release rollback `047691e35c6b8d38ba5540d1fe4de345ed752a6c` remains documented.
 
@@ -156,7 +172,7 @@ Append new decisions; do not silently rewrite prior rationale. Dates use Asia/Ca
 
 **Decision:** rebuild the homepage around a realistic fictional Run preview and make `report.html` a horizontal Focus Workbench: Scope → Matrix → Run → Repair → Report.
 
-**Why:** abstract boundary art and long copy did not explain how TenantProof works. One stage at a time gives the matrix, execution, repair, and handoff enough space while keeping the product concrete and engaging.
+**Why:** abstract boundary art and long copy did not explain how TenantBoundary works. One stage at a time gives the matrix, execution, repair, and handoff enough space while keeping the product concrete and engaging.
 
 **Constraints:** no generic permanent sidebar, no permanent inspector, no cramped three-column application shell, and no hidden fictional labeling. Evidence appears in a temporary dismissible dock only after selection.
 

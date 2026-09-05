@@ -1,4 +1,4 @@
-# TenantProof delivery runbook
+# TenantBoundary delivery runbook
 
 This runbook covers an authorized tenant-boundary engagement. It intentionally excludes instructions for arbitrary-target scanning.
 

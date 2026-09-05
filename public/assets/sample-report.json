@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0",
-  "reportId": "TP-DEMO-0830",
+  "reportId": "TB-DEMO-0830",
   "project": {
     "name": "Northstar CRM",
     "environment": "Fictional staging demo",
@@ -15,7 +15,7 @@
   },
   "checks": [
     {
-      "id": "TP-001",
+      "id": "TB-001",
       "actor": "member",
       "area": "Table",
       "resource": "customer_notes",
@@ -35,7 +35,7 @@
       }
     },
     {
-      "id": "TP-002",
+      "id": "TB-002",
       "actor": "member",
       "area": "Table",
       "resource": "customer_notes",
@@ -55,7 +55,7 @@
       }
     },
     {
-      "id": "TP-003",
+      "id": "TB-003",
       "actor": "manager",
       "area": "Table",
       "resource": "accounts",
@@ -75,7 +75,7 @@
       }
     },
     {
-      "id": "TP-004",
+      "id": "TB-004",
       "actor": "member",
       "area": "Table",
       "resource": "projects",
@@ -95,7 +95,7 @@
       }
     },
     {
-      "id": "TP-005",
+      "id": "TB-005",
       "actor": "member",
       "area": "Table",
       "resource": "projects",
@@ -115,7 +115,7 @@
       }
     },
     {
-      "id": "TP-006",
+      "id": "TB-006",
       "actor": "coach",
       "area": "Table",
       "resource": "client_sessions",
@@ -135,7 +135,7 @@
       }
     },
     {
-      "id": "TP-007",
+      "id": "TB-007",
       "actor": "manager",
       "area": "Function",
       "resource": "archive_project",
@@ -155,7 +155,7 @@
       }
     },
     {
-      "id": "TP-008",
+      "id": "TB-008",
       "actor": "member",
       "area": "Function",
       "resource": "team_metrics",
@@ -175,7 +175,7 @@
       }
     },
     {
-      "id": "TP-009",
+      "id": "TB-009",
       "actor": "member",
       "area": "Storage",
       "resource": "customer-files",
@@ -195,7 +195,7 @@
       }
     },
     {
-      "id": "TP-010",
+      "id": "TB-010",
       "actor": "member",
       "area": "Storage",
       "resource": "customer-files",
@@ -215,7 +215,7 @@
       }
     },
     {
-      "id": "TP-011",
+      "id": "TB-011",
       "actor": "anonymous",
       "area": "Table",
       "resource": "profiles",
@@ -235,7 +235,7 @@
       }
     },
     {
-      "id": "TP-012",
+      "id": "TB-012",
       "actor": "anonymous",
       "area": "Table",
       "resource": "billing_records",
@@ -255,7 +255,7 @@
       }
     },
     {
-      "id": "TP-013",
+      "id": "TB-013",
       "actor": "member",
       "area": "Table",
       "resource": "invitations",
@@ -275,7 +275,7 @@
       }
     },
     {
-      "id": "TP-014",
+      "id": "TB-014",
       "actor": "manager",
       "area": "Table",
       "resource": "memberships",
@@ -295,7 +295,7 @@
       }
     },
     {
-      "id": "TP-015",
+      "id": "TB-015",
       "actor": "member",
       "area": "Auth flow",
       "resource": "organization_switch",
@@ -315,7 +315,7 @@
       }
     },
     {
-      "id": "TP-016",
+      "id": "TB-016",
       "actor": "platform_admin",
       "area": "Server path",
       "resource": "support_console",

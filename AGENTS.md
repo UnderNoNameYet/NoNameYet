@@ -1,10 +1,10 @@
-# TenantProof — canonical agent instructions
+# TenantBoundary — canonical agent instructions
 
 This is the primary instruction file for any AI or human continuing this repository. Read it before editing code, copy, operations, pricing, or launch configuration. Then follow the ordered handoff reading list below.
 
 ## Mission
 
-TenantProof is a productized Supabase/PostgreSQL tenant-isolation verification and repair service. Its core promise is deliberately narrow:
+TenantBoundary is a productized Supabase/PostgreSQL tenant-isolation verification and repair service. Its core promise is deliberately narrow:
 
 > Prove that Customer A cannot read or modify Customer B’s data.
 
@@ -38,15 +38,16 @@ Use `handoff/README.md` as the complete index.
 ## Current state — 2026-09-05
 
 - Product specification, static MVP, production-preparation assets, and operating safeguards: complete.
-- Product UI: v0.3.3 is live with the concise product-first homepage, free boundary matrix, sidebar-free Focus Workbench organized as Scope → Matrix → Run → Repair → Report, and a deterministic four-page fictional report PDF generated from the canonical sample.
-- GitHub release: PR [#28](https://github.com/UnderNoNameYet/NoNameYet/pull/28) was squash-merged to `main` at `0be0d8d1009619d4abc5a48d7c08f68392c93967` on 2026-09-05.
-- Deployment: main workflow [run #64](https://github.com/UnderNoNameYet/NoNameYet/actions/runs/33949379579) completed successfully. Public verification returned the v0.3.3 homepage, Workbench, supporting routes, fictional JSON/CSV, and downloadable fictional PDF.
-- Deployment boundary: the live artifact contains exactly 27 files generated from `public/`. Repository handoff, operations, tests, and build output remain unpublished.
+- Live baseline: v0.3.3 is deployed under the former TenantProof name with the concise product-first homepage, free boundary matrix, sidebar-free Focus Workbench organized as Scope → Matrix → Run → Repair → Report, and a deterministic four-page fictional report PDF generated from the canonical sample.
+- Rebrand candidate: v0.4.0 changes the public name to TenantBoundary after a same-category naming collision. It keeps the service, promise, prices, workflow, safety boundaries, and fictional sample intact.
+- GitHub baseline: PR [#28](https://github.com/UnderNoNameYet/NoNameYet/pull/28) was squash-merged at `0be0d8d1009619d4abc5a48d7c08f68392c93967`; PR [#29](https://github.com/UnderNoNameYet/NoNameYet/pull/29) reconciled the handoff on `main` at `a1baa9ebde9bf1b1a05d7a0563ee9927ff96f9af`.
+- Deployment: main workflow [run #66](https://github.com/UnderNoNameYet/NoNameYet/actions/runs/33950062374) completed successfully for the unchanged v0.3.3 baseline. The v0.4.0 candidate must pass exact-head CI and live verification before this section calls it deployed.
+- Deployment boundary: the candidate artifact contains exactly 29 files generated from `public/`: 27 functional files plus canonical TenantBoundary PDF/social assets and two byte-identical legacy aliases. Repository handoff, operations, tests, and build output remain unpublished.
 - Runtime state: request-only preview, `state: preview`, `paymentMode: closed`, local worksheet/report import, and no hosted account, analytics, scanner, or credential collection.
 - Intake state: a private Notion request database, form, and launch-control page are prepared, but the form is intentionally unpublished until operator, legal, privacy, and delivery facts are verified.
-- First-pilot readiness: a deterministic private-configuration gate is prepared; the committed template remains fully blocked and does not authorize outreach, intake, payment, or testing.
+- First-pilot readiness: a deterministic private-configuration gate is prepared; 3 of 12 operator gates are verified privately (business contact, security contact, and delivery capacity). The committed template remains fully blocked, and no outreach, intake, payment, or testing is authorized yet.
 - Payment, commercial intake, customer work, testimonials, revenue, and real findings: none; never imply otherwise.
-- Immediate prior known-good main is `88cdf9837780b864a3527f3b568b10512f170461`; the older pre-TenantProof rollback reference is `047691e35c6b8d38ba5540d1fe4de345ed752a6c`.
+- Immediate prior known-good main is `a1baa9ebde9bf1b1a05d7a0563ee9927ff96f9af`; the older pre-TenantProof rollback reference is `047691e35c6b8d38ba5540d1fe4de345ed752a6c`.
 
 The canonical machine source is the current repository root on `main`; local `/data/` paths are release-session mirrors only. Historical paths for RebuttalKit, Stay5, screenshot concepts, or ClearCal are not active products.
 
@@ -200,4 +201,4 @@ Do not spend further product time on RebuttalKit, Stay5, App Store screenshot se
 
 ## Final operating mindset
 
-TenantProof wins by being narrower, more honest, and more evidentiary than generic scanners or broad “security audits.” Preserve that advantage. The goal is not to claim every competitor is obsolete; it is to make the right buyer see a lower-risk, more decision-useful purchase.
+TenantBoundary wins by being narrower, more honest, and more evidentiary than generic scanners or broad “security audits.” Preserve that advantage. The goal is not to claim every competitor is obsolete; it is to make the right buyer see a lower-risk, more decision-useful purchase.

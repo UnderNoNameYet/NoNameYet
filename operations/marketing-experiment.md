@@ -1,4 +1,4 @@
-# TenantProof ten-day marketing experiment
+# TenantBoundary ten-day marketing experiment
 
 Status: plan only. No outreach is authorized by this document.
 

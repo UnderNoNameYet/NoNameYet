@@ -2,7 +2,7 @@
 
 ## Design intent
 
-TenantProof should feel like a purpose-built engineering workbench: calm, exact, spacious, and credible. It must not resemble a generic admin template, a sketch, or an ornamental security landing page.
+TenantBoundary should feel like a purpose-built engineering workbench: calm, exact, spacious, and credible. It must not resemble a generic admin template, a sketch, or an ornamental security landing page.
 
 The interface exists to make a boundary contract, execution, repair, and evidence easy to inspect. Visual novelty must come from the product’s structure—not abstract shapes.
 
@@ -150,4 +150,4 @@ Prefer concrete observations such as “four comparison-tenant rows returned” 
 
 ## Competitive quality bar
 
-TenantProof must outperform through scope clarity, evidence traceability, honest uncertainty, privacy-safe first contact, fixed entry pricing, and a reviewable remediation handoff. A proposed UI feature that improves none of these should be rejected.
+TenantBoundary must outperform through scope clarity, evidence traceability, honest uncertainty, privacy-safe first contact, fixed entry pricing, and a reviewable remediation handoff. A proposed UI feature that improves none of these should be rejected.

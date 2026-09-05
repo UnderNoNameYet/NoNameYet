@@ -1,4 +1,4 @@
-# TenantProof evidence-handling policy
+# TenantBoundary evidence-handling policy
 
 Status: pre-launch operational draft  
 Owner: `{{OPERATOR}}`  

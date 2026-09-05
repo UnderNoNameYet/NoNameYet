@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://tenantproof.invalid/schema/report-1.0.json",
-  "title": "TenantProof redacted report",
+  "$id": "https://tenantboundary.invalid/schema/report-1.0.json",
+  "title": "TenantBoundary redacted report",
   "type": "object",
   "required": ["schemaVersion", "reportId", "project", "scope", "checks"],
   "additionalProperties": false,
@@ -53,7 +53,7 @@
       "required": ["id", "actor", "area", "resource", "operation", "expectation", "before", "after"],
       "additionalProperties": false,
       "properties": {
-        "id": { "type": "string", "pattern": "^TP-[A-Z0-9-]+$", "maxLength": 40 },
+        "id": { "type": "string", "pattern": "^(TP|TB)-[A-Z0-9-]+$", "maxLength": 40 },
         "actor": { "type": "string", "minLength": 1, "maxLength": 80 },
         "area": { "type": "string", "minLength": 1, "maxLength": 80 },
         "resource": { "type": "string", "minLength": 1, "maxLength": 160 },

@@ -4,7 +4,7 @@
 
 Protect customers, operators, and unrelated third parties while producing trustworthy evidence about a narrow authorization boundary.
 
-TenantProof must never create more risk than the uncertainty it is hired to reduce.
+TenantBoundary must never create more risk than the uncertainty it is hired to reduce.
 
 ## Threat model
 

@@ -37,10 +37,10 @@ for regular, bold in [
     ("/usr/share/fonts/truetype/liberation2/LiberationSans-Regular.ttf", "/usr/share/fonts/truetype/liberation2/LiberationSans-Bold.ttf"),
 ]:
     if Path(regular).exists() and Path(bold).exists():
-        pdfmetrics.registerFont(TTFont("TenantProofSans", regular))
-        pdfmetrics.registerFont(TTFont("TenantProofSans-Bold", bold))
-        font_regular = "TenantProofSans"
-        font_bold = "TenantProofSans-Bold"
+        pdfmetrics.registerFont(TTFont("TenantBoundarySans", regular))
+        pdfmetrics.registerFont(TTFont("TenantBoundarySans-Bold", bold))
+        font_regular = "TenantBoundarySans"
+        font_bold = "TenantBoundarySans-Bold"
         break
 
 styles = getSampleStyleSheet()
@@ -130,22 +130,22 @@ def page_decor(canvas, doc):
     if page > 1:
         canvas.setStrokeColor(LINE); canvas.line(18 * mm, 14 * mm, 192 * mm, 14 * mm)
         canvas.setFont(font_regular, 7.5); canvas.setFillColor(MUTED)
-        canvas.drawString(18 * mm, 9 * mm, f"TenantProof • canonical handoff • v{VERSION}")
+        canvas.drawString(18 * mm, 9 * mm, f"TenantBoundary • canonical handoff • v{VERSION}")
         canvas.drawRightString(192 * mm, 9 * mm, str(page))
     canvas.restoreState()
 
 
 OUT.parent.mkdir(parents=True, exist_ok=True)
-doc = SimpleDocTemplate(str(OUT), pagesize=A4, rightMargin=18 * mm, leftMargin=18 * mm, topMargin=18 * mm, bottomMargin=19 * mm, title="TenantProof Canonical Handoff Report", author="TenantProof project")
+doc = SimpleDocTemplate(str(OUT), pagesize=A4, rightMargin=18 * mm, leftMargin=18 * mm, topMargin=18 * mm, bottomMargin=19 * mm, title="TenantBoundary Canonical Handoff Report", author="TenantBoundary project")
 story = []
-cover_content = [Paragraph("CANONICAL PRODUCT + ENGINEERING HANDOFF", styles["TPCoverEyebrow"]), Paragraph("TenantProof", styles["TPCoverTitle"])]
+cover_content = [Paragraph("CANONICAL PRODUCT + ENGINEERING HANDOFF", styles["TPCoverEyebrow"]), Paragraph("TenantBoundary", styles["TPCoverTitle"])]
 cover = Table([[cover_content]], colWidths=[174 * mm], hAlign="LEFT")
 cover.setStyle(TableStyle([("BACKGROUND", (0, 0), (-1, -1), DARK), ("BOX", (0, 0), (-1, -1), 0, DARK), ("LEFTPADDING", (0, 0), (-1, -1), 12), ("RIGHTPADDING", (0, 0), (-1, -1), 12), ("TOPPADDING", (0, 0), (-1, -1), 15), ("BOTTOMPADDING", (0, 0), (-1, -1), 15)]))
 story.extend([cover, Spacer(1, 4 * mm), Paragraph("Focus Workbench for executed tenant-boundary evidence", styles["TPSubtitle"]), Spacer(1, 14 * mm), Paragraph("Prove that Customer A cannot read or modify Customer B’s data.", styles["TPTitle"]), Paragraph("Product strategy, workflow, UX system, architecture, safety boundaries, commercial state, roadmap, and release protocol.", styles["TPSubtitle"])])
 status_data = [
     [Paragraph("SNAPSHOT", styles["TPSmall"]), Paragraph("2026-09-05", styles["TPBody"])],
-    [Paragraph("STAGE", styles["TPSmall"]), Paragraph("v0.3.3 buyer-proof request-only preview live", styles["TPBody"])],
-    [Paragraph("QUALITY", styles["TPSmall"]), Paragraph("PR #28, main run #64, 27-file artifact, and live fictional PDF verified", styles["TPBody"])],
+    [Paragraph("STAGE", styles["TPSmall"]), Paragraph("v0.4.0 TenantBoundary rebrand candidate; v0.3.3 former-name baseline live", styles["TPBody"])],
+    [Paragraph("QUALITY", styles["TPSmall"]), Paragraph("29-file candidate with canonical assets and byte-identical former-path aliases; exact-head verification required", styles["TPBody"])],
     [Paragraph("COMMERCIAL", styles["TPSmall"]), Paragraph("$349 verification / $649 verification + repair; payments closed; no customers or revenue", styles["TPBody"])],
 ]
 status = Table(status_data, colWidths=[32 * mm, 137 * mm], hAlign="LEFT")
