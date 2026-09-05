@@ -37,13 +37,13 @@ Recent public requests include:
 - multi-tenant education SaaS role/isolation audit
 - manual SaaS authorization testing beyond automated scans
 
-These validate the problem and price neighborhood. They do not mean the jobs remain open or that TenantProof will win.
+These validate the problem and price neighborhood. They do not mean the jobs remain open or that TenantBoundary will win.
 
 ## Positioning
 
 ### One line
 
-TenantProof executes the tenant and role matrix your RLS badge cannot prove, then hands you redacted before/after evidence.
+TenantBoundary executes the tenant and role matrix your RLS badge cannot prove, then hands you redacted before/after evidence.
 
 ### What makes it different
 
@@ -80,7 +80,7 @@ TenantProof executes the tenant and role matrix your RLS badge cannot prove, the
 
 ### Example — broader pre-launch audit
 
-> Your request is broader than TenantProof’s fixed boundary package, so I would start by isolating the multi-tenant authorization work: tables, role paths, selected RPCs, and storage. The output is an expectation matrix, executed evidence, remediation, and retest—not an automated score. After that boundary is scoped, we can identify what remains for a full application-security review rather than mislabeling one as the other.
+> Your request is broader than TenantBoundary’s fixed boundary package, so I would start by isolating the multi-tenant authorization work: tables, role paths, selected RPCs, and storage. The output is an expectation matrix, executed evidence, remediation, and retest—not an automated score. After that boundary is scoped, we can identify what remains for a full application-security review rather than mislabeling one as the other.
 
 Never claim prior customers, references, or portfolio work. Use the explicitly fictional sample to demonstrate output structure.
 
@@ -146,7 +146,7 @@ Vanity traffic, likes, impressions, and email-list size are not primary signals.
 
 ### “I can ask AI to write policies.”
 
-Agree. TenantProof is not selling policy text; it sells agreed execution, before/after evidence, and regression checks against application-specific roles.
+Agree. TenantBoundary is not selling policy text; it sells agreed execution, before/after evidence, and regression checks against application-specific roles.
 
 ### “A scanner says RLS is enabled.”
 
@@ -154,7 +154,7 @@ Explain that configuration presence and business authorization behavior are diff
 
 ### “Why not a broad pentest?”
 
-A broad pentest may be appropriate. TenantProof is a narrower, faster decision artifact for the tenant boundary and should not be misrepresented as a substitute.
+A broad pentest may be appropriate. TenantBoundary is a narrower, faster decision artifact for the tenant boundary and should not be misrepresented as a substitute.
 
 ### “Can you guarantee no cross-tenant leak?”
 

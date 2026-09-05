@@ -1,11 +1,11 @@
-# TenantProof launch checklist
+# TenantBoundary launch checklist
 
 ## A. Operator and legal identity
 
 - [ ] Operator legal name or registered entity approved
 - [ ] Public trading/display name approved
 - [ ] Jurisdiction and business address requirements reviewed
-- [x] Dedicated TenantProof business email created; agent Mail attachment remains unavailable, so no email outreach has been sent
+- [x] Dedicated TenantBoundary business email created; agent Mail attachment remains unavailable, so no email outreach has been sent
 - [ ] Privacy contact and deletion route configured
 - [ ] Terms reviewed for governing law, liability, taxes, and statutory rights
 - [ ] Evidence retention period approved
@@ -38,7 +38,7 @@
 - [ ] Run strict release check
 - [x] GitHub connection restored and authenticated
 - [x] Inspect current `main` and pull-request template
-- [x] Initial TenantProof publication: PR #23 and post-deployment reconciliation PR #24
+- [x] Initial TenantBoundary publication: PR #23 and post-deployment reconciliation PR #24
 - [x] Focus Workbench release branch created from inspected `main`
 - [x] PR #25 exact 47-file diff, generated media, and exact-head CI reviewed
 - [x] Automated review requested twice; no submitted review, thread, or actionable comment returned
@@ -49,6 +49,7 @@
 - [x] Reconcile publication records through PR #26 and verify successful unchanged Pages run #54
 - [x] Prepare deterministic first-pilot readiness tooling with a fully blocked committed template
 - [x] Publish and verify the v0.3.3 downloadable fictional report PDF through PR #28, main run #64, and the 27-file public-only contract
+- [ ] Publish and verify the v0.4.0 TenantBoundary rebrand, 29-file contract, canonical assets, and byte-identical former-path aliases
 - [x] Prepare a private Notion request database, qualification form, and launch-control page
 - [ ] Approve privacy/operator facts, then explicitly publish the Notion qualification form
 

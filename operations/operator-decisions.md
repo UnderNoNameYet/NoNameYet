@@ -1,11 +1,11 @@
-# TenantProof operator decisions required before commercial intake
+# TenantBoundary operator decisions required before commercial intake
 
 Everything below is a factual account, legal, or identity decision that cannot be invented by product design.
 
 ## Required before customer intake opens
 
 1. **Public operator display name**  
-   Recommended product display: `TenantProof`. Confirm whether a legal personal or company name must also appear.
+   Recommended product display: `TenantBoundary`. Confirm whether a legal personal or company name must also appear.
 
 2. **Operator legal name and jurisdiction**  
    Needed for enforceable terms, invoices, tax treatment, governing law, and required business disclosures.
@@ -38,7 +38,7 @@ Everything below is a factual account, legal, or identity decision that cannot b
 
 ## Repository status
 
-The v0.3.3 request-only GitHub Pages preview is live from product release `0be0d8d1009619d4abc5a48d7c08f68392c93967` after PR #28 and successful deployment run #64. The generated four-page fictional report PDF and exact 27-file public-only contract were verified directly. Repository access and portable buyer proof are no longer blockers.
+The v0.3.3 request-only GitHub Pages preview remains live under the former TenantProof name. Branch `product/tenantboundary-rebrand-v040` is the v0.4.0 TenantBoundary candidate with canonical PDF/social assets, byte-identical former-path aliases, and an exact 29-file public-only contract. Repository access and portable buyer proof are no longer blockers; candidate CI, deployment, and live verification remain open.
 
 A private Notion request database, qualification form, and launch-control page are prepared. The form remains intentionally unpublished. Commercial intake, payment, outreach, and real testing remain blocked by the factual decisions above.
 

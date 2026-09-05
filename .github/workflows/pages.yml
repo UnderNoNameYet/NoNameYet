@@ -1,4 +1,4 @@
-name: Validate and deploy TenantProof preview
+name: Validate and deploy TenantBoundary preview
 
 on:
   push:
@@ -12,7 +12,7 @@ permissions:
   id-token: write
 
 concurrency:
-  group: tenantproof-pages-${{ github.ref }}
+  group: tenantboundary-pages-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
@@ -51,7 +51,7 @@ jobs:
           npm run quality
           grep -q '"state": "preview"' public/assets/site-config.js
           grep -q '"paymentMode": "closed"' public/assets/site-config.js
-          test "$(find dist -type f | wc -l)" -eq 27
+          test "$(find dist -type f | wc -l)" -eq 29
 
       - name: Configure Pages
         if: github.event_name != 'pull_request'

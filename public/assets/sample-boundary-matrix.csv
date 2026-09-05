@@ -1,11 +1,11 @@
 check_id,area,resource,actor,acting_tenant,target_tenant,operation,expected_result,control_type,evidence_status,notes
-TP-MATRIX-001,table,projects,member,Tenant A,Tenant A,SELECT,Allow own-tenant rows,positive,untested,Fictional starter; replace privately
-TP-MATRIX-002,table,projects,member,Tenant A,Tenant B,SELECT,Deny foreign rows,negative,untested,Fictional starter; confirm zero foreign rows
-TP-MATRIX-003,table,projects,member,Tenant A,Tenant B,UPDATE,Deny tenant reassignment,negative,untested,Fictional starter; confirm row remains unchanged
-TP-MATRIX-004,table,customer_notes,manager,Tenant A,Tenant A,DELETE,Allow own-tenant delete,positive,untested,Fictional starter; use synthetic data and confirm intended cascades
-TP-MATRIX-005,table,customer_notes,manager,Tenant A,Tenant B,DELETE,Deny foreign delete,negative,untested,Fictional starter; confirm row and related records remain unchanged
-TP-MATRIX-006,table,customer_notes,manager,Tenant A,Tenant A,INSERT,Allow valid own-tenant note,positive,untested,Fictional starter; use synthetic data
-TP-MATRIX-007,table,customer_notes,manager,Tenant A,Tenant B,INSERT,Deny foreign tenant assignment,negative,untested,Fictional starter; test proposed-row checks
-TP-MATRIX-008,function,archive_project(),manager,Tenant A,Tenant B,RPC,Deny foreign mutation,negative,untested,Fictional starter; confirm no side effect
-TP-MATRIX-009,storage,customer-files,member,Tenant A,Tenant A,DOWNLOAD,Allow own-tenant file,positive,untested,Fictional starter; use synthetic file
-TP-MATRIX-010,storage,customer-files,member,Tenant A,Tenant B,LIST,Deny foreign metadata,negative,untested,Fictional starter; do not include secrets
+TB-MATRIX-001,table,projects,member,Tenant A,Tenant A,SELECT,Allow own-tenant rows,positive,untested,Fictional starter; replace privately
+TB-MATRIX-002,table,projects,member,Tenant A,Tenant B,SELECT,Deny foreign rows,negative,untested,Fictional starter; confirm zero foreign rows
+TB-MATRIX-003,table,projects,member,Tenant A,Tenant B,UPDATE,Deny tenant reassignment,negative,untested,Fictional starter; confirm row remains unchanged
+TB-MATRIX-004,table,customer_notes,manager,Tenant A,Tenant A,DELETE,Allow own-tenant delete,positive,untested,Fictional starter; use synthetic data and confirm intended cascades
+TB-MATRIX-005,table,customer_notes,manager,Tenant A,Tenant B,DELETE,Deny foreign delete,negative,untested,Fictional starter; confirm row and related records remain unchanged
+TB-MATRIX-006,table,customer_notes,manager,Tenant A,Tenant A,INSERT,Allow valid own-tenant note,positive,untested,Fictional starter; use synthetic data
+TB-MATRIX-007,table,customer_notes,manager,Tenant A,Tenant B,INSERT,Deny foreign tenant assignment,negative,untested,Fictional starter; test proposed-row checks
+TB-MATRIX-008,function,archive_project(),manager,Tenant A,Tenant B,RPC,Deny foreign mutation,negative,untested,Fictional starter; confirm no side effect
+TB-MATRIX-009,storage,customer-files,member,Tenant A,Tenant A,DOWNLOAD,Allow own-tenant file,positive,untested,Fictional starter; use synthetic file
+TB-MATRIX-010,storage,customer-files,member,Tenant A,Tenant B,LIST,Deny foreign metadata,negative,untested,Fictional starter; do not include secrets

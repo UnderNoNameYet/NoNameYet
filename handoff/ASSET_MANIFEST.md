@@ -6,7 +6,8 @@ All media is product/demo material. No customer evidence, credentials, private r
 
 | Source | Dimensions | Purpose |
 |---|---:|---|
-| `public/assets/tenantproof-og.png` | 1200×630 | social/Open Graph preview |
+| `public/assets/tenantboundary-og.png` | 1200×630 | social/Open Graph preview |
+| `public/assets/tenantproof-og.png` | 1200×630 | byte-identical compatibility alias for previously shared links |
 | `public/assets/icon-192.png` | 192×192 | app/touch icon |
 | `public/assets/icon-512.png` | 512×512 | large manifest icon |
 | `public/assets/favicon.svg` | vector | browser icon |
@@ -15,9 +16,10 @@ All media is product/demo material. No customer evidence, credentials, private r
 
 | Output | Format | Purpose |
 |---|---:|---|
-| `public/assets/tenantproof-fictional-report.pdf` | four-page A4 PDF | portable buyer/proposal sample generated from `sample-report.json` |
+| `public/assets/tenantboundary-fictional-report.pdf` | four-page A4 PDF | portable buyer/proposal sample generated from `sample-report.json` |
+| `public/assets/tenantproof-fictional-report.pdf` | four-page A4 PDF | byte-identical compatibility alias for the former public path |
 
-`tools/build-sample-report-pdf.py` creates this file with deterministic metadata. It is ignored in source control, generated before QA/release bundling, and included only in the 27-file v0.3.3 public artifact. Every page identifies the report as fictional.
+`tools/build-sample-report-pdf.py` creates the canonical file with deterministic metadata and copies the exact bytes to the compatibility alias. Both PDFs are ignored in source control, generated before QA/release bundling, and included in the 29-file v0.4.0 candidate artifact. Every page identifies the report as fictional.
 
 ## Generated captures
 

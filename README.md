@@ -1,6 +1,6 @@
-# TenantProof
+# TenantBoundary
 
-TenantProof is a productized Supabase/PostgreSQL tenant-isolation verification and repair service.
+TenantBoundary is a productized Supabase/PostgreSQL tenant-isolation verification and repair service.
 
 > Prove that Customer A cannot read or modify Customer B’s data.
 
@@ -13,12 +13,14 @@ It sells an agreed authorization matrix, executed before/after evidence, remedia
 | Product specification | complete |
 | Local static MVP | complete |
 | Production preparation | complete for the closed technical preview |
-| Browser/responsive/privacy QA | passing; rerun after every change |
+| Browser/responsive/privacy QA | v0.3.3 baseline passing; v0.4.0 candidate requires a fresh exact-head run |
 | Qualification workflow | private Notion database/form prepared; form intentionally unpublished |
-| GitHub Pages request-only preview | v0.3.3 live from `0be0d8d10096` after PR [#28](https://github.com/UnderNoNameYet/NoNameYet/pull/28) and successful main [run #64](https://github.com/UnderNoNameYet/NoNameYet/actions/runs/33949379579) |
+| GitHub Pages request-only preview | v0.3.3 remains live under the former TenantProof name; v0.4.0 is the TenantBoundary rebrand candidate |
 | Buyer proof pack | live deterministic four-page fictional PDF; generated from the canonical sample |
 | Payments | closed |
 | Customers/revenue/testimonials | none |
+
+TenantBoundary is a public working name selected after a preliminary collision check. This is not a trademark-clearance claim, and no domain purchase is part of the zero-cost launch plan.
 
 ## Start here
 

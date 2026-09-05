@@ -1,4 +1,4 @@
-# TenantProof payment and refund workflow
+# TenantBoundary payment and refund workflow
 
 Status: recommendation for launch approval; no payment channel is currently open.
 

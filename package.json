@@ -1,8 +1,8 @@
 {
-  "name": "tenantproof",
-  "version": "0.3.3",
+  "name": "tenantboundary",
+  "version": "0.4.0",
   "private": true,
-  "description": "Static-first TenantProof product, sidebar-free Focus Workbench, local report viewer, evidence schema, operations, and release handoff.",
+  "description": "Static-first TenantBoundary product, sidebar-free Focus Workbench, local report viewer, evidence schema, operations, and release handoff.",
   "scripts": {
     "serve": "npm run sample:pdf && python3 -m http.server 4173 --directory public",
     "assets": "python3 tools/generate-brand-assets.py",

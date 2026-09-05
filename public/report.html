@@ -8,24 +8,24 @@
   <meta name="referrer" content="no-referrer">
   <meta name="robots" content="index,follow,max-image-preview:large">
   <meta property="og:type" content="website">
-  <meta property="og:site_name" content="TenantProof">
-  <meta property="og:title" content="Fictional verification workbench — TenantProof">
-  <meta property="og:description" content="Explore the fictional TenantProof scope, matrix, run, repair, and report workflow or open a redacted report locally.">
+  <meta property="og:site_name" content="TenantBoundary">
+  <meta property="og:title" content="Fictional verification workbench — TenantBoundary">
+  <meta property="og:description" content="Explore the fictional TenantBoundary scope, matrix, run, repair, and report workflow or open a redacted report locally.">
   <meta property="og:url" content="https://undernonameyet.github.io/NoNameYet/report.html">
-  <meta property="og:image" content="https://undernonameyet.github.io/NoNameYet/assets/tenantproof-og.png">
+  <meta property="og:image" content="https://undernonameyet.github.io/NoNameYet/assets/tenantboundary-og.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="TenantProof fictional verification workbench">
+  <meta property="og:image:alt" content="TenantBoundary fictional verification workbench">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Fictional verification workbench — TenantProof">
+  <meta name="twitter:title" content="Fictional verification workbench — TenantBoundary">
   <meta name="twitter:description" content="Scope, matrix, run, repair, and evidence in one fictional sample workflow.">
-  <meta name="twitter:image" content="https://undernonameyet.github.io/NoNameYet/assets/tenantproof-og.png">
+  <meta name="twitter:image" content="https://undernonameyet.github.io/NoNameYet/assets/tenantboundary-og.png">
   <link rel="canonical" href="https://undernonameyet.github.io/NoNameYet/report.html">
   <link rel="manifest" href="assets/site.webmanifest">
   <link rel="apple-touch-icon" href="assets/icon-192.png">
-  <meta name="description" content="Explore the fictional TenantProof scope, matrix, run, repair, and report workflow or open a redacted report locally.">
+  <meta name="description" content="Explore the fictional TenantBoundary scope, matrix, run, repair, and report workflow or open a redacted report locally.">
   <meta name="theme-color" content="#f6f5f1">
-  <title>Fictional verification workbench — TenantProof</title>
+  <title>Fictional verification workbench — TenantBoundary</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="assets/styles.css">
   <link rel="stylesheet" href="assets/workbench.css">
@@ -33,17 +33,17 @@
 <body class="tp-page tp-workbench-page">
 <a class="skip-link" href="#main">Skip to workbench</a>
 <header class="workbench-global">
-  <a class="workbench-brand" href="index.html" aria-label="TenantProof home"><span>TP</span><strong>TenantProof</strong></a>
+  <a class="workbench-brand" href="index.html" aria-label="TenantBoundary home"><span>TB</span><strong>TenantBoundary</strong></a>
   <span class="workbench-project">Northstar CRM <small>Fictional demo</small></span>
-  <span class="workbench-review-id">Review TP-DEMO-0830</span>
+  <span class="workbench-review-id">Review TB-DEMO-0830</span>
   <div class="workbench-global-actions"><a href="methodology.html">Method</a><a class="workbench-button" href="request.html">Scope a review</a></div>
 </header>
 <main id="main">
   <div class="workbench-mobile-banner">Fictional demo · Northstar CRM</div>
-  <h1 class="visually-hidden">TenantProof fictional verification workbench</h1>
+  <h1 class="visually-hidden">TenantBoundary fictional verification workbench</h1>
   <div class="workbench" data-report-root data-sample="true">
     <header class="workbench-railbar">
-      <div class="workbench-context"><span>Verification + Repair</span><strong data-project-name>Loading sample…</strong><small data-report-id>TP-DEMO</small></div>
+      <div class="workbench-context"><span>Verification + Repair</span><strong data-project-name>Loading sample…</strong><small data-report-id>TB-DEMO</small></div>
       <nav class="workbench-rail" aria-label="Review stages">
         <button type="button" data-workbench-stage="scope"><i>1</i><span>Scope</span></button>
         <button type="button" data-workbench-stage="matrix"><i>2</i><span>Matrix</span></button>
@@ -73,12 +73,12 @@
         <header class="workbench-panel-head"><div><span>Stage 4 · Repair</span><h2 tabindex="-1">Review the policy change</h2><p>Repair the root authorization rule, then rerun the same contracts.</p></div><span class="workbench-state">Fictional patch</span></header>
         <div class="repair-grid" data-sample-workflow><article class="repair-finding"><span class="workbench-label">Finding RLS-004</span><h3>Tenant membership was checked without record ownership.</h3><p>The policy admitted any organization member and omitted the row’s tenant predicate.</p><dl><div><dt>Affected</dt><dd>customer_notes · SELECT</dd></div><div><dt>Observed</dt><dd>4 comparison-tenant rows</dd></div><div><dt>Retest</dt><dd>Same actor, fixtures, and expectation</dd></div></dl></article><article class="repair-diff"><header><span>policies/customer_notes.sql</span><b>2 changed lines</b></header><pre><span class="minus">- using (is_org_member(org_id));</span>
 <span class="plus">+ using (tenant_id = app.current_tenant_id()</span>
-<span class="plus">+   and is_org_member(org_id));</span></pre><footer><span>Branch <code>tenantproof/rls-004</code></span><span>Awaiting owner review</span></footer></article></div>
+<span class="plus">+   and is_org_member(org_id));</span></pre><footer><span>Branch <code>tenantboundary/rls-004</code></span><span>Awaiting owner review</span></footer></article></div>
         <div class="repair-timeline"><span class="done"><i>✓</i><b>Finding reproduced</b></span><span class="done"><i>✓</i><b>Patch prepared</b></span><span class="active"><i>3</i><b>Owner review</b></span><span><i>4</i><b>Controlled retest</b></span></div>
       </section>
       <section class="workbench-panel" data-workbench-panel="report" hidden>
         <header class="workbench-panel-head"><div><span>Stage 5 · Report</span><h2 tabindex="-1">Evidence handoff</h2><p>Open a compatible redacted report locally or print the bundled fictional sample.</p></div><button class="workbench-button" type="button" data-workbench-print>Print report</button></header>
-        <div class="report-handoff"><article><span class="workbench-label">Fictional sample</span><h3>Northstar CRM · TP-DEMO-0830</h3><p>16 scoped checks with before/after observations, remediation notes, and one unresolved storage path.</p><ul><li>Contextual pass/fail semantics</li><li>Explicit untested and out-of-scope states</li><li>Redacted customer-facing evidence</li><li>Code-state and environment context</li></ul><a class="workbench-button" href="assets/tenantproof-fictional-report.pdf" download>Download fictional PDF</a></article><div class="import-zone no-print" data-import-zone><input type="file" id="report-file" accept="application/json,.json" data-report-file><span class="import-icon">JSON</span><h3>Open a redacted report</h3><p>Processed in this browser tab. Nothing is uploaded or stored.</p><button class="workbench-button" type="button" data-choose-report>Choose report</button><small>Schema 1.0 · 2 MB maximum</small></div></div>
+        <div class="report-handoff"><article><span class="workbench-label">Fictional sample</span><h3>Northstar CRM · TB-DEMO-0830</h3><p>16 scoped checks with before/after observations, remediation notes, and one unresolved storage path.</p><ul><li>Contextual pass/fail semantics</li><li>Explicit untested and out-of-scope states</li><li>Redacted customer-facing evidence</li><li>Code-state and environment context</li></ul><a class="workbench-button" href="assets/tenantboundary-fictional-report.pdf" download>Download fictional PDF</a></article><div class="import-zone no-print" data-import-zone><input type="file" id="report-file" accept="application/json,.json" data-report-file><span class="import-icon">JSON</span><h3>Open a redacted report</h3><p>Processed in this browser tab. Nothing is uploaded or stored.</p><button class="workbench-button" type="button" data-choose-report>Choose report</button><small>Schema 1.0 · 2 MB maximum</small></div></div>
         <div class="workbench-note"><strong>Result limit.</strong> A pass applies only to the recorded expectation, actor, operation, environment, code state, and execution time.</div>
       </section>
     </div>
@@ -86,7 +86,7 @@
     <section class="evidence-dock" data-evidence-dock aria-label="Selected check evidence" hidden><header><div><span>Evidence</span><strong>Selected check</strong></div><button type="button" data-close-evidence aria-label="Close evidence panel">Close</button></header><aside aria-live="polite" data-evidence-panel><p class="evidence-empty">Select a visible check to inspect its evidence.</p></aside></section>
   </div>
 </main>
-<footer class="workbench-footer"><span>Northstar CRM and all findings are fictional.</span><span>Local report files stay in browser memory.</span><a href="index.html">Return to TenantProof</a></footer>
+<footer class="workbench-footer"><span>Northstar CRM and all findings are fictional.</span><span>Local report files stay in browser memory.</span><a href="index.html">Return to TenantBoundary</a></footer>
 <script src="assets/site-config.js" defer></script><script src="assets/site.js" defer></script><script src="assets/report.js" defer></script><script src="assets/workbench.js" defer></script>
 </body>
 </html>

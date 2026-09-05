@@ -2,13 +2,13 @@
 
 ## Operating model
 
-TenantProof is request-only. The public experience qualifies a problem; it never grants authorization, accepts credentials, or guarantees acceptance.
+TenantBoundary is request-only. The public experience qualifies a problem; it never grants authorization, accepts credentials, or guarantees acceptance.
 
 ## Prepared private intake system
 
 ### Private qualification form — publication blocked
 
-The Notion form is configured and writes to a private pipeline, but it is not public. Keep it private until the operator approves the exact legal identity and jurisdiction, privacy/deletion handling, business contact, delivery capacity, and launch-state copy.
+The Notion form is configured and writes to a private pipeline, but it is not public. Keep it private until the HTTPS intake/deletion route and launch-state privacy copy are ready. Business/security contact and delivery capacity are verified privately. A contracting identity is required later for a customer contract, payout, or invoice—not for publishing the static app.
 
 Required fields:
 
@@ -145,7 +145,7 @@ Deliver:
 - access revocation checklist
 - deletion date/record
 
-The customer controls production deployment. TenantProof does not silently deploy RLS changes.
+The customer controls production deployment. TenantBoundary does not silently deploy RLS changes.
 
 ## Acceptance
 

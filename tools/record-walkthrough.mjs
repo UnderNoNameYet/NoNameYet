@@ -5,7 +5,7 @@ import { spawnSync } from 'node:child_process';
 const root = path.resolve(import.meta.dirname, '..');
 const buildDir = path.join(root, 'build');
 const output = path.join(buildDir, 'walkthrough.webm');
-const inputs = [path.join(buildDir, 'tenantproof-hero-desktop.png'), path.join(buildDir, 'tenantproof-report-desktop.png'), path.join(buildDir, 'tenantproof-matrix-desktop.png'), path.join(buildDir, 'tenantproof-request-mobile.png'), path.join(root, 'public/assets/tenantproof-og.png')];
+const inputs = [path.join(buildDir, 'tenantboundary-hero-desktop.png'), path.join(buildDir, 'tenantboundary-report-desktop.png'), path.join(buildDir, 'tenantboundary-matrix-desktop.png'), path.join(buildDir, 'tenantboundary-request-mobile.png'), path.join(root, 'public/assets/tenantboundary-og.png')];
 for (const input of inputs) if (!fs.existsSync(input)) throw new Error(`Missing walkthrough frame: ${path.relative(root, input)}`);
 const args = ['-y', '-hide_banner', '-loglevel', 'error'];
 for (const input of inputs) args.push('-loop', '1', '-t', '4', '-i', input);

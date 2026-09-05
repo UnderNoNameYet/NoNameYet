@@ -1,8 +1,8 @@
-# TenantProof product specification
+# TenantBoundary product specification
 
 ## 1. Product definition
 
-TenantProof is a productized professional service with supporting software. It verifies selected tenant and role authorization boundaries in Supabase/PostgreSQL applications and can repair agreed failures.
+TenantBoundary is a productized professional service with supporting software. It verifies selected tenant and role authorization boundaries in Supabase/PostgreSQL applications and can repair agreed failures.
 
 ### Core promise
 
@@ -60,7 +60,7 @@ RLS being enabled does not prove that policies implement the application’s int
 
 ## 4. Value proposition
 
-TenantProof provides:
+TenantBoundary provides:
 
 - an agreed expectation matrix
 - executed positive and negative controls

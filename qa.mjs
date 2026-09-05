@@ -12,17 +12,22 @@ function assert(condition, message) { if (!condition) { results.failures.push(me
 async function waitForText(locator, expected, attempts = 50) { for (let index = 0; index < attempts; index += 1) { if ((await locator.textContent())?.includes(expected)) return; await new Promise(resolve => setTimeout(resolve, 50)); } throw new Error(`Timed out waiting for text: ${expected}`); }
 async function waitForCount(locator, expected, attempts = 50) { for (let index = 0; index < attempts; index += 1) { if (await locator.count() === expected) return; await new Promise(resolve => setTimeout(resolve, 50)); } throw new Error(`Timed out waiting for count: ${expected}`); }
 function staticChecks() {
-  const required = [...pages, 'assets/styles.css', 'assets/workbench.css', 'assets/site.js', 'assets/report.js', 'assets/workbench.js', 'assets/site-config.js', 'assets/sample-report.json', 'assets/sample-boundary-matrix.csv', 'assets/tenantproof-fictional-report.pdf', 'assets/favicon.svg', 'assets/tenantproof-og.png', 'assets/icon-192.png', 'assets/icon-512.png', 'assets/site.webmanifest', 'robots.txt', 'sitemap.xml', '_headers', '.nojekyll', 'llms.txt'];
+  const required = [...pages, 'assets/styles.css', 'assets/workbench.css', 'assets/site.js', 'assets/report.js', 'assets/workbench.js', 'assets/site-config.js', 'assets/sample-report.json', 'assets/sample-boundary-matrix.csv', 'assets/tenantboundary-fictional-report.pdf', 'assets/tenantproof-fictional-report.pdf', 'assets/favicon.svg', 'assets/tenantboundary-og.png', 'assets/tenantproof-og.png', 'assets/icon-192.png', 'assets/icon-512.png', 'assets/site.webmanifest', 'robots.txt', 'sitemap.xml', '_headers', '.nojekyll', 'llms.txt'];
   required.forEach(file => assert(fs.existsSync(path.join(publicDir, file)), `Missing ${file}`));
   const allPublic = [];
   function walk(directory) { for (const entry of fs.readdirSync(directory, { withFileTypes: true })) { const target = path.join(directory, entry.name); if (entry.isDirectory()) walk(target); else allPublic.push(target); } }
   walk(publicDir);
-  assert(allPublic.length === 27, `Public artifact must contain exactly 27 files, found ${allPublic.length}`);
-  const samplePdf = fs.readFileSync(path.join(publicDir, 'assets/tenantproof-fictional-report.pdf'));
+  assert(allPublic.length === 29, `Public artifact must contain exactly 29 files, found ${allPublic.length}`);
+  const samplePdf = fs.readFileSync(path.join(publicDir, 'assets/tenantboundary-fictional-report.pdf'));
+  const legacyPdf = fs.readFileSync(path.join(publicDir, 'assets/tenantproof-fictional-report.pdf'));
   assert(samplePdf.subarray(0, 5).toString('ascii') === '%PDF-', 'Fictional sample PDF is not a valid PDF');
   assert(samplePdf.length > 10_000, 'Fictional sample PDF is unexpectedly small');
+  assert(samplePdf.equals(legacyPdf), 'Legacy fictional PDF alias must be byte-identical to the canonical PDF');
+  const socialPreview = fs.readFileSync(path.join(publicDir, 'assets/tenantboundary-og.png'));
+  const legacySocialPreview = fs.readFileSync(path.join(publicDir, 'assets/tenantproof-og.png'));
+  assert(socialPreview.equals(legacySocialPreview), 'Legacy social-image alias must be byte-identical to the canonical image');
   const publicText = allPublic.filter(file => !/\.(?:svg|png|pdf|ico)$/i.test(file)).map(file => fs.readFileSync(file, 'utf8')).join('\n');
-  const forbidden = [/hello@tenantproof/i, /example\.com/i, /lorem ipsum/i, /guaranteed security/i, /(?:is|becomes|makes? (?:an?|your)) unhackable/i, /100% secure/i, /typeform|calendly|stripe\.com\/pay/i, /watch the boundary hold/i, /boundary lab/i];
+  const forbidden = [/hello@tenantboundary/i, /example\.com/i, /lorem ipsum/i, /guaranteed security/i, /(?:is|becomes|makes? (?:an?|your)) unhackable/i, /100% secure/i, /typeform|calendly|stripe\.com\/pay/i, /watch the boundary hold/i, /boundary lab/i];
   forbidden.forEach(pattern => assert(!pattern.test(publicText), `Forbidden placeholder or claim: ${pattern}`));
   assert(!/<(?:script|img|iframe|source)[^>]+src=["']https?:\/\//i.test(publicText), 'Public build contains a remote executable or image asset');
   assert(!/<link[^>]+rel=["']stylesheet["'][^>]+href=["']https?:\/\//i.test(publicText), 'Public build contains a remote stylesheet');
@@ -72,8 +77,8 @@ async function browserChecks() {
     assert((await page.locator('h1').innerText()).trim() === 'Verify tenant isolation before you ship.', 'Home promise changed unexpectedly');
     assert(await page.locator('.tp-preview-rail span').count() === 5, 'Home workbench preview must show five stages');
     assert((await page.locator('.tp-demo-chip').first().innerText()).toLowerCase().includes('fictional'), 'Home demo label is missing');
-    await page.screenshot({ path: path.join(buildDir, 'tenantproof-desktop.png'), fullPage: true });
-    results.screenshots.push('build/tenantproof-desktop.png');
+    await page.screenshot({ path: path.join(buildDir, 'tenantboundary-desktop.png'), fullPage: true });
+    results.screenshots.push('build/tenantboundary-desktop.png');
     await page.goto(`${base}/report.html`, { waitUntil: 'networkidle' });
     await waitForText(page.locator('[data-metric="total"]'), '16');
     assert(await page.locator('[data-workbench-stage]').count() === 5, 'Workbench must expose five focus stages');
@@ -92,7 +97,7 @@ async function browserChecks() {
     const pdfLink = page.getByRole('link', { name: 'Download fictional PDF' });
     assert(await pdfLink.isVisible(), 'Report stage does not expose the fictional PDF download');
     const [pdfDownload] = await Promise.all([page.waitForEvent('download'), pdfLink.click()]);
-    assert(pdfDownload.suggestedFilename() === 'tenantproof-fictional-report.pdf', 'Fictional PDF download has the wrong filename');
+    assert(pdfDownload.suggestedFilename() === 'tenantboundary-fictional-report.pdf', 'Fictional PDF download has the wrong filename');
     await page.setInputFiles('[data-report-file]', path.join(publicDir, 'assets/sample-report.json')); await waitForText(page.locator('[data-report-notice]'), 'Opened');
     assert((await page.locator('[data-report-notice]').innerText()).includes('Nothing was uploaded'), 'Local import notice missing');
     await page.goto(`${base}/request.html?package=repair`, { waitUntil: 'networkidle' });
@@ -111,7 +116,7 @@ async function browserChecks() {
     for (const pageName of ['index.html', 'report.html', 'sample-matrix.html', 'request.html']) { await mobile.goto(`${base}/${pageName}`, { waitUntil: 'networkidle' }); const overflow = await mobile.evaluate(() => ({ width: window.innerWidth, scroll: document.documentElement.scrollWidth })); assert(overflow.scroll <= overflow.width + 1, `${pageName} has mobile horizontal overflow: ${JSON.stringify(overflow)}`); }
     await mobile.goto(`${base}/report.html`, { waitUntil: 'networkidle' }); await waitForText(mobile.locator('[data-metric="total"]'), '16');
     assert(await mobile.locator('.workbench-mobile-banner').isVisible(), 'Mobile workbench lacks a visible fictional label'); assert(await mobile.locator('.run-table-wrap').getAttribute('role') === 'region', 'Mobile results need an announced scroll region');
-    await mobile.goto(`${base}/index.html`, { waitUntil: 'networkidle' }); await mobile.locator('[data-menu-button]').click(); assert(await mobile.locator('[data-nav-links]').getAttribute('data-open') === 'true', 'Mobile menu did not open'); await mobile.locator('[data-menu-button]').click(); assert(await mobile.locator('[data-nav-links]').getAttribute('data-open') === 'false', 'Mobile menu did not close'); await mobile.screenshot({ path: path.join(buildDir, 'tenantproof-mobile.png'), fullPage: true }); results.screenshots.push('build/tenantproof-mobile.png'); await mobileContext.close();
+    await mobile.goto(`${base}/index.html`, { waitUntil: 'networkidle' }); await mobile.locator('[data-menu-button]').click(); assert(await mobile.locator('[data-nav-links]').getAttribute('data-open') === 'true', 'Mobile menu did not open'); await mobile.locator('[data-menu-button]').click(); assert(await mobile.locator('[data-nav-links]').getAttribute('data-open') === 'false', 'Mobile menu did not close'); await mobile.screenshot({ path: path.join(buildDir, 'tenantboundary-mobile.png'), fullPage: true }); results.screenshots.push('build/tenantboundary-mobile.png'); await mobileContext.close();
     assert(errors.length === 0, `Desktop browser errors: ${errors.join(' | ')}`); assert(mobileErrors.length === 0, `Mobile browser errors: ${mobileErrors.join(' | ')}`); assert(externalRequests.length === 0, `Unexpected external requests: ${externalRequests.join(', ')}`);
     results.browser = { pagesLoaded: pages.length, titles, homeWorkbenchPreview: true, focusStages: ['scope', 'matrix', 'run', 'repair', 'report'], reportBefore: { total: 16, pass: 11, fail: 4, unresolved: 1 }, reportAfter: { total: 16, pass: 15, fail: 0, unresolved: 1 }, statusFilter: true, evidenceDock: true, fictionalPdfDownload: true, localFileImport: true, scopeWizard: true, mobileMenu: true, mobileOverflowPages: 0, reducedMotion: true, consoleErrors: 0, externalRequests: 0 };
   } finally { if (browser) await browser.close(); server.kill('SIGTERM'); fs.closeSync(serverLog); }

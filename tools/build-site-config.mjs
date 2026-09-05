@@ -38,5 +38,5 @@ if (errors.length) {
 }
 const serialized = JSON.stringify(config, null, 2).replaceAll('<', '\\u003c');
 fs.mkdirSync(path.dirname(outputPath), { recursive: true });
-fs.writeFileSync(outputPath, `window.TENANTPROOF_CONFIG = Object.freeze(${serialized});\n`);
+fs.writeFileSync(outputPath, `window.TENANTBOUNDARY_CONFIG = Object.freeze(${serialized});\n`);
 console.log(JSON.stringify({ valid: true, state: config.state, output: outputPath, paymentMode: config.paymentMode }, null, 2));

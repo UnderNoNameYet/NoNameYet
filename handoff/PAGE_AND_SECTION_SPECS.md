@@ -8,7 +8,7 @@ Applies to every route except the dedicated workbench shell on `report.html`.
 
 ### Header
 
-- TenantProof wordmark/home link
+- TenantBoundary wordmark/home link
 - Sample workbench, Matrix, Method, and Pricing links
 - one primary `Scope a review` action
 - mobile menu with `aria-expanded` and an owned navigation ID

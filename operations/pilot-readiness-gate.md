@@ -1,4 +1,4 @@
-# TenantProof first-pilot readiness gate
+# TenantBoundary first-pilot readiness gate
 
 This gate separates a technically sound preview from permission to market, accept requests, invoice, or begin customer work. It records verified operational facts without placing identities, contracts, credentials, customer data, or evidence in the public repository.
 

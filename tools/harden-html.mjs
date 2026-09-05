@@ -7,39 +7,39 @@ const publicDir = path.join(root, 'public');
 const origin = 'https://undernonameyet.github.io/NoNameYet';
 const pages = {
   'index.html': {
-    title: 'TenantProof — Prove every tenant boundary',
-    description: 'TenantProof verifies and repairs Supabase tenant boundaries with synthetic identities, executed evidence, and regression tests.',
-    imageAlt: 'TenantProof authorization boundary report preview'
+    title: 'TenantBoundary — Prove every tenant boundary',
+    description: 'TenantBoundary verifies and repairs Supabase tenant boundaries with synthetic identities, executed evidence, and regression tests.',
+    imageAlt: 'TenantBoundary authorization boundary report preview'
   },
   'report.html': {
-    title: 'Sample authorization report — TenantProof',
-    description: 'Explore a fictional TenantProof authorization report or open a redacted report locally in your browser.',
-    imageAlt: 'TenantProof redacted report viewer'
+    title: 'Sample authorization report — TenantBoundary',
+    description: 'Explore a fictional TenantBoundary authorization report or open a redacted report locally in your browser.',
+    imageAlt: 'TenantBoundary redacted report viewer'
   },
   'methodology.html': {
-    title: 'Methodology and authorization — TenantProof',
-    description: 'TenantProof methodology, authorization requirements, scope boundaries, evidence handling, and remediation workflow.',
-    imageAlt: 'TenantProof authorization verification methodology'
+    title: 'Methodology and authorization — TenantBoundary',
+    description: 'TenantBoundary methodology, authorization requirements, scope boundaries, evidence handling, and remediation workflow.',
+    imageAlt: 'TenantBoundary authorization verification methodology'
   },
   'sample-matrix.html': {
-    title: 'Supabase tenant-boundary matrix template — TenantProof',
+    title: 'Supabase tenant-boundary matrix template — TenantBoundary',
     description: 'Download a free fictional CSV template for mapping Supabase tenant, role, resource, operation, and expected authorization outcomes.',
-    imageAlt: 'TenantProof tenant-boundary matrix template'
+    imageAlt: 'TenantBoundary tenant-boundary matrix template'
   },
   'request.html': {
-    title: 'Scope a review — TenantProof',
-    description: 'Create a private TenantProof scope brief without submitting credentials or customer data.',
-    imageAlt: 'TenantProof private review scope worksheet'
+    title: 'Scope a review — TenantBoundary',
+    description: 'Create a private TenantBoundary scope brief without submitting credentials or customer data.',
+    imageAlt: 'TenantBoundary private review scope worksheet'
   },
   'privacy.html': {
-    title: 'Privacy — TenantProof',
-    description: 'TenantProof pre-launch privacy and data-handling notice.',
-    imageAlt: 'TenantProof privacy and data handling'
+    title: 'Privacy — TenantBoundary',
+    description: 'TenantBoundary pre-launch privacy and data-handling notice.',
+    imageAlt: 'TenantBoundary privacy and data handling'
   },
   'terms.html': {
-    title: 'Terms and limitations — TenantProof',
-    description: 'TenantProof pre-launch terms, authorization requirements, and service limitations.',
-    imageAlt: 'TenantProof service boundaries and limitations'
+    title: 'Terms and limitations — TenantBoundary',
+    description: 'TenantBoundary pre-launch terms, authorization requirements, and service limitations.',
+    imageAlt: 'TenantBoundary service boundaries and limitations'
   }
 };
 
@@ -76,7 +76,7 @@ for (const [fileName, meta] of Object.entries(pages)) {
 
   if (!html.includes('data-production-meta')) {
     const canonical = fileName === 'index.html' ? `${origin}/` : `${origin}/${fileName}`;
-    const metaBlock = `\n  <!-- data-production-meta -->\n  <meta http-equiv="Content-Security-Policy" content="${csp}">\n  <meta name="referrer" content="no-referrer">\n  <meta name="robots" content="index,follow,max-image-preview:large">\n  <meta property="og:type" content="website">\n  <meta property="og:site_name" content="TenantProof">\n  <meta property="og:title" content="${meta.title}">\n  <meta property="og:description" content="${meta.description}">\n  <meta property="og:url" content="${canonical}">\n  <meta property="og:image" content="${origin}/assets/tenantproof-og.png">\n  <meta property="og:image:width" content="1200">\n  <meta property="og:image:height" content="630">\n  <meta property="og:image:alt" content="${meta.imageAlt}">\n  <meta name="twitter:card" content="summary_large_image">\n  <meta name="twitter:title" content="${meta.title}">\n  <meta name="twitter:description" content="${meta.description}">\n  <meta name="twitter:image" content="${origin}/assets/tenantproof-og.png">\n  <link rel="canonical" href="${canonical}">\n  <link rel="manifest" href="assets/site.webmanifest">\n  <link rel="apple-touch-icon" href="assets/icon-192.png">`;
+    const metaBlock = `\n  <!-- data-production-meta -->\n  <meta http-equiv="Content-Security-Policy" content="${csp}">\n  <meta name="referrer" content="no-referrer">\n  <meta name="robots" content="index,follow,max-image-preview:large">\n  <meta property="og:type" content="website">\n  <meta property="og:site_name" content="TenantBoundary">\n  <meta property="og:title" content="${meta.title}">\n  <meta property="og:description" content="${meta.description}">\n  <meta property="og:url" content="${canonical}">\n  <meta property="og:image" content="${origin}/assets/tenantboundary-og.png">\n  <meta property="og:image:width" content="1200">\n  <meta property="og:image:height" content="630">\n  <meta property="og:image:alt" content="${meta.imageAlt}">\n  <meta name="twitter:card" content="summary_large_image">\n  <meta name="twitter:title" content="${meta.title}">\n  <meta name="twitter:description" content="${meta.description}">\n  <meta name="twitter:image" content="${origin}/assets/tenantboundary-og.png">\n  <link rel="canonical" href="${canonical}">\n  <link rel="manifest" href="assets/site.webmanifest">\n  <link rel="apple-touch-icon" href="assets/icon-192.png">`;
     html = html.replace(/(<meta name="viewport"[^>]*>)/, `$1${metaBlock}`);
   }
 

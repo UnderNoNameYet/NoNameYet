@@ -25,7 +25,8 @@ from reportlab.platypus import (
 
 ROOT = Path(__file__).resolve().parents[1]
 SOURCE = ROOT / "public" / "assets" / "sample-report.json"
-OUT = ROOT / "public" / "assets" / "tenantproof-fictional-report.pdf"
+OUT = ROOT / "public" / "assets" / "tenantboundary-fictional-report.pdf"
+LEGACY_OUT = ROOT / "public" / "assets" / "tenantproof-fictional-report.pdf"
 
 rl_config.invariant = 1
 
@@ -57,10 +58,10 @@ for regular, bold in [
     ),
 ]:
     if Path(regular).exists() and Path(bold).exists():
-        pdfmetrics.registerFont(TTFont("TenantProofSans", regular))
-        pdfmetrics.registerFont(TTFont("TenantProofSans-Bold", bold))
-        font_regular = "TenantProofSans"
-        font_bold = "TenantProofSans-Bold"
+        pdfmetrics.registerFont(TTFont("TenantBoundarySans", regular))
+        pdfmetrics.registerFont(TTFont("TenantBoundarySans-Bold", bold))
+        font_regular = "TenantBoundarySans"
+        font_bold = "TenantBoundarySans-Bold"
         break
 
 styles = getSampleStyleSheet()
@@ -343,7 +344,7 @@ def page_decor(canvas, doc) -> None:
     canvas.line(16 * mm, 15 * mm, width - 16 * mm, 15 * mm)
     canvas.setFont(font_regular, 7.2)
     canvas.setFillColor(MUTED)
-    canvas.drawString(16 * mm, 9 * mm, "TenantProof · fictional demonstration · not customer evidence")
+    canvas.drawString(16 * mm, 9 * mm, "TenantBoundary · fictional demonstration · not customer evidence")
     canvas.drawRightString(width - 16 * mm, 9 * mm, str(canvas.getPageNumber()))
     canvas.restoreState()
 
@@ -363,8 +364,8 @@ doc = SimpleDocTemplate(
     rightMargin=16 * mm,
     topMargin=16 * mm,
     bottomMargin=20 * mm,
-    title="TenantProof Fictional Tenant-Boundary Verification Report",
-    author="TenantProof",
+    title="TenantBoundary Fictional Tenant-Boundary Verification Report",
+    author="TenantBoundary",
     subject="Fictional sample report showing scoped before-and-after tenant-isolation evidence",
 )
 
@@ -376,7 +377,7 @@ story.extend(
         Paragraph("FICTIONAL TENANT-BOUNDARY EVIDENCE", styles["TPKicker"]),
         Paragraph("Verification report", styles["TPTitle"]),
         Paragraph(
-            "Northstar CRM · a demonstration of the artifact a scoped TenantProof review produces.",
+            "Northstar CRM · a demonstration of the artifact a scoped TenantBoundary review produces.",
             styles["TPSubtitle"],
         ),
     ]
@@ -579,7 +580,7 @@ story.extend(
     section_header(
         "Method and limits",
         "Evidence is useful because its boundary is explicit.",
-        "TenantProof is a controlled professional review, not an arbitrary public scanner or a certification.",
+        "TenantBoundary is a controlled professional review, not an arbitrary public scanner or a certification.",
     )
 )
 method_rows = [
@@ -675,4 +676,14 @@ story.extend(
 )
 
 doc.build(story, onFirstPage=page_decor, onLaterPages=page_decor)
-print(json.dumps({"output": str(OUT), "bytes": OUT.stat().st_size, "pages": 4}))
+LEGACY_OUT.write_bytes(OUT.read_bytes())
+print(
+    json.dumps(
+        {
+            "output": str(OUT),
+            "legacyAlias": str(LEGACY_OUT),
+            "bytes": OUT.stat().st_size,
+            "pages": 4,
+        }
+    )
+)

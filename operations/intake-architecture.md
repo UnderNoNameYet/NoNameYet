@@ -1,4 +1,4 @@
-# TenantProof intake architecture
+# TenantBoundary intake architecture
 
 ## Goal
 

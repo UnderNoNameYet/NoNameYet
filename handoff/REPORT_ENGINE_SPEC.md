@@ -2,7 +2,7 @@
 
 ## Purpose
 
-The TenantProof report is the commercial artifact. It must let a technical buyer trace every conclusion to a scoped expectation and observed execution without exposing customer secrets.
+The TenantBoundary report is the commercial artifact. It must let a technical buyer trace every conclusion to a scoped expectation and observed execution without exposing customer secrets.
 
 ## Schema authority
 
@@ -18,7 +18,7 @@ Do not change semantics without versioning. Adding a required field is breaking.
 ```json
 {
   "schemaVersion": "1.0",
-  "reportId": "TP-…",
+  "reportId": "TB-…",
   "project": {
     "name": "…",
     "environment": "…",
@@ -41,7 +41,7 @@ No unknown top-level properties are accepted.
 
 ```json
 {
-  "id": "TP-001",
+  "id": "TB-001",
   "actor": "member",
   "area": "Table",
   "resource": "customer_notes",
@@ -54,7 +54,7 @@ No unknown top-level properties are accepted.
 
 ### Identity rules
 
-- IDs match `^TP-[A-Z0-9-]+$` and are unique in one report.
+- IDs match `^TB-[A-Z0-9-]+$` and are unique in one report.
 - Actor is an application role or explicit anonymous/service context.
 - Area is a surface such as Table, Function, Storage, API, or Edge Function.
 - Resource is a named in-scope asset; redact only when the customer handoff requires it.
@@ -89,7 +89,7 @@ Before access, construct:
 | member | foreign proposed tenant | customer_notes | update | reject/no change | same-tenant update succeeds |
 | manager | foreign | archive_project | invoke | reject/no mutation | own-tenant archive succeeds |
 
-The matrix is agreed by the verified owner. TenantProof does not invent business authorization semantics and then label deviations vulnerabilities.
+The matrix is agreed by the verified owner. TenantBoundary does not invent business authorization semantics and then label deviations vulnerabilities.
 
 ## Evidence requirements
 
@@ -136,7 +136,7 @@ If those change materially, create a new check or explain why results are not di
 
 ## Fictional sample
 
-`public/assets/sample-report.json` is Northstar CRM, report `TP-DEMO-0830`. It is fictional and contains 16 checks.
+`public/assets/sample-report.json` is Northstar CRM, report `TB-DEMO-0830`. It is fictional and contains 16 checks.
 
 - before: 11 pass, 4 fail, 1 untested
 - after: 15 pass, 0 fail, 1 out of scope
@@ -146,7 +146,7 @@ The sample demonstrates structure only. It cannot be presented as client work, a
 ### Downloadable fictional PDF
 
 `tools/build-sample-report-pdf.py` renders the canonical sample into
-`public/assets/tenantproof-fictional-report.pdf`.
+`public/assets/tenantboundary-fictional-report.pdf`.
 
 - four A4 pages: decision summary, contradictions/repair/retest, complete matrix, and method/limits
 - deterministic PDF metadata and content
@@ -187,7 +187,7 @@ A real execution adapter must be created per authorized engagement in a private 
 Recommended customer handoff:
 
 ```text
-TenantProof-<project>-<date>/
+TenantBoundary-<project>-<date>/
 ├── README.md
 ├── authorization-and-scope.pdf
 ├── report.json

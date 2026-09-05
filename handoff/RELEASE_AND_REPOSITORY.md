@@ -5,31 +5,34 @@
 - GitHub: `UnderNoNameYet/NoNameYet`
 - default branch: `main`
 - public origin: `https://undernonameyet.github.io/NoNameYet/`
-- canonical source: repository root on current `main`
-- inspected v0.3.3 release merge: `0be0d8d1009619d4abc5a48d7c08f68392c93967`
-- release pull request: [#28](https://github.com/UnderNoNameYet/NoNameYet/pull/28)
-- release deployment: successful main [workflow run #64](https://github.com/UnderNoNameYet/NoNameYet/actions/runs/33949379579)
-- exact commit checks: `https://github.com/UnderNoNameYet/NoNameYet/commit/0be0d8d1009619d4abc5a48d7c08f68392c93967/checks`
-- immediate prior known-good main: `88cdf9837780b864a3527f3b568b10512f170461`
+- canonical release source: repository root on `main`
+- candidate source: `product/tenantboundary-rebrand-v040`
+- inspected main baseline: `a1baa9ebde9bf1b1a05d7a0563ee9927ff96f9af`
+- v0.3.3 product release: PR [#28](https://github.com/UnderNoNameYet/NoNameYet/pull/28) at `0be0d8d1009619d4abc5a48d7c08f68392c93967`
+- latest verified baseline deployment: successful main [workflow run #66](https://github.com/UnderNoNameYet/NoNameYet/actions/runs/33950062374)
+- immediate prior known-good main: `a1baa9ebde9bf1b1a05d7a0563ee9927ff96f9af`
 
-The live v0.3.3 request-only preview is published from direct source. It includes the Focus Workbench and generated four-page fictional report PDF in an exact 27-file public artifact. PR [#25](https://github.com/UnderNoNameYet/NoNameYet/pull/25) / run #49 remain v0.3.2 history, while `047691e35c6b8d38ba5540d1fe4de345ed752a6c` remains the older pre-TenantProof recovery reference.
+The live v0.3.3 request-only preview is published under the former TenantProof name. The v0.4.0 TenantBoundary candidate keeps the Focus Workbench and generated four-page fictional report while expanding the public contract from 27 to 29 files for canonical assets and byte-identical former-path aliases. PR [#25](https://github.com/UnderNoNameYet/NoNameYet/pull/25) / run #49 remain v0.3.2 history, while `047691e35c6b8d38ba5540d1fe4de345ed752a6c` remains the older pre-TenantProof recovery reference.
 
 ## Authorization and limits
 
 The user authorized routine branch, pull-request, quality, merge, and publication decisions. This never overrides connection permissions, legal/account facts, platform confirmations, secret handling, customer authorization, or safe testing boundaries.
 
-## v0.3.3 release contents
+## v0.4.0 candidate contents
 
 - approved product-first homepage and Focus Workbench
 - `workbench.css` and `workbench.js`
 - free matrix route/CSV from the base feature work
+- TenantBoundary public naming and `TB-` fictional identifiers
 - deterministic four-page fictional report PDF generated from the canonical sample
+- canonical TenantBoundary PDF/social assets plus byte-identical former-path aliases
+- schema 1.0 compatibility with both former `TP-` and current `TB-` check identifiers
 - direct PDF download in the Workbench Report stage
 - PDF signature, size, filename, source-linkage, download, and isolation checks
 - expanded Chromium/static QA
 - corrected capture-before-sync quality order
 - pinned CI browser/media/PDF dependencies
-- coherent v0.3.3 handoff, architecture, roadmap, decisions, and release metadata
+- coherent v0.4.0 handoff, architecture, roadmap, decisions, and release metadata
 - failed materializer/finalizer artifacts removed
 
 ## Source inclusion policy
@@ -48,7 +51,7 @@ Exclude:
 
 ## Deployment artifact
 
-Publish only `dist/`, generated exclusively from `public/`. The v0.3.3 artifact contract is exactly 27 files and eight HTML pages. Tests, docs, operations, handoff, source config, and build output must not be web-accessible.
+Publish only `dist/`, generated exclusively from `public/`. The v0.4.0 candidate artifact contract is exactly 29 files and eight HTML pages. Tests, docs, operations, handoff, source config, and build output must not be web-accessible.
 
 ## Pull-request workflow
 
@@ -57,7 +60,7 @@ Publish only `dist/`, generated exclusively from `public/`. The v0.3.3 artifact 
 3. install pinned Pillow/ReportLab and Playwright Chromium; install FFmpeg
 4. expose the downloaded Chromium executable at a stable `chromium` path
 5. run `npm run quality`
-6. verify `state: preview`, `paymentMode: closed`, and exactly 27 `dist/` files for v0.3.3
+6. verify `state: preview`, `paymentMode: closed`, and exactly 29 `dist/` files for v0.4.0
 7. on pull requests: stop after validation
 8. on `main`: configure Pages, upload `dist/`, deploy, then verify live routes
 
@@ -73,7 +76,7 @@ No release config secret may appear in logs or client JavaScript. Only intention
 - public-only artifact and rollback verified
 - Northstar CRM explicitly fictional
 
-PR #28 met those conditions and was squash-merged only after exact-head CI, all 32 changed files, generated PDF pages, the Workbench Report state, focused secret/private-email scanning, and review surfaces were checked.
+PR #28 met those conditions for v0.3.3. The v0.4.0 pull request must independently pass exact-head CI, generated PDF/image alias checks, all changed-file review, focused secret/private-email scanning, and public review surfaces before merge.
 
 ## Generated handoff policy
 
@@ -81,13 +84,13 @@ Screenshots, walkthrough, PDF, checksums, and source manifest are generated by t
 
 ## Rollback
 
-- revert the v0.3.3 release merge `0be0d8d1009619d4abc5a48d7c08f68392c93967` or restore prior known-good main `88cdf9837780b864a3527f3b568b10512f170461`
+- before v0.4.0 merge, restore known-good main `a1baa9ebde9bf1b1a05d7a0563ee9927ff96f9af`; after merge, revert the v0.4.0 release commit if live verification fails
 - keep configuration at preview and payment closed
 - rerun the permanent Pages workflow
 - verify routes, assets, CSP, sample data, fictional labels, and workbench behavior after rollback
 - document cause and corrective action
 
-There is no migration or hosted state in v0.3.3.
+There is no migration or hosted state in v0.4.0.
 
 ## Versions
 
@@ -96,10 +99,11 @@ There is no migration or hosted state in v0.3.3.
 - `0.3.0` — canonical handoff/spec/quality release
 - `0.3.1` — initial request-only GitHub Pages preview
 - `0.3.2` — product-first Focus Workbench preview
-- `0.3.3` — live buyer-ready fictional PDF proof pack
+- `0.3.3` — live buyer-ready fictional PDF proof pack under the former TenantProof name
+- `0.4.0` — TenantBoundary rebrand candidate with compatibility aliases
 - `1.0.0` — first commercially ready public release after strict checks
 
-v0.3.3 is live and verified within the documented network limits. Do not label 1.0 or publish the private qualification form until owned intake, operator/commercial facts, legal state, and strict release checks are complete.
+v0.3.3 remains live and verified within the documented network limits. Do not call v0.4.0 live before deployment verification, label 1.0, or publish the private qualification form until the corresponding release and commercial gates are complete.
 
 ## Release marker
 

@@ -60,7 +60,7 @@ No client work occurred, no submission was made, and no relationship/testimonial
 
 ### Why
 
-Reachable demand, urgency window, differentiation, and safe fast fulfillment were weaker than TenantProof. Avoid chasing shutdown/migration news without a clear buyer channel and repeatable artifact.
+Reachable demand, urgency window, differentiation, and safe fast fulfillment were weaker than TenantBoundary. Avoid chasing shutdown/migration news without a clear buyer channel and repeatable artifact.
 
 ## Other researched opportunities
 
@@ -80,7 +80,7 @@ A real 2026 deadline and technical need exist. Migration scope can expand across
 
 Shutdown creates urgency but inventory migration carries operational-data and merchant-trust risk. Requires platform expertise and migration verification beyond current assets.
 
-## Why TenantProof survived
+## Why TenantBoundary survived
 
 - direct recent budgets at $300, $500, and $700
 - one legitimate pilot clears the $100 target
@@ -114,7 +114,7 @@ A frozen idea can return only when all are true:
 5. one-sale or short path to target
 6. safe fulfillment plan
 7. harder to replace than generic AI/templates
-8. explicit comparison against TenantProof’s current opportunity cost
+8. explicit comparison against TenantBoundary’s current opportunity cost
 9. documented decision approval
 
-Until then, continue TenantProof or stop—do not wander.
+Until then, continue TenantBoundary or stop—do not wander.

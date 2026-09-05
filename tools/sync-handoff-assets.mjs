@@ -6,14 +6,14 @@ import crypto from 'node:crypto';
 const root = path.resolve(import.meta.dirname, '..');
 const targetDir = path.join(root, 'handoff/assets');
 const copies = [
-  ['build/tenantproof-hero-desktop.png', '01-home-desktop.png'],
-  ['build/tenantproof-report-desktop.png', '02-report-desktop.png'],
-  ['build/tenantproof-request-mobile.png', '03-request-mobile.png'],
-  ['build/tenantproof-mobile.png', '04-home-mobile-full.png'],
-  ['public/assets/tenantproof-og.png', '05-social-preview.png'],
+  ['build/tenantboundary-hero-desktop.png', '01-home-desktop.png'],
+  ['build/tenantboundary-report-desktop.png', '02-report-desktop.png'],
+  ['build/tenantboundary-request-mobile.png', '03-request-mobile.png'],
+  ['build/tenantboundary-mobile.png', '04-home-mobile-full.png'],
+  ['public/assets/tenantboundary-og.png', '05-social-preview.png'],
   ['public/assets/icon-192.png', '06-icon-192.png'],
   ['public/assets/icon-512.png', '07-icon-512.png'],
-  ['build/tenantproof-matrix-desktop.png', '08-sample-matrix-desktop.png'],
+  ['build/tenantboundary-matrix-desktop.png', '08-sample-matrix-desktop.png'],
   ['build/walkthrough.webm', 'walkthrough.webm']
 ];
 

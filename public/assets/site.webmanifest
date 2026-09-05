@@ -1,6 +1,6 @@
 {
-  "name": "TenantProof",
-  "short_name": "TenantProof",
+  "name": "TenantBoundary",
+  "short_name": "TenantBoundary",
   "description": "Executed tenant-boundary evidence for Supabase SaaS.",
   "start_url": "../index.html",
   "scope": "../",

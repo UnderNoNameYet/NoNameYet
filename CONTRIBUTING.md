@@ -1,4 +1,4 @@
-# Contributing to TenantProof
+# Contributing to TenantBoundary
 
 Read [`AGENTS.md`](AGENTS.md) and [`handoff/README.md`](handoff/README.md) before opening a change.
 

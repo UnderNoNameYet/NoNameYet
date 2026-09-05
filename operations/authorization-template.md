@@ -1,4 +1,4 @@
-# TenantProof written authorization template
+# TenantBoundary written authorization template
 
 > Operational template for review before use. It is not legal advice and must be adapted to the operator's jurisdiction and customer agreement.
 
@@ -6,7 +6,7 @@
 
 - **System owner / customer legal name:** `{{CUSTOMER_LEGAL_NAME}}`
 - **Authorized representative:** `{{NAME_AND_TITLE}}`
-- **TenantProof operator legal name:** `{{OPERATOR_LEGAL_NAME}}`
+- **TenantBoundary operator legal name:** `{{OPERATOR_LEGAL_NAME}}`
 - **Technical contact:** `{{TECHNICAL_CONTACT}}`
 - **Emergency stop contact:** `{{STOP_CONTACT}}`
 
@@ -89,7 +89,7 @@ Title: `{{TITLE}}`
 Signature: `{{SIGNATURE}}`  
 Date: `{{DATE}}`
 
-**TenantProof operator**  
+**TenantBoundary operator**  
 Name: `{{NAME}}`  
 Signature: `{{SIGNATURE}}`  
 Date: `{{DATE}}`

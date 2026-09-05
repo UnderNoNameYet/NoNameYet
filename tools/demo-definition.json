@@ -8,7 +8,7 @@
   "scope": { "tables": 2, "roles": 2, "functions": 1, "storageBuckets": 0 },
   "scenarios": [
     {
-      "id": "TP-LAB-001",
+      "id": "TB-LAB-001",
       "actor": "member",
       "area": "Table",
       "resource": "documents",
@@ -16,7 +16,7 @@
       "expectation": "A member cannot read another tenant’s documents."
     },
     {
-      "id": "TP-LAB-002",
+      "id": "TB-LAB-002",
       "actor": "member",
       "area": "Table",
       "resource": "documents",
@@ -24,7 +24,7 @@
       "expectation": "A member cannot reassign a document to another tenant."
     },
     {
-      "id": "TP-LAB-003",
+      "id": "TB-LAB-003",
       "actor": "manager",
       "area": "Function",
       "resource": "archive_document",
