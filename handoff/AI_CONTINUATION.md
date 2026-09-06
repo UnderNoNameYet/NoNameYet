@@ -6,7 +6,7 @@ Use this when handing TenantBoundary to another advanced model or developer.
 
 > You are continuing TenantBoundary, a productized Supabase/PostgreSQL tenant-isolation verification and repair service. Do not invent a new product. Read `AGENTS.md` and every file linked from `handoff/README.md` before editing. The core promise is: “Prove that Customer A cannot read or modify Customer B’s data.” The product sells executed authorization evidence, remediation, and regression protection—not an automated badge or security guarantee.
 >
-> Current state: TenantBoundary v0.4.0 is live at `https://undernonameyet.github.io/NoNameYet/` from merge `bc5ed44111084cea80dc157a3cfbabacf30eec61`, PR #30, and successful main Pages run #68. It includes the product-first homepage, free fictional matrix, sidebar-free Scope → Matrix → Run → Repair → Report Focus Workbench, and deterministic four-page fictional PDF in an exact 29-file public contract with byte-identical former-path aliases. The $349 Boundary Verification Project Catalog offer is approved and visible on Upwork; a release candidate links it from the site while direct website intake and payment remain closed. There are no customers, revenue, testimonials, or real findings. Preserve those truths.
+> Current state: TenantBoundary v0.4.0 is live at `https://undernonameyet.github.io/NoNameYet/`. Marketplace-link PR #32 passed exact-head run #71, merged at `8eec4b9efde9707ae132b7ae22e6a0e1747be1ac`, and deployed through successful main Pages run #72. It includes the product-first homepage, free fictional matrix, sidebar-free Scope → Matrix → Run → Repair → Report Focus Workbench, deterministic four-page fictional PDF, and the approved $349 Upwork Project Catalog booking path in an exact 29-file public contract. Direct website intake and payment remain closed. There are no customers, revenue, testimonials, or real findings. Preserve those truths.
 >
 > A private Notion request database, qualification form, and launch-control page are prepared. The form is intentionally unpublished. Four of twelve operator-readiness gates are verified privately: business contact, security contact, delivery capacity, and approved acquisition channel. Do not make the form public until the remaining intake and legal gates are verified.
 >
@@ -36,7 +36,7 @@ Use this when handing TenantBoundary to another advanced model or developer.
 - real testing: written authorization required
 - raw evidence recommendation: 14 days
 - customers/revenue/testimonials: none
-- GitHub request-only preview: TenantBoundary v0.4.0 live from PR #30, merge `bc5ed44111084cea80dc157a3cfbabacf30eec61`, and successful main Pages run #68; marketplace-link release pending
+- GitHub marketplace-linked preview: live from PR #32, merge `8eec4b9efde9707ae132b7ae22e6a0e1747be1ac`, and successful main Pages run #72
 - buyer proof: live deterministic four-page fictional PDF generated from the canonical sample; the 29-file artifact includes byte-identical former-path aliases
 - qualification form: prepared privately in Notion and intentionally unpublished
 - dedicated Outlook contact: approved privately for business, privacy, and security response; do not expose its address in repository source

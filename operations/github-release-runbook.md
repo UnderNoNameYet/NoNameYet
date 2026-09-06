@@ -6,9 +6,9 @@ Public origin: `https://undernonameyet.github.io/NoNameYet/`
 
 ## Current state
 
-GitHub access is operational. TenantBoundary v0.4.0 shipped through PR [#30](https://github.com/UnderNoNameYet/NoNameYet/pull/30) at `bc5ed44111084cea80dc157a3cfbabacf30eec61` and successful main [workflow run #68](https://github.com/UnderNoNameYet/NoNameYet/actions/runs/33952234143). The request-only preview, generated four-page fictional report PDF, canonical social image, and both former-path aliases are live in an exact 29-file public-only artifact. Direct fetch verification passed on 2026-09-05. `a1baa9ebde9bf1b1a05d7a0563ee9927ff96f9af` is the immediate rollback, while `047691e35c6b8d38ba5540d1fe4de345ed752a6c` remains the legacy pre-TenantProof reference.
+GitHub access is operational. The approved Upwork booking path shipped through PR [#32](https://github.com/UnderNoNameYet/NoNameYet/pull/32) at `8eec4b9efde9707ae132b7ae22e6a0e1747be1ac` and successful main [workflow run #72](https://github.com/UnderNoNameYet/NoNameYet/actions/runs/34022114404). The marketplace-linked preview, generated four-page fictional report PDF, canonical social image, and both former-path aliases are live in the exact 29-file public-only artifact. Direct fetch verification passed on 2026-09-06. `b5bec82967b51c3f9a00be06a25150c744cc613f` is the immediate rollback, while `047691e35c6b8d38ba5540d1fe4de345ed752a6c` remains the legacy pre-TenantProof reference.
 
-The separate Notion qualification form remains private. Publication of product proof is not permission to open intake, payment, outreach, or real testing.
+The separate Notion qualification form remains private. The approved external Upwork offer does not open direct site intake/payment or authorize real testing.
 
 ## Completed first-publication sequence
 
