@@ -1,23 +1,23 @@
 # TenantBoundary payment and refund workflow
 
-Status: the $349 Upwork Project Catalog offer is approved and visible. Direct website payment remains closed.
+Status: recommendation for launch approval; no payment channel is currently open.
 
 ## Recommended first-sale model
 
 Do not use an unrestricted “buy now” checkout. Authorization work varies by role model and environment, so payment should follow qualification and written scope.
 
-1. Buyer opens the approved Upwork offer or completes a non-secret local scope brief.
-2. Operator confirms fit, authority, package limits, and staging availability in the platform conversation.
+1. Buyer completes a non-secret scope brief.
+2. Operator confirms fit, authority, package limits, and staging availability.
 3. Parties approve the statement of work and authorization record.
-4. Upwork handles the marketplace order and funded milestone for the $349 offer. A direct invoice is used only after the separate direct-payment gates are ready.
-5. Work starts only after the relevant order/milestone and written authorization conditions are satisfied.
+4. Operator issues an invoice through the approved processor.
+5. Work starts only after the relevant milestone clears.
 
 ## Milestones
 
 ### Boundary Verification — $349
 
-- One $349 Upwork Project Catalog order for the published offer.
-- The funded platform milestone starts only after scope and authorization are accepted.
+- One invoice for $349 after scope acceptance.
+- Full amount starts the verification milestone.
 
 ### Verification + Repair — $649
 
@@ -39,7 +39,7 @@ Processor fees, taxes, statutory cancellation rights, chargeback handling, invoi
 
 ## Processor recommendation
 
-Use Upwork’s platform order and refund process for buyers acquired through the approved Project Catalog offer; never route around the platform. For future direct buyers, use an operator-owned Stripe account or another reputable invoice processor only after operator identity and jurisdiction are confirmed. Prefer invoices over unrestricted public payment links because an invoice can reference the accepted scope and customer entity.
+Use an operator-owned Stripe account or another reputable invoice processor after the operator identity and jurisdiction are confirmed. Prefer invoices over public payment links for the first pilots because an invoice can reference the accepted scope and customer entity.
 
 Do not:
 

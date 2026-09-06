@@ -47,24 +47,8 @@
     contactLink.href = config.contactUrl;
     contactLink.hidden = false;
   }
-  let marketplaceUrl = '';
-  try {
-    const candidate = new URL(config.marketplaceUrl || '');
-    if (
-      candidate.protocol === 'https:' &&
-      candidate.hostname === 'www.upwork.com' &&
-      candidate.pathname.startsWith('/services/product/')
-    ) marketplaceUrl = candidate.href;
-  } catch {}
-  document.querySelectorAll('[data-marketplace-link]').forEach(link => {
-    if (marketplaceUrl) link.href = marketplaceUrl;
-  });
   document.querySelectorAll('[data-launch-state]').forEach(node => {
-    node.textContent = config.state === 'ready'
-      ? 'Public service.'
-      : marketplaceUrl
-        ? 'Upwork offer live; direct site preview.'
-        : 'Pre-launch preview.';
+    node.textContent = config.state === 'ready' ? 'Public service.' : 'Pre-launch preview.';
   });
 
   const form = document.querySelector('[data-scope-form]');
@@ -178,7 +162,7 @@
         (value('package') !== 'repair' && tables > 12) || roles > 3;
       quote.textContent = custom
         ? 'This scope exceeds the published package limits and requires a manual quote.'
-        : 'This scope appears to fit the selected published package. Final scope is confirmed before any payment or access.';
+        : 'This portfolio example fits the selected package boundary. No booking, payment, or access is available.';
     }
   }
 

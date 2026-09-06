@@ -208,12 +208,10 @@ Append new decisions; do not silently rewrite prior rationale. Dates use Asia/Ca
 
 **Constraints:** every page is labeled fictional; the PDF contains no real authorization, customer, production, revenue, or finding claim; the JSON remains the source of truth; public checkout and intake stay closed; the artifact must pass deterministic generation, PDF validation, public-only bundling, and live-route verification.
 
-## 2026-09-05 — Route the first purchasable offer through approved Upwork escrow
+## 2026-09-06 — Pause Upwork and remove public booking links for account eligibility
 
-**Decision:** link the approved $349 Boundary Verification Project Catalog offer from the public product while keeping the static website in preview mode with direct intake and payment closed.
+**Decision:** immediately restore TenantBoundary to request-only portfolio mode and remove every Upwork booking link because Upwork account eligibility cannot be verified.
 
-**Why:** the marketplace listing creates a zero-upfront-cost, platform-managed booking path without inventing a direct processor, exposing a placeholder contact, buying Connects, or building a backend before revenue.
+**Why:** Upwork requires account holders to satisfy its account and contract-eligibility rules. Until Upwork Support confirms the account is eligible, a public booking path could invite an order that must not be accepted.
 
-**Constraints:** the website must clearly distinguish the live $349 Upwork offer from the separately qualified $649 starting scope; Upwork handles marketplace account, order, and payment data; no order authorizes testing until written target, scope, environment, identities, exclusions, and stop conditions are agreed; no credentials or customer data belong in the public site or initial requirements.
-
-**Known correction:** Upwork currently categorizes the offer under Desktop App Improvements & Bug Fixes. Correct that marketplace metadata before promoting beyond the website; do not change the service promise to fit the wrong category.
+**Constraints:** hide the Upwork listing, accept no marketplace order or payment, contact Upwork Support for account instructions, and never provide false eligibility, identity, tax, or payout information or use another person’s account. Continue product learning and portfolio development without customer work until eligibility is real.

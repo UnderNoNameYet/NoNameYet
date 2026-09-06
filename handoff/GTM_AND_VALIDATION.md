@@ -6,6 +6,8 @@ Obtain one legitimate paid pilot—or, failing that, two serious scoped buyer co
 
 The experiment tests offer/channel fit. It does not prove a repeatable business after one sale.
 
+**Current status: paused.** Do not contact prospects, submit proposals, accept marketplace orders, or take payment until the operator satisfies the platform account and contractual eligibility requirements for the chosen channel.
+
 ## Ideal lead
 
 A founder/technical owner who:
@@ -19,17 +21,14 @@ A founder/technical owner who:
 
 ## Priority channels
 
-1. **Approved Project Catalog offer** — the [$349 Upwork listing](https://www.upwork.com/services/product/development-it-a-supabase-rls-and-tenant-isolation-review-with-evidence-2096498626928341965) is visible; monitor qualified messages and orders without paid boosts.
-2. **Recent paid requests** — Upwork or equivalent, only when free proposal capacity exists, through an authenticated operator account, and within platform rules.
-3. **Explicit public pain** — helpful reply where a founder asks about RLS isolation; disclose affiliation and avoid unsolicited exploit detail.
-4. **Warm technical network** — only if an approved business identity exists.
-5. **Search-indexed proof assets** — landing page, methodology, fictional sample report.
+1. **Recent paid requests** — Upwork or equivalent, through an authenticated operator account and within platform rules.
+2. **Explicit public pain** — helpful reply where a founder asks about RLS isolation; disclose affiliation and avoid unsolicited exploit detail.
+3. **Warm technical network** — only if an approved business identity exists.
+4. **Search-indexed proof assets** — landing page, methodology, fictional sample report.
 
 Do not cold-email from the private Outlook address. Do not spam GitHub issues, scraped emails, or unrelated communities.
 
 ## Current demand evidence
-
-Current first-party marketplace baseline on September 5, 2026: the approved listing is visible with 2 dashboard views and 0 orders. Treat this as a baseline, not validation.
 
 Recent public requests include:
 
@@ -91,11 +90,11 @@ Never claim prior customers, references, or portfolio work. Use the explicitly f
 
 ### Day 0 — readiness
 
-- live proof pages and approved external marketplace booking
+- live proof pages and intake
 - validated sample/report
 - proposal assets
 - capacity reserved for one pilot
-- Upwork identity, tax, and payout requirements completed privately before the relevant delivery or payout stage
+- payment/legal path ready before accepting funds
 
 ### Days 1–2 — top three applications
 

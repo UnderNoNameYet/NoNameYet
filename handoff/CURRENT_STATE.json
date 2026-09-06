@@ -1,8 +1,8 @@
 {
-  "snapshotAt": "2026-09-06T08:36:48Z",
+  "snapshotAt": "2026-09-06T10:38:57Z",
   "product": "TenantBoundary",
   "corePromise": "Prove that Customer A cannot read or modify Customer B's data.",
-  "stage": "TenantBoundary v0.4.0 marketplace-linked public preview live and verified; approved $349 Upwork offer visible; direct site intake and payment closed",
+  "stage": "TenantBoundary v0.4.0 request-only portfolio; marketplace booking removal release candidate required because Upwork account eligibility is unresolved; customer work and payment blocked",
   "sourcePath": "repository root on current main",
   "repository": {
     "owner": "UnderNoNameYet",
@@ -10,23 +10,23 @@
     "defaultBranch": "main",
     "access": "connected_published_and_verified",
     "authenticatedUser": "MYIndieDEV",
-    "inspectedMainSha": "8eec4b9efde9707ae132b7ae22e6a0e1747be1ac",
+    "inspectedMainSha": "307cf409a061a70a69830775112ca9d1f0aaf7fc",
     "liveVersion": "0.4.0",
     "pagesWorkflow": ".github/workflows/pages.yml",
     "releaseTransport": "direct source with an exact 29-file public-only build artifact",
     "preReleaseRollbackSha": "a1baa9ebde9bf1b1a05d7a0563ee9927ff96f9af",
-    "publishedPullRequestNumber": 32,
-    "publishedPullRequestUrl": "https://github.com/UnderNoNameYet/NoNameYet/pull/32",
-    "mergeSha": "8eec4b9efde9707ae132b7ae22e6a0e1747be1ac",
-    "workflowRunNumber": 72,
-    "workflowRunUrl": "https://github.com/UnderNoNameYet/NoNameYet/actions/runs/34022114404",
+    "publishedPullRequestNumber": 30,
+    "publishedPullRequestUrl": "https://github.com/UnderNoNameYet/NoNameYet/pull/30",
+    "mergeSha": "bc5ed44111084cea80dc157a3cfbabacf30eec61",
+    "workflowRunNumber": 74,
+    "workflowRunUrl": "https://github.com/UnderNoNameYet/NoNameYet/actions/runs/34022522918",
     "workflowConclusion": "success",
     "deployedUrl": "https://undernonameyet.github.io/NoNameYet/",
-    "liveVerifiedAt": "2026-09-06T08:36:48Z",
-    "liveVerification": "All eight HTML routes, approved Upwork URL on every buyer path, five homepage booking links, marketplace config/runtime guard, privacy/terms, local no-submit request flow, Northstar CRM fictional labels, and byte-identical canonical/former-path PDFs fetched successfully",
+    "liveVerifiedAt": "2026-09-05T07:22:53Z",
+    "liveVerification": "Previous marketplace-linked release verified; safety candidate restores the prior request-only public artifact and must deploy before the public booking path is considered closed",
     "priorKnownGoodMainSha": "b5bec82967b51c3f9a00be06a25150c744cc613f",
-    "mergedAt": "2026-09-06T08:32:00Z",
-    "workflowChecksUrl": "https://github.com/UnderNoNameYet/NoNameYet/commit/8eec4b9efde9707ae132b7ae22e6a0e1747be1ac/checks",
+    "mergedAt": "2026-09-05T07:19:30Z",
+    "workflowChecksUrl": "https://github.com/UnderNoNameYet/NoNameYet/commit/bc5ed44111084cea80dc157a3cfbabacf30eec61/checks",
     "publicProductDeployed": true,
     "liveBrand": "TenantBoundary",
     "legacyPreProductRollbackSha": "047691e35c6b8d38ba5540d1fe4de345ed752a6c"
@@ -50,18 +50,9 @@
     }
   ],
   "payment": {
-    "mode": "closed_on_website",
-    "recommendedInitialProcessor": "Upwork order and platform payment for the approved $349 Project Catalog offer; direct invoices only after separate readiness gates",
-    "activated": false,
-    "marketplace": {
-      "platform": "Upwork",
-      "state": "approved_visible",
-      "url": "https://www.upwork.com/services/product/development-it-a-supabase-rls-and-tenant-isolation-review-with-evidence-2096498626928341965",
-      "package": "Boundary Verification",
-      "priceUsd": 349,
-      "deliveryDays": 7,
-      "revisions": 1
-    }
+    "mode": "closed",
+    "recommendedInitialProcessor": "none until platform account, contractual, identity, tax, payout, legal, and customer-specific authorization gates are satisfied",
+    "activated": false
   },
   "safety": {
     "writtenAuthorizationRequired": true,
@@ -126,12 +117,11 @@
       "assets/tenantproof-og.png"
     ],
     "canonicalFictionalPdf": "assets/tenantboundary-fictional-report.pdf",
-    "marketplaceUrl": "https://www.upwork.com/services/product/development-it-a-supabase-rls-and-tenant-isolation-review-with-evidence-2096498626928341965",
-    "marketplaceBookingState": "live_verified"
+    "marketplaceBookingState": "pause_required_removed_from_release_candidate"
   },
   "quality": {
-    "latestKnownResult": "local_pr_main_and_live_marketplace_link_pass",
-    "latestLocalRunAt": "2026-09-06T08:17:53.222Z",
+    "latestKnownResult": "age_safety_rollback_pending_full_quality",
+    "latestLocalRunAt": "2026-09-05T07:10:15.029Z",
     "qualityGateCommands": 37,
     "requiredFiles": 29,
     "htmlPages": 8,
@@ -152,15 +142,15 @@
     "browserPersistenceCalls": 0,
     "postRequests": 0,
     "demoRunnerLocked": true,
-    "mustRerunAfterChanges": false,
+    "mustRerunAfterChanges": true,
     "githubPullRequestBuild": "success",
     "githubMainBuildAndDeploy": "success",
-    "exactHeadPullRequestSha": "2ebcbe68456ae829b67bb2be800f4b2591c95bcd",
-    "pullRequestWorkflowRunNumber": 71,
-    "pullRequestWorkflowRunUrl": "https://github.com/UnderNoNameYet/NoNameYet/actions/runs/34021970749",
-    "releaseMergeSha": "8eec4b9efde9707ae132b7ae22e6a0e1747be1ac",
-    "mainWorkflowRunNumber": 72,
-    "mainWorkflowRunUrl": "https://github.com/UnderNoNameYet/NoNameYet/actions/runs/34022114404",
+    "exactHeadPullRequestSha": "984272c83cc5077dc27c8a0ec7c74404b403f265",
+    "pullRequestWorkflowRunNumber": 67,
+    "pullRequestWorkflowRunUrl": "https://github.com/UnderNoNameYet/NoNameYet/actions/runs/33952105496",
+    "releaseMergeSha": "bc5ed44111084cea80dc157a3cfbabacf30eec61",
+    "mainWorkflowRunNumber": 68,
+    "mainWorkflowRunUrl": "https://github.com/UnderNoNameYet/NoNameYet/actions/runs/33952234143",
     "liveRouteVerification": "pass",
     "liveTextRoutesWithoutFormerBrand": true,
     "livePdfBytes": 53287,
@@ -168,15 +158,7 @@
     "livePdfLegacyAliasByteIdentical": true,
     "liveSocialImageBytes": 68225,
     "liveSocialImageSha256": "5667c5414898fcbd3d3213872fd8626f2e31680c9642b0e027df7f1e76c1dc73",
-    "liveSocialImageLegacyAliasByteIdentical": true,
-    "marketplaceLinkChecks": {
-      "validatedUpworkProjectUrl": true,
-      "safeExternalLinkAttributes": true,
-      "visibleOnSevenPublicPages": true,
-      "externalRuntimeRequests": 0,
-      "desktopVisualInspection": "pass",
-      "mobileVisualInspection": "pass"
-    }
+    "liveSocialImageLegacyAliasByteIdentical": true
   },
   "commercialTruth": {
     "customers": 0,
@@ -184,26 +166,22 @@
     "testimonials": 0,
     "realFindingsPublished": 0,
     "tenDayRevenueTargetUsd": 100,
-    "targetIsGuarantee": false,
-    "marketplaceViewsBaseline": 2,
-    "marketplaceOrders": 0,
-    "baselineObservedAt": "2026-09-05"
+    "targetIsGuarantee": false
   },
   "blockers": [
-    "correct the Upwork category metadata, which currently presents the offer under Desktop App Improvements & Bug Fixes",
-    "complete private Upwork identity, tax, and payout requirements before the first delivery or payout",
-    "owned HTTPS intake and deletion route before direct website intake opens",
-    "verified operator identity, jurisdiction, and public contact before direct contracting opens",
-    "direct payment processor, payout, tax, and refund configuration before accepting money outside Upwork"
+    "Upwork account eligibility is unresolved; the listing must remain hidden and no order may be accepted unless Upwork Support confirms eligibility",
+    "Upwork Support account instructions are required; do not provide false eligibility, identity, tax, or payout information or use another person\u2019s account",
+    "owned HTTPS intake and deletion route before any future direct commercial intake",
+    "legal contracting identity, jurisdiction, and owned business contact before any future contract or payment",
+    "payment processor, payout, tax, and refund configuration only after legal eligibility"
   ],
   "nextActions": [
-    "correct the Upwork category from Desktop App Improvements & Bug Fixes to the closest available security or web-application category",
-    "verify that the fictional four-page PDF is visible in the public Upwork gallery and remains clearly labeled as demonstration work",
-    "complete private Upwork identity, tax, and payout requirements before the first delivery or payout",
-    "monitor the initial 2-view and 0-order baseline and respond promptly to qualified Upwork messages without paid boosts",
-    "keep the Notion qualification form private and direct website payment closed until the direct-intake gates are ready",
-    "do not buy a domain, paid tool, paid lead, or proposal credits before revenue",
-    "prefer one safely authorized paid pilot over speculative workspace or recurring-monitoring features"
+    "turn the Upwork Project Catalog listing visibility off immediately",
+    "contact Upwork Support, explain that account eligibility cannot be confirmed, and follow their account instructions",
+    "deploy and verify removal of every Upwork booking link from the TenantBoundary public site",
+    "accept no proposal, order, payment, credential, customer data, or real target while eligibility is unresolved",
+    "continue TenantBoundary only as a portfolio, learning, and product-development project",
+    "never provide false eligibility, identity, tax, or payout information or use another person\u2019s account"
   ],
   "frozenProducts": [
     "RebuttalKit",
@@ -214,13 +192,13 @@
   ],
   "localReleaseMirror": "/data/tenantproof",
   "pilotReadiness": {
-    "status": "private_record_partially_verified",
+    "status": "blocked_platform_eligibility",
     "checker": "npm run pilot:check",
     "firstPilotStrict": "npm run pilot:strict",
     "commercialStrict": "npm run commercial:strict",
     "privateConfig": "config/pilot-readiness.json (ignored)",
     "committedTemplateBlocked": true,
-    "verifiedGates": 4,
+    "verifiedGates": 3,
     "requiredGates": 12,
     "outreachReady": false,
     "intakeReady": false,
@@ -231,19 +209,16 @@
     "verifiedGateNames": [
       "businessContact",
       "securityContact",
-      "deliveryCapacity",
-      "approvedAcquisitionChannel"
+      "deliveryCapacity"
     ],
     "remainingOutreachBlockers": [
+      "platformEligibility",
       "contractingIdentity",
       "httpsIntakeAndDeletion",
-      "launchLegalCopy"
+      "launchLegalCopy",
+      "approvedAcquisitionChannel"
     ],
-    "approvedAcquisitionChannel": {
-      "platform": "Upwork Project Catalog",
-      "state": "approved_visible",
-      "url": "https://www.upwork.com/services/product/development-it-a-supabase-rls-and-tenant-isolation-review-with-evidence-2096498626928341965"
-    }
+    "platformEligibilityVerified": false
   },
   "brandDecision": {
     "approvedByOperator": true,
@@ -252,6 +227,6 @@
     "compatibility": "Keep old PDF and social-image paths as byte-identical aliases while all visible public copy uses TenantBoundary",
     "publicWorkingName": "TenantBoundary",
     "status": "live_and_verified",
-    "release": "TenantBoundary v0.4.0 via PR #30/main run #68; approved marketplace booking path via PR #32/main run #72"
+    "release": "v0.4.0 via PR #30 and main workflow run #68"
   }
 }

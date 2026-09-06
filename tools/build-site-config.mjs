@@ -24,17 +24,6 @@ try {
 } catch { errors.push('publicOrigin must be an absolute URL'); }
 if (!['closed', 'invoice', 'payment_link'].includes(config.paymentMode)) errors.push('paymentMode must be closed, invoice, or payment_link');
 if (config.paymentMode === 'payment_link' && !/^https:\/\//.test(config.paymentUrl || '')) errors.push('paymentUrl must be HTTPS for payment_link mode');
-if (config.marketplaceUrl) {
-  try {
-    const marketplace = new URL(config.marketplaceUrl);
-    const validUpworkProject = marketplace.protocol === 'https:' &&
-      marketplace.hostname === 'www.upwork.com' &&
-      marketplace.pathname.startsWith('/services/product/');
-    if (!validUpworkProject) errors.push('marketplaceUrl must be an HTTPS Upwork Project Catalog URL');
-  } catch {
-    errors.push('marketplaceUrl must be an absolute URL');
-  }
-}
 
 if (config.state === 'ready') {
   if (!/^https:\/\//.test(config.contactUrl || '')) errors.push('ready state requires an HTTPS contactUrl');

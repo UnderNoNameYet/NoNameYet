@@ -10,13 +10,13 @@ Applies to every route except the dedicated workbench shell on `report.html`.
 
 - TenantBoundary wordmark/home link
 - Sample workbench, Matrix, Method, and Pricing links
-- one primary `Book on Upwork` action for the approved $349 Project Catalog offer
+- one primary local `Scope worksheet` action while commercial activity is paused
 - mobile menu with `aria-expanded` and an owned navigation ID
 - visible keyboard focus; menu closes after navigation or desktop resize
 
 ### Footer
 
-Product, Trust, and Start links; approved marketplace link plus local scope worksheet; dynamic year; launch-state label; factual safety line. Never add invented addresses, registrations, customers, social accounts, or outcomes.
+Product, Trust, and Start links; dynamic year; launch-state label; factual safety line. Never add invented addresses, registrations, customers, social accounts, or outcomes.
 
 ## `index.html` — product-first marketing page
 
@@ -28,8 +28,8 @@ Let a Supabase SaaS founder understand the failure, workflow, deliverable, fixed
 
 1. **Hero**
    - direct promise: verify tenant isolation before shipping
-   - short explanation of an approved matrix, controlled run, repair, rerun, and retained evidence
-   - primary action opens the approved $349 Upwork offer; secondary action opens the sample workbench
+   - short explanation of the portfolio demonstration and an explicit statement that bookings/customer work are paused
+   - primary action opens the sample workbench; secondary action prepares scope
    - realistic fictional Run-stage preview, not abstract decoration
    - staging, synthetic-data, and written-authorization safeguards
 
@@ -55,14 +55,15 @@ Let a Supabase SaaS founder understand the failure, workflow, deliverable, fixed
    - explicit contextual-result limitation
 
 6. **Pricing**
-   - Boundary Verification: $349, bookable through the approved Upwork Project Catalog offer
-   - Verification + Repair: $649 starting scope, qualified separately rather than presented as a live checkout
+   - Boundary Verification: $349 example future scope
+   - Verification + Repair: $649 example future scope
+   - no active booking or payment action
    - manual-quote boundary for larger, production-only, regulated, or unusually sensitive work
 
 7. **Service boundaries and CTA**
    - no credentials through the public site
    - written authorization, staging, synthetic data, and no certification claim
-   - approved marketplace booking plus an optional local scope brief before access is discussed
+   - local-only scope worksheet for portfolio planning; it does not create a contract
 
 ### Acceptance criteria
 
@@ -82,7 +83,7 @@ Let a buyer inspect the complete fictional workflow and open a compatible redact
 
 ### Shell
 
-- compact product header with project, fictional label, review ID, Method, and approved Upwork booking action
+- compact product header with project, fictional label, review ID, Method, and Scope action
 - horizontal stage rail: **Scope → Matrix → Run → Repair → Report**
 - Run opens by default
 - no permanent left navigation, account sidebar, or always-open inspector
