@@ -1,10 +1,12 @@
 # TenantBoundary ten-day marketing experiment
 
-Status: zero-cost inbound experiment live. The [$349 Upwork Project Catalog offer](https://www.upwork.com/services/product/development-it-a-supabase-rls-and-tenant-isolation-review-with-evidence-2096498626928341965) is approved and visible. Direct website intake and paid promotion remain closed.
+Status: paused. No outreach, proposal, marketplace order, or payment is authorized while the platform Upwork account-eligibility gate is unresolved.
 
 ## Objective
 
 Test whether one qualified Supabase SaaS founder will purchase a bounded tenant-isolation verification. The revenue objective is at least USD 100 within ten days after launch; it is an experiment target, not a guarantee.
+
+This objective is deferred until the operator can legally form the applicable contracts and satisfies every platform account, identity, tax, and payout requirement. Do not provide false information or use another person’s account or details as a workaround.
 
 ## Ideal customer profile
 
@@ -25,16 +27,15 @@ Do not lead with “security audit.” Lead with the exact boundary and delivera
 
 ## Channel order
 
-1. **Approved Project Catalog offer:** monitor the public Upwork listing and answer qualified platform messages promptly; do not boost or buy traffic.
-2. **Current paid requests:** individually apply only when free Connects are available and the request is current, eligible, and strongly matched.
-3. **Explicit public founder pain:** reply only where the founder is asking for help with tenant isolation, RLS, or launch verification.
-4. **Warm technical communities:** share the fictional matrix as an educational artifact, not as a disguised testimonial.
-5. **Direct outreach:** only to public business contacts where the app's multi-tenant Supabase architecture and current trigger are genuinely evident; no personal mailbox and no bulk sends.
+1. **Current paid requests:** individually apply to recent Supabase RLS, authorization, or pre-launch review jobs where location and qualifications permit.
+2. **Explicit public founder pain:** reply only where the founder is asking for help with tenant isolation, RLS, or launch verification.
+3. **Warm technical communities:** share the fictional matrix as an educational artifact, not as a disguised testimonial.
+4. **Direct outreach:** only to public business contacts where the app's multi-tenant Supabase architecture and current trigger are genuinely evident; no personal mailbox and no bulk sends.
 
 ## Ten-day sequence
 
-- **Day 0:** link and verify the approved Project Catalog offer from the request-only site.
-- **Day 1:** correct the Upwork category mismatch and verify the public gallery/PDF; submit a tailored proposal only if a strong current match and free Connects exist.
+- **Day 0:** publish request-only site and verify intake.
+- **Day 1:** submit up to three tailored paid-job proposals.
 - **Day 2:** respond to up to two explicit public requests; publish one concise explanation of why `RLS enabled` is not a tenant-boundary test.
 - **Day 3:** review opens, replies, objections, and qualification failures.
 - **Day 4:** refine only the message or package boundary—not the whole product.
@@ -55,8 +56,6 @@ Maximum initial outbound set: ten well-matched buyers. Do not increase volume to
 Never claim to have tested the prospect, found a vulnerability, served a client, or improved a business result without authorization and evidence.
 
 ## Metrics
-
-Initial dashboard baseline on September 5, 2026: **2 views, 0 orders**. This is observation only, not demand proof.
 
 - Qualified prospects contacted
 - Replies

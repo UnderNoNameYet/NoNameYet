@@ -70,7 +70,6 @@ Checks:
 - restrictive meta CSP and external runtime config
 - same-origin runtime assets only
 - internal links/canonical URLs resolve
-- approved marketplace links are limited to one HTTPS `www.upwork.com/services/product/…` URL and use safe new-tab attributes
 - no forbidden product, customer, legal, or commercial claim
 - GitHub Pages upload source is `dist/`, copied only from `public/`
 
@@ -109,7 +108,6 @@ Run Chromium at minimum at 1440×960/1050 and 390×844:
 
 - every page returns success
 - no console/page error or external runtime request
-- approved Upwork links are visible and have the configured URL without being fetched until the user chooses to leave the site
 - no document-level horizontal overflow
 - stage rail/table overflow stays inside announced regions
 - mobile fictional-demo banner remains visible

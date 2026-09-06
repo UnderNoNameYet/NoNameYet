@@ -4,22 +4,12 @@ All notable product changes are recorded here. The project has not reached a com
 
 ## [Unreleased]
 
-### Commercial path
+### Safety
 
-- linked the approved and visible $349 Upwork Project Catalog offer from the homepage, Workbench, local scope worksheet, supporting-page navigation, and footers
-- kept direct website intake and payment closed while clearly separating the platform-managed Upwork order from the local no-submit worksheet
-- updated privacy and service-limit copy for the external marketplace path without weakening written authorization, staging-first work, synthetic-data defaults, or fictional-sample labels
-
-### Quality and handoff
-
-- added strict Upwork Project Catalog URL validation and automated checks for visible, safely attributed external links with no new runtime requests
-- updated the zero-cost experiment, current state, product specification, operating guidance, and continuation handoff
-
-### Release state
-
-- released through exact-head PR [#32](https://github.com/UnderNoNameYet/NoNameYet/pull/32), successful PR [run #71](https://github.com/UnderNoNameYet/NoNameYet/actions/runs/34021970749), and squash merge `8eec4b9efde9707ae132b7ae22e6a0e1747be1ac`
-- deployed through successful main Pages [run #72](https://github.com/UnderNoNameYet/NoNameYet/actions/runs/34022114404)
-- verified all eight HTML routes, the configured Upwork URL, five homepage booking links, marketplace-aware privacy/terms, local no-submit behavior, and the byte-identical fictional PDF aliases on the live site
+- removed the approved Upwork booking link from every public buyer path immediately after learning that the platform Upwork account-eligibility gate is unresolved
+- restored the prior request-only site behavior with local scope generation, no form submission, and closed payment
+- documented that false eligibility, identity, tax, or payout information and another person’s account must never be used as a workaround
+- kept the product, fictional proof pack, source, and zero-cost portfolio available for learning and future launch when the operator is legally and contractually eligible
 
 ## [0.4.0] — 2026-09-05 — TenantBoundary working-name release
 

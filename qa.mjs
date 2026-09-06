@@ -7,7 +7,6 @@ const root = path.resolve(import.meta.dirname), publicDir = path.join(root, 'pub
 fs.mkdirSync(buildDir, { recursive: true });
 const base = 'http://127.0.0.1:4173';
 const pages = ['index.html', 'report.html', 'methodology.html', 'sample-matrix.html', 'request.html', 'privacy.html', 'terms.html', '404.html'];
-const marketplaceUrl = 'https://www.upwork.com/services/product/development-it-a-supabase-rls-and-tenant-isolation-review-with-evidence-2096498626928341965';
 const results = { generatedAt: new Date().toISOString(), static: {}, browser: {}, screenshots: [], failures: [] };
 function assert(condition, message) { if (!condition) { results.failures.push(message); throw new Error(message); } }
 async function waitForText(locator, expected, attempts = 50) { for (let index = 0; index < attempts; index += 1) { if ((await locator.textContent())?.includes(expected)) return; await new Promise(resolve => setTimeout(resolve, 50)); } throw new Error(`Timed out waiting for text: ${expected}`); }
@@ -34,8 +33,7 @@ function staticChecks() {
   assert(!/<link[^>]+rel=["']stylesheet["'][^>]+href=["']https?:\/\//i.test(publicText), 'Public build contains a remote stylesheet');
   assert(!/localStorage|sessionStorage/i.test(publicText), 'Public scripts use browser persistence');
   assert(!/fetch\([^)]*method\s*:\s*["']POST/i.test(publicText), 'Public scripts contain a POST request');
-  const previewConfig = JSON.parse(fs.readFileSync(path.join(root, 'config/site.preview.json'), 'utf8'));
-  assert(previewConfig.marketplaceUrl === marketplaceUrl, 'Preview config is missing the approved Upwork Project Catalog URL');
+  assert(!/upwork\.com/i.test(publicText), 'Portfolio-only public build must not expose an Upwork booking path');
   for (const pageName of pages) {
     const html = fs.readFileSync(path.join(publicDir, pageName), 'utf8');
     assert((html.match(/<h1\b/gi) || []).length === 1, `${pageName} must contain exactly one h1`);
@@ -47,12 +45,6 @@ function staticChecks() {
     assert(/assets\/site-config\.js/i.test(html), `${pageName} is missing the external site config`);
     const hrefs = [...html.matchAll(/href=["']([^"'#?]+)(?:[?#][^"']*)?["']/gi)].map(match => match[1]);
     for (const href of hrefs) { if (/^(https?:|mailto:|tel:|data:|javascript:)/i.test(href)) continue; const destination = path.resolve(path.dirname(path.join(publicDir, pageName)), href); assert(destination.startsWith(publicDir), `${pageName} links outside public directory: ${href}`); assert(fs.existsSync(destination), `${pageName} has broken link: ${href}`); }
-  }
-  for (const pageName of pages.filter(pageName => pageName !== '404.html')) {
-    const html = fs.readFileSync(path.join(publicDir, pageName), 'utf8');
-    assert(html.includes('data-marketplace-link'), `${pageName} is missing the approved marketplace booking path`);
-    assert(html.includes(`href="${marketplaceUrl}"`), `${pageName} is missing the marketplace URL fallback`);
-    assert(/data-marketplace-link[^>]+target="_blank"[^>]+rel="noopener noreferrer"/i.test(html), `${pageName} marketplace link needs safe external-link attributes`);
   }
   for (const script of ['assets/site.js', 'assets/report.js', 'assets/workbench.js', 'assets/site-config.js', '../tools/validate-report.mjs', '../tools/run-matrix.mjs', '../tools/demo-adapter.mjs', '../tools/build-site-config.mjs', '../tools/release-check.mjs', '../tools/harden-html.mjs']) { const check = spawnSync(process.execPath, ['--check', path.resolve(publicDir, script)], { encoding: 'utf8' }); assert(check.status === 0, `Syntax error in ${script}: ${check.stderr}`); }
   const validator = spawnSync(process.execPath, ['tools/validate-report.mjs', 'public/assets/sample-report.json'], { cwd: root, encoding: 'utf8' });
@@ -84,14 +76,9 @@ async function browserChecks() {
     for (const pageName of pages) { const response = await page.goto(`${base}/${pageName}`, { waitUntil: 'networkidle' }); assert(response?.ok(), `${pageName} returned ${response?.status()}`); titles[pageName] = await page.title(); assert((await page.locator('h1').count()) === 1, `${pageName} browser DOM has wrong h1 count`); assert((await page.locator('main').count()) === 1, `${pageName} browser DOM has wrong main count`); }
     await page.goto(`${base}/index.html`, { waitUntil: 'networkidle' });
     assert((await page.locator('h1').innerText()).trim() === 'Verify tenant isolation before you ship.', 'Home promise changed unexpectedly');
+    assert((await page.locator('.tp-home-lede').innerText()).includes('Bookings and customer work are paused'), 'Home must disclose that commercial activity is paused');
     assert(await page.locator('.tp-preview-rail span').count() === 5, 'Home workbench preview must show five stages');
     assert((await page.locator('.tp-demo-chip').first().innerText()).toLowerCase().includes('fictional'), 'Home demo label is missing');
-    const marketplaceLink = page.locator('[data-marketplace-link]').first();
-    assert(await marketplaceLink.isVisible(), 'Home marketplace booking link is not visible');
-    assert(await marketplaceLink.getAttribute('href') === marketplaceUrl, 'Home marketplace booking link has the wrong URL');
-    assert(await marketplaceLink.getAttribute('target') === '_blank', 'Home marketplace booking link must open in a new tab');
-    assert((await marketplaceLink.getAttribute('rel') || '').includes('noopener'), 'Home marketplace booking link is missing noopener');
-    assert((await page.locator('[data-launch-state]').first().innerText()).includes('Upwork offer live'), 'Marketplace launch state is not shown');
     await page.screenshot({ path: path.join(buildDir, 'tenantboundary-desktop.png'), fullPage: true });
     results.screenshots.push('build/tenantboundary-desktop.png');
     await page.goto(`${base}/report.html`, { waitUntil: 'networkidle' });
@@ -118,7 +105,7 @@ async function browserChecks() {
     await page.goto(`${base}/request.html?package=repair`, { waitUntil: 'networkidle' });
     assert(await page.locator('input[value="repair"]').isChecked(), 'Repair query parameter did not select package');
     assert(await page.locator('[data-contact-link]').isHidden(), 'Secure intake link must stay hidden in preview state');
-    assert(await page.locator('[data-marketplace-link]').first().isVisible(), 'Request page must expose the approved Upwork offer');
+    assert((await page.locator('.notice.mt-18').innerText()).includes('Bookings, customer work, and payment are paused'), 'Scope worksheet must disclose the portfolio-only state');
     await page.getByRole('button', { name: 'Describe application' }).click();
     await page.locator('#app-name').fill('Fictional Atlas CRM'); const requestUrlBeforeEnter = page.url(); await page.locator('#app-name').press('Enter');
     assert(page.url() === requestUrlBeforeEnter, 'Pressing Enter submitted private scope data into the URL');

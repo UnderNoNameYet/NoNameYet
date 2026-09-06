@@ -1,19 +1,17 @@
 # TenantBoundary handoff report
 
 - **Snapshot:** 2026-09-05
-- **Product stage:** TenantBoundary v0.4.0 marketplace-linked public preview live and verified
-- **Commercial stage:** approved $349 Upwork Project Catalog offer visible; direct website intake/payment closed; no customer or revenue yet
-- **Next objective:** correct the Upwork category metadata, verify the public gallery, and convert one safely authorized paid pilot without paid promotion
+- **Product stage:** TenantBoundary v0.4.0 request-only technical preview live and verified
+- **Commercial stage:** portfolio-only; marketplace, customer work, and payment paused because the Upwork account-eligibility gate is unresolved
+- **Next objective:** preserve the product and proof pack, hide the Upwork listing, obtain platform account instructions, and resume commercial planning only when legally and contractually eligible
 
 ## Executive summary
 
 TenantBoundary is a productized Supabase/PostgreSQL tenant-isolation verification and repair service. It turns a buyer-approved authorization model into paired controls and produces redacted before/after evidence. The promise remains narrow: **Prove that Customer A cannot read or modify Customer B’s data.**
 
-The v0.4.0 TenantBoundary release preserves the actual workflow rather than abstract positioning. The public homepage shows a concise fictional Run preview, while `report.html` is a spacious Focus Workbench organized as **Scope → Matrix → Run → Repair → Report**. The interface preserves local report import, schema 1.0, filters, keyboard selection, print, contextual result limits, and an explicit unresolved state. The live site links the approved $349 Upwork Project Catalog offer while retaining the static no-submit worksheet and closed direct-payment configuration.
+The live v0.4.0 TenantBoundary release preserves the actual workflow rather than abstract positioning. The public homepage shows a concise fictional Run preview, while `report.html` is a spacious Focus Workbench organized as **Scope → Matrix → Run → Repair → Report**. The interface preserves local report import, schema 1.0, filters, keyboard selection, print, contextual result limits, and an explicit unresolved state.
 
 PR [#30](https://github.com/UnderNoNameYet/NoNameYet/pull/30) passed exact-head CI and was squash-merged at `bc5ed44111084cea80dc157a3cfbabacf30eec61`. Main Pages [run #68](https://github.com/UnderNoNameYet/NoNameYet/actions/runs/33952234143) completed successfully and published the exact 29-file `public/` artifact. Direct public fetches confirmed the homepage, Workbench, matrix, supporting routes, fictional JSON/CSV, canonical PDF/social assets, and both former-path aliases.
-
-Marketplace-link PR [#32](https://github.com/UnderNoNameYet/NoNameYet/pull/32) passed exact-head [run #71](https://github.com/UnderNoNameYet/NoNameYet/actions/runs/34021970749), was squash-merged at `8eec4b9efde9707ae132b7ae22e6a0e1747be1ac`, and deployed through successful main [run #72](https://github.com/UnderNoNameYet/NoNameYet/actions/runs/34022114404). Live fetches verified all routes, five homepage booking links, config/runtime URL guards, updated privacy/terms, and unchanged byte-identical fictional PDF aliases.
 
 The deterministic four-page fictional report PDF is generated from the same canonical JSON as the interactive Workbench. It gives proposals and buyer conversations a compact proof artifact without adding a backend, customer data, a claim of real work, or commercial activation. The live PDF is visibly fictional on every page.
 
@@ -31,7 +29,7 @@ It executes the agreed positive and negative paths in a controlled environment, 
 
 - direct “verify tenant isolation before you ship” promise
 - realistic fictional Workbench Run preview
-- concise boundary questions, controlled method, before/after artifact, fixed prices, service boundaries, approved Upwork booking, and local scope CTA
+- concise boundary questions, controlled method, before/after artifact, fixed prices, service boundaries, and local scope CTA
 - no abstract hero illustration, stock art, generic app sidebar, or essay-length marketing wall
 
 ### Focus Workbench
@@ -51,7 +49,7 @@ It executes the agreed positive and negative paths in a controlled environment, 
 - methodology/authorization
 - free fictional matrix and local CSV download
 - three-step local scope worksheet
-- marketplace-aware privacy and terms that preserve direct-site limits
+- pre-commercial privacy and terms
 - branded 404
 
 ## Architecture and safety
@@ -92,23 +90,24 @@ The gate validates the generated sample PDF’s signature, minimum size, source 
 - Boundary Verification: $349
 - Verification + Repair: $649
 - larger, regulated, production-only, or unusually sensitive scope: manual quote
-- approved $349 Upwork Project Catalog offer; Upwork handles that marketplace order and payment
-- direct website intake and payment remain closed; no unrestricted checkout
-- any execution still follows qualification, written authorization, and signed scope
+- request and qualification only; no unrestricted checkout
+- invoice/escrow only after qualification, written authorization, and signed scope
 - customers: 0; revenue: $0; testimonials: 0; published real findings: 0
 
-Business/security contact, delivery capacity, and an approved acquisition channel are verified privately. The operator must complete platform identity, payout/tax, SOW, authorization, secure-access, and refund facts before the first engagement reaches the corresponding stage. None of those are required to keep the static app or truthful marketplace link published.
+Business/security contact and delivery capacity are verified privately. Payment stays closed until an actual contract also has the required identity, payout/tax, SOW, authorization, secure-access, and refund facts. None of those are required to keep the static app published.
 
 A private Notion request database, qualification form, and launch-control page are prepared. The user explicitly kept the form private; do not describe or operate it as public until the same commercial facts and privacy handling are approved.
 
+The Upwork listing and website booking links are paused. Do not accept an order, provide false eligibility, identity, tax, or payout information, or use another person’s account. TenantBoundary remains useful as a portfolio and product-development project until the operator satisfies platform account and contractual eligibility.
+
 ## Continuation plan
 
-1. Preserve the verified marketplace-linked preview and its 29-file public-only deployment boundary.
-2. Correct the Upwork category from Desktop App Improvements & Bug Fixes to the closest available security or web-application category.
-3. Verify that the fictional PDF is visible in the public gallery and remains labeled as demonstration work.
+1. Preserve the verified TenantBoundary v0.4.0 request-only release and its 29-file public-only deployment boundary.
+2. Keep the Upwork listing hidden and contact Upwork Support for instructions on the ineligible account.
+3. Do not submit proposals, accept orders, or attempt an identity/tax workaround before eligibility.
 4. Keep `state: preview`, `paymentMode: closed`, the Notion form private, and all fictional labels until the corresponding commercial gates are ready.
 5. Do not buy a domain, paid tool, paid lead, or proposal credits before revenue.
-6. Monitor the initial baseline of 2 views and 0 orders, respond promptly to qualified Upwork messages, and prefer one safely authorized paid pilot over speculative workspace features.
+6. Prefer one safely authorized paid pilot over speculative workspace, billing, connection, or recurring-monitoring features.
 7. For any product change, use a focused branch, exact-head CI, changed-file/secret review, generated-artifact reconciliation, and live route verification after merge.
 8. Keep customer evidence, credentials, authorization records, and engagement workspaces outside this public repository.
 

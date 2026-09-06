@@ -13,12 +13,12 @@ It sells an agreed authorization matrix, executed before/after evidence, remedia
 | Product specification | complete |
 | Local static MVP | complete |
 | Production preparation | complete for the closed technical preview |
-| Browser/responsive/privacy QA | local 37/37, exact-head PR #32 run #71, main run #72, and live marketplace-link verification passed |
+| Browser/responsive/privacy QA | local, exact-head PR, main deployment, and live verification passed for v0.4.0 |
 | Qualification workflow | private Notion database/form prepared; form intentionally unpublished |
-| GitHub Pages marketplace-linked preview | live from `8eec4b9efde9` after PR [#32](https://github.com/UnderNoNameYet/NoNameYet/pull/32) and successful main [run #72](https://github.com/UnderNoNameYet/NoNameYet/actions/runs/34022114404) |
-| Approved marketplace offer | [$349 Boundary Verification on Upwork](https://www.upwork.com/services/product/development-it-a-supabase-rls-and-tenant-isolation-review-with-evidence-2096498626928341965) is approved, visible, and linked from every public buyer path |
+| GitHub Pages request-only preview | TenantBoundary v0.4.0 live from `bc5ed4411108` after PR [#30](https://github.com/UnderNoNameYet/NoNameYet/pull/30) and successful main [run #68](https://github.com/UnderNoNameYet/NoNameYet/actions/runs/33952234143) |
 | Buyer proof pack | live deterministic four-page fictional PDF with a byte-identical former-path alias; generated from the canonical sample |
-| Payments | direct website payment closed; the approved $349 Upwork order uses Upwork contracting and payment |
+| Payments | closed |
+| Marketplace | paused: the Upwork account-eligibility gate is unresolved; the public site intentionally contains no Upwork booking link |
 | Customers/revenue/testimonials | none |
 
 TenantBoundary is a public working name selected after a preliminary collision check. This is not a trademark-clearance claim, and no domain purchase is part of the zero-cost launch plan.
@@ -59,7 +59,6 @@ Larger, production-only, regulated, or more sensitive work receives a manual quo
 - report schema 1.0 and validator
 - demo-only matrix runner locked against real targets
 - external preview/ready configuration
-- configuration-driven approved Upwork Project Catalog booking links with hardcoded no-JavaScript fallbacks
 - CSP-compatible HTML and portable security headers
 - sitemap, manifest, social image, and application icons
 - authorization, SOW, evidence, delivery, payment, intake, launch, and marketing runbooks
@@ -145,17 +144,20 @@ A public premium release additionally requires `npm run release:strict` with:
 - evidence-retention value
 - fresh GitHub repository verification
 
-Direct-site commercial activation still requires the ignored private pilot-readiness record and `npm run commercial:strict`. The approved Upwork listing provides a platform-managed booking path, but neither a green technical quality run nor a marketplace order grants permission to test before the customer-specific scope and written authorization are complete.
+Commercial activation also requires the ignored private pilot-readiness record and `npm run commercial:strict`; neither a green technical quality run nor the committed blocked template grants permission to accept work.
 
 ## Current blockers
 
-- correct the Upwork category metadata, which currently presents the offer under Desktop App Improvements & Bug Fixes
-- complete private Upwork identity, tax, and payout requirements before the first delivery or payout
-- verified operator identity, jurisdiction, contact, retention, and deletion details remain required before direct website intake opens
+- Upwork account and contractual eligibility must be confirmed by the platform; do not accept orders, provide false eligibility/identity/tax information, or use another person’s account
+- usable public form URL must be inserted into static release config
+- legal contracting identity, jurisdiction, and owned business contact are required before taking payment
+- static privacy/terms remain pre-launch
 - security contact is required before publishing `security.txt`
-- direct website payment processing remains intentionally closed
+- payment processor is not activated
 
 The user authorized autonomous product decisions, branches, merging, and deployment after checks. That authority does not allow bypassing platform permissions, inventing legal/account facts, or weakening authorization and privacy controls.
+
+Until the platform account-eligibility gate is satisfied, TenantBoundary is a portfolio and product-development project only. Keep marketplace listings hidden, direct intake/payment closed, and all customer work disabled.
 
 ## Commercial validation rule
 

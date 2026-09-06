@@ -6,13 +6,13 @@ Use this when handing TenantBoundary to another advanced model or developer.
 
 > You are continuing TenantBoundary, a productized Supabase/PostgreSQL tenant-isolation verification and repair service. Do not invent a new product. Read `AGENTS.md` and every file linked from `handoff/README.md` before editing. The core promise is: “Prove that Customer A cannot read or modify Customer B’s data.” The product sells executed authorization evidence, remediation, and regression protection—not an automated badge or security guarantee.
 >
-> Current state: TenantBoundary v0.4.0 is live at `https://undernonameyet.github.io/NoNameYet/`. Marketplace-link PR #32 passed exact-head run #71, merged at `8eec4b9efde9707ae132b7ae22e6a0e1747be1ac`, and deployed through successful main Pages run #72. It includes the product-first homepage, free fictional matrix, sidebar-free Scope → Matrix → Run → Repair → Report Focus Workbench, deterministic four-page fictional PDF, and the approved $349 Upwork Project Catalog booking path in an exact 29-file public contract. Direct website intake and payment remain closed. There are no customers, revenue, testimonials, or real findings. Preserve those truths.
+> Current state: TenantBoundary v0.4.0 is live at `https://undernonameyet.github.io/NoNameYet/` from merge `bc5ed44111084cea80dc157a3cfbabacf30eec61`, PR #30, and successful main Pages run #68. It includes the product-first homepage, free fictional matrix, sidebar-free Scope → Matrix → Run → Repair → Report Focus Workbench, and deterministic four-page fictional PDF in an exact 29-file public contract with byte-identical former-path aliases. Payment and commercial intake remain closed; there are no customers, revenue, testimonials, or real findings. Preserve those truths.
 >
-> A private Notion request database, qualification form, and launch-control page are prepared. The form is intentionally unpublished. Four of twelve operator-readiness gates are verified privately: business contact, security contact, delivery capacity, and approved acquisition channel. Do not make the form public until the remaining intake and legal gates are verified.
+> A private Notion request database, qualification form, and launch-control page are prepared. The form is intentionally unpublished. Three of twelve operator-readiness gates are verified privately: business contact, security contact, and delivery capacity. Do not make the form public until the remaining intake and legal gates are verified.
 >
 > First, inspect `handoff/CURRENT_STATE.json`, run `npm run quality`, and reconcile any drift. If GitHub is available, inspect current `main`, repository instructions, Pages workflow, and PR template before writing. Commit product source, specs, operations, handoff, media, and quality tooling. Publish only `public/`. The user authorized autonomous merging after checks, but do not bypass account permissions, fabricate legal/account facts, expose private email, or test any real target without written authorization.
 >
-> Next objective: publish and verify the website booking link, correct Upwork’s current Desktop App category mismatch, verify the fictional PDF in the public gallery, and convert one safely authorized pilot without boosts or paid Connects. Complete identity/payout facts privately inside Upwork only when the platform or an actual contract requires them. Prefer one paid pilot to vanity traffic. Never use bulk spam, fake proof, blind discounts, or unsupported claims.
+> Next objective: keep TenantBoundary in portfolio-only mode. Upwork account eligibility cannot be verified. Remove public booking links, keep the Upwork listing hidden, accept no order or payment, and contact Upwork Support for account instructions. Never provide false eligibility, identity, tax, or payout information or use another person’s account. Continue product learning without customer work until eligibility is confirmed.
 
 ## Mandatory first actions
 
@@ -28,7 +28,7 @@ Use this when handing TenantBoundary to another advanced model or developer.
 
 - product: TenantBoundary
 - prices: $349 / $649 starting packages
-- public website checkout: closed; approved $349 Upwork Project Catalog order path visible
+- public checkout: closed
 - sample: fictional Northstar CRM
 - schema: 1.0
 - default test environment: staging/dedicated test project
@@ -36,7 +36,8 @@ Use this when handing TenantBoundary to another advanced model or developer.
 - real testing: written authorization required
 - raw evidence recommendation: 14 days
 - customers/revenue/testimonials: none
-- GitHub marketplace-linked preview: live from PR #32, merge `8eec4b9efde9707ae132b7ae22e6a0e1747be1ac`, and successful main Pages run #72
+- marketplace/customer activity: paused until platform account and contractual eligibility are satisfied
+- GitHub request-only preview: TenantBoundary v0.4.0 live from PR #30, merge `bc5ed44111084cea80dc157a3cfbabacf30eec61`, and successful main Pages run #68
 - buyer proof: live deterministic four-page fictional PDF generated from the canonical sample; the 29-file artifact includes byte-identical former-path aliases
 - qualification form: prepared privately in Notion and intentionally unpublished
 - dedicated Outlook contact: approved privately for business, privacy, and security response; do not expose its address in repository source

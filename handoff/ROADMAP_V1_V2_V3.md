@@ -67,16 +67,17 @@ Prepared without opening intake or payment:
 - non-strict analysis in `npm run quality`
 - strict `pilot:strict` and combined `commercial:strict` commands
 
-Four private gates are verified: business contact, security contact, delivery capacity, and an approved Upwork Project Catalog acquisition channel. Still blocked on real facts needed for the corresponding direct commercial stage:
+The platform account and contractual eligibility gate is currently unsatisfied. Marketplace listings must remain hidden, customer work/payment are paused, and no identity or tax workaround is permitted.
+
+Three private gates are verified: business contact, security contact, and delivery capacity. Still blocked on real facts needed for the corresponding commercial stage:
 
 - contracting identity/tax details before accepting a contract or payment
 - HTTPS intake/deletion route
 - launch-state privacy/terms
 - processor, payout, and refund position before accepting money
-- private Upwork identity, tax, and payout completion before the corresponding delivery or payout stage
-- correction of the Upwork category metadata before broader promotion
+- authenticated approved acquisition channel before individualized outreach
 
-The approved $349 Upwork order path does not open direct website intake or authorize testing. No customer evidence is accepted before a customer-specific contract, scope, and written authorization are complete.
+No payment or customer evidence is accepted before these blockers are resolved.
 
 ### V1.4 first paid pilot
 

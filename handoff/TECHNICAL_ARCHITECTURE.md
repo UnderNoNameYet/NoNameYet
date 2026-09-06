@@ -99,7 +99,6 @@ Query parameters may preselect a package, but form submission is prevented. Vali
   "state": "preview | ready",
   "publicOrigin": "https://…/",
   "contactUrl": "https://…",
-  "marketplaceUrl": "https://www.upwork.com/services/product/…",
   "operatorDisplayName": "…",
   "contactEmail": "…",
   "paymentMode": "closed | invoice | payment_link",
@@ -108,7 +107,7 @@ Query parameters may preselect a package, but form submission is prevented. Vali
 }
 ```
 
-The live release remains `preview` with `paymentMode: closed`. `marketplaceUrl` may expose one validated HTTPS Upwork Project Catalog URL while direct site intake and payment stay closed; browser code accepts only `www.upwork.com/services/product/…`. Ready state requires verified HTTPS contact/origin, operator facts, business email, legal copy, payment mode, and a 1–365 day retention value. `release-check.mjs` prefers ignored `config/site.release.json` when it exists, so real facts never require changing the committed preview source.
+The live release remains `preview` with `paymentMode: closed`. Ready state requires verified HTTPS contact/origin, operator facts, business email, legal copy, payment mode, and a 1–365 day retention value. `release-check.mjs` prefers ignored `config/site.release.json` when it exists, so real facts never require changing the committed preview source.
 
 Commercial capability is tracked separately in ignored `config/pilot-readiness.json`. Its committed example is fully blocked. The checker reports outreach, intake, payment, first-pilot, and launch-experiment stages without exposing private evidence references.
 
