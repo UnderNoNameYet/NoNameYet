@@ -13,10 +13,10 @@ It sells an agreed authorization matrix, executed before/after evidence, remedia
 | Product specification | complete |
 | Local static MVP | complete |
 | Production preparation | complete for the closed technical preview |
-| Browser/responsive/privacy QA | local, exact-head PR, main deployment, and live verification passed for v0.4.0 |
+| Browser/responsive/privacy QA | local 37/37, exact-head PR #32 run #71, main run #72, and live marketplace-link verification passed |
 | Qualification workflow | private Notion database/form prepared; form intentionally unpublished |
-| GitHub Pages request-only preview | TenantBoundary v0.4.0 live from `bc5ed4411108` after PR [#30](https://github.com/UnderNoNameYet/NoNameYet/pull/30) and successful main [run #68](https://github.com/UnderNoNameYet/NoNameYet/actions/runs/33952234143) |
-| Approved marketplace offer | [$349 Boundary Verification on Upwork](https://www.upwork.com/services/product/development-it-a-supabase-rls-and-tenant-isolation-review-with-evidence-2096498626928341965) is approved, visible, and linked from the release candidate |
+| GitHub Pages marketplace-linked preview | live from `8eec4b9efde9` after PR [#32](https://github.com/UnderNoNameYet/NoNameYet/pull/32) and successful main [run #72](https://github.com/UnderNoNameYet/NoNameYet/actions/runs/34022114404) |
+| Approved marketplace offer | [$349 Boundary Verification on Upwork](https://www.upwork.com/services/product/development-it-a-supabase-rls-and-tenant-isolation-review-with-evidence-2096498626928341965) is approved, visible, and linked from every public buyer path |
 | Buyer proof pack | live deterministic four-page fictional PDF with a byte-identical former-path alias; generated from the canonical sample |
 | Payments | direct website payment closed; the approved $349 Upwork order uses Upwork contracting and payment |
 | Customers/revenue/testimonials | none |

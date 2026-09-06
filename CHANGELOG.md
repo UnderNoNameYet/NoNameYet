@@ -15,6 +15,12 @@ All notable product changes are recorded here. The project has not reached a com
 - added strict Upwork Project Catalog URL validation and automated checks for visible, safely attributed external links with no new runtime requests
 - updated the zero-cost experiment, current state, product specification, operating guidance, and continuation handoff
 
+### Release state
+
+- released through exact-head PR [#32](https://github.com/UnderNoNameYet/NoNameYet/pull/32), successful PR [run #71](https://github.com/UnderNoNameYet/NoNameYet/actions/runs/34021970749), and squash merge `8eec4b9efde9707ae132b7ae22e6a0e1747be1ac`
+- deployed through successful main Pages [run #72](https://github.com/UnderNoNameYet/NoNameYet/actions/runs/34022114404)
+- verified all eight HTML routes, the configured Upwork URL, five homepage booking links, marketplace-aware privacy/terms, local no-submit behavior, and the byte-identical fictional PDF aliases on the live site
+
 ## [0.4.0] — 2026-09-05 — TenantBoundary working-name release
 
 ### Brand

@@ -51,7 +51,7 @@
 - [x] Publish and verify the v0.3.3 downloadable fictional report PDF through PR #28, main run #64, and the 27-file public-only contract
 - [x] Publish and verify the v0.4.0 TenantBoundary rebrand, 29-file contract, canonical assets, and byte-identical former-path aliases through PR #30 and main run #68
 - [x] Approve and publish the $349 Upwork Project Catalog offer without buying Connects or boosts
-- [ ] Publish and live-verify the website marketplace-link release
+- [x] Publish and live-verify the website marketplace-link release through PR #32, merge `8eec4b9efde9707ae132b7ae22e6a0e1747be1ac`, and main run #72
 - [x] Prepare a private Notion request database, qualification form, and launch-control page
 - [ ] Approve privacy/operator facts, then explicitly publish the Notion qualification form
 
