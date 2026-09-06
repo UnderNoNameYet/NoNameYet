@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-09-06T10:49:36.943Z",
+  "generatedAt": "2026-09-06T11:03:13.510Z",
   "product": "TenantBoundary",
   "version": "0.4.0",
   "sourceOfTruth": "AGENTS.md and handoff/README.md",
   "deployRoot": "public/",
   "files": 111,
-  "bytes": 3303597,
+  "bytes": 3304899,
   "byRole": {
     "repository-root": 11,
     "repository-workflow": 2,
@@ -57,8 +57,8 @@
     {
       "path": "CHANGELOG.md",
       "role": "repository-root",
-      "bytes": 8721,
-      "sha256": "08118283ccee288a5c06ac7b5a44901f6e9536218a76857e08ca28a86353aaaf"
+      "bytes": 9184,
+      "sha256": "dddefdb0ea25d82f780ec67d9b4435fd93aaca228b49f1f0d88a7b8be0b182c5"
     },
     {
       "path": "CONTRIBUTING.md",
@@ -69,8 +69,8 @@
     {
       "path": "README.md",
       "role": "repository-root",
-      "bytes": 8884,
-      "sha256": "482aac311df8a493ad550b3470a1454ddcbb1f3ca3637114adb1d292ec7825e3"
+      "bytes": 8892,
+      "sha256": "c12af9ecce8affa810e875383222ddfd6059f3aeb5ff136196514264c0a3f408"
     },
     {
       "path": "ROADMAP.md",
@@ -111,8 +111,8 @@
     {
       "path": "handoff/AI_CONTINUATION.md",
       "role": "handoff-source",
-      "bytes": 5871,
-      "sha256": "222c84d0d38127c80e1bae4806ade60defd6b2cfebcd61e982ccbd707030da5c"
+      "bytes": 5920,
+      "sha256": "62ff52772245f0dbf6ae948b92e3aae4474bff1d52a9e737f3cc00f339bbb0bd"
     },
     {
       "path": "handoff/ASSET_MANIFEST.md",
@@ -129,8 +129,8 @@
     {
       "path": "handoff/CURRENT_STATE.json",
       "role": "handoff-source",
-      "bytes": 9207,
-      "sha256": "d2386070034a10d421708febe5dcb387556a7718d9675228bdec047e32fe053a"
+      "bytes": 9200,
+      "sha256": "b3bdb926950172233d1338b0c751f5c07938806087a296da3cc736ecb6d3cc4d"
     },
     {
       "path": "handoff/DECISION_LOG.md",
@@ -147,8 +147,8 @@
     {
       "path": "handoff/GITHUB_PUBLICATION.md",
       "role": "handoff-source",
-      "bytes": 6645,
-      "sha256": "9ae821540646e37a149d2e1eec832c22c3a56a5916f919b7170c08522daa3d55"
+      "bytes": 6809,
+      "sha256": "4db629e37a06171d2661492b477b98c67836c11d8d14bae5e861d29e4cec92b2"
     },
     {
       "path": "handoff/GTM_AND_VALIDATION.md",
@@ -159,8 +159,8 @@
     {
       "path": "handoff/HANDOFF_REPORT.md",
       "role": "handoff-source",
-      "bytes": 9430,
-      "sha256": "9897356a0a24c749c0a6a22a6d749cbc25fe2445f88454721f5f5af650af436f"
+      "bytes": 9988,
+      "sha256": "c9923a2d206810d685fb795c7a3f14049ecb6a58e6ae585d0f374484ffc2f463"
     },
     {
       "path": "handoff/HANDOFF_REPORT.pdf",
@@ -369,8 +369,8 @@
     {
       "path": "operations/operator-decisions.md",
       "role": "operations-private-template",
-      "bytes": 4017,
-      "sha256": "67ef857ada75f279a7f932e12cf26bf1ac4a28384e1341805276d7a61b0dd30f"
+      "bytes": 4084,
+      "sha256": "2cdf2a89ab5e1edde6ddf0c0d6f21e094cf4785b54657516481b4e621cfcc254"
     },
     {
       "path": "operations/payment-refund-workflow.md",

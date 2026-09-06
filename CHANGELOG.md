@@ -2,7 +2,7 @@
 
 All notable product changes are recorded here. The project has not reached a commercially ready 1.0 release.
 
-## [Unreleased]
+## 2026-09-06 — Marketplace safety pause
 
 ### Safety
 
@@ -10,6 +10,12 @@ All notable product changes are recorded here. The project has not reached a com
 - restored the prior request-only site behavior with local scope generation, no form submission, and closed payment
 - documented that false eligibility, identity, tax, or payout information and another person’s account must never be used as a workaround
 - kept the product, fictional proof pack, source, and zero-cost portfolio available for learning and future launch when the operator is legally and contractually eligible
+
+### Release state
+
+- released through exact-head PR [#34](https://github.com/UnderNoNameYet/NoNameYet/pull/34) and squash merge `c3b2f8461bec92b28d97e0696f15c602c8044bb2`
+- deployed through successful main Pages [run #76](https://github.com/UnderNoNameYet/NoNameYet/actions/runs/34028664281)
+- live verification confirmed the homepage, scope worksheet, Workbench, matrix, and configuration return 200 with no Upwork URL or booking CTA
 
 ## [0.4.0] — 2026-09-05 — TenantBoundary working-name release
 
