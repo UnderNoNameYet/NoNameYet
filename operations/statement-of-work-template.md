@@ -75,10 +75,10 @@ Dates depend on timely access and responses. No platform approval, security outc
 
 - Fee: `{{FEE_USD}}`
 - Milestones: `{{MILESTONES}}`
-- Payment method: operator-issued invoice through `{{PROCESSOR}}`
+- Payment method: `{{UPWORK_ORDER_OR_OPERATOR_INVOICE}}`
 - Taxes: `{{TAX_HANDLING}}`
 
-The public website does not collect payment. An invoice is issued only after this scope and the authorization record are accepted.
+The public website does not collect payment. For the approved $349 Upwork offer, the platform order and payment terms apply; for a future direct engagement, an invoice is issued only after this scope and the authorization record are accepted. In either case, payment alone does not authorize testing.
 
 ## Cancellation and refund
 

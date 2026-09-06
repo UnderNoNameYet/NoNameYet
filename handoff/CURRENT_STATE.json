@@ -1,8 +1,8 @@
 {
-  "snapshotAt": "2026-09-05T07:22:53Z",
+  "snapshotAt": "2026-09-06T08:21:25Z",
   "product": "TenantBoundary",
   "corePromise": "Prove that Customer A cannot read or modify Customer B's data.",
-  "stage": "TenantBoundary v0.4.0 request-only technical preview live and verified; commercial intake and payment closed",
+  "stage": "TenantBoundary v0.4.0 public preview live; approved $349 Upwork marketplace offer visible; website booking-link release candidate tested; direct site intake and payment closed",
   "sourcePath": "repository root on current main",
   "repository": {
     "owner": "UnderNoNameYet",
@@ -10,7 +10,7 @@
     "defaultBranch": "main",
     "access": "connected_published_and_verified",
     "authenticatedUser": "MYIndieDEV",
-    "inspectedMainSha": "bc5ed44111084cea80dc157a3cfbabacf30eec61",
+    "inspectedMainSha": "b5bec82967b51c3f9a00be06a25150c744cc613f",
     "liveVersion": "0.4.0",
     "pagesWorkflow": ".github/workflows/pages.yml",
     "releaseTransport": "direct source with an exact 29-file public-only build artifact",
@@ -50,9 +50,18 @@
     }
   ],
   "payment": {
-    "mode": "closed",
-    "recommendedInitialProcessor": "operator-owned invoice or source-platform escrow after qualification and signed scope",
-    "activated": false
+    "mode": "closed_on_website",
+    "recommendedInitialProcessor": "Upwork order and platform payment for the approved $349 Project Catalog offer; direct invoices only after separate readiness gates",
+    "activated": false,
+    "marketplace": {
+      "platform": "Upwork",
+      "state": "approved_visible",
+      "url": "https://www.upwork.com/services/product/development-it-a-supabase-rls-and-tenant-isolation-review-with-evidence-2096498626928341965",
+      "package": "Boundary Verification",
+      "priceUsd": 349,
+      "deliveryDays": 7,
+      "revisions": 1
+    }
   },
   "safety": {
     "writtenAuthorizationRequired": true,
@@ -116,11 +125,13 @@
       "assets/tenantproof-fictional-report.pdf",
       "assets/tenantproof-og.png"
     ],
-    "canonicalFictionalPdf": "assets/tenantboundary-fictional-report.pdf"
+    "canonicalFictionalPdf": "assets/tenantboundary-fictional-report.pdf",
+    "marketplaceUrl": "https://www.upwork.com/services/product/development-it-a-supabase-rls-and-tenant-isolation-review-with-evidence-2096498626928341965",
+    "marketplaceBookingState": "approved_visible_release_candidate"
   },
   "quality": {
-    "latestKnownResult": "local_pr_main_and_live_v0.4.0_pass",
-    "latestLocalRunAt": "2026-09-05T07:10:15.029Z",
+    "latestKnownResult": "local_marketplace_link_static_browser_and_visual_qa_pass",
+    "latestLocalRunAt": "2026-09-06T08:17:53.222Z",
     "qualityGateCommands": 37,
     "requiredFiles": 29,
     "htmlPages": 8,
@@ -157,7 +168,15 @@
     "livePdfLegacyAliasByteIdentical": true,
     "liveSocialImageBytes": 68225,
     "liveSocialImageSha256": "5667c5414898fcbd3d3213872fd8626f2e31680c9642b0e027df7f1e76c1dc73",
-    "liveSocialImageLegacyAliasByteIdentical": true
+    "liveSocialImageLegacyAliasByteIdentical": true,
+    "marketplaceLinkChecks": {
+      "validatedUpworkProjectUrl": true,
+      "safeExternalLinkAttributes": true,
+      "visibleOnSevenPublicPages": true,
+      "externalRuntimeRequests": 0,
+      "desktopVisualInspection": "pass",
+      "mobileVisualInspection": "pass"
+    }
   },
   "commercialTruth": {
     "customers": 0,
@@ -165,20 +184,24 @@
     "testimonials": 0,
     "realFindingsPublished": 0,
     "tenDayRevenueTargetUsd": 100,
-    "targetIsGuarantee": false
+    "targetIsGuarantee": false,
+    "marketplaceViewsBaseline": 2,
+    "marketplaceOrders": 0,
+    "baselineObservedAt": "2026-09-05"
   },
   "blockers": [
-    "contracting identity and tax details before accepting a customer contract or payment; not required to publish the app",
-    "owned HTTPS intake and deletion route before commercial intake opens",
-    "launch-state privacy and terms before commercial intake opens",
-    "payment processor, payout, tax, and refund configuration before accepting money",
-    "authenticated approved acquisition channel before individualized outreach"
+    "correct the Upwork category metadata, which currently presents the offer under Desktop App Improvements & Bug Fixes",
+    "complete private Upwork identity, tax, and payout requirements before the first delivery or payout",
+    "owned HTTPS intake and deletion route before direct website intake opens",
+    "verified operator identity, jurisdiction, and public contact before direct contracting opens",
+    "direct payment processor, payout, tax, and refund configuration before accepting money outside Upwork"
   ],
   "nextActions": [
-    "keep the verified TenantBoundary v0.4.0 request-only preview and 29-file public-only deployment boundary stable",
-    "create or finish only the free Upwork Basic profile and complete identity details privately inside Upwork if the platform requires them",
-    "recheck the single best-fit India-eligible Supabase review and apply once only if free Connects are available",
-    "keep the Notion qualification form private and payment closed until the HTTPS intake, privacy, and contract-specific gates are ready",
+    "publish and verify the tested marketplace-link release without changing the 29-file public-only deployment boundary",
+    "correct the Upwork category from Desktop App Improvements & Bug Fixes to the closest available security or web-application category",
+    "verify that the fictional four-page PDF is visible in the public Upwork gallery and remains clearly labeled as demonstration work",
+    "monitor the initial 2-view and 0-order baseline and respond promptly to qualified Upwork messages without paid boosts",
+    "keep the Notion qualification form private and direct website payment closed until the direct-intake gates are ready",
     "do not buy a domain, paid tool, paid lead, or proposal credits before revenue",
     "prefer one safely authorized paid pilot over speculative workspace or recurring-monitoring features"
   ],
@@ -197,7 +220,7 @@
     "commercialStrict": "npm run commercial:strict",
     "privateConfig": "config/pilot-readiness.json (ignored)",
     "committedTemplateBlocked": true,
-    "verifiedGates": 3,
+    "verifiedGates": 4,
     "requiredGates": 12,
     "outreachReady": false,
     "intakeReady": false,
@@ -208,14 +231,19 @@
     "verifiedGateNames": [
       "businessContact",
       "securityContact",
-      "deliveryCapacity"
+      "deliveryCapacity",
+      "approvedAcquisitionChannel"
     ],
     "remainingOutreachBlockers": [
       "contractingIdentity",
       "httpsIntakeAndDeletion",
-      "launchLegalCopy",
-      "approvedAcquisitionChannel"
-    ]
+      "launchLegalCopy"
+    ],
+    "approvedAcquisitionChannel": {
+      "platform": "Upwork Project Catalog",
+      "state": "approved_visible",
+      "url": "https://www.upwork.com/services/product/development-it-a-supabase-rls-and-tenant-isolation-review-with-evidence-2096498626928341965"
+    }
   },
   "brandDecision": {
     "approvedByOperator": true,

@@ -17,12 +17,13 @@ Status legend: **implemented**, **prepared**, **blocked**, **evidence-gated**, *
 | Print report | implemented | report/workbench scripts | No upload or hosted state |
 | Methodology/authorization | implemented | `public/methodology.html` | Scope, evidence, stop rules |
 | Local scope worksheet | implemented | `public/request.html`, `assets/site.js` | Three steps; no submission/storage |
+| Approved marketplace booking | implemented/external | site config and public CTAs | $349 Upwork Project Catalog URL only; no site-side order or payment |
 | Free boundary matrix | implemented | `public/sample-matrix.html`, CSV | Fictional paired controls; local download |
-| Privacy and terms | implemented/pre-commercial | public HTML | Must be updated with verified facts before payment |
+| Privacy and terms | implemented/marketplace-aware | public HTML | Separates local website behavior, Upwork processing, and written authorization |
 | Branded 404 | implemented | `public/404.html` | Recovery links |
 | Qualification form and private pipeline | prepared/private | Notion | Non-sensitive; intentionally unpublished until commercial facts and privacy handling are verified |
 | Static-site secure intake link | blocked | release config | Requires verified owned HTTPS endpoint |
-| Checkout | intentionally closed | config/operations | Qualify, authorize, then invoice |
+| Direct checkout | intentionally closed | config/operations | Upwork handles the one approved external marketplace order |
 | First-pilot readiness gate | implemented/blocked | `tools/check-pilot-readiness.mjs`, private config | Reports stage blockers; strict modes fail until verified facts exist |
 | Hosted customer account | evidence-gated | none | Not V1 |
 | Connections/Team/Activity/Plan pages | evidence-gated | none | Design direction only, not operating product |
@@ -34,6 +35,7 @@ Status legend: **implemented**, **prepared**, **blocked**, **evidence-gated**, *
 - dynamic year and configuration-driven launch labels
 - optional reveal enhancement with reduced-motion fallback
 - HTTPS-only secure contact link in verified ready state
+- validated configuration-driven Upwork Project Catalog links with hardcoded no-JavaScript fallbacks
 - request-package query parser
 - three-step local scope navigation/validation with heading focus
 - local brief generation, clipboard fallback, and text download
@@ -97,7 +99,7 @@ The command-line JSON-schema validator remains stricter release authority.
 
 ## Production support
 
-Eight HTML pages, restrictive meta CSP, `_headers`, canonical/social metadata, icons, social image, manifest, sitemap, robots, `.nojekyll`, `llms.txt`, schema/sample JSON, CSV template, downloadable fictional PDF, and route-scoped workbench assets. The live v0.4.0 public artifact contains exactly 29 files, including canonical TenantBoundary PDF/social assets and byte-identical former-path aliases.
+Eight HTML pages, restrictive meta CSP, `_headers`, canonical/social metadata, icons, social image, manifest, sitemap, robots, `.nojekyll`, `llms.txt`, schema/sample JSON, CSV template, downloadable fictional PDF, validated external marketplace CTAs, and route-scoped workbench assets. The v0.4.0 public artifact contains exactly 29 files, including canonical TenantBoundary PDF/social assets and byte-identical former-path aliases.
 
 ## Operational documents
 

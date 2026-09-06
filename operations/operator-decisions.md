@@ -2,7 +2,7 @@
 
 Everything below is a factual account, legal, or identity decision that cannot be invented by product design.
 
-## Required before customer intake opens
+## Required before direct website intake opens
 
 1. **Public operator display name**  
    Recommended product display: `TenantBoundary`. Confirm whether a legal personal or company name must also appear.
@@ -25,7 +25,7 @@ Everything below is a factual account, legal, or identity decision that cannot b
 7. **Delivery availability**  
    Confirm capacity to respond to a qualified inquiry and execute one pilot.
 
-## Required before payment opens
+## Required before direct payment opens
 
 8. **Invoice processor**  
    Product recommendation: an operator-owned Stripe account using invoices, not an unrestricted public checkout, for initial customers.
@@ -40,7 +40,7 @@ Everything below is a factual account, legal, or identity decision that cannot b
 
 TenantBoundary v0.4.0 is live from PR #30, merge `bc5ed44111084cea80dc157a3cfbabacf30eec61`, and successful main run #68. The canonical PDF/social assets, byte-identical former-path aliases, and exact 29-file public-only contract were verified directly. Repository access, working-name publication, and portable buyer proof are no longer blockers.
 
-A private Notion request database, qualification form, and launch-control page are prepared. The form remains intentionally unpublished. Commercial intake, payment, outreach, and real testing remain blocked by the factual decisions above.
+A private Notion request database, qualification form, and launch-control page are prepared. The form remains intentionally unpublished. The $349 Upwork Project Catalog offer is approved and visible, so an authenticated acquisition and marketplace-order path now exists. Direct website intake/payment and all real testing remain blocked by the applicable factual and customer-specific decisions above.
 
 ## Readiness record
 
@@ -50,12 +50,13 @@ Use `operations/pilot-readiness-gate.md` as the controlling workflow. Copy the b
 
 ## Recommended launch mode
 
-Start in **request-only mode**:
+Continue in **marketplace-assisted request-only mode**:
 
 - Publish the product and fictional report.
-- Route qualified prospects to the owned intake or an approved marketplace conversation.
+- Route the $349 Boundary Verification package to the approved Upwork Project Catalog offer.
+- Keep the $649 repair package as a separately qualified starting scope.
 - Confirm scope and authorization manually.
-- Issue an invoice only after fit and written scope.
+- Use Upwork contracting and payment for marketplace orders; use a direct invoice only after the separate direct-payment gates are ready.
 - Do not expose a buy-now payment link.
 
 This minimizes access mistakes and supports a credible first pilot without pretending the service is an automated scanner.

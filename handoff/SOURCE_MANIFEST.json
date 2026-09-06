@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-09-05T07:30:19.326Z",
+  "generatedAt": "2026-09-06T08:28:06.690Z",
   "product": "TenantBoundary",
   "version": "0.4.0",
   "sourceOfTruth": "AGENTS.md and handoff/README.md",
   "deployRoot": "public/",
   "files": 111,
-  "bytes": 3382979,
+  "bytes": 3315563,
   "byRole": {
     "repository-root": 11,
     "repository-workflow": 2,
@@ -57,8 +57,8 @@
     {
       "path": "CHANGELOG.md",
       "role": "repository-root",
-      "bytes": 8152,
-      "sha256": "7c40e0cc10ebd67b6b21337abf9265d83021b63c81cd991eca6feee55722cfa6"
+      "bytes": 8925,
+      "sha256": "816efefed13e0c7966dc4fb0951e38e6a2e4a75ae24c7d72c8762c3dd266e821"
     },
     {
       "path": "CONTRIBUTING.md",
@@ -69,8 +69,8 @@
     {
       "path": "README.md",
       "role": "repository-root",
-      "bytes": 8334,
-      "sha256": "dbfa8eca9893d74a1d4d7c045c9974b817c9a455879a486a656074eaf4e05cea"
+      "bytes": 9108,
+      "sha256": "b83ae843ffdf676f7eb9c34885123f5b371d16cc33c2f03216cc14c3a5a86dfe"
     },
     {
       "path": "ROADMAP.md",
@@ -99,20 +99,20 @@
     {
       "path": "config/site.preview.json",
       "role": "release-configuration",
-      "bytes": 241,
-      "sha256": "77af1e67709b729ad208401c1d1da4fdeadc0625948bafbda5d510d55c933f56"
+      "bytes": 396,
+      "sha256": "b56f378845cdf973f269e43f19ebe2e453ba98b4832244282f83393550a37992"
     },
     {
       "path": "config/site.release.example.json",
       "role": "release-configuration",
-      "bytes": 347,
-      "sha256": "bbeedc826b675fbb0237c154aa41c0d2811441f23ce98912bf319ab319883d06"
+      "bytes": 502,
+      "sha256": "2fd9bcbf89957924a4374c4d53b251b9d57a85fbe0d50c31187755f74158d161"
     },
     {
       "path": "handoff/AI_CONTINUATION.md",
       "role": "handoff-source",
-      "bytes": 5734,
-      "sha256": "0d8293a7dda8342b44bbfd77baa8d45f79759480ece1498016c0ab25662f648f"
+      "bytes": 6070,
+      "sha256": "131098508e82e38b96d2e297912cb25ad4e929e95af50274cfdf5f68968040cc"
     },
     {
       "path": "handoff/ASSET_MANIFEST.md",
@@ -129,20 +129,20 @@
     {
       "path": "handoff/CURRENT_STATE.json",
       "role": "handoff-source",
-      "bytes": 8889,
-      "sha256": "dcf8f02324528950cce5d39ccf76223e7ada9954a7eccdff2883583947cfd126"
+      "bytes": 10469,
+      "sha256": "47bfcd0ced7ff1cf1fe70314e0c9f56dac29f41299a68d1af9500513b1e17a0f"
     },
     {
       "path": "handoff/DECISION_LOG.md",
       "role": "handoff-source",
-      "bytes": 12620,
-      "sha256": "62f68e65b670bf86f91d91c5f0c34f3598ee8528da80637055a7cdbcb3a61b39"
+      "bytes": 13757,
+      "sha256": "7c640ac4b79f40eff8fe9c54b9288ab4d35b8b27e398d4ed887496cdfec3719b"
     },
     {
       "path": "handoff/FEATURE_AND_FUNCTION_INVENTORY.md",
       "role": "handoff-source",
-      "bytes": 7281,
-      "sha256": "6e79dacb70ae08ea3923eaa0fafb9911cf77b124c49bb5c1a7acc85e3407d073"
+      "bytes": 7634,
+      "sha256": "bbd24eea64a14d39d08bbe4e60202984b613616e94eb1d0dc31fcc0e5c71cbab"
     },
     {
       "path": "handoff/GITHUB_PUBLICATION.md",
@@ -153,14 +153,14 @@
     {
       "path": "handoff/GTM_AND_VALIDATION.md",
       "role": "handoff-source",
-      "bytes": 6505,
-      "sha256": "837adf111185e249ea17bd940b0e8a54cbdf9d671541e90bb0174991b13a1213"
+      "bytes": 7088,
+      "sha256": "df570ccc58a3398668bc7c647fe808e6e052acec05817980cd1fa6c57979dc2d"
     },
     {
       "path": "handoff/HANDOFF_REPORT.md",
       "role": "handoff-source",
-      "bytes": 9081,
-      "sha256": "3dd9ea374aab1e02c9bc7bc2a86663321065ff019439685a3c03c34f2efed01e"
+      "bytes": 9574,
+      "sha256": "b86c2194a3e2717c50ed8001396c70916271fd35c4e7b4c7980ad6395250f29b"
     },
     {
       "path": "handoff/HANDOFF_REPORT.pdf",
@@ -177,8 +177,8 @@
     {
       "path": "handoff/PAGE_AND_SECTION_SPECS.md",
       "role": "handoff-source",
-      "bytes": 8002,
-      "sha256": "b72fcc6fde9b40a6552b1da3f95551648529b723a8abacca489a2d0d696c4090"
+      "bytes": 8324,
+      "sha256": "9b3d47548b2adfd25784ce439a9c3c042a32f97ef428b3b8dac187d13f0ac214"
     },
     {
       "path": "handoff/PRODUCT_SPEC.md",
@@ -189,8 +189,8 @@
     {
       "path": "handoff/QUALITY_GATES.md",
       "role": "handoff-source",
-      "bytes": 8360,
-      "sha256": "f89aa0324acc7dc5cde00fa26ad1292c650bf15201d74c113ca03dc57dfebe2e"
+      "bytes": 8615,
+      "sha256": "55d2c874cbece5bb95c514c97292fe4a5524497b7ce41f059e220a7ba8033cc1"
     },
     {
       "path": "handoff/README.md",
@@ -219,8 +219,8 @@
     {
       "path": "handoff/ROADMAP_V1_V2_V3.md",
       "role": "handoff-source",
-      "bytes": 8011,
-      "sha256": "25cc78b37c4326f9a926d2babb10b6ccf35020834fe323b6bd36f996d997a251"
+      "bytes": 8302,
+      "sha256": "7c8ba8e6cf4e63598ab29411ff57f20bc72f6d3b9d341cb208ede797ebcd6692"
     },
     {
       "path": "handoff/SECURITY_PRIVACY_AND_SAFETY.md",
@@ -231,8 +231,8 @@
     {
       "path": "handoff/TECHNICAL_ARCHITECTURE.md",
       "role": "handoff-source",
-      "bytes": 8186,
-      "sha256": "aa43757383ad8dc2a46748e4d2c692de7fcace82a340a39825c94f4113b55617"
+      "bytes": 8443,
+      "sha256": "9ddb2968e7b37d5ee059f3cd65e1c77a97e31cb91cc67123490e87a9d91e1aa8"
     },
     {
       "path": "handoff/UX_DESIGN_SYSTEM.md",
@@ -357,26 +357,26 @@
     {
       "path": "operations/launch-checklist.md",
       "role": "operations-private-template",
-      "bytes": 4584,
-      "sha256": "233f57d4b9fa6882c90a77da4da77acf763cdc8ebd238988cbd1cbe697b8bc1a"
+      "bytes": 5119,
+      "sha256": "eb900e72d5429e5c7e71d09ec6e36b8030f789a36e4927c979350c217fb5b112"
     },
     {
       "path": "operations/marketing-experiment.md",
       "role": "operations-private-template",
-      "bytes": 3612,
-      "sha256": "c831916901b2e73d928b85bf6abaae58ead96f1b14e9784eb2db4b2a10fbcae8"
+      "bytes": 4246,
+      "sha256": "94002cbe64c38019ce10f13d79a2d0bb05962f0eba62977b38201437780804ac"
     },
     {
       "path": "operations/operator-decisions.md",
       "role": "operations-private-template",
-      "bytes": 3467,
-      "sha256": "c83e4a070393bcb57b3453015dcdd9a2cae6ccc41a2cd8ea76cd6afda6b27e69"
+      "bytes": 3829,
+      "sha256": "53fe9c2808d39754d6d37ad2ff81dd7060db6da163dd18ce4b8f62944e9a3b0c"
     },
     {
       "path": "operations/payment-refund-workflow.md",
       "role": "operations-private-template",
-      "bytes": 2926,
-      "sha256": "17557d4358f0511eb94484547b66740e8eb1e60b9afe9a49054f15675855304e"
+      "bytes": 3396,
+      "sha256": "d491785ec5c8b121575e10fba87399e13b7ca47d1fe70dec8f3250c7d54f45cb"
     },
     {
       "path": "operations/pilot-readiness-gate.md",
@@ -387,8 +387,8 @@
     {
       "path": "operations/statement-of-work-template.md",
       "role": "operations-private-template",
-      "bytes": 4570,
-      "sha256": "4e2015dac7df0bb457ceebec155bfdb1ca2ec0f4d562d5a8cb50c4cd6f2a6faa"
+      "bytes": 4731,
+      "sha256": "56edd8194fe0494dc0db24ca00bea840e73cdbca2f091f188fb5fae098ac7b0f"
     },
     {
       "path": "package.json",
@@ -405,8 +405,8 @@
     {
       "path": "public/404.html",
       "role": "deployable-public",
-      "bytes": 2153,
-      "sha256": "3d20dbf53be660a348e3344825aff2332740d89081d7b7728066f888dbefddef"
+      "bytes": 2173,
+      "sha256": "5c82950a32327527d7eb3271e1d77e2a63fb5c87a5886cf7c3cedd84ceb8c170"
     },
     {
       "path": "public/_headers",
@@ -453,14 +453,14 @@
     {
       "path": "public/assets/site-config.js",
       "role": "deployable-public",
-      "bytes": 288,
-      "sha256": "b17e975bef702432db222cf559f92d87594f4ea275d23deb8a1ecd92b98c09ec"
+      "bytes": 443,
+      "sha256": "30d634783468ce22839320dbbf9ff677aec43e1e111a660911e979f8bd21112d"
     },
     {
       "path": "public/assets/site.js",
       "role": "deployable-public",
-      "bytes": 8017,
-      "sha256": "bfcac1ab65999a9f75f7e92eef11594a2e9385422d727dca357e3d29d2e6ebbb"
+      "bytes": 8541,
+      "sha256": "1413740dcef0b3aeaf3d407df7ab6deff431b5a75dcdf9cc7056921b33cc5511"
     },
     {
       "path": "public/assets/site.webmanifest",
@@ -477,8 +477,8 @@
     {
       "path": "public/assets/tenantboundary-fictional-report.pdf",
       "role": "deployable-public",
-      "bytes": 53287,
-      "sha256": "8ef66a08cddcc7e877441aa006e7815d7fc84c9e87f5f9e7778c1a74f700fd84"
+      "bytes": 11159,
+      "sha256": "0d767d0292f604fb1582f29dd90eed80965b65383d425d620925b2f71cb66ddc"
     },
     {
       "path": "public/assets/tenantboundary-og.png",
@@ -489,8 +489,8 @@
     {
       "path": "public/assets/tenantproof-fictional-report.pdf",
       "role": "deployable-public",
-      "bytes": 53287,
-      "sha256": "8ef66a08cddcc7e877441aa006e7815d7fc84c9e87f5f9e7778c1a74f700fd84"
+      "bytes": 11159,
+      "sha256": "0d767d0292f604fb1582f29dd90eed80965b65383d425d620925b2f71cb66ddc"
     },
     {
       "path": "public/assets/tenantproof-og.png",
@@ -513,38 +513,38 @@
     {
       "path": "public/index.html",
       "role": "deployable-public",
-      "bytes": 11148,
-      "sha256": "2945b4b61e07eb040f6e183ce03472c4b9f9eaee8c66f3ec51fd5d8b30a65b10"
+      "bytes": 12726,
+      "sha256": "222633328b288e13b2dbf4be08c0710fc9289573805f60decde4f8791c9734b3"
     },
     {
       "path": "public/llms.txt",
       "role": "deployable-public",
-      "bytes": 1309,
-      "sha256": "3c01718a3ed379966ef2a6d1e6c5e68fb7f84ebb315dbbe9d517d0f0cca06a59"
+      "bytes": 1497,
+      "sha256": "30073c8710f184d4233709afa453dbcc25b4a28039d7928ffac63ac6b383fbc0"
     },
     {
       "path": "public/methodology.html",
       "role": "deployable-public",
-      "bytes": 9236,
-      "sha256": "d3b221eb3c6bad0f1bf818d9a0285d2613b0d3cbe329e483e59b222d2677b763"
+      "bytes": 9737,
+      "sha256": "6224d492df54b7c33e81e31b96b63117ae7bdce55972250ca9be547b64796bab"
     },
     {
       "path": "public/privacy.html",
       "role": "deployable-public",
-      "bytes": 5714,
-      "sha256": "b3711867b50aed8b6ec6fe97ee94d80e9590acc4cc28b7930e681ae45f8e2dd1"
+      "bytes": 6712,
+      "sha256": "451de4b9f40436d632339273e561a921b900d63978583156c2f34165e37592b1"
     },
     {
       "path": "public/report.html",
       "role": "deployable-public",
-      "bytes": 13787,
-      "sha256": "0716fbeebf0b4a6db8bc61954ab6db9d90d397d56c740d35808764070f74005f"
+      "bytes": 14041,
+      "sha256": "49fb427fdf91907c053bcacd94b8e139798a4fac59ae5748514e072e568311c0"
     },
     {
       "path": "public/request.html",
       "role": "deployable-public",
-      "bytes": 10747,
-      "sha256": "87557c69679de24720f801d2408c0ddff853b0f01e970e23f2c646b96d5f9b71"
+      "bytes": 11690,
+      "sha256": "1b3d55be6650a7f80f422e3c4070a466f7c293aff5cf6a750c568c86a8041875"
     },
     {
       "path": "public/robots.txt",
@@ -555,8 +555,8 @@
     {
       "path": "public/sample-matrix.html",
       "role": "deployable-public",
-      "bytes": 10790,
-      "sha256": "4d57ecb472a84d1d47c05f5cc5ade40b12ef81d7445680fb715648337e57b9d7"
+      "bytes": 11291,
+      "sha256": "578c5d3851914eaad5ab7cfcf79c1fd7f765785572c31b4a91e776e2f84179b0"
     },
     {
       "path": "public/sitemap.xml",
@@ -567,8 +567,8 @@
     {
       "path": "public/terms.html",
       "role": "deployable-public",
-      "bytes": 6346,
-      "sha256": "c2e2f7a9176e5c65a30af0faf3eb4ef4ad0463a4d3531e778b2a5e91291ffb8d"
+      "bytes": 7423,
+      "sha256": "4a54f49036d2e7ada4c2f8aa5a05e5c2537fcd1fc0aacd28210d32a64ceb5308"
     },
     {
       "path": "schema/report.schema.json",
@@ -597,8 +597,8 @@
     {
       "path": "tools/build-site-config.mjs",
       "role": "build-quality-tooling",
-      "bytes": 2460,
-      "sha256": "63dcd6650d863e1d7ec5040210f398cbdaa8a6c076e9d00b72bdf3df43e6a531"
+      "bytes": 2914,
+      "sha256": "aae8af2639a5a769da43866ce384034898bdc3c37dabdd90ba514acc889f1ae1"
     },
     {
       "path": "tools/build-source-manifest.mjs",
@@ -645,8 +645,8 @@
     {
       "path": "tools/harden-html.mjs",
       "role": "build-quality-tooling",
-      "bytes": 6434,
-      "sha256": "2c038e916b09a461e852542a76236a2b9e7376d65e8d1099046ac7e71c8fb24d"
+      "bytes": 6455,
+      "sha256": "7b31fda426c7dd7586d24aab613967b6e36666e05e0a97d276ea292bb5fe97e3"
     },
     {
       "path": "tools/quality-gate.mjs",

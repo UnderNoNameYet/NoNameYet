@@ -33,12 +33,12 @@ const pages = {
   },
   'privacy.html': {
     title: 'Privacy — TenantBoundary',
-    description: 'TenantBoundary pre-launch privacy and data-handling notice.',
+    description: 'TenantBoundary website and Upwork marketplace privacy and data-handling notice.',
     imageAlt: 'TenantBoundary privacy and data handling'
   },
   'terms.html': {
     title: 'Terms and limitations — TenantBoundary',
-    description: 'TenantBoundary pre-launch terms, authorization requirements, and service limitations.',
+    description: 'TenantBoundary marketplace terms, authorization requirements, and service limitations.',
     imageAlt: 'TenantBoundary service boundaries and limitations'
   }
 };

@@ -50,6 +50,8 @@
 - [x] Prepare deterministic first-pilot readiness tooling with a fully blocked committed template
 - [x] Publish and verify the v0.3.3 downloadable fictional report PDF through PR #28, main run #64, and the 27-file public-only contract
 - [x] Publish and verify the v0.4.0 TenantBoundary rebrand, 29-file contract, canonical assets, and byte-identical former-path aliases through PR #30 and main run #68
+- [x] Approve and publish the $349 Upwork Project Catalog offer without buying Connects or boosts
+- [ ] Publish and live-verify the website marketplace-link release
 - [x] Prepare a private Notion request database, qualification form, and launch-control page
 - [ ] Approve privacy/operator facts, then explicitly publish the Notion qualification form
 
@@ -60,7 +62,9 @@
 - [x] Sample report remains labeled fictional
 - [x] Ten named prospects meet the target profile
 - [x] First five prepared messages reference current, explicit buyer triggers
-- [ ] Outreach channel and account approved by the user
+- [x] Upwork Project Catalog acquisition channel and account approved by the user
+- [ ] Correct the Upwork listing category from Desktop App Improvements & Bug Fixes
+- [ ] Verify the fictional PDF is visible in the public Upwork gallery
 - [ ] Suppression list and response log ready
 - [ ] No bulk scraping or spam automation
 - [ ] Stop rule: no serious conversation after ten well-matched contacts means reassess the offer
@@ -76,6 +80,6 @@
 
 ## F. Launch decision
 
-The closed technical preview is live and does not accept or transmit static-site requests. Commercial intake may open only after operator identity, privacy contact, intake handling, written authorization, and delivery capacity are ready.
+The static preview is live and does not accept or transmit direct-site requests. The approved $349 Upwork offer is the current marketplace booking path. Direct website intake may open only after operator identity, privacy contact, intake handling, written authorization, and delivery capacity are ready.
 
-Payment may open only after the buyer and scope are qualified. Technical publication, commercial intake, payment activation, outbound marketing, and target-specific authorization remain separate gates.
+An Upwork order uses platform contracting and payment, but work may begin only after the buyer and scope are qualified and written authorization is complete. Technical publication, marketplace acquisition, direct intake, direct payment activation, outbound marketing, and target-specific authorization remain separate gates.

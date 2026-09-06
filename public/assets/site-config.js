@@ -2,6 +2,7 @@ window.TENANTBOUNDARY_CONFIG = Object.freeze({
   "state": "preview",
   "publicOrigin": "https://undernonameyet.github.io/NoNameYet/",
   "contactUrl": "",
+  "marketplaceUrl": "https://www.upwork.com/services/product/development-it-a-supabase-rls-and-tenant-isolation-review-with-evidence-2096498626928341965",
   "operatorDisplayName": "",
   "contactEmail": "",
   "paymentMode": "closed",

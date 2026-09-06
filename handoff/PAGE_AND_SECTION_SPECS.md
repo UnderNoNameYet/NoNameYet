@@ -10,13 +10,13 @@ Applies to every route except the dedicated workbench shell on `report.html`.
 
 - TenantBoundary wordmark/home link
 - Sample workbench, Matrix, Method, and Pricing links
-- one primary `Scope a review` action
+- one primary `Book on Upwork` action for the approved $349 Project Catalog offer
 - mobile menu with `aria-expanded` and an owned navigation ID
 - visible keyboard focus; menu closes after navigation or desktop resize
 
 ### Footer
 
-Product, Trust, and Start links; dynamic year; launch-state label; factual safety line. Never add invented addresses, registrations, customers, social accounts, or outcomes.
+Product, Trust, and Start links; approved marketplace link plus local scope worksheet; dynamic year; launch-state label; factual safety line. Never add invented addresses, registrations, customers, social accounts, or outcomes.
 
 ## `index.html` — product-first marketing page
 
@@ -29,7 +29,7 @@ Let a Supabase SaaS founder understand the failure, workflow, deliverable, fixed
 1. **Hero**
    - direct promise: verify tenant isolation before shipping
    - short explanation of an approved matrix, controlled run, repair, rerun, and retained evidence
-   - primary action opens the sample workbench; secondary action prepares scope
+   - primary action opens the approved $349 Upwork offer; secondary action opens the sample workbench
    - realistic fictional Run-stage preview, not abstract decoration
    - staging, synthetic-data, and written-authorization safeguards
 
@@ -55,14 +55,14 @@ Let a Supabase SaaS founder understand the failure, workflow, deliverable, fixed
    - explicit contextual-result limitation
 
 6. **Pricing**
-   - Boundary Verification: $349
-   - Verification + Repair: $649
+   - Boundary Verification: $349, bookable through the approved Upwork Project Catalog offer
+   - Verification + Repair: $649 starting scope, qualified separately rather than presented as a live checkout
    - manual-quote boundary for larger, production-only, regulated, or unusually sensitive work
 
 7. **Service boundaries and CTA**
    - no credentials through the public site
    - written authorization, staging, synthetic data, and no certification claim
-   - local scope brief before access is discussed
+   - approved marketplace booking plus an optional local scope brief before access is discussed
 
 ### Acceptance criteria
 
@@ -82,7 +82,7 @@ Let a buyer inspect the complete fictional workflow and open a compatible redact
 
 ### Shell
 
-- compact product header with project, fictional label, review ID, Method, and Scope action
+- compact product header with project, fictional label, review ID, Method, and approved Upwork booking action
 - horizontal stage rail: **Scope → Matrix → Run → Repair → Report**
 - Run opens by default
 - no permanent left navigation, account sidebar, or always-open inspector
