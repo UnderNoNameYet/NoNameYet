@@ -207,3 +207,13 @@ Append new decisions; do not silently rewrite prior rationale. Dates use Asia/Ca
 **Why:** the interactive Workbench demonstrates product behavior, but proposals and qualification conversations also need a portable artifact that a buyer can inspect or share quickly. A generated PDF strengthens proof of deliverable structure without requiring a backend, credentials, customer evidence, testimonials, or speculative workspace features.
 
 **Constraints:** every page is labeled fictional; the PDF contains no real authorization, customer, production, revenue, or finding claim; the JSON remains the source of truth; public checkout and intake stay closed; the artifact must pass deterministic generation, PDF validation, public-only bundling, and live-route verification.
+
+## 2026-09-05 — Route the first purchasable offer through approved Upwork escrow
+
+**Decision:** link the approved $349 Boundary Verification Project Catalog offer from the public product while keeping the static website in preview mode with direct intake and payment closed.
+
+**Why:** the marketplace listing creates a zero-upfront-cost, platform-managed booking path without inventing a direct processor, exposing a placeholder contact, buying Connects, or building a backend before revenue.
+
+**Constraints:** the website must clearly distinguish the live $349 Upwork offer from the separately qualified $649 starting scope; Upwork handles marketplace account, order, and payment data; no order authorizes testing until written target, scope, environment, identities, exclusions, and stop conditions are agreed; no credentials or customer data belong in the public site or initial requirements.
+
+**Known correction:** Upwork currently categorizes the offer under Desktop App Improvements & Bug Fixes. Correct that marketplace metadata before promoting beyond the website; do not change the service promise to fit the wrong category.

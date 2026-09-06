@@ -4,7 +4,16 @@ All notable product changes are recorded here. The project has not reached a com
 
 ## [Unreleased]
 
-- No unreleased product changes.
+### Commercial path
+
+- linked the approved and visible $349 Upwork Project Catalog offer from the homepage, Workbench, local scope worksheet, supporting-page navigation, and footers
+- kept direct website intake and payment closed while clearly separating the platform-managed Upwork order from the local no-submit worksheet
+- updated privacy and service-limit copy for the external marketplace path without weakening written authorization, staging-first work, synthetic-data defaults, or fictional-sample labels
+
+### Quality and handoff
+
+- added strict Upwork Project Catalog URL validation and automated checks for visible, safely attributed external links with no new runtime requests
+- updated the zero-cost experiment, current state, product specification, operating guidance, and continuation handoff
 
 ## [0.4.0] — 2026-09-05 — TenantBoundary working-name release
 

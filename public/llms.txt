@@ -19,6 +19,7 @@ TenantBoundary tests whether one synthetic customer identity can read or modify 
 - /methodology.html — Scope, authorization, and evidence handling
 - /sample-matrix.html — Fictional tenant-boundary matrix and local CSV download
 - /request.html — Local-only scope worksheet
+- https://www.upwork.com/services/product/development-it-a-supabase-rls-and-tenant-isolation-review-with-evidence-2096498626928341965 — Approved $349 Upwork Project Catalog booking path
 - /privacy.html — Current data-handling notice
 - /terms.html — Current service limitations
 
