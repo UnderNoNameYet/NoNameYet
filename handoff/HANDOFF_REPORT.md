@@ -1,9 +1,9 @@
 # TenantBoundary handoff report
 
-- **Snapshot:** 2026-09-05
-- **Product stage:** TenantBoundary v0.4.0 request-only technical preview live and verified
+- **Snapshot:** 2026-09-06
+- **Product stage:** TenantBoundary v0.4.0 portfolio-only safety release live and verified
 - **Commercial stage:** portfolio-only; marketplace, customer work, and payment paused because the Upwork account-eligibility gate is unresolved
-- **Next objective:** preserve the product and proof pack, hide the Upwork listing, obtain platform account instructions, and resume commercial planning only when legally and contractually eligible
+- **Next objective:** preserve the product and proof pack, keep the Upwork listing hidden, obtain platform account instructions, and resume commercial planning only when legally and contractually eligible
 
 ## Executive summary
 
@@ -12,6 +12,8 @@ TenantBoundary is a productized Supabase/PostgreSQL tenant-isolation verificatio
 The live v0.4.0 TenantBoundary release preserves the actual workflow rather than abstract positioning. The public homepage shows a concise fictional Run preview, while `report.html` is a spacious Focus Workbench organized as **Scope → Matrix → Run → Repair → Report**. The interface preserves local report import, schema 1.0, filters, keyboard selection, print, contextual result limits, and an explicit unresolved state.
 
 PR [#30](https://github.com/UnderNoNameYet/NoNameYet/pull/30) passed exact-head CI and was squash-merged at `bc5ed44111084cea80dc157a3cfbabacf30eec61`. Main Pages [run #68](https://github.com/UnderNoNameYet/NoNameYet/actions/runs/33952234143) completed successfully and published the exact 29-file `public/` artifact. Direct public fetches confirmed the homepage, Workbench, matrix, supporting routes, fictional JSON/CSV, canonical PDF/social assets, and both former-path aliases.
+
+After platform account eligibility became unresolved, safety PR [#34](https://github.com/UnderNoNameYet/NoNameYet/pull/34) restored request-only portfolio behavior and removed every public Upwork booking path. It passed exact-head run #75, merged at `c3b2f8461bec92b28d97e0696f15c602c8044bb2`, and deployed through successful main Pages [run #76](https://github.com/UnderNoNameYet/NoNameYet/actions/runs/34028664281). Live verification found no Upwork URL or booking CTA on the homepage, scope worksheet, Workbench, matrix, or configuration.
 
 The deterministic four-page fictional report PDF is generated from the same canonical JSON as the interactive Workbench. It gives proposals and buyer conversations a compact proof artifact without adding a backend, customer data, a claim of real work, or commercial activation. The live PDF is visibly fictional on every page.
 
@@ -102,7 +104,7 @@ The Upwork listing and website booking links are paused. Do not accept an order,
 
 ## Continuation plan
 
-1. Preserve the verified TenantBoundary v0.4.0 request-only release and its 29-file public-only deployment boundary.
+1. Preserve the verified TenantBoundary v0.4.0 portfolio-only safety release and its 29-file public-only deployment boundary.
 2. Keep the Upwork listing hidden and contact Upwork Support for instructions on the ineligible account.
 3. Do not submit proposals, accept orders, or attempt an identity/tax workaround before eligibility.
 4. Keep `state: preview`, `paymentMode: closed`, the Notion form private, and all fictional labels until the corresponding commercial gates are ready.

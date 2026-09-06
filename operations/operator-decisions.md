@@ -43,7 +43,7 @@ Everything below is a factual account, legal, or identity decision that cannot b
 
 ## Repository status
 
-TenantBoundary v0.4.0 is live from PR #30, merge `bc5ed44111084cea80dc157a3cfbabacf30eec61`, and successful main run #68. The canonical PDF/social assets, byte-identical former-path aliases, and exact 29-file public-only contract were verified directly. Repository access, working-name publication, and portable buyer proof are no longer blockers.
+TenantBoundary v0.4.0 portfolio-only mode is live from safety PR #34, merge `c3b2f8461bec92b28d97e0696f15c602c8044bb2`, and successful main run #76. Every public Upwork booking path was removed. The canonical PDF/social assets, byte-identical former-path aliases, and exact 29-file public-only contract were verified directly.
 
 A private Notion request database, qualification form, and launch-control page are prepared. The form remains intentionally unpublished. Commercial intake, payment, outreach, and real testing remain blocked by the factual decisions above. The Upwork listing must remain hidden and the platform should be contacted for account instructions while account eligibility is unresolved.
 
@@ -53,9 +53,9 @@ Use `operations/pilot-readiness-gate.md` as the controlling workflow. Copy the b
 
 `npm run pilot:strict` covers first-pilot operating capability. `npm run commercial:strict` additionally requires the approved acquisition channel and public release facts. Neither command replaces customer-specific written authorization.
 
-## Recommended launch mode
+## Future recommended launch mode
 
-Start in **request-only mode**:
+Only after platform account, contractual, intake, and payment gates are satisfied, start in **request-only mode**:
 
 - Publish the product and fictional report.
 - Route qualified prospects to the owned intake or an approved marketplace conversation.

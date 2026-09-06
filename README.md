@@ -15,7 +15,7 @@ It sells an agreed authorization matrix, executed before/after evidence, remedia
 | Production preparation | complete for the closed technical preview |
 | Browser/responsive/privacy QA | local, exact-head PR, main deployment, and live verification passed for v0.4.0 |
 | Qualification workflow | private Notion database/form prepared; form intentionally unpublished |
-| GitHub Pages request-only preview | TenantBoundary v0.4.0 live from `bc5ed4411108` after PR [#30](https://github.com/UnderNoNameYet/NoNameYet/pull/30) and successful main [run #68](https://github.com/UnderNoNameYet/NoNameYet/actions/runs/33952234143) |
+| GitHub Pages request-only preview | Portfolio-only safety release live from `c3b2f8461bec` after PR [#34](https://github.com/UnderNoNameYet/NoNameYet/pull/34) and successful main [run #76](https://github.com/UnderNoNameYet/NoNameYet/actions/runs/34028664281) |
 | Buyer proof pack | live deterministic four-page fictional PDF with a byte-identical former-path alias; generated from the canonical sample |
 | Payments | closed |
 | Marketplace | paused: the Upwork account-eligibility gate is unresolved; the public site intentionally contains no Upwork booking link |
